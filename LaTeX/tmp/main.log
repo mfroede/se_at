@@ -1,66 +1,235 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.7)  3 DEC 2013 09:51
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.3)  9 DEC 2013 22:12
 entering extended mode
 **main.tex
-(C:\Users\Marcus\Studium\git\se_at\Source\main.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\main.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Program Files (x86)\miktex\tex\latex\thesis\thesis.cls"
+Document Class: thesis 1996/25/01 1.0g LaTeX document class (wm).
+\hours=\count79
+\minutes=\count80
+("C:\Program Files (x86)\miktex\tex\latex\base\bk10.clo"
+File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
-\abovecaptionskip=\skip41
-\belowcaptionskip=\skip42
+\c@part=\count81
+\c@chapter=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\beforechaptervspace=\skip41
+\afterchaptervspace=\skip42
+\exampleindent=\skip43
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip44
+\belowcaptionskip=\skip45
 \bibindent=\dimen102
 )
-(C:\Users\Marcus\Studium\git\se_at\Source\main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+("C:\Program Files (x86)\miktex\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files (x86)\miktex\tex\generic\babel\babel.sty"
+Package: babel 2008/07/06 v3.8l The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\miktex\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\miktex\tex\generic\babel\ngermanb.ldf"
+Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
+
+("C:\Program Files (x86)\miktex\tex\generic\babel\babel.def"
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count90
+\U@D=\dimen103
+)
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 92.
+))
+("C:\Program Files (x86)\miktex\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("C:\Program Files (x86)\miktex\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("C:\Program Files (x86)\miktex\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\miktex\tex\latex\breakcites\breakcites.sty")
+("C:\Program Files (x86)\miktex\tex\latex\graphics\epsfig.sty"
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+("C:\Program Files (x86)\miktex\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\miktex\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Program Files (x86)\miktex\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\miktex\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\miktex\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\miktex\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+\epsfxsize=\dimen106
+\epsfysize=\dimen107
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\main.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+("C:\Program Files (x86)\miktex\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen108
+\scratchbox=\box26
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen109
+\MPnumerator=\count96
+\everyMPtoPDFconversion=\toks18
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
  [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (C:\Users\Marcus\Studium\
-git\se_at\Source\main.aux) ) 
+
+{C:/Users/Claudia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Pages/Inhaltsverzeichnis.tex
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\main.toc)
+\tf@toc=\write3
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/Einleitung.tex [2
+
+]
+Kapitel 1.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/Grundlagen.tex [3
+
+]
+Kapitel 2.
+
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\MDA.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\PIM.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\PSM.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\GWT.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\MVP.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\UIBinder.tex)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Sections\GIN.tex))
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/Konzeption.tex [4
+
+]
+Kapitel 3.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/UMLProfil.tex [5
+
+]
+Kapitel 4.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/M1Modell.tex [6
+
+]
+Kapitel 5.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/Generator.tex [7
+
+]
+Kapitel 6.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/Ergebnis.tex [8
+
+]
+Kapitel 7.
+)
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\Chapters/FazitAusblick.tex [9
+
+]
+Kapitel 8.
+) [10
+
+]
+(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
+at\LaTeX\Source\main.aux) ) 
 Here is how much of TeX's memory you used:
- 210 strings out of 493921
- 2432 string characters out of 3147279
- 49031 words of memory out of 3000000
- 3587 multiletter control sequences out of 15000+200000
- 4850 words of font info for 18 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 23i,4n,18p,136b,109s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb>
-Output written on main.pdf (1 page, 24113 bytes).
+ 1729 strings out of 494053
+ 25975 string characters out of 3147792
+ 76978 words of memory out of 3000000
+ 4983 multiletter control sequences out of 15000+200000
+ 4942 words of font info for 18 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 32i,7n,24p,196b,170s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/miktex/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Pr
+ogram Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmsl12.pfb>
+Output written on main.pdf (10 pages, 96155 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,19 +1,29 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
-\documentclass{article}
+\documentclass{thesis}
+\usepackage{makeidx}
+\usepackage[ngerman]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{url}
+\usepackage{breakcites}
+\usepackage{epsfig}
 
 \begin{document}
+\title{Generierung einer frontendseitigen GWT Anwendung unter Verwendung
+von dem MVP Pattern und Dependency Injection}
+\author{Claudia Schäfer	|	Marcus Fabarius	|	Stephanie Lehmann\\ CMS}
+\maketitle
 
 
-\section{Title}
+\input{Pages/Inhaltsverzeichnis}
 
-\subsection{Subtitle}
-
-Plain text.
-
-\subsection{Another subtitle}
-
-More plain text.
-
+\input{Chapters/Einleitung}
+\input{Chapters/Grundlagen}
+\input{Chapters/Konzeption}
+\input{Chapters/UMLProfil}
+\input{Chapters/M1Modell}
+\input{Chapters/Generator}
+\input{Chapters/Ergebnis}
+\input{Chapters/FazitAusblick}
 
 \end{document}
