@@ -3,7 +3,6 @@
 # Package Files #
 *.jar
 *.war
-.project
 
 # gwt caches and compiled units #
 war/gwt_bree/
@@ -16,4 +15,5 @@ gwt-unitCache/
 war/WEB-INF/deploy/
 war/WEB-INF/classes/
 /LaTeX/Output
+/
 /tmp
