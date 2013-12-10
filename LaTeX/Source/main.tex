@@ -1,22 +1,27 @@
 %%This is a very basic article template.
 %%There is just one section and two subsections.
 \documentclass{thesis}
+
 \usepackage{makeidx}
+\usepackage[T1]{fontenc} 
 \usepackage[ngerman]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\nonfrenchspacing
 \usepackage{url}
 \usepackage{breakcites}
-\usepackage{epsfig}
+\usepackage{epsfig} 
 
 \begin{document}
+\pagenumbering{roman}
 \title{Generierung einer frontendseitigen GWT Anwendung unter Verwendung
 von dem MVP Pattern und Dependency Injection}
-\author{Claudia Sch‰fer	|	Marcus Fabarius	|	Stephanie Lehmann\\ CMS}
+\author{Claudia Sch√§fer	|	Marcus Fabarius	|	Stephanie Lehmann\\ CMS}
 \maketitle
 
 
 \input{Pages/Inhaltsverzeichnis}
 
+\pagenumbering{arabic}
 \input{Chapters/Einleitung}
 \input{Chapters/Grundlagen}
 \input{Chapters/Konzeption}
