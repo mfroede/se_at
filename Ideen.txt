@@ -1,0 +1,13 @@
+View -> Erzeugung von View, Activity und Place, XML
+View nur wenn mehr als eine ViewImpl zur selben View, unterschied im Generator berücksichtigen
+ViewImpl -> eigentliche Implementierung der View, boolean Bind (Wechsel der View möglich, bind für alle ViewImpl als Kommentar)
+PermanentView -> zB: Footer und Header, drei Typen Footer, Header, other. Bei Footer und Header Positionierung
+ViewObject als InteractionElement Navigation in den Properties der Elemente
+Generierung von interactions Elementen, in XML und bei Bedarf in ViewImpl
+
+
+Ausblick (wenn Zeit):
+	Generierung einer separaten Navigation Ansicht in Form eines ActivityDiagrams
+	Generierung eines Gesamt UML-Klassendiagram
+	
+Offene Fragen:
