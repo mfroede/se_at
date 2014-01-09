@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.7)  10 DEC 2013 11:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.11.7)  10 DEC 2013 14:57
 entering extended mode
 **main.tex
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.tex
@@ -427,14 +427,16 @@ Here is how much of TeX's memory you used:
 {C:/Program Files/
 MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/cm-super/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-su
-per/sfrm1728.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl0
-900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1000.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
-Output written on main.pdf (11 pages, 127338 bytes).
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-s
+uper/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
+1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1728.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl0900.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb>
+Output written on main.pdf (11 pages, 149385 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
