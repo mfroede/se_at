@@ -3,11 +3,21 @@ View nur wenn mehr als eine ViewImpl zur selben View, unterschied im Generator b
 ViewImpl -> eigentliche Implementierung der View, boolean Bind (Wechsel der View möglich, bind für alle ViewImpl als Kommentar)
 PermanentView -> zB: Footer und Header, drei Typen Footer, Header, other. Bei Footer und Header Positionierung
 ViewObject als InteractionElement Navigation in den Properties der Elemente
-Generierung von interactions Elementen, in XML und bei Bedarf in ViewImpl
-
+---------------------------------------------------------------------------
+List,Menu,Tree- jeweils Items Verhalten beschreiben (for schleife für input navigation auf die einzelnen items)
+Generierung Kommentar für setzen der genannten Items
+Verhalten: OpenDialog(einfaches Popup oder OwnDialog), ZwischenspeichernVonWerten(z.B. Auf mehrere Seiten verteiltes Formular) und goToView
+DatenKlassen integrieren(dienen auch als zusätzliche Möglichkeit zur Befüllung im Objekt z.B. Table)
+setzen von Values und Labels (auch auf null immer wenn beim jeweiligem Objekt möglich, nicht setzen immer wenn nicht möglich bei einem Objekt)
+Vererbung von ViewObject und ViewNavigationObject nicht möglich (unterschiedliche Typen bei property type)
 
 Ausblick (wenn Zeit):
 	Generierung einer separaten Navigation Ansicht in Form eines ActivityDiagrams
 	Generierung eines Gesamt UML-Klassendiagram
 	
 Offene Fragen:
+	Generierung von interactions Elementen, in XML und bei Bedarf in ViewImpl
+	Items setzen z.B. Menu in den meisten Fällen fest(also in ausschließlich XML möglich)
+	
+Zwischenstand:
+	keine Möglichkeit Anzahl oder in anderer Weise Items auf Objekte zu setzen
