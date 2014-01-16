@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generate" nsURI="beuth::se::ue4::profile::common::generate" startHeaderPosition="29" endHeaderPosition="-1">
+  <mtl:Module name="generate" nsURI="beuth::se::ue4::profile::common::generate" startHeaderPosition="30" endHeaderPosition="-1">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generate" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <parameter name="aClass">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
       </parameter>
@@ -85,18 +85,18 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generate">
-      <details key="start" value="90"/>
-      <details key="end" value="145"/>
+      <details key="start" value="94"/>
+      <details key="end" value="151"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generate/%">
-      <details key="start" value="133"/>
-      <details key="end" value="134"/>
+      <details key="start" value="138"/>
+      <details key="end" value="140"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generate/aClass">
-      <details key="start" value="116"/>
-      <details key="end" value="130"/>
+      <details key="start" value="120"/>
+      <details key="end" value="134"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>

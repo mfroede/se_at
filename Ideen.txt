@@ -1,4 +1,4 @@
-View -> Erzeugung von View, Activity und Place, XML
+﻿View -> Erzeugung von View, Activity und Place, XML
 View nur wenn mehr als eine ViewImpl zur selben View, unterschied im Generator berücksichtigen
 ViewImpl -> eigentliche Implementierung der View, boolean Bind (Wechsel der View möglich, bind für alle ViewImpl als Kommentar)
 PermanentView -> zB: Footer und Header, drei Typen Footer, Header, other. Bei Footer und Header Positionierung
@@ -21,3 +21,7 @@ Offene Fragen:
 	
 Zwischenstand:
 	keine Möglichkeit Anzahl oder in anderer Weise Items auf Objekte zu setzen
+
+Feststellungen:
+	Property-Objects of view zweimal enthalten
+	Probleme mit Profil mei PermanentView
