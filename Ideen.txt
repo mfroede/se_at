@@ -13,7 +13,7 @@ Vererbung von ViewObject und ViewNavigationObject nicht möglich (unterschiedlic
 
 Ausblick (wenn Zeit):
 	Generierung einer separaten Navigation Ansicht in Form eines ActivityDiagrams
-	Generierung eines Gesamt UML-Klassendiagram
+	Generierung eines Gesamt UML-Klassendiagramm
 	
 Offene Fragen:
 	Generierung von interactions Elementen, in XML und bei Bedarf in ViewImpl
@@ -24,4 +24,4 @@ Zwischenstand:
 
 Feststellungen:
 	Property-Objects of view zweimal enthalten
-	Probleme mit Profil mei PermanentView
+	Probleme mit Profil mit PermanentView

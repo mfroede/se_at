@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w">
+  <uml:Model xmi:id="_LjYDQH0PEeOmQMDesVJLfw" name="beuth.se.ue4.app.PortfolieDemo" URI="" viewpoint="">
+    <packagedElement xmi:type="uml:Class" xmi:id="_W0yGEH0PEeOmQMDesVJLfw" name="About">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qXATEH0QEeOmQMDesVJLfw" name="infoText" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rEYWcH0QEeOmQMDesVJLfw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rEYWcX0QEeOmQMDesVJLfw" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_rEYWcn0QEeOmQMDesVJLfw">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5g4FAH6sEeOTOt9HQcChsg" name="Header">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Kd4_wH6tEeOTOt9HQcChsg" name="menu" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KsfccH6tEeOTOt9HQcChsg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KsfccX6tEeOTOt9HQcChsg" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ksfccn6tEeOTOt9HQcChsg">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SsyB4H6vEeOYXsTxu91P0A" name="about" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S9BdUH6vEeOYXsTxu91P0A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S9BdUX6vEeOYXsTxu91P0A" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_S9BdUn6vEeOYXsTxu91P0A">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fQkSkH6vEeOYXsTxu91P0A" name="home" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_frPcYH6vEeOYXsTxu91P0A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_frPcYX6vEeOYXsTxu91P0A" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_frPcYn6vEeOYXsTxu91P0A">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1rOtEIQmEeORmKr0PGrM5w" name="news" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_14MLAIQmEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_14MLAYQmEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_14MLAoQmEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8nvMMIQmEeORmKr0PGrM5w" name="portfolio" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_84RikIQmEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_84RikYQmEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_84RikoQmEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_NYPKYIQmEeORmKr0PGrM5w" name="Footer">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VY_UwIQmEeORmKr0PGrM5w" name="Impressum" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VucnYIQmEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VucnYYQmEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_VucnYoQmEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hQ9oUIQmEeORmKr0PGrM5w" name="Home">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q7lf4IQnEeORmKr0PGrM5w" name="label1" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RRpPcIQnEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RRpPcYQnEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_RRpPcoQnEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pB7qQIQmEeORmKr0PGrM5w" name="News">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MVdz4IQoEeORmKr0PGrM5w" name="newsList" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MgMdMIQoEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MgMdMYQoEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_MgMdMoQoEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ud1CIIQoEeORmKr0PGrM5w" name="fistNews" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UpAXYIQoEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UpAXYYQoEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_UpAXYoQoEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_qGVGgIQmEeORmKr0PGrM5w" name="Portfolio">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y1CvcIQnEeORmKr0PGrM5w" name="lebenslauf" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZDDWQIQnEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZDDWQYQnEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZDDWQoQnEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eVwmAIQnEeORmKr0PGrM5w" name="name" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_egMUYIQnEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_egMUYYQnEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_egMUYoQnEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fkSOoIQnEeORmKr0PGrM5w" name="bday" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_frS1kIQnEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_frS1kYQnEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_frS1koQnEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_g9GbsIQnEeORmKr0PGrM5w" name="address" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hFvaUIQnEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hFvaUYQnEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_hFvaUoQnEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yna90IQmEeORmKr0PGrM5w" name="Impressum">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eI-40IQoEeORmKr0PGrM5w" name="impressum" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eXlVgIQoEeORmKr0PGrM5w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eXlVgYQoEeORmKr0PGrM5w" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_eXlVgoQoEeORmKr0PGrM5w">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_mS-h8IQsEeORmKr0PGrM5w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mTRc4IQsEeORmKr0PGrM5w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../beuth.se.ue4.profile/model/gwt.profile.uml#_qmF-cHkfEeOUo5BywlZ9hA"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:ViewImpl xmi:id="_iw4EoH0PEeOmQMDesVJLfw" base_Class="_W0yGEH0PEeOmQMDesVJLfw"/>
+  <profile:ViewObject xmi:id="_stQ_0H0QEeOmQMDesVJLfw" type="LABEL" base_Property="_qXATEH0QEeOmQMDesVJLfw" value="Hallo ich bin,...." label=""/>
+  <profile:ViewObject xmi:id="_JoFHMH6vEeOYXsTxu91P0A" type="MENU" base_Property="_Kd4_wH6tEeOTOt9HQcChsg" viewNavigationObject="_iFUSIH6vEeOYXsTxu91P0A _TWEPcH6vEeOYXsTxu91P0A _5pcPEIQmEeORmKr0PGrM5w _-fibUIQmEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_TWEPcH6vEeOYXsTxu91P0A" base_Property="_SsyB4H6vEeOYXsTxu91P0A" type="ITEM" GoToView="_iw4EoH0PEeOmQMDesVJLfw" value="About"/>
+  <profile:ViewNavigationObject xmi:id="_iFUSIH6vEeOYXsTxu91P0A" base_Property="_fQkSkH6vEeOYXsTxu91P0A" type="ITEM" GoToView="_j4KUEIQmEeORmKr0PGrM5w"/>
+  <profile:Header xmi:id="_vUgGcIQkEeORmKr0PGrM5w" base_Class="_5g4FAH6sEeOTOt9HQcChsg"/>
+  <profile:Footer xmi:id="_Pv7agIQmEeORmKr0PGrM5w" base_Class="_NYPKYIQmEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_WuE4YIQmEeORmKr0PGrM5w" base_Property="_VY_UwIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_0MTQ8IQmEeORmKr0PGrM5w" value="Impressum" label="Impressum"/>
+  <profile:ViewImpl xmi:id="_j4KUEIQmEeORmKr0PGrM5w" base_Class="_hQ9oUIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_tAvpMIQmEeORmKr0PGrM5w" base_Class="_pB7qQIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_uqi4kIQmEeORmKr0PGrM5w" base_Class="_qGVGgIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_0MTQ8IQmEeORmKr0PGrM5w" base_Class="_yna90IQmEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_5pcPEIQmEeORmKr0PGrM5w" base_Property="_1rOtEIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_tAvpMIQmEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_-fibUIQmEeORmKr0PGrM5w" base_Property="_8nvMMIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_uqi4kIQmEeORmKr0PGrM5w"/>
+  <profile:ViewObject xmi:id="_RnGiEIQnEeORmKr0PGrM5w" type="LABEL" base_Property="_Q7lf4IQnEeORmKr0PGrM5w" value="Hallo Welt!"/>
+  <profile:ViewObject xmi:id="_bNoXcIQnEeORmKr0PGrM5w" type="TABLE" base_Property="_Y1CvcIQnEeORmKr0PGrM5w" viewNavigationObject="_jTmZAIQnEeORmKr0PGrM5w _5Pir4IQnEeORmKr0PGrM5w _Gf5HoIQoEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_jTmZAIQnEeORmKr0PGrM5w" base_Property="_eVwmAIQnEeORmKr0PGrM5w" type="ITEM" value="Blub1" label="Name"/>
+  <profile:ViewNavigationObject xmi:id="_5Pir4IQnEeORmKr0PGrM5w" base_Property="_fkSOoIQnEeORmKr0PGrM5w" type="ITEM" value="01.01.1980" label="bday"/>
+  <profile:ViewNavigationObject xmi:id="_Gf5HoIQoEeORmKr0PGrM5w" base_Property="_g9GbsIQnEeORmKr0PGrM5w" type="ITEM" value="Luxemburgerstr. 117&#xD;&#xA;12345 Berlin" label="Anders"/>
+  <profile:ViewObject xmi:id="_Phd10IQoEeORmKr0PGrM5w" type="LIST" base_Property="_MVdz4IQoEeORmKr0PGrM5w" viewNavigationObject="_WwKRIIQoEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_WwKRIIQoEeORmKr0PGrM5w" base_Property="_Ud1CIIQoEeORmKr0PGrM5w" type="ITEM" value="Nothing" label="News"/>
+  <profile:ViewObject xmi:id="_f61Q8IQoEeORmKr0PGrM5w" type="LABEL" base_Property="_eI-40IQoEeORmKr0PGrM5w" value="Fülltext" label="text"/>
+  <profile:ViewImpl xmi:id="_qClnQIQsEeORmKr0PGrM5w" base_Class="_W0yGEH0PEeOmQMDesVJLfw"/>
+  <profile:ViewImpl xmi:id="_sWs-8IQsEeORmKr0PGrM5w" base_Class="_pB7qQIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_s-fXsIQsEeORmKr0PGrM5w" base_Class="_hQ9oUIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_te1EoIQsEeORmKr0PGrM5w" base_Class="_qGVGgIQmEeORmKr0PGrM5w"/>
+  <profile:ViewImpl xmi:id="_t_wncIQsEeORmKr0PGrM5w" base_Class="_yna90IQmEeORmKr0PGrM5w"/>
+  <profile:Header xmi:id="_xh9i4IQsEeORmKr0PGrM5w" base_Class="_5g4FAH6sEeOTOt9HQcChsg"/>
+  <profile:Footer xmi:id="_yEY6gIQsEeORmKr0PGrM5w" base_Class="_NYPKYIQmEeORmKr0PGrM5w"/>
+  <profile:ViewObject xmi:id="_znLi8IQsEeORmKr0PGrM5w" type="LABEL" base_Property="_qXATEH0QEeOmQMDesVJLfw" value="Hier Text&#xD;&#xA;" label="text"/>
+  <profile:ViewObject xmi:id="_4XURIIQsEeORmKr0PGrM5w" type="LABEL" base_Property="_Q7lf4IQnEeORmKr0PGrM5w" value="Fülltext"/>
+  <profile:ViewNavigationObject xmi:id="_--OTsIQsEeORmKr0PGrM5w" base_Property="_Ud1CIIQoEeORmKr0PGrM5w" type="ITEM" value="news"/>
+  <profile:ViewObject xmi:id="_A9L6wIQtEeORmKr0PGrM5w" type="LIST" base_Property="_MVdz4IQoEeORmKr0PGrM5w" value="liste"/>
+  <profile:ViewObject xmi:id="_GxkUMIQtEeORmKr0PGrM5w" type="TABLE" base_Property="_Y1CvcIQnEeORmKr0PGrM5w" value="tabelle halt" viewNavigationObject="_JdYaMIQtEeORmKr0PGrM5w _NrZSwIQtEeORmKr0PGrM5w _PSz8gIQtEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_JdYaMIQtEeORmKr0PGrM5w" base_Property="_eVwmAIQnEeORmKr0PGrM5w" type="ITEM" value="Vorname Nachname"/>
+  <profile:ViewNavigationObject xmi:id="_NrZSwIQtEeORmKr0PGrM5w" base_Property="_fkSOoIQnEeORmKr0PGrM5w" type="ITEM" value="gestern"/>
+  <profile:ViewNavigationObject xmi:id="_PSz8gIQtEeORmKr0PGrM5w" base_Property="_g9GbsIQnEeORmKr0PGrM5w" type="ITEM" value="straße 1&#xD;&#xA;12345 irgendwo"/>
+  <profile:ViewObject xmi:id="_UMMGQIQtEeORmKr0PGrM5w" type="LABEL" base_Property="_eI-40IQoEeORmKr0PGrM5w" value="Fülltext"/>
+  <profile:ViewNavigationObject xmi:id="_W2NcgIQtEeORmKr0PGrM5w" base_Property="_SsyB4H6vEeOYXsTxu91P0A" type="ITEM" GoToView="_qClnQIQsEeORmKr0PGrM5w" value="About"/>
+  <profile:ViewNavigationObject xmi:id="_aTDW0IQtEeORmKr0PGrM5w" base_Property="_fQkSkH6vEeOYXsTxu91P0A" type="ITEM" GoToView="_s-fXsIQsEeORmKr0PGrM5w" value="Home"/>
+  <profile:ViewNavigationObject xmi:id="_dV9uMIQtEeORmKr0PGrM5w" base_Property="_1rOtEIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_sWs-8IQsEeORmKr0PGrM5w" value="News"/>
+  <profile:ViewNavigationObject xmi:id="_gW8L4IQtEeORmKr0PGrM5w" base_Property="_8nvMMIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_te1EoIQsEeORmKr0PGrM5w" value="Protfolio"/>
+  <profile:ViewObject xmi:id="_jbMAAIQtEeORmKr0PGrM5w" type="MENU" base_Property="_Kd4_wH6tEeOTOt9HQcChsg" value="Menu" viewNavigationObject="_W2NcgIQtEeORmKr0PGrM5w _aTDW0IQtEeORmKr0PGrM5w _dV9uMIQtEeORmKr0PGrM5w _gW8L4IQtEeORmKr0PGrM5w"/>
+  <profile:ViewNavigationObject xmi:id="_oVf94IQtEeORmKr0PGrM5w" base_Property="_VY_UwIQmEeORmKr0PGrM5w" type="ITEM" GoToView="_t_wncIQsEeORmKr0PGrM5w" value="Impressum"/>
+</xmi:XMI>
