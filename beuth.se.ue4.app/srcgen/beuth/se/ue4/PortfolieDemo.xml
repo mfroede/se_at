@@ -1,3 +1,4 @@
+beuth/se/ue4/PortfolieDemo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- When updating your version of GWT, you should also update this DTD reference, 
 	so that your app can take advantage of the latest GWT module capabilities. -->
@@ -22,9 +23,9 @@
 	<inherits name="com.google.gwt.inject.Inject" />
 
 	<!-- Specify the app entry point class. -->
-	<entry-point class='beuth.se.ue4.app.client.AppEntryPoint' />
+	<entry-point class='beuth.se.ue4.client.AppEntryPoint' />
 
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />
 </module>
-	beuth/se/ue4/app/client/AppEntryPoint.java
+beuth/se/ue4/client/AppEntryPoint.java

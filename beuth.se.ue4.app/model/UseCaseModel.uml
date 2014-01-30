@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w">
-  <uml:Model xmi:id="_LjYDQH0PEeOmQMDesVJLfw" name="beuth.se.ue4.app.PortfolieDemo" URI="" viewpoint="">
+  <uml:Model xmi:id="_LjYDQH0PEeOmQMDesVJLfw" name="beuth.se.ue4.PortfolieDemo" URI="" viewpoint="">
     <packagedElement xmi:type="uml:Class" xmi:id="_W0yGEH0PEeOmQMDesVJLfw" name="About">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_qXATEH0QEeOmQMDesVJLfw" name="infoText" visibility="public">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rEYWcH0QEeOmQMDesVJLfw" value="1"/>

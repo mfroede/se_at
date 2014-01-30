@@ -1,0 +1,8 @@
+[comment encoding = UTF-8 /]
+[module util('http://www.eclipse.org/uml2/4.0.0/UML')]
+
+
+[query public quallyName(model : Model) : String = 
+   model.name.replaceAll('[.]', '/')/]
+[query public packageName(model : Model) : String = 
+   model.name.substring( 1, model.name.lastIndexOf('.') )/]

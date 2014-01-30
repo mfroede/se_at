@@ -1,8 +1,8 @@
-package beuth.se.ue4.app.client;
+package beuth.se.ue4.client;
 
-import beuth.se.ue4.app.client.common.AppPlaceHistoryMapper;
-import beuth.se.ue4.app.client.gin.AppGinjector;
-import beuth.se.ue4.app.client.modules.start.StartPlace;
+import beuth.se.ue4.client.common.AppPlaceHistoryMapper;
+import beuth.se.ue4.client.gin.AppGinjector;
+import beuth.se.ue4.client.modules.start.StartPlace;
 import org.fusesource.restygwt.client.Defaults;
 
 import com.google.gwt.activity.shared.ActivityManager;
@@ -36,13 +36,28 @@ public class AppEntryPoint implements EntryPoint {
 				activityMapper, eventBus);
 		contentActivityManager.setDisplay(content);
 
-		ActivityMapper activityMapper2 = injector
-				.getNavigationViewActivityMapper();
-		SimplePanel navigation = new SimplePanel();
+--------------------------------------------------
 
-		ActivityManager contentActivityManager2 = new ActivityManager(
-				activityMapper2, eventBus);
-		contentActivityManager2.setDisplay(navigation);
+		ActivityMapper activityMapperHeader = injector
+				.getNavigationViewActivityMapper();
+		SimplePanel header = new SimplePanel();
+
+		ActivityManager contentActivityManagerHeader = new ActivityManager(
+				activityMapperHeader, eventBus);
+		contentActivityManagerHeader.setDisplay(header);
+
+		
+		ActivityMapper activityMapperFooter = injector
+				.getNavigationViewActivityMapper();
+		SimplePanel footer = new SimplePanel();
+
+		ActivityManager contentActivityManagerFooter = new ActivityManager(
+				activityMapperFooter, eventBus);
+		contentActivityManagerFooter.setDisplay(footer);
+
+		
+
+--------------------------------------------------
 
 		RootPanel.get().add(navigation);
 		RootPanel.get().add(content);

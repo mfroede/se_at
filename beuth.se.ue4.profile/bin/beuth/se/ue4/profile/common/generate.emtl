@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generate" nsURI="beuth::se::ue4::profile::common::generate" startHeaderPosition="29" endHeaderPosition="147">
+  <mtl:Module name="generate" nsURI="beuth::se::ue4::profile::common::generate" startHeaderPosition="30" endHeaderPosition="149">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
     </input>
@@ -13,7 +13,7 @@
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Model"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;"/>
       <parameter name="model">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Model"/>
       </parameter>
@@ -108,28 +108,28 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generate">
-      <details key="start" value="151"/>
-      <details key="end" value="251"/>
+      <details key="start" value="155"/>
+      <details key="end" value="260"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generate/%">
-      <details key="start" value="211"/>
-      <details key="end" value="235"/>
+      <details key="start" value="217"/>
+      <details key="end" value="241"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generate/%/model">
-      <details key="start" value="229"/>
-      <details key="end" value="234"/>
+      <details key="start" value="235"/>
+      <details key="end" value="240"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generate/%.1">
-      <details key="start" value="237"/>
-      <details key="end" value="239"/>
+      <details key="start" value="243"/>
+      <details key="end" value="247"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generate/model">
-      <details key="start" value="177"/>
-      <details key="end" value="190"/>
+      <details key="start" value="181"/>
+      <details key="end" value="194"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>

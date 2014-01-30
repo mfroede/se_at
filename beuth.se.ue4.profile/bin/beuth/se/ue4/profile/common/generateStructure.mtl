@@ -1,5 +1,6 @@
 [comment encoding = UTF-8 /]
 [module generateStructure('http://www.eclipse.org/uml2/4.0.0/UML')]
+[import beuth::se::ue4::profile::common::util /]
 
 
 [template public generateStructure(model : Model)]
@@ -8,16 +9,11 @@
 
 [/template]
 
-[template public qualliName(model : Model)]
-	[model.name.replaceAll('[.]', '/')/]
-[/template]
 
-[template public packageName(model : Model)]
-	[model.name.substring( 1, model.name.lastIndexOf('.') )/]
-[/template]
 
 [template public configXML(model : Model)]
-[file (qualliName(model) + '.xml', false, 'UTF-8')]
+[file (quallyName(model) + '.xml', false, 'UTF-8')]
+[quallyName(model) + '.xml'/]
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- When updating your version of GWT, you should also update this DTD reference, 
 	so that your app can take advantage of the latest GWT module capabilities. -->
@@ -42,7 +38,7 @@
 	<inherits name="com.google.gwt.inject.Inject" />
 
 	<!-- Specify the app entry point class. -->
-	<entry-point class='[model.name.substring( 1, model.name.lastIndexOf('.') )/]client.AppEntryPoint' />
+	<entry-point class='[packageName(model)/]client.AppEntryPoint' />
 
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />
@@ -53,11 +49,11 @@
 
 [template public EntryPoint(model : Model)]
 [file (packageName(model).replaceAll('[.]', '/') + 'client/AppEntryPoint.java', false, 'UTF-8')]
-package [model.name.substring( 1, model.name.lastIndexOf('.') )/]client;
+package [packageName(model)/]client;
 
-import [model.name.substring( 1, model.name.lastIndexOf('.') )/]client.common.AppPlaceHistoryMapper;
-import [model.name.substring( 1, model.name.lastIndexOf('.') )/]client.gin.AppGinjector;
-import [model.name.substring( 1, model.name.lastIndexOf('.') )/]client.modules.start.StartPlace;
+import [packageName(model)/]client.common.AppPlaceHistoryMapper;
+import [packageName(model)/]client.gin.AppGinjector;
+import [packageName(model)/]client.modules.start.StartPlace;
 import org.fusesource.restygwt.client.Defaults;
 
 import com.google.gwt.activity.shared.ActivityManager;
@@ -91,14 +87,39 @@ public class AppEntryPoint implements EntryPoint {
 				activityMapper, eventBus);
 		contentActivityManager.setDisplay(content);
 
-		ActivityMapper activityMapper2 = injector
+--------------------------------------------------
+[for (interface : Interface | model.ownedElement)]
+[interface.name/]
+[interface.getAppliedStereotypes()/]
+	[if (interface.getAppliedStereotype('PermanentView')->notEmpty())]
+	
+		ActivityMapper activityMapper[interface.name/] = injector
 				.getNavigationViewActivityMapper();
-		SimplePanel navigation = new SimplePanel();
+		SimplePanel [interface.name.toLowerFirst()/] = new SimplePanel();
 
-		ActivityManager contentActivityManager2 = new ActivityManager(
-				activityMapper2, eventBus);
-		contentActivityManager2.setDisplay(navigation);
+		ActivityManager contentActivityManager[interface.name/] = new ActivityManager(
+				activityMapper[interface.name/], eventBus);
+		contentActivityManager[interface.name/].setDisplay([interface.name.toLowerFirst()/]);
+		
+	[/if]
+[/for]
 
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
+		ActivityMapper activityMapper[class.name/] = injector
+				.getNavigationViewActivityMapper();
+		SimplePanel [class.name.toLowerFirst()/] = new SimplePanel();
+
+		ActivityManager contentActivityManager[class.name/] = new ActivityManager(
+				activityMapper[class.name/], eventBus);
+		contentActivityManager[class.name/].setDisplay([class.name.toLowerFirst()/]);
+
+		
+	[/if]
+[/for]
+
+--------------------------------------------------
+[model.ownedElement.getAppliedStereotypes().name.endsWith('Header')/]
 		RootPanel.get().add(navigation);
 		RootPanel.get().add(content);
 
