@@ -6,10 +6,12 @@
 [template public generateStructure(model : Model)]
 [configXML(model)/]
 [EntryPoint(model)/]
-
+[appPlaceHistoryMapper(model)/]
+[activityMapper(model)/]
+[activityView(model)/]
+[abstractActivityDefaultImpl(model)/]
+[gin(model)/]
 [/template]
-
-
 
 [template public configXML(model : Model)]
 [file (quallyName(model) + '.xml', false, 'UTF-8')]
@@ -34,7 +36,6 @@
 	<inherits name='com.google.gwt.activity.Activity' />
 	<inherits name='com.google.gwt.place.Place' />
 	<inherits name="com.google.gwt.i18n.I18N" />
-	<inherits name='org.fusesource.restygwt.RestyGWT' />
 	<inherits name="com.google.gwt.inject.Inject" />
 
 	<!-- Specify the app entry point class. -->
@@ -47,14 +48,12 @@
 [/file]
 [/template]
 
-[template public EntryPoint(model : Model)]
+[template public EntryPoint(model : Model) ]
 [file (packageName(model).replaceAll('[.]', '/') + 'client/AppEntryPoint.java', false, 'UTF-8')]
 package [packageName(model)/]client;
 
 import [packageName(model)/]client.common.AppPlaceHistoryMapper;
 import [packageName(model)/]client.gin.AppGinjector;
-import [packageName(model)/]client.modules.start.StartPlace;
-import org.fusesource.restygwt.client.Defaults;
 
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -67,12 +66,6 @@ import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.web.bindery.event.shared.EventBus;
 
 public class AppEntryPoint implements EntryPoint {
-	static {
-		// if you don't do this, on JSON response you'll get something like
-		// this:
-		// "Could not parse response: org.fusesource.restygwt.client.ResponseFormatException: Response was NOT a valid JSON document"
-		Defaults.setDateFormat(null);
-	}
 
 	@Override
 	public void onModuleLoad() {
@@ -87,10 +80,8 @@ public class AppEntryPoint implements EntryPoint {
 				activityMapper, eventBus);
 		contentActivityManager.setDisplay(content);
 
---------------------------------------------------
+//--------------------------------------------------
 [for (interface : Interface | model.ownedElement)]
-[interface.name/]
-[interface.getAppliedStereotypes()/]
 	[if (interface.getAppliedStereotype('PermanentView')->notEmpty())]
 	
 		ActivityMapper activityMapper[interface.name/] = injector
@@ -103,7 +94,6 @@ public class AppEntryPoint implements EntryPoint {
 		
 	[/if]
 [/for]
-
 [for (class : Class | model.ownedElement)]
 	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
 		ActivityMapper activityMapper[class.name/] = injector
@@ -118,21 +108,278 @@ public class AppEntryPoint implements EntryPoint {
 	[/if]
 [/for]
 
---------------------------------------------------
-[model.ownedElement.getAppliedStereotypes().name.endsWith('Header')/]
-		RootPanel.get().add(navigation);
-		RootPanel.get().add(content);
+//--------------------------------------------------
+
+[for (class : Class | model.ownedElement)]
+[if ( class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') )]
+		RootPanel.get().add( [class.name.toLowerFirst()/] );
+[/if]
+[/for]
+		RootPanel.get().add( content );
+[for (class : Class | model.ownedElement)]
+[if ( class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') )]
+		RootPanel.get().add( [class.name.toLowerFirst()/] );
+[/if]
+[/for]
+[for (class : Class | model.ownedElement)]
+[if ( class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer') )]
+		RootPanel.get().add( [class.name.toLowerFirst()/] );
+[/if]
+[/for]
 
 		AppPlaceHistoryMapper historyMapper = GWT
 				.create(AppPlaceHistoryMapper.class);
 		PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(
 				historyMapper);
 		historyHandler.register(injector.getPlaceController(), eventBus,
-				new StartPlace());
+				new YourStartHerePlace());
 
 		historyHandler.handleCurrentHistory();
 	}
 }
 
 [/file]
+[/template]
+
+[template public appPlaceHistoryMapper(model : Model) ]
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/AppPlaceHistoryMapper.java', false, 'UTF-8')]
+package [packageName(model)/]client.common;
+
+
+[for (class : Class | model.ownedElement)]
+import [packageName(model)/]client.view.[class.name/]Place;
+[/for]
+
+import com.google.gwt.place.shared.PlaceHistoryMapper;
+import com.google.gwt.place.shared.WithTokenizers;
+
+@WithTokenizers({ 
+	[for (class : Class | model.ownedElement)]
+		[class.name/]Place.Tokenizer.class,
+	[/for] })
+public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {
+
+}
+[/file]
+[/template]
+
+[template public activityMapper(model : Model) ]
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/'+class.name+'ViewActivityMapper.java', false, 'UTF-8')]
+package [packageName(model)/]client.common;
+
+import [packageName(model)/]client.view.[class.name/]Activity;
+
+import com.google.gwt.activity.shared.Activity;
+import com.google.gwt.activity.shared.ActivityMapper;
+import com.google.gwt.place.shared.Place;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+public class [class.name/]ViewActivityMapper implements ActivityMapper {
+
+	
+	@Inject
+	Provider<[class.name/]Activity> [class.name.toLowerFirst()/]ActivityProvider;
+	
+	@Override
+	public Activity getActivity(Place place) {
+		return [class.name.toLowerFirst()/]ActivityProvider.get();
+	}
+
+}
+[/file]
+	[/if]
+[/for]
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/ActivityMapperImpl.java', false, 'UTF-8')]
+package [packageName(model)/]client.common;
+
+[for (class : Class | model.ownedElement)]
+	[if (not class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') and not class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') and not class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer') )]
+import [packageName(model)/]client.view.[class.name/]Activity;
+import [packageName(model)/]client.view.[class.name/]Place;
+	[/if]
+[/for]
+import com.google.gwt.activity.shared.Activity;
+import com.google.gwt.activity.shared.ActivityMapper;
+import com.google.gwt.place.shared.Place;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+public class ActivityMapperImpl implements ActivityMapper {
+	
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl')._not() and class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header')._not() and class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer')._not())]
+	@Inject
+	Provider<[class.name/]Activity> [class.name.toLowerFirst()/]ActivityProvider;
+	[/if]
+[/for]
+	
+	@Override
+	public Activity getActivity(Place place) {
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl')._not() and class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header')._not() and class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer')._not())]
+		if (place instanceof [class.name/]Place) {
+			return [class.name.toLowerFirst()/]ActivityProvider.get();
+		}
+	[/if]
+[/for]
+		return null;
+	}
+
+}
+[/file]
+[/template]
+
+[template public activityView(model : Model) ]
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/AbstractView.java', false, 'UTF-8')]
+package [packageName(model)/]client.common;
+
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+public class AbstractView implements IsWidget {
+	protected LayoutPanel content;
+
+	public AbstractView() {
+		content = new LayoutPanel();
+		content.getElement().getStyle().setWidth(/*width here*/, Unit.PC);
+		content.getElement().getStyle().setHeight(/*height here*/, Unit.PC);
+	}
+
+	@Override
+	public Widget asWidget() {
+		return content;
+	}
+
+}
+[/file]
+[/template]
+
+[template public abstractActivityDefaultImpl(model : Model) ]
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/AbstractActivityDefaultImpl.java', false, 'UTF-8')]
+package [packageName(model)/]client.common;
+
+import com.google.gwt.activity.shared.AbstractActivity;
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+
+public class AbstractActivityDefaultImpl<T extends Place> extends
+		AbstractActivity {
+
+	protected Place place;
+
+	public Place getPlace() {
+		return place;
+	}
+
+	public void setPlace(Place place) {
+		this.place = place;
+	}
+
+	@Override
+	public void start(AcceptsOneWidget panel, EventBus eventBus) {
+		// TODO Auto-generated method stub
+	}
+}
+[/file]
+[/template]
+[template public gin(model : Model) ]
+
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/gin/AppGinjector.java', false, 'UTF-8')]
+package [packageName(model)/]client.common.gin;
+
+import [packageName(model)/]client.common.ActivityMapperImpl;
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
+import [packageName(model)/]client.common.[class.name/]ViewActivityMapper;
+	[/if]
+[/for]
+
+
+import com.google.gwt.inject.client.GinModules;
+import com.google.gwt.inject.client.Ginjector;
+import com.google.gwt.place.shared.PlaceController;
+import com.google.web.bindery.event.shared.EventBus;
+
+@GinModules(ProductionGinModule.class)
+public interface AppGinjector extends Ginjector {
+
+	public EventBus getEventBus();
+
+	public PlaceController getPlaceController();
+
+	public ActivityMapperImpl getActivityMapper();
+[for (class : Class | model.ownedElement)]
+	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
+
+	public [class.name/]ViewActivityMapper get[class.name/]ViewActivityMapper();
+[/if]
+[/for]
+}
+[/file]
+
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/gin/PlaceControllerProvider.java', false, 'UTF-8')]
+package [packageName(model)/]client.common.gin;
+
+import com.google.gwt.place.shared.PlaceController;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.web.bindery.event.shared.EventBus;
+
+public class PlaceControllerProvider implements Provider<PlaceController> {
+
+	private final EventBus eventBus;
+
+	@Inject
+	public PlaceControllerProvider(EventBus eventBus) {
+		this.eventBus = eventBus;
+	}
+
+	@Override
+	public PlaceController get() {
+		return new PlaceController(eventBus);
+	}
+
+}
+[/file]
+
+[file (packageName(model).replaceAll('[.]', '/') + 'client/common/gin/ProductionGinModule.java', false, 'UTF-8')]
+package [packageName(model)/]client.common.gin;
+
+import javax.inject.Singleton;
+
+import [packageName(model)/]client.common.ActivityMapperImpl;
+[for (class : Class | model.ownedElement)]
+import [packageName(model)/]client.view.[class.name/]View;
+import [packageName(model)/]client.view.[class.name/]ViewImpl;
+[/for]
+
+import com.google.gwt.inject.client.AbstractGinModule;
+import com.google.gwt.place.shared.PlaceController;
+import com.google.web.bindery.event.shared.EventBus;
+import com.google.web.bindery.event.shared.SimpleEventBus;
+
+public class ProductionGinModule extends AbstractGinModule {
+
+	@Override
+	protected void configure() {
+		bind(EventBus.class).to(SimpleEventBus.class).in(Singleton.class);
+		bind(PlaceController.class).toProvider(PlaceControllerProvider.class)
+				.in(Singleton.class);
+		bind(ActivityMapperImpl.class).in(Singleton.class);
+
+		bind(YourStartHereActivity.class);
+
+[for (class : Class | model.ownedElement)]
+		bind([class.name/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+[/for]
+	}
+}
+[/file]
+
 [/template]

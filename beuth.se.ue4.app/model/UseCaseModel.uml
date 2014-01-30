@@ -10,7 +10,7 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_5g4FAH6sEeOTOt9HQcChsg" name="Header">
+    <packagedElement xmi:type="uml:Class" xmi:id="_5g4FAH6sEeOTOt9HQcChsg" name="MyHeader">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Kd4_wH6tEeOTOt9HQcChsg" name="menu" visibility="public">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KsfccH6tEeOTOt9HQcChsg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KsfccX6tEeOTOt9HQcChsg" value="1"/>
@@ -47,7 +47,7 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_NYPKYIQmEeORmKr0PGrM5w" name="Footer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_NYPKYIQmEeORmKr0PGrM5w" name="MyFooter">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_VY_UwIQmEeORmKr0PGrM5w" name="Impressum" visibility="public">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VucnYIQmEeORmKr0PGrM5w" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VucnYYQmEeORmKr0PGrM5w" value="1"/>

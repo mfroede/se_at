@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="util" nsURI="beuth::se::ue4::profile::common::util" startHeaderPosition="29" endHeaderPosition="174">
+  <mtl:Module name="util" nsURI="beuth::se::ue4::profile::common::util" startHeaderPosition="30" endHeaderPosition="179">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
     </input>
@@ -152,88 +152,88 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/quallyName">
-      <details key="start" value="86"/>
-      <details key="end" value="176"/>
+      <details key="start" value="90"/>
+      <details key="end" value="181"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/quallyName/model">
-      <details key="start" value="111"/>
-      <details key="end" value="124"/>
+      <details key="start" value="115"/>
+      <details key="end" value="128"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/quallyName/%">
-      <details key="start" value="141"/>
-      <details key="end" value="174"/>
+      <details key="start" value="146"/>
+      <details key="end" value="179"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/quallyName/%/%">
-      <details key="start" value="141"/>
-      <details key="end" value="151"/>
+      <details key="start" value="146"/>
+      <details key="end" value="156"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/quallyName/%/%/model">
-      <details key="start" value="141"/>
-      <details key="end" value="146"/>
+      <details key="start" value="146"/>
+      <details key="end" value="151"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/quallyName/%/%.1">
-      <details key="start" value="163"/>
-      <details key="end" value="168"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/quallyName/%/%.2">
-      <details key="start" value="170"/>
+      <details key="start" value="168"/>
       <details key="end" value="173"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/quallyName/%/%.2">
+      <details key="start" value="175"/>
+      <details key="end" value="178"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.7" references="/0/packageName">
-      <details key="start" value="177"/>
-      <details key="end" value="289"/>
+      <details key="start" value="183"/>
+      <details key="end" value="296"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/packageName/model">
-      <details key="start" value="203"/>
-      <details key="end" value="216"/>
+      <details key="start" value="209"/>
+      <details key="end" value="222"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/packageName/%">
-      <details key="start" value="233"/>
-      <details key="end" value="287"/>
+      <details key="start" value="240"/>
+      <details key="end" value="294"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/packageName/%/%">
-      <details key="start" value="233"/>
-      <details key="end" value="243"/>
+      <details key="start" value="240"/>
+      <details key="end" value="250"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/packageName/%/%/model">
-      <details key="start" value="233"/>
-      <details key="end" value="238"/>
+      <details key="start" value="240"/>
+      <details key="end" value="245"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/packageName/%/%.1">
-      <details key="start" value="255"/>
-      <details key="end" value="256"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/packageName/%/%.2">
-      <details key="start" value="258"/>
-      <details key="end" value="285"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/packageName/%/%.2/%">
-      <details key="start" value="258"/>
-      <details key="end" value="268"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/packageName/%/%.2/%/model">
-      <details key="start" value="258"/>
+      <details key="start" value="262"/>
       <details key="end" value="263"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/packageName/%/%.2">
+      <details key="start" value="265"/>
+      <details key="end" value="292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/packageName/%/%.2/%">
+      <details key="start" value="265"/>
+      <details key="end" value="275"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/packageName/%/%.2/%/model">
+      <details key="start" value="265"/>
+      <details key="end" value="270"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.16" references="/0/packageName/%/%.2/%.1">
-      <details key="start" value="281"/>
-      <details key="end" value="284"/>
+      <details key="start" value="288"/>
+      <details key="end" value="291"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

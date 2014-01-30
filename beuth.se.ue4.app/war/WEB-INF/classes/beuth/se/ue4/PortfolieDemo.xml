@@ -19,7 +19,6 @@ beuth/se/ue4/PortfolieDemo.xml
 	<inherits name='com.google.gwt.activity.Activity' />
 	<inherits name='com.google.gwt.place.Place' />
 	<inherits name="com.google.gwt.i18n.I18N" />
-	<inherits name='org.fusesource.restygwt.RestyGWT' />
 	<inherits name="com.google.gwt.inject.Inject" />
 
 	<!-- Specify the app entry point class. -->

@@ -25,3 +25,7 @@ Zwischenstand:
 Feststellungen:
 	Property-Objects of view zweimal enthalten
 	Probleme mit Profil mit PermanentView
+
+	
+Doku
+	StatPlace muss Manuel gesetzt werden
