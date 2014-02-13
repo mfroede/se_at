@@ -1,52 +1,10 @@
 [comment encoding = UTF-8 /]
 [module generateMVP('http://www.eclipse.org/uml2/4.0.0/UML')]
 [import beuth::se::ue4::profile::common::util /]
+[import beuth::se::ue4::profile::common::generateViewInterface /]
+[import beuth::se::ue4::profile::common::generateConcreteView /]
 
 [template public generateMVP(model : Model)]
-[for (class : Class | model.ownedElement)]
-[view(class, packageName(model))/]
-[viewImpl(class, packageName(model))/]
-[place(class, packageName(model))/]
-[activity(class, packageName(model))/]
-[/for]
-[/template]
-
-[template public view(class : Class, packageName : String)]
-[file (packageName.replaceAll('[.]', '/') + 'client/view/'+class.name+'View.java', false, 'UTF-8')]
-package [packageName/]client.view;
-
-public class [class.name/]View extends IsWidget {
-
-}
-[/file]
-[/template]
-
-[template public viewImpl(class : Class, packageName : String)]
-[file (packageName.replaceAll('[.]', '/') + 'client/view/'+class.name+'ViewImpl.java', false, 'UTF-8')]
-package [packageName/]client.view;
-
-public class [class.name/]ViewImpl extends AbstractView implements OneCampaignView {
-
-}
-[/file]
-[/template]
-
-[template public place(class : Class, packageName : String)]
-[file (packageName.replaceAll('[.]', '/') + 'client/view/'+class.name+'Place.java', false, 'UTF-8')]
-package [packageName/]client.view;
-
-public class [class.name/]Place extends Place {
-
-}
-[/file]
-[/template]
-
-[template public activity(class : Class, packageName : String)]
-[file (packageName.replaceAll('[.]', '/') + 'client/view/'+class.name+'Activity.java', false, 'UTF-8')]
-package [packageName/]client.view;
-
-public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.name/]Place> {
-
-}
-[/file]
+[generateViewInterface(model)/]
+[generateConcreteView(model,packageName(model.name))/]
 [/template]

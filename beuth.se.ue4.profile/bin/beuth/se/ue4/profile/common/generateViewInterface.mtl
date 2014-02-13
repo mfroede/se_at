@@ -1,0 +1,91 @@
+[comment encoding = UTF-8 /]
+[module generateViewInterface('http://www.eclipse.org/uml2/4.0.0/UML')]
+[import beuth::se::ue4::profile::common::util /]
+
+[template public generateViewInterface(model : Model)]
+[for (interface : Interface | model.ownedElement)]
+[if (interface.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('View'))]
+	[viewForInterface(interface, packageName(model.name))/]
+	[placeForInterface(interface, packageName(model.name))/]
+	[activityForInterface(interface, packageName(model.name))/]
+[/if]
+	
+[/for]
+[/template]
+
+[template public viewForInterface(interface : Interface, packageName : String)]
+[file (quallyName(packageName) + 'client/view/'+interface.name+'View.java', false, 'UTF-8')]
+package [packageName/]client.view;
+
+import com.google.gwt.user.client.ui.IsWidget;
+
+public class [interface.name/]View extends IsWidget {
+	public interface Presenter {
+
+		//Methods
+
+	}
+
+	void setPresenter(Presenter presenter);
+
+	[for(o: Operation | interface.getAllOperations())]
+	[operationIA(o)/]
+	[/for]
+
+}
+[/file]
+[/template]
+
+[template public placeForInterface(interface : Interface, packageName : String)]
+[file (quallyName(packageName) + 'client/view/'+interface.name+'Place.java', false, 'UTF-8')]
+package [packageName/]client.view;
+
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.place.shared.PlaceTokenizer;
+
+public class [interface.name/]Place extends Place {
+	public static class Tokenizer implements
+			PlaceTokenizer<[interface.name/]Place> {
+
+		@Override
+		public [interface.name/]Place getPlace(final String token) {
+			return new [interface.name/]Place();
+		}
+
+		@Override
+		public String getToken(final [interface.name/]Place place) {
+			return ""; //$NON-NLS-1$
+		}
+
+	}
+}
+[/file]
+[/template]
+
+[template public activityForInterface(interface : Interface, packageName : String)]
+[file (quallyName(packageName) + 'client/view/'+interface.name+'Activity.java', false, 'UTF-8')]
+package [packageName/]client.view;
+
+import com.google.gwt.place.shared.PlaceController;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+import com.google.inject.Inject;
+import com.google.web.bindery.event.shared.EventBus;
+
+public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[interface.name/]Place> implements [interface.name/]View.Presenter{
+	private final [interface.name/]View view;
+	private final EventBus eventBus;
+	private final PlaceController placeController;
+
+	@Inject
+	public [interface.name/]Activity(final [interface.name/]View view,
+			final EventBus eventBus, PlaceController placeController) {
+		this.view = view;
+		this.eventBus = eventBus;
+		this.placeController = placeController;
+
+	}
+
+	//TODO Overrides einfuegen
+}
+[/file]
+[/template]

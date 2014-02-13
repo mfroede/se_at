@@ -1,0 +1,130 @@
+[comment encoding = UTF-8 /]
+[module generateBasicStaticStructure('http://www.eclipse.org/uml2/4.0.0/UML')]
+[import beuth::se::ue4::profile::common::util /]
+
+
+[template public generateBasicStaticStructure(modelName : String)]
+[configXML(modelName)/]
+[activityView(modelName)/]
+[abstractActivityDefaultImpl(modelName)/]
+[placeControllerProvider(modelName)/]
+[/template]
+
+[template public configXML(modelName : String)]
+[file (quallyName(modelName) + '.xml', false, 'UTF-8')]
+[quallyName(modelName) + '.xml'/]
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+	so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='[modelName.substring(modelName.lastIndexOf('.') + 1, modelName.size())/]'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- <inherits name='com.google.gwt.user.theme.clean.Clean' /> -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard'/>
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<inherits name='com.google.gwt.activity.Activity' />
+	<inherits name='com.google.gwt.place.Place' />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="com.google.gwt.inject.Inject" />
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='[packageName(modelName)/]client.AppEntryPoint' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+</module>
+[quallyName(packageName(modelName)) + 'client/AppEntryPoint.java'/]
+[/file]
+[/template]
+
+[template public activityView(modelName : String) ]
+[file (quallyName(packageName(modelName)) + 'client/common/AbstractView.java', false, 'UTF-8')]
+package [packageName(modelName)/]client.common;
+
+import com.google.gwt.dom.client.Style.Unit;
+import com.google.gwt.user.client.ui.IsWidget;
+import com.google.gwt.user.client.ui.LayoutPanel;
+import com.google.gwt.user.client.ui.Widget;
+
+public class AbstractView implements IsWidget {
+	protected LayoutPanel content;
+
+	public AbstractView() {
+		content = new LayoutPanel();
+		content.getElement().getStyle().setWidth(/*width here*/, Unit.PC);
+		content.getElement().getStyle().setHeight(/*height here*/, Unit.PC);
+	}
+
+	@Override
+	public Widget asWidget() {
+		return content;
+	}
+
+}
+[/file]
+[/template]
+
+[template public abstractActivityDefaultImpl(modelName : String) ]
+[file (quallyName(packageName(modelName)) + 'client/common/AbstractActivityDefaultImpl.java', false, 'UTF-8')]
+package [packageName(modelName)/]client.common;
+
+import com.google.gwt.activity.shared.AbstractActivity;
+import com.google.gwt.event.shared.EventBus;
+import com.google.gwt.place.shared.Place;
+import com.google.gwt.user.client.ui.AcceptsOneWidget;
+
+public class AbstractActivityDefaultImpl<T extends Place> extends
+		AbstractActivity {
+
+	protected Place place;
+
+	public Place getPlace() {
+		return place;
+	}
+
+	public void setPlace(Place place) {
+		this.place = place;
+	}
+
+	@Override
+	public void start(AcceptsOneWidget panel, EventBus eventBus) {
+		// TODO Auto-generated method stub
+	}
+}
+[/file]
+[/template]
+[template public placeControllerProvider(modelName : String) ]
+[file (quallyName(packageName(modelName)) + 'client/common/gin/PlaceControllerProvider.java', false, 'UTF-8')]
+package [packageName(modelName)/]client.common.gin;
+
+import com.google.gwt.place.shared.PlaceController;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.web.bindery.event.shared.EventBus;
+
+public class PlaceControllerProvider implements Provider<PlaceController> {
+
+	private final EventBus eventBus;
+
+	@Inject
+	public PlaceControllerProvider(EventBus eventBus) {
+		this.eventBus = eventBus;
+	}
+
+	@Override
+	public PlaceController get() {
+		return new PlaceController(eventBus);
+	}
+
+}
+[/file]
+
+[/template]

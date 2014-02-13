@@ -2,7 +2,27 @@
 [module util('http://www.eclipse.org/uml2/4.0.0/UML')]
 
 
-[query public quallyName(model : Model) : String = 
-   model.name.replaceAll('[.]', '/')/]
-[query public packageName(model : Model) : String = 
-   model.name.substring( 1, model.name.lastIndexOf('.') )/]
+[query public quallyName(modelName : String) : String = 
+   modelName.replaceAll('[.]', '/')/]
+[query public packageName(modelName : String) : String = 
+   modelName.substring( 1, modelName.lastIndexOf('.') )/]
+
+[query public isNotViewExisting(class : Class) : Boolean = 
+   class.clientDependency.target.getAppliedStereotypes()->asOrderedSet()->first().oclIsInvalid()/]
+
+[template public operationIA(o : Operation)]
+
+[o.visibility/][if(o.isAbstract)] abstract [/if][for (pa:Parameter | o.ownedParameter)][if (pa.direction = (ParameterDirectionKind::return))][if( not pa.type.oclIsUndefined())] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if][else] void[/if][/if][/for] [o.name/]([for (pa:Parameter | (o.ownedParameter->select(not (direction = ParameterDirectionKind::return))))separator (',')] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if] [pa.name /][/for]); 
+
+[/template]
+
+[template public operation(o : Operation)]
+[o.visibility/][for (pa:Parameter | o.ownedParameter)][if (pa.direction = (ParameterDirectionKind::return))][if( not pa.type.oclIsUndefined())] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if][else] void[/if][/if][/for] [o.name/]([for (pa:Parameter | (o.ownedParameter->select(not (direction = ParameterDirectionKind::return))))separator (',')] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if] [pa.name /][/for]){ 
+	//[protected (o.name)]
+	// TODO Auto generated Method
+	//[/protected]
+}
+[/template]
+[template public getClassName(class : Class)]
+[if (isNotViewExisting(class))][class.name/][else][class.clientDependency.target.oclAsType(Interface).name/][/if]
+[/template]

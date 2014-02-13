@@ -29,3 +29,6 @@ Feststellungen:
 	
 Doku
 	StatPlace muss Manuel gesetzt werden
+
+Überlegung:
+	@Overrides bei methoden in view impl als boolean setzen können-> gibt viewImpl methoden die müssen vererbt werden und welche die müssen nicht über View gemacht werden
