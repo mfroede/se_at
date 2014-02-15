@@ -25,6 +25,13 @@
           <value xsi:nil="true"/>
         </defaultValue>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3Mp1UJZ2EeOLx-y2tbQtDA" name="Attribute1" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3plo8JZ2EeOLx-y2tbQtDA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3plo8ZZ2EeOLx-y2tbQtDA" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_3pm3EJZ2EeOLx-y2tbQtDA">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_XSRo4JUBEeO4ZfzhyAwU7g" name="InterfaceRealization1" client="_0Xe58JUAEeO4ZfzhyAwU7g" supplier="_RZScQJUBEeO4ZfzhyAwU7g" contract="_RZScQJUBEeO4ZfzhyAwU7g"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_BNaDgJUBEeO4ZfzhyAwU7g" name="Home">
@@ -180,4 +187,5 @@
   <profile_1:ViewNavigationObject xmi:id="_KKaxwJZ1EeOLx-y2tbQtDA" base_Property="_7h58cJUEEeO4ZfzhyAwU7g" type="ITEM" goToView="_YwVuwJZ0EeOLx-y2tbQtDA"/>
   <profile_1:ViewNavigationObject xmi:id="_OId7sJZ1EeOLx-y2tbQtDA" base_Property="_CsFrMJUFEeO4ZfzhyAwU7g" type="ITEM" goToView="_T1p9cJZ0EeOLx-y2tbQtDA"/>
   <profile_1:ViewNavigationObject xmi:id="_SM6BgJZ1EeOLx-y2tbQtDA" base_Property="_QvyPcJUFEeO4ZfzhyAwU7g" type="ITEM" goToView="_Xmw3kJZ0EeOLx-y2tbQtDA"/>
+  <profile_1:ViewNavigationObject xmi:id="_4wAecJZ2EeOLx-y2tbQtDA" base_Property="_3Mp1UJZ2EeOLx-y2tbQtDA" goToView="_T1p9cJZ0EeOLx-y2tbQtDA"/>
 </xmi:XMI>

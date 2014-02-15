@@ -91,6 +91,17 @@
         <element xmi:type="uml:Property" href="UseCaseGWTModel.uml#_nVFIsJUCEeO4ZfzhyAwU7g"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_nVGW0ZUCEeO4ZfzhyAwU7g"/>
       </children>
+      <children xmi:type="notation:Shape" xmi:id="_3MtfsJZ2EeOLx-y2tbQtDA" type="3012" fontName="Segoe UI" lineColor="0">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4wIaQJZ2EeOLx-y2tbQtDA" source="Stereotype_Annotation">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4wJBUJZ2EeOLx-y2tbQtDA" key="StereotypeWithQualifiedNameList" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4wJBUZZ2EeOLx-y2tbQtDA" key="StereotypeList" value="profile::ViewNavigationObject"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4wJBUpZ2EeOLx-y2tbQtDA" key="Stereotype_Presentation_Kind" value="HorizontalStereo"/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4wJBU5Z2EeOLx-y2tbQtDA" key="PropStereoDisplay" value=""/>
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4wJBVJZ2EeOLx-y2tbQtDA" key="StereotypePropertyLocation" value="Compartment"/>
+        </eAnnotations>
+        <element xmi:type="uml:Property" href="UseCaseGWTModel.uml#_3Mp1UJZ2EeOLx-y2tbQtDA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3MtfsZZ2EeOLx-y2tbQtDA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_0Xh9SJUAEeO4ZfzhyAwU7g"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_0Xh9SZUAEeO4ZfzhyAwU7g"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_0Xh9SpUAEeO4ZfzhyAwU7g"/>
