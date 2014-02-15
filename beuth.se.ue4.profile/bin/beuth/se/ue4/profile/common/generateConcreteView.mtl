@@ -3,7 +3,7 @@
 [import beuth::se::ue4::profile::common::util /]
 
 [template public generateConcreteView(model: Model, packageName : String)]
-[for (class : Class | model.ownedElement)]
+[for (class : Class | model.ownedElement.oclAsType(Class))]
 	[viewXML(class, packageName)/]
 	[viewImpl(class, packageName)/]
 	[if (isNotViewExisting(class))]
@@ -63,23 +63,17 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 							Panel [property.name/];
 						[/if]
 					[elseif (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
-
-[for (p : OclAny | property.getTaggedValue('ViewObject','viewNavigationObject')->asOrderedSet())]
-5-> [p/]
-[/for]
-2[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')/]
-						[for (stereotype : OclAny | property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject').oclAsSet())]
-							1[stereotype.oclAsType(Stereotype)/]							
-							[if (class.attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('ITEM'))]
+						[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject').oclAsSet().oclAsType(Property))]
+							[if (prop.getTaggedValue('ViewNavigationObject','type').oclAsSet()->first().oclAsType(uml::EnumerationLiteral).name.endsWith('ITEM'))]
 								[if (isValueExists(property, 'type', 'MENU'))]
-									@UiField
-									MenuItem [stereotype.name/];
+	@UiField
+	MenuItem [prop.name/];
 								[comment][elseif (isValueExists(property, 'type', 'TABLE')  or isValueExists(property, 'type', 'LIST') or isValueExists(property, 'type', 'PANEL'))]
 									@UiField
 									Button [stereotype.name/];[/comment]
 								[elseif (isValueExists(property, 'type', 'TREE'))]
-									@UiField
-									TreeItem [stereotype.name/];
+	@UiField
+	TreeItem [prop.name/];
 								[/if]
 							[/if]
 						[/for]
