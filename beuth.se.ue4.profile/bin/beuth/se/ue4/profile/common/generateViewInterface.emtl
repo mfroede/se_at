@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generateViewInterface" nsURI="beuth::se::ue4::profile::common::generateViewInterface" startHeaderPosition="29" endHeaderPosition="147">
+  <mtl:Module name="generateViewInterface" nsURI="beuth::se::ue4::profile::common::generateViewInterface" startHeaderPosition="30" endHeaderPosition="149">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
     </input>
@@ -26,7 +26,7 @@
               </argument>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation" definition="/0/placeForInterface">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/generateViewInterface/%/interface">
@@ -44,7 +44,7 @@
               </argument>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#x9;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation" definition="/0/activityForInterface">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
             <argument xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/generateViewInterface/%/interface">
@@ -62,7 +62,7 @@
               </argument>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
           <ifExpr xsi:type="ocl.ecore:OperationCallExp">
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
             <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -88,7 +88,7 @@
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/endsWith"/>
           </ifExpr>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#xD;&#xA;"/>
         <loopVariable name="interface">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Interface"/>
         </loopVariable>
@@ -109,7 +109,7 @@
         <body xsi:type="ocl.ecore:VariableExp" name="packageName" referredVariable="/0/viewForInterface/packageName">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xA;&#xA;import com.google.gwt.user.client.ui.IsWidget;&#xA;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.user.client.ui.IsWidget;&#xD;&#xA;&#xD;&#xA;public class "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/viewForInterface/interface">
@@ -117,7 +117,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View extends IsWidget {&#xA;&#x9;public interface Presenter {&#xA;&#xA;&#x9;&#x9;//Methods&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;void setPresenter(Presenter presenter);&#xA;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View extends IsWidget {&#xD;&#xA;&#x9;public interface Presenter {&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;//Methods&#xD;&#xA;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;void setPresenter(Presenter presenter);&#xD;&#xA;&#xD;&#xA;"/>
         <body xsi:type="mtl:ForBlock">
           <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;"/>
           <body xsi:type="mtl:TemplateInvocation">
@@ -127,7 +127,7 @@
               <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
             </argument>
           </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
           <loopVariable name="o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
           </loopVariable>
@@ -138,7 +138,7 @@
             <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/uml2/4.0.0/UML#//Classifier/getAllOperations"/>
           </iterSet>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;}&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:OperationCallExp">
@@ -188,7 +188,7 @@
         <body xsi:type="ocl.ecore:VariableExp" name="packageName" referredVariable="/0/placeForInterface/packageName">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xA;&#xA;import com.google.gwt.place.shared.Place;&#xA;import com.google.gwt.place.shared.PlaceTokenizer;&#xA;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.place.shared.Place;&#xD;&#xA;import com.google.gwt.place.shared.PlaceTokenizer;&#xD;&#xA;&#xD;&#xA;public class "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/placeForInterface/interface">
@@ -196,7 +196,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place extends Place {&#xA;&#x9;public static class Tokenizer implements&#xA;&#x9;&#x9;&#x9;PlaceTokenizer&lt;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place extends Place {&#xD;&#xA;&#x9;public static class Tokenizer implements&#xD;&#xA;&#x9;&#x9;&#x9;PlaceTokenizer&lt;"/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/placeForInterface/interface">
@@ -204,7 +204,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place> {&#xA;&#xA;&#x9;&#x9;@Override&#xA;&#x9;&#x9;public "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place> {&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/placeForInterface/interface">
@@ -212,7 +212,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place getPlace(final String token) {&#xA;&#x9;&#x9;&#x9;return new "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place getPlace(final String token) {&#xD;&#xA;&#x9;&#x9;&#x9;return new "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/placeForInterface/interface">
@@ -220,7 +220,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place();&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;&#x9;@Override&#xA;&#x9;&#x9;public String getToken(final "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place();&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public String getToken(final "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/placeForInterface/interface">
@@ -228,7 +228,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place place) {&#xA;&#x9;&#x9;&#x9;return &quot;&quot;; //$NON-NLS-1$&#xA;&#x9;&#x9;}&#xA;&#xA;&#x9;}&#xA;}&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Place place) {&#xD;&#xA;&#x9;&#x9;&#x9;return &quot;&quot;; //$NON-NLS-1$&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:OperationCallExp">
@@ -278,7 +278,7 @@
         <body xsi:type="ocl.ecore:VariableExp" name="packageName" referredVariable="/0/activityForInterface/packageName">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xA;&#xA;import com.google.gwt.place.shared.PlaceController;&#xA;import com.google.gwt.user.client.ui.AcceptsOneWidget;&#xA;import com.google.inject.Inject;&#xA;import com.google.web.bindery.event.shared.EventBus;&#xA;&#xA;public class "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.view;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.place.shared.PlaceController;&#xD;&#xA;import com.google.gwt.user.client.ui.AcceptsOneWidget;&#xD;&#xA;import com.google.inject.Inject;&#xD;&#xA;import com.google.web.bindery.event.shared.EventBus;&#xD;&#xA;&#xD;&#xA;public class "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/activityForInterface/interface">
@@ -302,7 +302,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View.Presenter{&#xA;&#x9;private final "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View.Presenter{&#xD;&#xA;&#x9;private final "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/activityForInterface/interface">
@@ -310,7 +310,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View view;&#xA;&#x9;private final EventBus eventBus;&#xA;&#x9;private final PlaceController placeController;&#xA;&#xA;&#x9;@Inject&#xA;&#x9;public "/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View view;&#xD;&#xA;&#x9;private final EventBus eventBus;&#xD;&#xA;&#x9;private final PlaceController placeController;&#xD;&#xA;&#xD;&#xA;&#x9;@Inject&#xD;&#xA;&#x9;public "/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="interface" referredVariable="/0/activityForInterface/interface">
@@ -326,7 +326,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View view,&#xA;&#x9;&#x9;&#x9;final EventBus eventBus, PlaceController placeController) {&#xA;&#x9;&#x9;this.view = view;&#xA;&#x9;&#x9;this.eventBus = eventBus;&#xA;&#x9;&#x9;this.placeController = placeController;&#xA;&#xA;&#x9;}&#xA;&#xA;&#x9;//TODO Overrides einfuegen&#xA;}&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="View view,&#xD;&#xA;&#x9;&#x9;&#x9;final EventBus eventBus, PlaceController placeController) {&#xD;&#xA;&#x9;&#x9;this.view = view;&#xD;&#xA;&#x9;&#x9;this.eventBus = eventBus;&#xD;&#xA;&#x9;&#x9;this.placeController = placeController;&#xD;&#xA;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;//TODO Overrides einfuegen&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:OperationCallExp">
@@ -505,6 +505,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="Interface_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Interface"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Element_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Element"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Class_Class">
@@ -692,653 +697,653 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateViewInterface">
-      <details key="start" value="151"/>
-      <details key="end" value="547"/>
+      <details key="start" value="155"/>
+      <details key="end" value="560"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateViewInterface/%">
-      <details key="start" value="206"/>
-      <details key="end" value="535"/>
+      <details key="start" value="211"/>
+      <details key="end" value="547"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateViewInterface/%/%">
-      <details key="start" value="257"/>
-      <details key="end" value="526"/>
+      <details key="start" value="263"/>
+      <details key="end" value="536"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateViewInterface/%/%/%">
-      <details key="start" value="345"/>
-      <details key="end" value="346"/>
+      <details key="start" value="352"/>
+      <details key="end" value="353"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateViewInterface/%/%/%.1">
-      <details key="start" value="347"/>
-      <details key="end" value="399"/>
+      <details key="start" value="354"/>
+      <details key="end" value="406"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateViewInterface/%/%/%.1/interface">
-      <details key="start" value="364"/>
-      <details key="end" value="373"/>
+      <details key="start" value="371"/>
+      <details key="end" value="380"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateViewInterface/%/%/%.1/%">
-      <details key="start" value="375"/>
-      <details key="end" value="398"/>
+      <details key="start" value="382"/>
+      <details key="end" value="405"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateViewInterface/%/%/%.1/%/%">
-      <details key="start" value="387"/>
-      <details key="end" value="397"/>
+      <details key="start" value="394"/>
+      <details key="end" value="404"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateViewInterface/%/%/%.1/%/%/model">
-      <details key="start" value="387"/>
-      <details key="end" value="392"/>
+      <details key="start" value="394"/>
+      <details key="end" value="399"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateViewInterface/%/%/%.2">
-      <details key="start" value="401"/>
-      <details key="end" value="403"/>
+      <details key="start" value="408"/>
+      <details key="end" value="411"/>
       <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateViewInterface/%/%/%.3">
-      <details key="start" value="404"/>
-      <details key="end" value="457"/>
+      <details key="start" value="412"/>
+      <details key="end" value="465"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateViewInterface/%/%/%.3/interface">
-      <details key="start" value="422"/>
-      <details key="end" value="431"/>
+      <details key="start" value="430"/>
+      <details key="end" value="439"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateViewInterface/%/%/%.3/%">
-      <details key="start" value="433"/>
-      <details key="end" value="456"/>
+      <details key="start" value="441"/>
+      <details key="end" value="464"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateViewInterface/%/%/%.3/%/%">
-      <details key="start" value="445"/>
-      <details key="end" value="455"/>
+      <details key="start" value="453"/>
+      <details key="end" value="463"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateViewInterface/%/%/%.3/%/%/model">
-      <details key="start" value="445"/>
-      <details key="end" value="450"/>
+      <details key="start" value="453"/>
+      <details key="end" value="458"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateViewInterface/%/%/%.4">
-      <details key="start" value="459"/>
-      <details key="end" value="461"/>
+      <details key="start" value="467"/>
+      <details key="end" value="470"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateViewInterface/%/%/%.5">
-      <details key="start" value="462"/>
-      <details key="end" value="518"/>
+      <details key="start" value="471"/>
+      <details key="end" value="527"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateViewInterface/%/%/%.5/interface">
-      <details key="start" value="483"/>
-      <details key="end" value="492"/>
+      <details key="start" value="492"/>
+      <details key="end" value="501"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateViewInterface/%/%/%.5/%">
-      <details key="start" value="494"/>
-      <details key="end" value="517"/>
+      <details key="start" value="503"/>
+      <details key="end" value="526"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateViewInterface/%/%/%.5/%/%">
-      <details key="start" value="506"/>
-      <details key="end" value="516"/>
+      <details key="start" value="515"/>
+      <details key="end" value="525"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateViewInterface/%/%/%.5/%/%/model">
-      <details key="start" value="506"/>
-      <details key="end" value="511"/>
+      <details key="start" value="515"/>
+      <details key="end" value="520"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateViewInterface/%/%/%.6">
-      <details key="start" value="520"/>
-      <details key="end" value="521"/>
+      <details key="start" value="529"/>
+      <details key="end" value="531"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateViewInterface/%/%/%.7">
-      <details key="start" value="261"/>
-      <details key="end" value="343"/>
+      <details key="start" value="267"/>
+      <details key="end" value="349"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/generateViewInterface/%/%/%.7/%">
-      <details key="start" value="262"/>
-      <details key="end" value="325"/>
+      <details key="start" value="268"/>
+      <details key="end" value="331"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/generateViewInterface/%/%/%.7/%/%">
-      <details key="start" value="262"/>
-      <details key="end" value="320"/>
+      <details key="start" value="268"/>
+      <details key="end" value="326"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/generateViewInterface/%/%/%.7/%/%/%">
-      <details key="start" value="262"/>
-      <details key="end" value="311"/>
+      <details key="start" value="268"/>
+      <details key="end" value="317"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/generateViewInterface/%/%/%.7/%/%/%/%">
-      <details key="start" value="262"/>
-      <details key="end" value="295"/>
+      <details key="start" value="268"/>
+      <details key="end" value="301"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/generateViewInterface/%/%/%.7/%/%/%/%/interface">
-      <details key="start" value="262"/>
-      <details key="end" value="271"/>
+      <details key="start" value="268"/>
+      <details key="end" value="277"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/generateViewInterface/%/%/%.7/%.1">
-      <details key="start" value="335"/>
-      <details key="end" value="341"/>
+      <details key="start" value="341"/>
+      <details key="end" value="347"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/generateViewInterface/%/%.1">
-      <details key="start" value="527"/>
-      <details key="end" value="529"/>
+      <details key="start" value="538"/>
+      <details key="end" value="541"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/generateViewInterface/%/interface">
-      <details key="start" value="212"/>
-      <details key="end" value="233"/>
+      <details key="start" value="217"/>
+      <details key="end" value="238"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/generateViewInterface/%/%.2">
-      <details key="start" value="236"/>
-      <details key="end" value="254"/>
+      <details key="start" value="241"/>
+      <details key="end" value="259"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/generateViewInterface/%/%.2/model">
-      <details key="start" value="236"/>
-      <details key="end" value="241"/>
+      <details key="start" value="241"/>
+      <details key="end" value="246"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/generateViewInterface/model">
-      <details key="start" value="190"/>
-      <details key="end" value="203"/>
+      <details key="start" value="194"/>
+      <details key="end" value="207"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/viewForInterface">
-      <details key="start" value="549"/>
-      <details key="end" value="1051"/>
+      <details key="start" value="564"/>
+      <details key="end" value="1087"/>
       <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/viewForInterface/%">
-      <details key="start" value="629"/>
-      <details key="end" value="1039"/>
+      <details key="start" value="645"/>
+      <details key="end" value="1074"/>
       <details key="line" value="17"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/viewForInterface/%/%">
-      <details key="start" value="722"/>
-      <details key="end" value="730"/>
+      <details key="start" value="739"/>
+      <details key="end" value="747"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/viewForInterface/%/packageName">
-      <details key="start" value="731"/>
-      <details key="end" value="742"/>
+      <details key="start" value="748"/>
+      <details key="end" value="759"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/viewForInterface/%/%.1">
-      <details key="start" value="744"/>
-      <details key="end" value="819"/>
+      <details key="start" value="761"/>
+      <details key="end" value="840"/>
       <details key="line" value="18"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/viewForInterface/%/%.2">
-      <details key="start" value="820"/>
-      <details key="end" value="834"/>
+      <details key="start" value="841"/>
+      <details key="end" value="855"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/viewForInterface/%/%.2/interface">
-      <details key="start" value="820"/>
-      <details key="end" value="829"/>
+      <details key="start" value="841"/>
+      <details key="end" value="850"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/viewForInterface/%/%.3">
-      <details key="start" value="836"/>
-      <details key="end" value="950"/>
+      <details key="start" value="857"/>
+      <details key="end" value="980"/>
       <details key="line" value="22"/>
     </eAnnotations>
     <eAnnotations source="positions.42" references="/0/viewForInterface/%/%.4">
-      <details key="start" value="951"/>
-      <details key="end" value="1028"/>
+      <details key="start" value="981"/>
+      <details key="end" value="1060"/>
       <details key="line" value="31"/>
     </eAnnotations>
     <eAnnotations source="positions.43" references="/0/viewForInterface/%/%.4/%">
-      <details key="start" value="1002"/>
-      <details key="end" value="1003"/>
+      <details key="start" value="1033"/>
+      <details key="end" value="1034"/>
       <details key="line" value="32"/>
     </eAnnotations>
     <eAnnotations source="positions.44" references="/0/viewForInterface/%/%.4/%.1">
-      <details key="start" value="1004"/>
-      <details key="end" value="1018"/>
+      <details key="start" value="1035"/>
+      <details key="end" value="1049"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.45" references="/0/viewForInterface/%/%.4/%.1/o">
-      <details key="start" value="1016"/>
-      <details key="end" value="1017"/>
+      <details key="start" value="1047"/>
+      <details key="end" value="1048"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.46" references="/0/viewForInterface/%/%.4/%.2">
-      <details key="start" value="1020"/>
-      <details key="end" value="1021"/>
+      <details key="start" value="1051"/>
+      <details key="end" value="1053"/>
       <details key="line" value="33"/>
     </eAnnotations>
     <eAnnotations source="positions.47" references="/0/viewForInterface/%/%.4/o">
-      <details key="start" value="956"/>
-      <details key="end" value="968"/>
+      <details key="start" value="986"/>
+      <details key="end" value="998"/>
       <details key="line" value="31"/>
     </eAnnotations>
     <eAnnotations source="positions.48" references="/0/viewForInterface/%/%.4/%.3">
-      <details key="start" value="971"/>
-      <details key="end" value="999"/>
+      <details key="start" value="1001"/>
+      <details key="end" value="1029"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.49" references="/0/viewForInterface/%/%.4/%.3/interface">
-      <details key="start" value="971"/>
-      <details key="end" value="980"/>
+      <details key="start" value="1001"/>
+      <details key="end" value="1010"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.50" references="/0/viewForInterface/%/%.5">
-      <details key="start" value="1029"/>
-      <details key="end" value="1032"/>
+      <details key="start" value="1062"/>
+      <details key="end" value="1067"/>
       <details key="line" value="34"/>
     </eAnnotations>
     <eAnnotations source="positions.51" references="/0/viewForInterface/%/%.6">
-      <details key="start" value="636"/>
-      <details key="end" value="703"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/viewForInterface/%/%.6/%">
-      <details key="start" value="636"/>
-      <details key="end" value="691"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/viewForInterface/%/%.6/%/%">
-      <details key="start" value="636"/>
-      <details key="end" value="676"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/viewForInterface/%/%.6/%/%/%">
-      <details key="start" value="636"/>
-      <details key="end" value="659"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/viewForInterface/%/%.6/%/%/%/packageName">
-      <details key="start" value="647"/>
-      <details key="end" value="658"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/viewForInterface/%/%.6/%/%/%.1">
-      <details key="start" value="662"/>
-      <details key="end" value="676"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/viewForInterface/%/%.6/%/%.1">
-      <details key="start" value="677"/>
-      <details key="end" value="691"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/viewForInterface/%/%.6/%/%.1/interface">
-      <details key="start" value="677"/>
-      <details key="end" value="686"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/viewForInterface/%/%.6/%.1">
-      <details key="start" value="692"/>
-      <details key="end" value="703"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/viewForInterface/%/%.7">
-      <details key="start" value="712"/>
+      <details key="start" value="652"/>
       <details key="end" value="719"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/viewForInterface/%/%.6/%">
+      <details key="start" value="652"/>
+      <details key="end" value="707"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/viewForInterface/%/%.6/%/%">
+      <details key="start" value="652"/>
+      <details key="end" value="692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/viewForInterface/%/%.6/%/%/%">
+      <details key="start" value="652"/>
+      <details key="end" value="675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/viewForInterface/%/%.6/%/%/%/packageName">
+      <details key="start" value="663"/>
+      <details key="end" value="674"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/viewForInterface/%/%.6/%/%/%.1">
+      <details key="start" value="678"/>
+      <details key="end" value="692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/viewForInterface/%/%.6/%/%.1">
+      <details key="start" value="693"/>
+      <details key="end" value="707"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/viewForInterface/%/%.6/%/%.1/interface">
+      <details key="start" value="693"/>
+      <details key="end" value="702"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/viewForInterface/%/%.6/%.1">
+      <details key="start" value="708"/>
+      <details key="end" value="719"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/viewForInterface/%/%.7">
+      <details key="start" value="728"/>
+      <details key="end" value="735"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.61" references="/0/viewForInterface/interface">
-      <details key="start" value="583"/>
-      <details key="end" value="604"/>
+      <details key="start" value="598"/>
+      <details key="end" value="619"/>
       <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.62" references="/0/viewForInterface/packageName">
-      <details key="start" value="606"/>
-      <details key="end" value="626"/>
+      <details key="start" value="621"/>
+      <details key="end" value="641"/>
       <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.63" references="/0/placeForInterface">
-      <details key="start" value="1053"/>
-      <details key="end" value="1749"/>
+      <details key="start" value="1091"/>
+      <details key="end" value="1811"/>
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.64" references="/0/placeForInterface/%">
-      <details key="start" value="1134"/>
-      <details key="end" value="1737"/>
+      <details key="start" value="1173"/>
+      <details key="end" value="1798"/>
       <details key="line" value="40"/>
     </eAnnotations>
     <eAnnotations source="positions.65" references="/0/placeForInterface/%/%">
-      <details key="start" value="1228"/>
-      <details key="end" value="1236"/>
+      <details key="start" value="1268"/>
+      <details key="end" value="1276"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.66" references="/0/placeForInterface/%/packageName">
-      <details key="start" value="1237"/>
-      <details key="end" value="1248"/>
+      <details key="start" value="1277"/>
+      <details key="end" value="1288"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.67" references="/0/placeForInterface/%/%.1">
-      <details key="start" value="1250"/>
-      <details key="end" value="1371"/>
+      <details key="start" value="1290"/>
+      <details key="end" value="1416"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.68" references="/0/placeForInterface/%/%.2">
-      <details key="start" value="1372"/>
-      <details key="end" value="1386"/>
+      <details key="start" value="1417"/>
+      <details key="end" value="1431"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.69" references="/0/placeForInterface/%/%.2/interface">
-      <details key="start" value="1372"/>
-      <details key="end" value="1381"/>
+      <details key="start" value="1417"/>
+      <details key="end" value="1426"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.70" references="/0/placeForInterface/%/%.3">
-      <details key="start" value="1388"/>
-      <details key="end" value="1470"/>
+      <details key="start" value="1433"/>
+      <details key="end" value="1517"/>
       <details key="line" value="46"/>
     </eAnnotations>
     <eAnnotations source="positions.71" references="/0/placeForInterface/%/%.4">
-      <details key="start" value="1471"/>
-      <details key="end" value="1485"/>
+      <details key="start" value="1518"/>
+      <details key="end" value="1532"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.72" references="/0/placeForInterface/%/%.4/interface">
-      <details key="start" value="1471"/>
-      <details key="end" value="1480"/>
+      <details key="start" value="1518"/>
+      <details key="end" value="1527"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.73" references="/0/placeForInterface/%/%.5">
-      <details key="start" value="1487"/>
-      <details key="end" value="1518"/>
+      <details key="start" value="1534"/>
+      <details key="end" value="1568"/>
       <details key="line" value="48"/>
     </eAnnotations>
     <eAnnotations source="positions.74" references="/0/placeForInterface/%/%.6">
-      <details key="start" value="1519"/>
-      <details key="end" value="1533"/>
+      <details key="start" value="1569"/>
+      <details key="end" value="1583"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.75" references="/0/placeForInterface/%/%.6/interface">
-      <details key="start" value="1519"/>
-      <details key="end" value="1528"/>
+      <details key="start" value="1569"/>
+      <details key="end" value="1578"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.76" references="/0/placeForInterface/%/%.7">
-      <details key="start" value="1535"/>
-      <details key="end" value="1586"/>
+      <details key="start" value="1585"/>
+      <details key="end" value="1637"/>
       <details key="line" value="51"/>
     </eAnnotations>
     <eAnnotations source="positions.77" references="/0/placeForInterface/%/%.8">
-      <details key="start" value="1587"/>
-      <details key="end" value="1601"/>
+      <details key="start" value="1638"/>
+      <details key="end" value="1652"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.78" references="/0/placeForInterface/%/%.8/interface">
-      <details key="start" value="1587"/>
-      <details key="end" value="1596"/>
+      <details key="start" value="1638"/>
+      <details key="end" value="1647"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.79" references="/0/placeForInterface/%/%.9">
-      <details key="start" value="1603"/>
-      <details key="end" value="1660"/>
+      <details key="start" value="1654"/>
+      <details key="end" value="1715"/>
       <details key="line" value="52"/>
     </eAnnotations>
     <eAnnotations source="positions.80" references="/0/placeForInterface/%/%.10">
-      <details key="start" value="1661"/>
-      <details key="end" value="1675"/>
+      <details key="start" value="1716"/>
+      <details key="end" value="1730"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.81" references="/0/placeForInterface/%/%.10/interface">
-      <details key="start" value="1661"/>
-      <details key="end" value="1670"/>
+      <details key="start" value="1716"/>
+      <details key="end" value="1725"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.82" references="/0/placeForInterface/%/%.11">
-      <details key="start" value="1677"/>
-      <details key="end" value="1730"/>
+      <details key="start" value="1732"/>
+      <details key="end" value="1791"/>
       <details key="line" value="56"/>
     </eAnnotations>
     <eAnnotations source="positions.83" references="/0/placeForInterface/%/%.12">
-      <details key="start" value="1141"/>
-      <details key="end" value="1209"/>
+      <details key="start" value="1180"/>
+      <details key="end" value="1248"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.84" references="/0/placeForInterface/%/%.12/%">
-      <details key="start" value="1141"/>
-      <details key="end" value="1196"/>
+      <details key="start" value="1180"/>
+      <details key="end" value="1235"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.85" references="/0/placeForInterface/%/%.12/%/%">
-      <details key="start" value="1141"/>
-      <details key="end" value="1181"/>
+      <details key="start" value="1180"/>
+      <details key="end" value="1220"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.86" references="/0/placeForInterface/%/%.12/%/%/%">
-      <details key="start" value="1141"/>
-      <details key="end" value="1164"/>
+      <details key="start" value="1180"/>
+      <details key="end" value="1203"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.87" references="/0/placeForInterface/%/%.12/%/%/%/packageName">
-      <details key="start" value="1152"/>
-      <details key="end" value="1163"/>
+      <details key="start" value="1191"/>
+      <details key="end" value="1202"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.88" references="/0/placeForInterface/%/%.12/%/%/%.1">
-      <details key="start" value="1167"/>
-      <details key="end" value="1181"/>
+      <details key="start" value="1206"/>
+      <details key="end" value="1220"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.89" references="/0/placeForInterface/%/%.12/%/%.1">
-      <details key="start" value="1182"/>
-      <details key="end" value="1196"/>
+      <details key="start" value="1221"/>
+      <details key="end" value="1235"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.90" references="/0/placeForInterface/%/%.12/%/%.1/interface">
-      <details key="start" value="1182"/>
-      <details key="end" value="1191"/>
+      <details key="start" value="1221"/>
+      <details key="end" value="1230"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.91" references="/0/placeForInterface/%/%.12/%.1">
-      <details key="start" value="1197"/>
-      <details key="end" value="1209"/>
+      <details key="start" value="1236"/>
+      <details key="end" value="1248"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.92" references="/0/placeForInterface/%/%.13">
-      <details key="start" value="1218"/>
-      <details key="end" value="1225"/>
+      <details key="start" value="1257"/>
+      <details key="end" value="1264"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.93" references="/0/placeForInterface/interface">
-      <details key="start" value="1088"/>
-      <details key="end" value="1109"/>
+      <details key="start" value="1126"/>
+      <details key="end" value="1147"/>
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.94" references="/0/placeForInterface/packageName">
-      <details key="start" value="1111"/>
-      <details key="end" value="1131"/>
+      <details key="start" value="1149"/>
+      <details key="end" value="1169"/>
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.95" references="/0/activityForInterface">
-      <details key="start" value="1751"/>
-      <details key="end" value="2715"/>
+      <details key="start" value="1815"/>
+      <details key="end" value="2805"/>
       <details key="line" value="65"/>
     </eAnnotations>
     <eAnnotations source="positions.96" references="/0/activityForInterface/%">
-      <details key="start" value="1835"/>
-      <details key="end" value="2703"/>
+      <details key="start" value="1900"/>
+      <details key="end" value="2792"/>
       <details key="line" value="66"/>
     </eAnnotations>
     <eAnnotations source="positions.97" references="/0/activityForInterface/%/%">
-      <details key="start" value="1932"/>
-      <details key="end" value="1940"/>
+      <details key="start" value="1998"/>
+      <details key="end" value="2006"/>
       <details key="line" value="67"/>
     </eAnnotations>
     <eAnnotations source="positions.98" references="/0/activityForInterface/%/packageName">
-      <details key="start" value="1941"/>
-      <details key="end" value="1952"/>
+      <details key="start" value="2007"/>
+      <details key="end" value="2018"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.99" references="/0/activityForInterface/%/%.1">
-      <details key="start" value="1954"/>
-      <details key="end" value="2175"/>
+      <details key="start" value="2020"/>
+      <details key="end" value="2248"/>
       <details key="line" value="67"/>
     </eAnnotations>
     <eAnnotations source="positions.100" references="/0/activityForInterface/%/%.2">
-      <details key="start" value="2176"/>
-      <details key="end" value="2190"/>
+      <details key="start" value="2249"/>
+      <details key="end" value="2263"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.101" references="/0/activityForInterface/%/%.2/interface">
-      <details key="start" value="2176"/>
-      <details key="end" value="2185"/>
+      <details key="start" value="2249"/>
+      <details key="end" value="2258"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.102" references="/0/activityForInterface/%/%.3">
-      <details key="start" value="2192"/>
-      <details key="end" value="2237"/>
+      <details key="start" value="2265"/>
+      <details key="end" value="2310"/>
       <details key="line" value="74"/>
     </eAnnotations>
     <eAnnotations source="positions.103" references="/0/activityForInterface/%/%.4">
-      <details key="start" value="2238"/>
-      <details key="end" value="2252"/>
+      <details key="start" value="2311"/>
+      <details key="end" value="2325"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.104" references="/0/activityForInterface/%/%.4/interface">
-      <details key="start" value="2238"/>
-      <details key="end" value="2247"/>
+      <details key="start" value="2311"/>
+      <details key="end" value="2320"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.105" references="/0/activityForInterface/%/%.5">
-      <details key="start" value="2254"/>
-      <details key="end" value="2272"/>
+      <details key="start" value="2327"/>
+      <details key="end" value="2345"/>
       <details key="line" value="74"/>
     </eAnnotations>
     <eAnnotations source="positions.106" references="/0/activityForInterface/%/%.6">
-      <details key="start" value="2273"/>
-      <details key="end" value="2287"/>
+      <details key="start" value="2346"/>
+      <details key="end" value="2360"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.107" references="/0/activityForInterface/%/%.6/interface">
-      <details key="start" value="2273"/>
-      <details key="end" value="2282"/>
+      <details key="start" value="2346"/>
+      <details key="end" value="2355"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.108" references="/0/activityForInterface/%/%.7">
-      <details key="start" value="2289"/>
-      <details key="end" value="2320"/>
+      <details key="start" value="2362"/>
+      <details key="end" value="2394"/>
       <details key="line" value="74"/>
     </eAnnotations>
     <eAnnotations source="positions.109" references="/0/activityForInterface/%/%.8">
-      <details key="start" value="2321"/>
-      <details key="end" value="2335"/>
+      <details key="start" value="2395"/>
+      <details key="end" value="2409"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.110" references="/0/activityForInterface/%/%.8/interface">
-      <details key="start" value="2321"/>
-      <details key="end" value="2330"/>
+      <details key="start" value="2395"/>
+      <details key="end" value="2404"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.111" references="/0/activityForInterface/%/%.9">
-      <details key="start" value="2337"/>
-      <details key="end" value="2448"/>
+      <details key="start" value="2411"/>
+      <details key="end" value="2527"/>
       <details key="line" value="75"/>
     </eAnnotations>
     <eAnnotations source="positions.112" references="/0/activityForInterface/%/%.10">
-      <details key="start" value="2449"/>
-      <details key="end" value="2463"/>
+      <details key="start" value="2528"/>
+      <details key="end" value="2542"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.113" references="/0/activityForInterface/%/%.10/interface">
-      <details key="start" value="2449"/>
-      <details key="end" value="2458"/>
+      <details key="start" value="2528"/>
+      <details key="end" value="2537"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.114" references="/0/activityForInterface/%/%.11">
-      <details key="start" value="2465"/>
-      <details key="end" value="2480"/>
+      <details key="start" value="2544"/>
+      <details key="end" value="2559"/>
       <details key="line" value="80"/>
     </eAnnotations>
     <eAnnotations source="positions.115" references="/0/activityForInterface/%/%.12">
-      <details key="start" value="2481"/>
-      <details key="end" value="2495"/>
+      <details key="start" value="2560"/>
+      <details key="end" value="2574"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.116" references="/0/activityForInterface/%/%.12/interface">
-      <details key="start" value="2481"/>
-      <details key="end" value="2490"/>
+      <details key="start" value="2560"/>
+      <details key="end" value="2569"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.117" references="/0/activityForInterface/%/%.13">
-      <details key="start" value="2497"/>
-      <details key="end" value="2696"/>
+      <details key="start" value="2576"/>
+      <details key="end" value="2785"/>
       <details key="line" value="80"/>
     </eAnnotations>
     <eAnnotations source="positions.118" references="/0/activityForInterface/%/%.14">
-      <details key="start" value="1842"/>
-      <details key="end" value="1913"/>
+      <details key="start" value="1907"/>
+      <details key="end" value="1978"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.119" references="/0/activityForInterface/%/%.14/%">
-      <details key="start" value="1842"/>
-      <details key="end" value="1897"/>
+      <details key="start" value="1907"/>
+      <details key="end" value="1962"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.120" references="/0/activityForInterface/%/%.14/%/%">
-      <details key="start" value="1842"/>
-      <details key="end" value="1882"/>
+      <details key="start" value="1907"/>
+      <details key="end" value="1947"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.121" references="/0/activityForInterface/%/%.14/%/%/%">
-      <details key="start" value="1842"/>
-      <details key="end" value="1865"/>
+      <details key="start" value="1907"/>
+      <details key="end" value="1930"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.122" references="/0/activityForInterface/%/%.14/%/%/%/packageName">
-      <details key="start" value="1853"/>
-      <details key="end" value="1864"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.123" references="/0/activityForInterface/%/%.14/%/%/%.1">
-      <details key="start" value="1868"/>
-      <details key="end" value="1882"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.124" references="/0/activityForInterface/%/%.14/%/%.1">
-      <details key="start" value="1883"/>
-      <details key="end" value="1897"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.125" references="/0/activityForInterface/%/%.14/%/%.1/interface">
-      <details key="start" value="1883"/>
-      <details key="end" value="1892"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.126" references="/0/activityForInterface/%/%.14/%.1">
-      <details key="start" value="1898"/>
-      <details key="end" value="1913"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.127" references="/0/activityForInterface/%/%.15">
-      <details key="start" value="1922"/>
+      <details key="start" value="1918"/>
       <details key="end" value="1929"/>
       <details key="line" value="0"/>
     </eAnnotations>
+    <eAnnotations source="positions.123" references="/0/activityForInterface/%/%.14/%/%/%.1">
+      <details key="start" value="1933"/>
+      <details key="end" value="1947"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.124" references="/0/activityForInterface/%/%.14/%/%.1">
+      <details key="start" value="1948"/>
+      <details key="end" value="1962"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.125" references="/0/activityForInterface/%/%.14/%/%.1/interface">
+      <details key="start" value="1948"/>
+      <details key="end" value="1957"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.126" references="/0/activityForInterface/%/%.14/%.1">
+      <details key="start" value="1963"/>
+      <details key="end" value="1978"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.127" references="/0/activityForInterface/%/%.15">
+      <details key="start" value="1987"/>
+      <details key="end" value="1994"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
     <eAnnotations source="positions.128" references="/0/activityForInterface/interface">
-      <details key="start" value="1789"/>
-      <details key="end" value="1810"/>
+      <details key="start" value="1853"/>
+      <details key="end" value="1874"/>
       <details key="line" value="65"/>
     </eAnnotations>
     <eAnnotations source="positions.129" references="/0/activityForInterface/packageName">
-      <details key="start" value="1812"/>
-      <details key="end" value="1832"/>
+      <details key="start" value="1876"/>
+      <details key="end" value="1896"/>
       <details key="line" value="65"/>
     </eAnnotations>
   </ecore:EAnnotation>

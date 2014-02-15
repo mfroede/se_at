@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="importsUtil" nsURI="beuth::se::ue4::profile::common::importsUtil" startHeaderPosition="29" endHeaderPosition="218">
+  <mtl:Module name="importsUtil" nsURI="beuth::se::ue4::profile::common::importsUtil" startHeaderPosition="30" endHeaderPosition="223">
     <input>
       <takesTypesFrom href="http://www.eclipse.org/uml2/4.0.0/UML#/"/>
     </input>
@@ -189,98 +189,98 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/importActivityShared">
-      <details key="start" value="93"/>
-      <details key="end" value="220"/>
+      <details key="start" value="97"/>
+      <details key="end" value="225"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/importActivityShared/classString">
-      <details key="start" value="128"/>
-      <details key="end" value="148"/>
+      <details key="start" value="132"/>
+      <details key="end" value="152"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/importActivityShared/%">
-      <details key="start" value="165"/>
-      <details key="end" value="218"/>
+      <details key="start" value="170"/>
+      <details key="end" value="223"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/importActivityShared/%/%">
-      <details key="start" value="165"/>
-      <details key="end" value="205"/>
+      <details key="start" value="170"/>
+      <details key="end" value="210"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/importActivityShared/%/classString">
-      <details key="start" value="207"/>
-      <details key="end" value="218"/>
+      <details key="start" value="212"/>
+      <details key="end" value="223"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/importUI">
-      <details key="start" value="222"/>
-      <details key="end" value="336"/>
+      <details key="start" value="229"/>
+      <details key="end" value="344"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/importUI/classString">
-      <details key="start" value="245"/>
-      <details key="end" value="265"/>
+      <details key="start" value="252"/>
+      <details key="end" value="272"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/importUI/%">
-      <details key="start" value="282"/>
-      <details key="end" value="334"/>
+      <details key="start" value="290"/>
+      <details key="end" value="342"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/importUI/%/%">
-      <details key="start" value="282"/>
-      <details key="end" value="321"/>
+      <details key="start" value="290"/>
+      <details key="end" value="329"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/importUI/%/classString">
-      <details key="start" value="323"/>
-      <details key="end" value="334"/>
+      <details key="start" value="331"/>
+      <details key="end" value="342"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/importCoreClient">
-      <details key="start" value="338"/>
-      <details key="end" value="457"/>
+      <details key="start" value="348"/>
+      <details key="end" value="468"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/importCoreClient/classString">
-      <details key="start" value="369"/>
-      <details key="end" value="389"/>
+      <details key="start" value="379"/>
+      <details key="end" value="399"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/importCoreClient/%">
-      <details key="start" value="406"/>
-      <details key="end" value="455"/>
+      <details key="start" value="417"/>
+      <details key="end" value="466"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/importCoreClient/%/%">
-      <details key="start" value="406"/>
-      <details key="end" value="442"/>
+      <details key="start" value="417"/>
+      <details key="end" value="453"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/importCoreClient/%/classString">
-      <details key="start" value="444"/>
-      <details key="end" value="455"/>
+      <details key="start" value="455"/>
+      <details key="end" value="466"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/importInjectInject">
-      <details key="start" value="459"/>
-      <details key="end" value="544"/>
+      <details key="start" value="472"/>
+      <details key="end" value="558"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/importInjectInject/%">
-      <details key="start" value="509"/>
-      <details key="end" value="542"/>
+      <details key="start" value="523"/>
+      <details key="end" value="556"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/importInjectProvider">
-      <details key="start" value="546"/>
-      <details key="end" value="635"/>
+      <details key="start" value="562"/>
+      <details key="end" value="652"/>
       <details key="line" value="17"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/importInjectProvider/%">
-      <details key="start" value="598"/>
-      <details key="end" value="633"/>
+      <details key="start" value="615"/>
+      <details key="end" value="650"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

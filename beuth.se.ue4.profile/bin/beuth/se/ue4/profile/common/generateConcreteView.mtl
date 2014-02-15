@@ -63,7 +63,11 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 							Panel [property.name/];
 						[/if]
 					[elseif (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
-2[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject').oclAsType(uml::Property)/]
+
+[for (p : OclAny | property.getTaggedValue('ViewObject','viewNavigationObject')->asOrderedSet())]
+5-> [p/]
+[/for]
+2[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')/]
 						[for (stereotype : OclAny | property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject').oclAsSet())]
 							1[stereotype.oclAsType(Stereotype)/]							
 							[if (class.attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('ITEM'))]

@@ -1,6 +1,10 @@
 [comment encoding = UTF-8 /]
 [module util('http://www.eclipse.org/uml2/4.0.0/UML')]
 
+[query public getTaggedValue(element:Element, stereotypeName:String ,property:String ) : Sequence(OclAny) = 
+	invoke('beuth.se.ue4.profile.common.PropertyHelper', 
+	'getTaggedValue(org.eclipse.uml2.uml.Element, java.lang.String, java.lang.String)',
+	Sequence{ element, stereotypeName, property }) /]
 
 [query public quallyName(modelName : String) : String = 
    modelName.replaceAll('[.]', '/')/]

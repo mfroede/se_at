@@ -1641,7 +1641,7 @@
                 </source>
                 <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
               </body>
-              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ViewImpl.class).in(Singleton.class);&#xA;"/>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ViewImpl.class).in(Singleton.class);&#xD;&#xA;"/>
             </else>
           </body>
           <loopVariable name="class">
@@ -1839,6 +1839,11 @@
     <eClassifiers xsi:type="ecore:EClass" name="Model_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Model"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Element_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Element"/>
       </eAnnotations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Class_Class">
@@ -4282,7 +4287,7 @@
     </eAnnotations>
     <eAnnotations source="positions.381" references="/0/gin">
       <details key="start" value="7234"/>
-      <details key="end" value="10577"/>
+      <details key="end" value="10580"/>
       <details key="line" value="185"/>
     </eAnnotations>
     <eAnnotations source="positions.382" references="/0/gin/%">
@@ -4757,7 +4762,7 @@
     </eAnnotations>
     <eAnnotations source="positions.476" references="/0/gin/%.3">
       <details key="start" value="8794"/>
-      <details key="end" value="10562"/>
+      <details key="end" value="10565"/>
       <details key="line" value="219"/>
     </eAnnotations>
     <eAnnotations source="positions.477" references="/0/gin/%.3/%">
@@ -4907,12 +4912,12 @@
     </eAnnotations>
     <eAnnotations source="positions.506" references="/0/gin/%.3/%.7">
       <details key="start" value="9868"/>
-      <details key="end" value="10546"/>
+      <details key="end" value="10549"/>
       <details key="line" value="246"/>
     </eAnnotations>
     <eAnnotations source="positions.507" references="/0/gin/%.3/%.7/%">
       <details key="start" value="9913"/>
-      <details key="end" value="10537"/>
+      <details key="end" value="10540"/>
       <details key="line" value="247"/>
     </eAnnotations>
     <eAnnotations source="positions.508" references="/0/gin/%.3/%.7/%/%">
@@ -5126,43 +5131,43 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.550" references="/0/gin/%.3/%.7/%/%.2">
-      <details key="start" value="10430"/>
-      <details key="end" value="10532"/>
+      <details key="start" value="10431"/>
+      <details key="end" value="10535"/>
       <details key="line" value="257"/>
     </eAnnotations>
     <eAnnotations source="positions.551" references="/0/gin/%.3/%.7/%/%.2/%">
-      <details key="start" value="10437"/>
-      <details key="end" value="10444"/>
+      <details key="start" value="10439"/>
+      <details key="end" value="10446"/>
       <details key="line" value="258"/>
     </eAnnotations>
     <eAnnotations source="positions.552" references="/0/gin/%.3/%.7/%/%.2/%.1">
-      <details key="start" value="10445"/>
-      <details key="end" value="10464"/>
+      <details key="start" value="10447"/>
+      <details key="end" value="10466"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.553" references="/0/gin/%.3/%.7/%/%.2/%.1/class">
-      <details key="start" value="10458"/>
-      <details key="end" value="10463"/>
+      <details key="start" value="10460"/>
+      <details key="end" value="10465"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.554" references="/0/gin/%.3/%.7/%/%.2/%.2">
-      <details key="start" value="10466"/>
-      <details key="end" value="10481"/>
+      <details key="start" value="10468"/>
+      <details key="end" value="10483"/>
       <details key="line" value="258"/>
     </eAnnotations>
     <eAnnotations source="positions.555" references="/0/gin/%.3/%.7/%/%.2/%.3">
-      <details key="start" value="10482"/>
-      <details key="end" value="10492"/>
+      <details key="start" value="10484"/>
+      <details key="end" value="10494"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.556" references="/0/gin/%.3/%.7/%/%.2/%.3/class">
-      <details key="start" value="10482"/>
-      <details key="end" value="10487"/>
+      <details key="start" value="10484"/>
+      <details key="end" value="10489"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.557" references="/0/gin/%.3/%.7/%/%.2/%.4">
-      <details key="start" value="10494"/>
-      <details key="end" value="10531"/>
+      <details key="start" value="10496"/>
+      <details key="end" value="10534"/>
       <details key="line" value="258"/>
     </eAnnotations>
     <eAnnotations source="positions.558" references="/0/gin/%.3/%.7/class">
@@ -5181,8 +5186,8 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.561" references="/0/gin/%.3/%.8">
-      <details key="start" value="10548"/>
-      <details key="end" value="10555"/>
+      <details key="start" value="10551"/>
+      <details key="end" value="10558"/>
       <details key="line" value="261"/>
     </eAnnotations>
     <eAnnotations source="positions.562" references="/0/gin/%.3/%.9">
@@ -5231,8 +5236,8 @@
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.571" references="/0/gin/%.4">
-      <details key="start" value="10564"/>
-      <details key="end" value="10566"/>
+      <details key="start" value="10567"/>
+      <details key="end" value="10569"/>
       <details key="line" value="264"/>
     </eAnnotations>
     <eAnnotations source="positions.572" references="/0/gin/model">
