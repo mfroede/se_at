@@ -63,8 +63,8 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 							Panel [property.name/];
 						[/if]
 					[elseif (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
-						[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject').oclAsSet().oclAsType(Property))]
-							[if (prop.getTaggedValue('ViewNavigationObject','type').oclAsSet()->first().oclAsType(uml::EnumerationLiteral).name.endsWith('ITEM'))]
+						[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+							[if (prop.getTaggedValue('ViewNavigationObject','type', false).oclAsSet()->first().oclAsType(uml::EnumerationLiteral).name.endsWith('ITEM'))]
 								[if (isValueExists(property, 'type', 'MENU'))]
 	@UiField
 	MenuItem [prop.name/];

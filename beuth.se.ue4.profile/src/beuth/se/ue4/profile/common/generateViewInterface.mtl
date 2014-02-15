@@ -117,48 +117,70 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 	}
 
 	[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
-	[for (property: Property | class.attribute)]
-		[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
-			[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
-				[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]						
+		[for (property: Property | class.attribute)]
+			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+				[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+					[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]						
 		@Override
 		void on[property.name.toUpperFirst()/]Clicked(){
-[getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView')/]
-			placeController.gotTo(new [getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView').oclAsType(uml::Interface).name/]Place());
+			placeController.gotTo(new [getClassName(property.getTaggedValue(property.getApplicableStereotypes()->asOrderedSet()->first().name, 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 		}
-				[else]
+					[else]
 		@Override
 		// void on[property.name.toUpperFirst()/]Clicked(){
 		//	placeController.gotTo(new [getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView').oclAsType(uml::Interface).name/]Place());
 		// }
+					[/if]
 				[/if]
 			[/if]
-		[/if]
+		[/for]
 	[/for]
-[/for]
-		[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute->notEmpty())]
-			[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->notEmpty())]
-				[if (not interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject').oclIsUndefined())]
-					[for (class : Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
-						[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
-							[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
-									[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]				
-		@Override
-		void onButtonClicked(String buttonName){
+	[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute->notEmpty())]
+		[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->notEmpty())]
+			[if (not interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject').oclIsUndefined())]
+				[for (class : Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+					[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+						[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+							[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]	
+								[if (i<=1)]				
+	@Override
+	void onButtonClicked(String buttonName){
+		switch(buttonName) {
+								[/if]
+		case "[property.name/]":
+			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+			break;
+							[else]
+								[if (i<=1)]	
+	// @Override
+	// void onButtonClicked(String buttonName){
+	//	 switch(buttonName) {
+								[/if]
+	// 	 case "[property.name/]":
+	// 		 placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+	// 		 break;
+							[/if]
+						[/if]
+					[/for]
+					[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+						[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+							[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]	
+								[if (i<=1)]	
 		}
-
-									[else]
-		@Override
-		// void onButtonClicked(String buttonName){
-		}
-
+	}
+								[/if]
+							[else]
+								[if (i<=1)]	
+	//	 }
+	// }
 								[/if]
 							[/if]
-						[/for]
-					[/for]					
-				[/if]
+						[/if]
+					[/for]
+				[/for]					
 			[/if]
 		[/if]
+	[/if]
 }
 [/file]
 [/template]
