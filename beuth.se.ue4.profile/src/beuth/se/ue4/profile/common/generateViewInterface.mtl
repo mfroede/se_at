@@ -21,9 +21,40 @@ import com.google.gwt.user.client.ui.IsWidget;
 
 public class [interface.name/]View extends IsWidget {
 	public interface Presenter {
+[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+	[for (property: Property | class.attribute)]
+		[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+			[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+				[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]						
+		void on[property.name.toUpperFirst()/]Clicked();
+				[else]
+		// void on[property.name.toUpperFirst()/]Clicked();
+				[/if]
+			[/if]
+		[/if]
+	[/for]
+[/for]
+		[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute->notEmpty())]
+			[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->notEmpty())]
+				[if (not interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject').oclIsUndefined())]
+					[for (class : Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+						[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+							[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+								[if (i<=1)]				
+									[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]				
+		void onButtonClicked(String buttonName);
 
-		//Methods
+									[else]
+		// void onButtonClicked(String buttonName);
 
+									[/if]
+								[/if]
+							[/if]
+						[/for]
+					[/for]					
+				[/if]
+			[/if]
+		[/if]
 	}
 
 	void setPresenter(Presenter presenter);
@@ -85,7 +116,49 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 
 	}
 
-	//TODO Overrides einfuegen
+	[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+	[for (property: Property | class.attribute)]
+		[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+			[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+				[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]						
+		@Override
+		void on[property.name.toUpperFirst()/]Clicked(){
+[getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView')/]
+			placeController.gotTo(new [getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView').oclAsType(uml::Interface).name/]Place());
+		}
+				[else]
+		@Override
+		// void on[property.name.toUpperFirst()/]Clicked(){
+		//	placeController.gotTo(new [getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView').oclAsType(uml::Interface).name/]Place());
+		// }
+				[/if]
+			[/if]
+		[/if]
+	[/for]
+[/for]
+		[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute->notEmpty())]
+			[if (interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->notEmpty())]
+				[if (not interface.getTargetDirectedRelationships().source.oclAsType(Class).attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject').oclIsUndefined())]
+					[for (class : Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+						[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+							[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+									[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]				
+		@Override
+		void onButtonClicked(String buttonName){
+		}
+
+									[else]
+		@Override
+		// void onButtonClicked(String buttonName){
+		}
+
+								[/if]
+							[/if]
+						[/for]
+					[/for]					
+				[/if]
+			[/if]
+		[/if]
 }
 [/file]
 [/template]

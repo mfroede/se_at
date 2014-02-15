@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_OVS8QJUAEeO4ZfzhyAwU7g">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4" xmlns:profile_1="http:///schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_OVS8QJUAEeO4ZfzhyAwU7g http:///schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6 ../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_D1o2cJZ0EeOLx-y2tbQtDA">
   <uml:Model xmi:id="_WSqbcJUAEeO4ZfzhyAwU7g" name="beuth.se.ue4.model">
     <packagedElement xmi:type="uml:Class" xmi:id="_wQqOgJUAEeO4ZfzhyAwU7g" name="About">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pnlzUJUBEeO4ZfzhyAwU7g" name="infoText" visibility="public">
@@ -127,7 +127,7 @@
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nd8bsJUAEeO4ZfzhyAwU7g">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_neenMJUAEeO4ZfzhyAwU7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_OVS8QJUAEeO4ZfzhyAwU7g"/>
+        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_D1o2cJZ0EeOLx-y2tbQtDA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_cDXdgJT6EeOgb7PnCEGbYw"/>
     </profileApplication>
@@ -156,4 +156,28 @@
   <profile:ViewNavigationObject xmi:id="_oOpGkJUFEeO4ZfzhyAwU7g" base_Property="_kA560JUFEeO4ZfzhyAwU7g" goToView="_kFjHEJUBEeO4ZfzhyAwU7g" value="impressum" label="Impressum"/>
   <profile:View xmi:id="_H0qKsJUJEeO4ZfzhyAwU7g" base_Interface="_RZScQJUBEeO4ZfzhyAwU7g"/>
   <profile:ViewImpl xmi:id="_Jip9kJUJEeO4ZfzhyAwU7g" base_Class="_ND7lkJUBEeO4ZfzhyAwU7g" concreteBinding="false"/>
+  <profile_1:ViewImpl xmi:id="_SyIq8JZ0EeOLx-y2tbQtDA" base_Class="_wQqOgJUAEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewImpl xmi:id="_T1p9cJZ0EeOLx-y2tbQtDA" base_Class="_0Xe58JUAEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewImpl xmi:id="_Xmw3kJZ0EeOLx-y2tbQtDA" base_Class="_D8TSsJUBEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewImpl xmi:id="_YwVuwJZ0EeOLx-y2tbQtDA" base_Class="_BNaDgJUBEeO4ZfzhyAwU7g"/>
+  <profile_1:Header xmi:id="_Z_UDUJZ0EeOLx-y2tbQtDA" base_Class="_WwMIIJUEEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewImpl xmi:id="_bJ5nIJZ0EeOLx-y2tbQtDA" base_Class="_hAgBsJUBEeO4ZfzhyAwU7g"/>
+  <profile_1:Footer xmi:id="_cmL-8JZ0EeOLx-y2tbQtDA" base_Class="_ZpROEJUEEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewImpl xmi:id="_dsVusJZ0EeOLx-y2tbQtDA" base_Class="_ND7lkJUBEeO4ZfzhyAwU7g"/>
+  <profile_1:View xmi:id="_fNTLIJZ0EeOLx-y2tbQtDA" base_Interface="_RZScQJUBEeO4ZfzhyAwU7g"/>
+  <profile_1:ViewNavigationObject xmi:id="_hGLYUJZ0EeOLx-y2tbQtDA" base_Property="_kA560JUFEeO4ZfzhyAwU7g" goToView="_bJ5nIJZ0EeOLx-y2tbQtDA"/>
+  <profile_1:ViewObject xmi:id="_lu2MkJZ0EeOLx-y2tbQtDA" base_Property="_CkTdoJUEEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_pNZXEJZ0EeOLx-y2tbQtDA" viewObject="_pNZXEJZ0EeOLx-y2tbQtDA _rVPNUJZ0EeOLx-y2tbQtDA _tNKYQJZ0EeOLx-y2tbQtDA _vWdnEJZ0EeOLx-y2tbQtDA" base_Property="_HFIZ8JUDEeO4ZfzhyAwU7g" type="TABLE"/>
+  <profile_1:ViewObject xmi:id="_rVPNUJZ0EeOLx-y2tbQtDA" base_Property="_Yo_SQJUDEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_tNKYQJZ0EeOLx-y2tbQtDA" base_Property="_j0gIcJUDEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_vWdnEJZ0EeOLx-y2tbQtDA" base_Property="_26KxwJUDEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_0-WcoJZ0EeOLx-y2tbQtDA" base_Property="_5IguEJUCEeO4ZfzhyAwU7g" type="LABEL"/>
+  <profile_1:ViewObject xmi:id="_4ESS0JZ0EeOLx-y2tbQtDA" base_Property="_pnlzUJUBEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_58gYsJZ0EeOLx-y2tbQtDA" viewObject="_76PQsJZ0EeOLx-y2tbQtDA" base_Property="_W40xoJUCEeO4ZfzhyAwU7g" type="LIST"/>
+  <profile_1:ViewObject xmi:id="_76PQsJZ0EeOLx-y2tbQtDA" base_Property="_nVFIsJUCEeO4ZfzhyAwU7g" type="TEXTFIELD"/>
+  <profile_1:ViewObject xmi:id="_EL0sYJZ1EeOLx-y2tbQtDA" viewNavigationObject="_GZcagJZ1EeOLx-y2tbQtDA _KKaxwJZ1EeOLx-y2tbQtDA _OId7sJZ1EeOLx-y2tbQtDA _SM6BgJZ1EeOLx-y2tbQtDA" base_Property="_i2l5QJUEEeO4ZfzhyAwU7g" type="LIST"/>
+  <profile_1:ViewNavigationObject xmi:id="_GZcagJZ1EeOLx-y2tbQtDA" base_Property="_slJpQJUEEeO4ZfzhyAwU7g" type="ITEM" goToView="_SyIq8JZ0EeOLx-y2tbQtDA"/>
+  <profile_1:ViewNavigationObject xmi:id="_KKaxwJZ1EeOLx-y2tbQtDA" base_Property="_7h58cJUEEeO4ZfzhyAwU7g" type="ITEM" goToView="_YwVuwJZ0EeOLx-y2tbQtDA"/>
+  <profile_1:ViewNavigationObject xmi:id="_OId7sJZ1EeOLx-y2tbQtDA" base_Property="_CsFrMJUFEeO4ZfzhyAwU7g" type="ITEM" goToView="_T1p9cJZ0EeOLx-y2tbQtDA"/>
+  <profile_1:ViewNavigationObject xmi:id="_SM6BgJZ1EeOLx-y2tbQtDA" base_Property="_QvyPcJUFEeO4ZfzhyAwU7g" type="ITEM" goToView="_Xmw3kJZ0EeOLx-y2tbQtDA"/>
 </xmi:XMI>
