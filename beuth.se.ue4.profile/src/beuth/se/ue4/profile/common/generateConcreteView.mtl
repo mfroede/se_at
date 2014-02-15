@@ -3,7 +3,7 @@
 [import beuth::se::ue4::profile::common::util /]
 
 [template public generateConcreteView(model: Model, packageName : String)]
-[for (class : Class | model.ownedElement.oclAsType(Class))]
+[for (class : Class | model.ownedElement)]
 	[viewXML(class, packageName)/]
 	[viewImpl(class, packageName)/]
 	[if (isNotViewExisting(class))]
