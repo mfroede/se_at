@@ -27,6 +27,7 @@ Feststellungen:
 	Property-Objects of view zweimal enthalten
 	Probleme mit Profil mit PermanentView
 	*1Grenzen aufzeigen z.B. bei variabler Befüllung von Listen z.B. bei news auch wenn auf extra seite gegangen wird
+erst goToView als Property ind viewNavigationObject gesetzt -> geht nicht, da man von mehreren NavigationObjekten auf eine View kommen kann, deshalb als Association gelöst
 
 	
 Doku
