@@ -14,6 +14,7 @@ Vererbung von ViewObject und ViewNavigationObject nicht möglich (unterschiedlic
 Ausblick (wenn Zeit):
 	Generierung einer separaten Navigation Ansicht in Form eines ActivityDiagrams
 	Generierung eines Gesamt UML-Klassendiagramm
+	Erweiterbarkeit auf Backend z.B. für automatische Befüllung (siehe Stichpunkt *1)
 	
 Offene Fragen:
 	Generierung von interactions Elementen, in XML und bei Bedarf in ViewImpl
@@ -25,10 +26,17 @@ Zwischenstand:
 Feststellungen:
 	Property-Objects of view zweimal enthalten
 	Probleme mit Profil mit PermanentView
+	*1Grenzen aufzeigen z.B. bei variabler Befüllung von Listen z.B. bei news auch wenn auf extra seite gegangen wird
 
 	
 Doku
 	StatPlace muss Manuel gesetzt werden
+	Gin Lib muss eingebunden werden
 
 Überlegung:
 	@Overrides bei methoden in view impl als boolean setzen können-> gibt viewImpl methoden die müssen vererbt werden und welche die müssen nicht über View gemacht werden
+	Was passiert z.B. bei login oder Resgistrierung, wenn Parameter mit übergeben werden müssen -> es gibt keine Methoden die gesetzt werden können, sodass ein solcher fall möglich ist
+	@UiHandler({ "button" })
+	void onButtonPressed(ClickEvent e) {
+		presenter.onButtonClick(name.getText(), password.getText());
+	}

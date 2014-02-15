@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29 ../../beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29" xmlns:profile_1="http:///schemas/profile/_dcjI4JT4EeOgb7PnCEGbYw/30" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_XhOpEIQlEeORmKr0PGrM5w/29 file:/C:/Users/Claudia/Documents/Studium/Master/Semester1/SE/neu/Semesterprojekt/se_at/beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w http:///schemas/profile/_dcjI4JT4EeOgb7PnCEGbYw/30 ../../beuth.se.ue4.profile/model/gwt.profile.uml#_dcqdoJT4EeOgb7PnCEGbYw">
   <uml:Model xmi:id="_LjYDQH0PEeOmQMDesVJLfw" name="beuth.se.ue4.PortfolieDemo" URI="" viewpoint="">
     <packagedElement xmi:type="uml:Class" xmi:id="_W0yGEH0PEeOmQMDesVJLfw" name="About">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_qXATEH0QEeOmQMDesVJLfw" name="infoText" visibility="public">
@@ -124,9 +124,11 @@
     <packagedElement xmi:type="uml:Realization" xmi:id="_yrd_YJPUEeOxutRcRMNoLw" name="Realization1" client="_pB7qQIQmEeORmKr0PGrM5w" supplier="_kQ3-EJPUEeOxutRcRMNoLw"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_p2x50JPYEeOfF6BmMd72hg" clientDependency="_uGSnMJPYEeOfF6BmMd72hg" name="NewsTest"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_uGSnMJPYEeOfF6BmMd72hg" name="Realization2" client="_p2x50JPYEeOfF6BmMd72hg" supplier="_kQ3-EJPUEeOxutRcRMNoLw"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_d5j_kJT5EeOgb7PnCEGbYw" name="Class1"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_gOOJ0JT5EeOgb7PnCEGbYw" name="Class2"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_mS-h8IQsEeORmKr0PGrM5w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mTRc4IQsEeORmKr0PGrM5w" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwt.profile.uml#_XhYaEIQlEeORmKr0PGrM5w"/>
+        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwt.profile.uml#_dcqdoJT4EeOgb7PnCEGbYw"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../../beuth.se.ue4.profile/model/gwt.profile.uml#_qmF-cHkfEeOUo5BywlZ9hA"/>
     </profileApplication>
@@ -199,4 +201,6 @@
   <profile:ViewObject xmi:id="_qp4nMJPXEeOfF6BmMd72hg" type="LIST" base_Property="_MVdz4IQoEeORmKr0PGrM5w" value="newsList" label="newsList" viewObject="_aiCkcJPYEeOfF6BmMd72hg"/>
   <profile:ViewObject xmi:id="_aiCkcJPYEeOfF6BmMd72hg" type="TEXTFIELD" base_Property="_Ud1CIIQoEeORmKr0PGrM5w" value="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet." label="firstNews"/>
   <profile:ViewImpl xmi:id="_r4ItkJPYEeOfF6BmMd72hg" base_Class="_p2x50JPYEeOfF6BmMd72hg" concreteBind="false"/>
+  <profile_1:ViewImpl xmi:id="_e2Mm8JT5EeOgb7PnCEGbYw" base_Class="_d5j_kJT5EeOgb7PnCEGbYw" concreteBinding="false"/>
+  <profile_1:ViewImpl xmi:id="_hGjgAJT5EeOgb7PnCEGbYw" base_Class="_gOOJ0JT5EeOgb7PnCEGbYw"/>
 </xmi:XMI>

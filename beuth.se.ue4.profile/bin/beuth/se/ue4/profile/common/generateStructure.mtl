@@ -244,14 +244,19 @@ public class ProductionGinModule extends AbstractGinModule {
 		bind(YourStartHereActivity.class);
 
 [for (class : Class | model.ownedElement)]
-[comment]		[if (class.getValue(model.getApplicableStereotype('ViewImpl'), 'concreteBind').toString().endsWith('true') or class.getValue(model.getApplicableStereotype('Header'), 'concreteBind').toString().endsWith('true')or class.getValue(model.getApplicableStereotype('Footer'), 'concreteBind').toString().endsWith('true')or class.getValue(model.getApplicableStereotype('PermanentView'), 'concreteBind').toString().endsWith('true'))][/comment]
-[comment]			[if (property.name.endsWith('concreteBind') and property.getValue('Property', propertyName).endsWith('true'))][/comment]
+	[if (not isNotViewExisting(class))]
+		[for (p : Property | class.getAppliedStereotypes()->asOrderedSet()->first().attribute)]
+		[if (p.name.endsWith('concreteBinding'))]
+			[if(not class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(),p.name).oclAsType(Boolean))]
+		// bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+			[else]
 		bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
-[comment]			[elseif(property.name.endsWith('concreteBind') and property.default.endsWith('false'))][/comment]
-[comment]		[else][/comment]
-[comment]		// bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);[/comment]
-[comment]			[/if][/comment]
-[comment]		[/for]		[/comment]
+			[/if]
+		[/if]
+		[/for]
+	[else]
+		bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+	[/if]	
 [/for]
 	}
 }

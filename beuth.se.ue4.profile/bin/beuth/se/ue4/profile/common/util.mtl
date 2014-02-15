@@ -8,7 +8,15 @@
    modelName.substring( 1, modelName.lastIndexOf('.') )/]
 
 [query public isNotViewExisting(class : Class) : Boolean = 
-   class.clientDependency.target.getAppliedStereotypes()->asOrderedSet()->first().oclIsInvalid()/]
+   if(class.interfaceRealization->notEmpty())then if(class.interfaceRealization.target.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('View')) then false else true endif else true endif/]
+
+[query public getStereotypeValueProperty(property:Property, propName:String) : Stereotype =
+     getValue(property.getAppliedStereotypes()->asOrderedSet()->first(),propName)
+/]
+[query public isValueExists(property:Property, propName:String, name:String) : Boolean =
+     getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), propName).oclAsType(uml::EnumerationLiteral).name.endsWith(name)
+/]
+
 
 [template public operationIA(o : Operation)]
 
