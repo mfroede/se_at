@@ -94,25 +94,6 @@
           </argument>
         </body>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.AppEntryPoint' />&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- Specify the paths for translatable code -->&#xD;&#xA;&#x9;&lt;source path='client' />&#xD;&#xA;&lt;/module>&#xD;&#xA;"/>
-        <body xsi:type="ocl.ecore:OperationCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="mtl:QueryInvocation">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="util.emtl#/0/quallyName"/>
-            <argument xsi:type="mtl:QueryInvocation">
-              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              <definition href="util.emtl#/0/packageName"/>
-              <argument xsi:type="ocl.ecore:VariableExp" name="modelName" referredVariable="/0/configXML/modelName">
-                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-              </argument>
-            </argument>
-          </source>
-          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client/AppEntryPoint.java">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          </argument>
-          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/+"/>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:QueryInvocation">
@@ -368,6 +349,11 @@
         <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Element"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Boolean_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+      </eAnnotations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Class_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/uml2/4.0.0/UML#//Class"/>
@@ -464,15 +450,6 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -656,12 +633,12 @@
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/configXML">
       <details key="start" value="382"/>
-      <details key="end" value="2037"/>
+      <details key="end" value="2056"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/configXML/%">
       <details key="start" value="431"/>
-      <details key="end" value="2024"/>
+      <details key="end" value="2043"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/configXML/%/%">
@@ -755,263 +732,233 @@
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/configXML/%/%.6">
-      <details key="start" value="1949"/>
-      <details key="end" value="2013"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/configXML/%/%.6/%">
-      <details key="start" value="1949"/>
-      <details key="end" value="1983"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/configXML/%/%.6/%/%">
-      <details key="start" value="1960"/>
-      <details key="end" value="1982"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/configXML/%/%.6/%/%/modelName">
-      <details key="start" value="1972"/>
-      <details key="end" value="1981"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/configXML/%/%.6/%.1">
-      <details key="start" value="1986"/>
-      <details key="end" value="2013"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/configXML/%/%.7">
-      <details key="start" value="2015"/>
-      <details key="end" value="2017"/>
-      <details key="line" value="45"/>
-    </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/configXML/%/%.8">
       <details key="start" value="438"/>
       <details key="end" value="468"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/configXML/%/%.8/%">
+    <eAnnotations source="positions.34" references="/0/configXML/%/%.6/%">
       <details key="start" value="438"/>
       <details key="end" value="459"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/configXML/%/%.8/%/modelName">
+    <eAnnotations source="positions.35" references="/0/configXML/%/%.6/%/modelName">
       <details key="start" value="449"/>
       <details key="end" value="458"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/configXML/%/%.8/%.1">
+    <eAnnotations source="positions.36" references="/0/configXML/%/%.6/%.1">
       <details key="start" value="462"/>
       <details key="end" value="468"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/configXML/%/%.9">
+    <eAnnotations source="positions.37" references="/0/configXML/%/%.7">
       <details key="start" value="477"/>
       <details key="end" value="484"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/configXML/modelName">
+    <eAnnotations source="positions.38" references="/0/configXML/modelName">
       <details key="start" value="409"/>
       <details key="end" value="427"/>
       <details key="line" value="13"/>
     </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/activityView">
-      <details key="start" value="2041"/>
-      <details key="end" value="2814"/>
+    <eAnnotations source="positions.39" references="/0/activityView">
+      <details key="start" value="2060"/>
+      <details key="end" value="2833"/>
       <details key="line" value="48"/>
     </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/activityView/%">
-      <details key="start" value="2094"/>
-      <details key="end" value="2801"/>
+    <eAnnotations source="positions.40" references="/0/activityView/%">
+      <details key="start" value="2113"/>
+      <details key="end" value="2820"/>
       <details key="line" value="49"/>
     </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/activityView/%/%">
-      <details key="start" value="2191"/>
-      <details key="end" value="2199"/>
+    <eAnnotations source="positions.41" references="/0/activityView/%/%">
+      <details key="start" value="2210"/>
+      <details key="end" value="2218"/>
       <details key="line" value="50"/>
     </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/activityView/%/%.1">
-      <details key="start" value="2200"/>
-      <details key="end" value="2222"/>
+    <eAnnotations source="positions.42" references="/0/activityView/%/%.1">
+      <details key="start" value="2219"/>
+      <details key="end" value="2241"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/activityView/%/%.1/modelName">
-      <details key="start" value="2212"/>
-      <details key="end" value="2221"/>
+    <eAnnotations source="positions.43" references="/0/activityView/%/%.1/modelName">
+      <details key="start" value="2231"/>
+      <details key="end" value="2240"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/activityView/%/%.2">
-      <details key="start" value="2224"/>
-      <details key="end" value="2794"/>
+    <eAnnotations source="positions.44" references="/0/activityView/%/%.2">
+      <details key="start" value="2243"/>
+      <details key="end" value="2813"/>
       <details key="line" value="50"/>
     </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/activityView/%/%.3">
-      <details key="start" value="2101"/>
-      <details key="end" value="2171"/>
+    <eAnnotations source="positions.45" references="/0/activityView/%/%.3">
+      <details key="start" value="2120"/>
+      <details key="end" value="2190"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/activityView/%/%.3/%">
-      <details key="start" value="2101"/>
-      <details key="end" value="2135"/>
+    <eAnnotations source="positions.46" references="/0/activityView/%/%.3/%">
+      <details key="start" value="2120"/>
+      <details key="end" value="2154"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/activityView/%/%.3/%/%">
-      <details key="start" value="2112"/>
-      <details key="end" value="2134"/>
+    <eAnnotations source="positions.47" references="/0/activityView/%/%.3/%/%">
+      <details key="start" value="2131"/>
+      <details key="end" value="2153"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/activityView/%/%.3/%/%/modelName">
-      <details key="start" value="2124"/>
-      <details key="end" value="2133"/>
+    <eAnnotations source="positions.48" references="/0/activityView/%/%.3/%/%/modelName">
+      <details key="start" value="2143"/>
+      <details key="end" value="2152"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/activityView/%/%.3/%.1">
-      <details key="start" value="2138"/>
-      <details key="end" value="2171"/>
+    <eAnnotations source="positions.49" references="/0/activityView/%/%.3/%.1">
+      <details key="start" value="2157"/>
+      <details key="end" value="2190"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/activityView/%/%.4">
-      <details key="start" value="2180"/>
-      <details key="end" value="2187"/>
+    <eAnnotations source="positions.50" references="/0/activityView/%/%.4">
+      <details key="start" value="2199"/>
+      <details key="end" value="2206"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/activityView/modelName">
-      <details key="start" value="2071"/>
-      <details key="end" value="2089"/>
+    <eAnnotations source="positions.51" references="/0/activityView/modelName">
+      <details key="start" value="2090"/>
+      <details key="end" value="2108"/>
       <details key="line" value="48"/>
     </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/abstractActivityDefaultImpl">
-      <details key="start" value="2818"/>
-      <details key="end" value="3631"/>
+    <eAnnotations source="positions.52" references="/0/abstractActivityDefaultImpl">
+      <details key="start" value="2837"/>
+      <details key="end" value="3650"/>
       <details key="line" value="75"/>
     </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/abstractActivityDefaultImpl/%">
-      <details key="start" value="2886"/>
-      <details key="end" value="3618"/>
+    <eAnnotations source="positions.53" references="/0/abstractActivityDefaultImpl/%">
+      <details key="start" value="2905"/>
+      <details key="end" value="3637"/>
       <details key="line" value="76"/>
     </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/abstractActivityDefaultImpl/%/%">
-      <details key="start" value="2998"/>
-      <details key="end" value="3006"/>
+    <eAnnotations source="positions.54" references="/0/abstractActivityDefaultImpl/%/%">
+      <details key="start" value="3017"/>
+      <details key="end" value="3025"/>
       <details key="line" value="77"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/abstractActivityDefaultImpl/%/%.1">
-      <details key="start" value="3007"/>
-      <details key="end" value="3029"/>
+    <eAnnotations source="positions.55" references="/0/abstractActivityDefaultImpl/%/%.1">
+      <details key="start" value="3026"/>
+      <details key="end" value="3048"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/abstractActivityDefaultImpl/%/%.1/modelName">
-      <details key="start" value="3019"/>
-      <details key="end" value="3028"/>
+    <eAnnotations source="positions.56" references="/0/abstractActivityDefaultImpl/%/%.1/modelName">
+      <details key="start" value="3038"/>
+      <details key="end" value="3047"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/abstractActivityDefaultImpl/%/%.2">
-      <details key="start" value="3031"/>
-      <details key="end" value="3611"/>
+    <eAnnotations source="positions.57" references="/0/abstractActivityDefaultImpl/%/%.2">
+      <details key="start" value="3050"/>
+      <details key="end" value="3630"/>
       <details key="line" value="77"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/abstractActivityDefaultImpl/%/%.3">
-      <details key="start" value="2893"/>
-      <details key="end" value="2978"/>
+    <eAnnotations source="positions.58" references="/0/abstractActivityDefaultImpl/%/%.3">
+      <details key="start" value="2912"/>
+      <details key="end" value="2997"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/abstractActivityDefaultImpl/%/%.3/%">
-      <details key="start" value="2893"/>
-      <details key="end" value="2927"/>
+    <eAnnotations source="positions.59" references="/0/abstractActivityDefaultImpl/%/%.3/%">
+      <details key="start" value="2912"/>
+      <details key="end" value="2946"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/abstractActivityDefaultImpl/%/%.3/%/%">
-      <details key="start" value="2904"/>
-      <details key="end" value="2926"/>
+    <eAnnotations source="positions.60" references="/0/abstractActivityDefaultImpl/%/%.3/%/%">
+      <details key="start" value="2923"/>
+      <details key="end" value="2945"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/abstractActivityDefaultImpl/%/%.3/%/%/modelName">
-      <details key="start" value="2916"/>
-      <details key="end" value="2925"/>
+    <eAnnotations source="positions.61" references="/0/abstractActivityDefaultImpl/%/%.3/%/%/modelName">
+      <details key="start" value="2935"/>
+      <details key="end" value="2944"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/abstractActivityDefaultImpl/%/%.3/%.1">
-      <details key="start" value="2930"/>
-      <details key="end" value="2978"/>
+    <eAnnotations source="positions.62" references="/0/abstractActivityDefaultImpl/%/%.3/%.1">
+      <details key="start" value="2949"/>
+      <details key="end" value="2997"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/abstractActivityDefaultImpl/%/%.4">
-      <details key="start" value="2987"/>
-      <details key="end" value="2994"/>
+    <eAnnotations source="positions.63" references="/0/abstractActivityDefaultImpl/%/%.4">
+      <details key="start" value="3006"/>
+      <details key="end" value="3013"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/abstractActivityDefaultImpl/modelName">
-      <details key="start" value="2863"/>
-      <details key="end" value="2881"/>
+    <eAnnotations source="positions.64" references="/0/abstractActivityDefaultImpl/modelName">
+      <details key="start" value="2882"/>
+      <details key="end" value="2900"/>
       <details key="line" value="75"/>
     </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/placeControllerProvider">
-      <details key="start" value="3633"/>
-      <details key="end" value="4375"/>
+    <eAnnotations source="positions.65" references="/0/placeControllerProvider">
+      <details key="start" value="3652"/>
+      <details key="end" value="4394"/>
       <details key="line" value="104"/>
     </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/placeControllerProvider/%">
-      <details key="start" value="3697"/>
-      <details key="end" value="4360"/>
+    <eAnnotations source="positions.66" references="/0/placeControllerProvider/%">
+      <details key="start" value="3716"/>
+      <details key="end" value="4379"/>
       <details key="line" value="105"/>
     </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/placeControllerProvider/%/%">
-      <details key="start" value="3809"/>
-      <details key="end" value="3817"/>
+    <eAnnotations source="positions.67" references="/0/placeControllerProvider/%/%">
+      <details key="start" value="3828"/>
+      <details key="end" value="3836"/>
       <details key="line" value="106"/>
     </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/placeControllerProvider/%/%.1">
-      <details key="start" value="3818"/>
-      <details key="end" value="3840"/>
+    <eAnnotations source="positions.68" references="/0/placeControllerProvider/%/%.1">
+      <details key="start" value="3837"/>
+      <details key="end" value="3859"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/placeControllerProvider/%/%.1/modelName">
-      <details key="start" value="3830"/>
-      <details key="end" value="3839"/>
+    <eAnnotations source="positions.69" references="/0/placeControllerProvider/%/%.1/modelName">
+      <details key="start" value="3849"/>
+      <details key="end" value="3858"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/placeControllerProvider/%/%.2">
-      <details key="start" value="3842"/>
-      <details key="end" value="4353"/>
+    <eAnnotations source="positions.70" references="/0/placeControllerProvider/%/%.2">
+      <details key="start" value="3861"/>
+      <details key="end" value="4372"/>
       <details key="line" value="106"/>
     </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/placeControllerProvider/%/%.3">
-      <details key="start" value="3704"/>
-      <details key="end" value="3789"/>
+    <eAnnotations source="positions.71" references="/0/placeControllerProvider/%/%.3">
+      <details key="start" value="3723"/>
+      <details key="end" value="3808"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/placeControllerProvider/%/%.3/%">
-      <details key="start" value="3704"/>
-      <details key="end" value="3738"/>
+    <eAnnotations source="positions.72" references="/0/placeControllerProvider/%/%.3/%">
+      <details key="start" value="3723"/>
+      <details key="end" value="3757"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.79" references="/0/placeControllerProvider/%/%.3/%/%">
-      <details key="start" value="3715"/>
-      <details key="end" value="3737"/>
+    <eAnnotations source="positions.73" references="/0/placeControllerProvider/%/%.3/%/%">
+      <details key="start" value="3734"/>
+      <details key="end" value="3756"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.80" references="/0/placeControllerProvider/%/%.3/%/%/modelName">
-      <details key="start" value="3727"/>
-      <details key="end" value="3736"/>
+    <eAnnotations source="positions.74" references="/0/placeControllerProvider/%/%.3/%/%/modelName">
+      <details key="start" value="3746"/>
+      <details key="end" value="3755"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.81" references="/0/placeControllerProvider/%/%.3/%.1">
-      <details key="start" value="3741"/>
-      <details key="end" value="3789"/>
+    <eAnnotations source="positions.75" references="/0/placeControllerProvider/%/%.3/%.1">
+      <details key="start" value="3760"/>
+      <details key="end" value="3808"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.82" references="/0/placeControllerProvider/%/%.4">
-      <details key="start" value="3798"/>
-      <details key="end" value="3805"/>
+    <eAnnotations source="positions.76" references="/0/placeControllerProvider/%/%.4">
+      <details key="start" value="3817"/>
+      <details key="end" value="3824"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.83" references="/0/placeControllerProvider/%.1">
-      <details key="start" value="4362"/>
-      <details key="end" value="4364"/>
+    <eAnnotations source="positions.77" references="/0/placeControllerProvider/%.1">
+      <details key="start" value="4381"/>
+      <details key="end" value="4383"/>
       <details key="line" value="129"/>
     </eAnnotations>
-    <eAnnotations source="positions.84" references="/0/placeControllerProvider/modelName">
-      <details key="start" value="3674"/>
-      <details key="end" value="3692"/>
+    <eAnnotations source="positions.78" references="/0/placeControllerProvider/modelName">
+      <details key="start" value="3693"/>
+      <details key="end" value="3711"/>
       <details key="line" value="104"/>
     </eAnnotations>
   </ecore:EAnnotation>

@@ -27,8 +27,11 @@ Feststellungen:
 	Property-Objects of view zweimal enthalten
 	Probleme mit Profil mit PermanentView
 	*1Grenzen aufzeigen z.B. bei variabler Befüllung von Listen z.B. bei news auch wenn auf extra seite gegangen wird
-erst goToView als Property ind viewNavigationObject gesetzt -> geht nicht, da man von mehreren NavigationObjekten auf eine View kommen kann, deshalb als Association gelöst
-
+	erst goToView als Property ind viewNavigationObject gesetzt -> geht nicht, da man von mehreren NavigationObjekten auf eine View kommen kann, deshalb als Association gelöst
+	PropertyHelper funktioniert nicht, wenn goTo auf View zeigt, muss auf ViewImpl zeigen
+	wir haben keine ListBox
+	RadioButtons labels müssen gleich sein, damit die Gruppe gebildet wird
+	wir machen auf schwachsinnigkeit für mehrere Footer und Header aufmerksam weil nur in AppEntryPoint je einer max möglich
 	
 Doku
 	StatPlace muss Manuel gesetzt werden
@@ -41,3 +44,5 @@ Doku
 	void onButtonPressed(ClickEvent e) {
 		presenter.onButtonClick(name.getText(), password.getText());
 	}
+Noch Machen:
+	bei AppEntryPoint schleife entfernen und ersetzen mit select, weil nich alle klassen durchgehen müssen nur ein HEADER,FOOTER möglich

@@ -41,7 +41,7 @@
 	<!-- Specify the paths for translatable code -->
 	<source path='client' />
 </module>
-[quallyName(packageName(modelName)) + 'client/AppEntryPoint.java'/]
+[comment][quallyName(packageName(modelName)) + 'client/AppEntryPoint.java'/][/comment]
 [/file]
 [/template]
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4" xmlns:profile_1="http:///schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_OVS8QJUAEeO4ZfzhyAwU7g http:///schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6 ../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_D1o2cJZ0EeOLx-y2tbQtDA">
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http://schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4" xmlns:profile_1="http://schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6" xmlns:profile_2="http://schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http://schemas/profile/_OVSVMJUAEeO4ZfzhyAwU7g/4 file:/C:/Users/Claudia/Documents/Studium/Master/Semester1/SE/neu/Semesterprojekt/Neuer http://schemas/profile/_D1oPYJZ0EeOLx-y2tbQtDA/6 file:/C:/Users/Claudia/Documents/Studium/Master/Semester1/SE/neu/Semesterprojekt/Neuer%20Ordner/se_at/beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_D1o2cJZ0EeOLx-y2tbQtDA http://schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7 ../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ">
   <uml:Model xmi:id="_WSqbcJUAEeO4ZfzhyAwU7g" name="beuth.se.ue4.model">
     <packagedElement xmi:type="uml:Class" xmi:id="_wQqOgJUAEeO4ZfzhyAwU7g" name="About">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_pnlzUJUBEeO4ZfzhyAwU7g" name="infoText" visibility="public">
@@ -141,7 +141,7 @@
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_nd8bsJUAEeO4ZfzhyAwU7g">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_neenMJUAEeO4ZfzhyAwU7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_D1o2cJZ0EeOLx-y2tbQtDA"/>
+        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_cDXdgJT6EeOgb7PnCEGbYw"/>
     </profileApplication>
@@ -192,4 +192,6 @@
   <profile_1:ViewNavigationObject xmi:id="_4wAecJZ2EeOLx-y2tbQtDA" base_Property="_3Mp1UJZ2EeOLx-y2tbQtDA" goToView="_T1p9cJZ0EeOLx-y2tbQtDA"/>
   <profile_1:ViewNavigationObject xmi:id="_Wr6fQJZ8EeOzVIU6qJ-i7Q" base_Property="_UAFLIJZ8EeOzVIU6qJ-i7Q" value="Port" label="port" goToView="_OjAPsJaCEeOzVIU6qJ-i7Q"/>
   <profile_1:ViewImpl xmi:id="_OjAPsJaCEeOzVIU6qJ-i7Q" base_Class="_D8TSsJUBEeO4ZfzhyAwU7g"/>
+  <profile_2:ViewImpl xmi:id="_dYXcAJczEeOJBLS8VIwxyQ" base_Class="_wQqOgJUAEeO4ZfzhyAwU7g"/>
+  <profile_2:ViewObject xmi:id="_eag1gJczEeOJBLS8VIwxyQ" base_Property="_pnlzUJUBEeO4ZfzhyAwU7g" type="LABEL" value="kjg fsxcvbh jk nkblin" label="info"/>
 </xmi:XMI>

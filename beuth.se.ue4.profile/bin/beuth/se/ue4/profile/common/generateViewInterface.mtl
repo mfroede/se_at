@@ -1,21 +1,30 @@
 [comment encoding = UTF-8 /]
 [module generateViewInterface('http://www.eclipse.org/uml2/4.0.0/UML')]
 [import beuth::se::ue4::profile::common::util /]
+[import beuth::se::ue4::profile::common::packageDeclaration /]
 
 [template public generateViewInterface(model : Model)]
 [for (interface : Interface | model.ownedElement)]
 [if (interface.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('View'))]
-	[viewForInterface(interface, packageName(model.name))/]
-	[placeForInterface(interface, packageName(model.name))/]
-	[activityForInterface(interface, packageName(model.name))/]
+	[viewForInterface(interface, model.name, 'client.view.')/]
+	[placeForInterface(interface, model.name, 'client.view.')/]
+	[activityForInterface(interface, model.name, 'client.view.')/]
 [/if]
-	
+[/for]
+[for (pack : Package | model.allOwnedElements()->select(oclIsTypeOf(Package)))]
+[for (interface : Interface | pack.ownedElement->select(oclIsTypeOf(Interface)))]
+[if (interface.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('View'))]
+	[viewForInterface(interface, model.name, 'client.view.')/]
+	[placeForInterface(interface, model.name, 'client.view.')/]
+	[activityForInterface(interface, model.name, 'client.view.')/]
+[/if]
+[/for]
 [/for]
 [/template]
 
-[template public viewForInterface(interface : Interface, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+interface.name+'View.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public viewForInterface(interface : Interface, packageName : String, packString: String)]
+[file (generatePackageI(interface, packageName, packString)+interface.name+'View.java', false, 'UTF-8')]
+package [generatePackageDeclarationI(interface, packageName, packString)/];
 
 import com.google.gwt.user.client.ui.IsWidget;
 
@@ -67,9 +76,9 @@ public class [interface.name/]View extends IsWidget {
 [/file]
 [/template]
 
-[template public placeForInterface(interface : Interface, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+interface.name+'Place.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public placeForInterface(interface : Interface, packageName : String, packString: String)]
+[file (generatePackageI(interface, packageName, packString)+interface.name+'Place.java', false, 'UTF-8')]
+package [generatePackageDeclarationI(interface, packageName, packString)/];
 
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
@@ -93,9 +102,9 @@ public class [interface.name/]Place extends Place {
 [/file]
 [/template]
 
-[template public activityForInterface(interface : Interface, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+interface.name+'Activity.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public activityForInterface(interface : Interface, packageName : String, packString: String)]
+[file (generatePackageI(interface, packageName, packString)+interface.name+'Activity.java', false, 'UTF-8')]
+package [generatePackageDeclarationI(interface, packageName, packString)/];
 
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
@@ -115,6 +124,14 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 		this.placeController = placeController;
 
 	}
+	@Override
+	public void start(final AcceptsOneWidget panel,
+			final com.google.gwt.event.shared.EventBus pEventBus) {
+		view.setPresenter(this);
+
+		panel.setWidget(view);
+
+	}
 
 	[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
 		[for (property: Property | class.attribute)]
@@ -126,9 +143,9 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 			placeController.gotTo(new [getClassName(property.getTaggedValue(property.getApplicableStereotypes()->asOrderedSet()->first().name, 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 		}
 					[else]
-		@Override
+		// @Override
 		// void on[property.name.toUpperFirst()/]Clicked(){
-		//	placeController.gotTo(new [getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'goToView').oclAsType(uml::Interface).name/]Place());
+		//	placeController.gotTo(new [getClassName(property.getTaggedValue(property.getApplicableStereotypes()->asOrderedSet()->first().name, 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 		// }
 					[/if]
 				[/if]

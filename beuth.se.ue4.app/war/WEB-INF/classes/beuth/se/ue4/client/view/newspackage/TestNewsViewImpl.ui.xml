@@ -3,6 +3,22 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 	</ui:style>
-
+	<g:FlowPanel>
 	//InteractionElements
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="actNews" text="actNews"/>
+				
+				
+					
+				
+									
+				
+	</g:FlowPanel>
+	
 </ui:UiBinder> 

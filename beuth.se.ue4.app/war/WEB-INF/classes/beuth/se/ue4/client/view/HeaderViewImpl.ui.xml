@@ -12,7 +12,6 @@
 				
 				
 
-					<g:Button ui:field="Button1" text=""/>
 				
 				
 					
@@ -29,7 +28,37 @@
 				
 				
 					
-					<g:TextField ui:field="infoText" text="resfjhiugigkhjjlkhiuhiu"/>			
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				<g:MenuBar ui:field="menuBar">
+					<g:MenuItem ui:field="about" text="about"/>
+					<g:MenuItem ui:field="portfolio" text="portfolio"/>
+					<g:MenuItem ui:field="news" text="news"/>
+				</g:MenuBar>
+				
+				
+
+				
+				
+
+				
+				
+					
 				
 									
 				

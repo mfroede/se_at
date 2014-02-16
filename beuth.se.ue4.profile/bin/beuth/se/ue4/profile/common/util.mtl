@@ -6,6 +6,16 @@
 	'getTaggedValue(org.eclipse.uml2.uml.Element, java.lang.String, java.lang.String, java.lang.Boolean)',
 	Sequence{ element, stereotypeName, property, isClass }) /]
 
+[query public setIsExisting( isExisting:Boolean ) : Boolean=
+	invoke('beuth.se.ue4.profile.common.SingletonHelper', 
+	'setIsExisting(java.lang.Boolean)',
+	Sequence{ isExisting }) /]
+
+[query public setter( isExisting:Boolean ) : Boolean=
+	invoke('beuth.se.ue4.profile.common.SingletonHelper', 
+	'setter( isExisting:Boolean )',
+	Sequence{ isExisting }) /]
+
 [query public quallyName(modelName : String) : String = 
    modelName.replaceAll('[.]', '/')/]
 [query public packageName(modelName : String) : String = 

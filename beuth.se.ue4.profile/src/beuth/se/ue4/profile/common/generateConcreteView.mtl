@@ -1,24 +1,36 @@
 [comment encoding = UTF-8 /]
 [module generateConcreteView('http://www.eclipse.org/uml2/4.0.0/UML')]
 [import beuth::se::ue4::profile::common::util /]
+[import beuth::se::ue4::profile::common::packageDeclaration /]
 
 [template public generateConcreteView(model: Model, packageName : String)]
 [for (class : Class | model.ownedElement)]
-	[viewXML(class, packageName)/]
-	[viewImpl(class, packageName)/]
+	[viewXML(class, model.name, 'client.view.')/]
+	[viewImpl(class, model.name, 'client.view.')/]
 	[if (isNotViewExisting(class))]
-	[view(class, packageName)/]
-	[place(class.name, packageName)/]
-	[activity(class, packageName)/]
+	[view(class, model.name, 'client.view.')/]
+	[place(class, model.name, 'client.view.')/]
+	[activity(class, model.name, 'client.view.')/]
 	[/if]
+[/for]
+[for (pack : Package | model.allOwnedElements()->select(oclIsTypeOf(Package)))]
+[for (class : Class | pack.ownedElement)]
+	[viewXML(class, model.name, 'client.view.')/]
+	[viewImpl(class, model.name, 'client.view.')/]
+	[if (isNotViewExisting(class))]
+	[view(class, model.name,'client.view.')/]
+	[place(class, model.name,'client.view.')/]
+	[activity(class, model.name,'client.view.')/]
+	[/if]
+[/for]
 [/for]
 
 [/template]
 
-[template public viewImpl(class : Class, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+class.name+'ViewImpl.java', false, 'UTF-8')]
-
-package [packageName/]client.view;
+[template public viewImpl(class : Class, packageName : String, string :String)]
+[comment][file (quallyName(packageName) + 'client/view/'+class.name+'ViewImpl.java', false, 'UTF-8')][/comment]
+[file (generatePackage(class, packageName, string)+class.name+'ViewImpl.java', false, 'UTF-8')]
+package [generatePackageDeclaration(class, packageName, string)/];
 
 //import AbstractView
 import com.google.gwt.core.client.GWT;
@@ -40,7 +52,6 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('ViewObject'))]
 				[if (not isValueExists(property, 'type', 'LABEL'))]
 					[if (getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->isEmpty() or getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->isEmpty())]
-					1
 						[if (isValueExists(property, 'type', 'MENU'))]
 							//TODO Value must be set
 							@UiField
@@ -64,16 +75,18 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 						[/if]
 					[elseif (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
 						[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
-							[if (prop.getTaggedValue('ViewNavigationObject','type', false).oclAsSet()->first().oclAsType(uml::EnumerationLiteral).name.endsWith('ITEM'))]
+							[if (prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(),'type').oclAsType(uml::EnumerationLiteral).name.endsWith('ITEM'))]
 								[if (isValueExists(property, 'type', 'MENU'))]
 	@UiField
 	MenuItem [prop.name/];
+
 								[comment][elseif (isValueExists(property, 'type', 'TABLE')  or isValueExists(property, 'type', 'LIST') or isValueExists(property, 'type', 'PANEL'))]
 									@UiField
 									Button [stereotype.name/];[/comment]
 								[elseif (isValueExists(property, 'type', 'TREE'))]
 	@UiField
 	TreeItem [prop.name/];
+
 								[/if]
 							[/if]
 						[/for]
@@ -92,11 +105,11 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 						RadioButton [property.name/];					
 					[/if]
 				[/if]
-			[elseif (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+			[comment][elseif (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
 				[if (isValueExists(property, 'type', 'BUTTON') and getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')->isEmpty())]
 						@UiField
 						Button [property.name/];
-				[/if]
+				[/if][/comment]
 
 			[/if]
 		[/if]
@@ -107,6 +120,22 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 	@Inject
 	public [class.name/]ViewImpl() {
 		content.add(uiBinder.createAndBindUi(this));
+
+		[for (property: Property | class.attribute)]
+			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+				[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+		[property.name/].setCommand(new Command() {
+
+			@Override
+			public void execute() {
+				presenter.on[property.name.toUpperFirst()/]Clicked();
+
+			}
+		});
+
+				[/if]
+			[/if]
+		[/for]
 	}
 	[for (o : Operation | class.getImplementedInterfaces()->asOrderedSet()->first().getAppliedStereotypes()->asOrderedSet()->first().getAllOperations())]
 	@Override		
@@ -116,6 +145,19 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 	[operation(o)/]
 	[/for]	
 
+		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+	
+				
+			[if (i<=1)]	
+	@UiHandler({ "[class.attribute->select(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON')).name->sep('\", "')/]" })
+	void onButtonPressed(ClickEvent e) {
+		Widget w = (Widget) e.getSource();
+		presenter.onButtonClick(w.getTitle());
+	}		
+			[/if]	
+			[/if]
+			[/for]
 	@Override
 	public void setPresenter(final Presenter presenter) {
 		this.presenter = presenter;
@@ -124,22 +166,242 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 [/file]
 [/template]
 
-[template public viewXML(class : Class, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+class.name+'ViewImpl.ui.xml', false, 'UTF-8')]
+[template public viewXML(class : Class, packageName : String, string:String)]
+[file (generatePackage(class, packageName, string)+class.name+'ViewImpl.ui.xml', false, 'UTF-8')]
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 	</ui:style>
-
+	<g:FlowPanel>
 	//InteractionElements
+		[for (property : Property | class.attribute)]
+		[if(property.getAppliedStereotypes()->notEmpty())]
+[comment][generateUniqueViewElements(class)/][/comment]
+
+				[newMenu(property)/]
+				[newTree(property)/]
+
+				[newTable(property)/]
+				[newList(property)/]
+
+				[newButton(property)/]
+				[newCheckBox(property)/]
+				[newRadioButton(property)/]	
+				[newTextField(property)/]
+				[newLabel(property)/]					
+[comment]			[else][/comment]
+[comment]			[elseif (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))][/comment]
+				
+[comment]			[/if][/comment]
+		[/if]
+	[/for]
+	</g:FlowPanel>
+	
 </ui:UiBinder> 
 [/file]
 [/template]
 
-[template public activity(class : Class, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+class.name+'Activity.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public generateUniqueViewElements (class : Class) ]
+				[for (prop : Property | class.attribute)]
+					[setIsExisting(false)/]
+					
+					[if (not prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('MENU') or
+						 not prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('TREE') or
+						 not prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('LIST') or
+						 not prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('TABLE'))]
+						[for (p : Property | class.attribute)]
+							[if (p.getValue(p.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('LIST') or
+						 		 p.getValue(p.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('TABLE') or
+								 p.getValue(p.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('TREE'))]
+								[if (p.getTaggedValue('ViewObject', 'viewObject', false).oclAsSet()->notEmpty())]
+[comment]									values: [p.getTaggedValue('ViewObject', 'viewObject', false).oclAsSet()->select(e|e.oclAsType(Property).name.endsWith(prop.name))/][/comment]
+									[if ((p.getTaggedValue('ViewObject', 'viewObject', false).oclAsSet()->select(e|e.oclAsType(Property).name.endsWith(prop.name))->notEmpty()))]
+[comment]									-->[setIsExisting(true)/][/comment]
+									[/if]
+								[/if]
+								[if (p.getTaggedValue('ViewObject', 'viewNavigationObject', false).oclAsSet()->notEmpty())]
+[comment]									values: [p.getTaggedValue('ViewObject', 'viewNavigationObject', false).oclAsSet()->select(e|e.oclAsType(Property).name.endsWith(prop.name))/][/comment]
+									[if ((p.getTaggedValue('ViewObject', 'viewNavigationObject', false).oclAsSet()->select(e|e.oclAsType(Property).name.endsWith(prop.name))->notEmpty()))]
+[comment]									-->[setIsExisting(true)/][/comment]
+									[/if]
+								[/if]
+							[/if]
+						[/for]
+					[/if]
+[comment]					is Existing [setter(false)/][/comment]
+					[if (not setter(false))]
+[comment]						-->is Existing [setter(false).oclAsType(Boolean)/][/comment]
+						[newButton(prop)/]
+						[newCheckBox(prop)/]
+						[newRadioButton(prop)/]	
+						[newTextField(prop)/]
+						[newLabel(prop)/]
+					[/if]
+				[/for]
+[/template]
+
+[template public newList (property : Property) ]
+[if (isValueExists(property, 'type', 'LIST'))]
+	<g:Grid ui:field="[property.name/]">
+	[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty() and property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
+		<g:row>
+		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+			<g:column>
+			[newButton(prop)/]
+			</g:column>
+			[/for]
+			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
+			<g:column>
+			[newLabel(prop)/]
+			[newTextField(prop)/]
+			</g:column>
+		[/for]
+		</g:row>
+	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+		<g:row>
+			<g:column>
+			[newButton(prop)/]
+			</g:column>
+		</g:row>
+		[/for]
+	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
+		[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
+		<g:row>
+				<g:column>
+				[newLabel(prop)/]
+				[newTextField(prop)/]
+				</g:column>
+		</g:row>
+		[/for]
+	[/if]
+</g:Grid>
+[/if]
+[/template]
+
+[template public newTable (property : Property) ]
+[if (isValueExists(property, 'type', 'TABLE'))]
+<g:Grid ui:field="[property.name/]">
+	[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty() and property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
+		<g:row>
+		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+			<g:column>
+			[newButton(prop)/]
+			</g:column>
+			<g:column>
+			[newButton(prop)/]
+			</g:column>
+			[/for]
+			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
+			<g:column>
+			[newLabel(prop)/]
+			[newTextField(prop)/]
+			</g:column>
+			<g:column>
+			[newLabel(prop)/]
+			[newTextField(prop)/]
+			</g:column>
+		[/for]
+		</g:row>
+	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+    	<g:row>
+			<g:column>
+      		[newButton(prop)/]
+			</g:column>
+			<g:column>
+      		[newButton(prop)/]
+			</g:column>
+    	</g:row>
+		[/for]
+		[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
+			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
+    	<g:row>
+			<g:column>
+      		[newLabel(prop)/]
+			[newTextField(prop)/]
+			</g:column>
+			<g:column>
+      		[newLabel(prop)/]
+			[newTextField(prop)/]
+			</g:column>
+    	</g:row>
+		[/for]
+	[/if]
+</g:Grid>
+[/if]
+[/template]
+
+[template public newRadioButton (property : Property) ]
+[if (isValueExists(property, 'type', 'RADIOBUTTON'))]
+	<g:RadoButton ui:field="[property.name/]" name="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]" />
+[/if]
+[/template]
+
+[template public newCheckBox (property : Property) ]
+[if (isValueExists(property, 'type', 'CHECKBOX'))]
+	<g:CheckBox ui:field="[property.name/]">[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]</g:CheckBox>
+[/if]
+[/template]
+
+[template public newTree (property : Property) ]
+[if (isValueExists(property, 'type', 'TREE'))]
+<g:Tree ui:field="[property.name/]">
+	[newTreeItems(property, 'viewNavigationObject')/]
+	[newTreeItems(property, 'viewObject')/]
+</g:Tree>
+[/if]	
+[/template]
+
+[template public newMenu (property : Property) ]
+[if (isValueExists(property, 'type', 'MENU'))]
+<g:MenuBar ui:field="[property.name/]">
+[if(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+	[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+	<g:MenuItem ui:field="[prop.name/]" text="[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+	[/for]
+[/if]
+</g:MenuBar>
+[/if]
+[/template]
+
+[template public newTextField (property : Property) ]
+[if (isValueExists(property, 'type', 'TEXTFIELD'))]
+	<g:TextField ui:field="[property.name/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>			
+[/if]
+[/template]
+
+[template public newLabel (prop : Property) ]
+[if (isValueExists(prop, 'type', 'LABEL'))]
+	<g:Label text="[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+[/if]
+[/template]
+
+[template public newButton (property : Property) ]
+[if (isValueExists(property, 'type', 'BUTTON'))]
+	<g:Button ui:field="[property.name/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+[/if]
+[/template]
+
+[template public newTreeItems (property : Property, viewObjectString: String) ]
+[if(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), viewObjectString)->notEmpty())]
+	[for (prop : Property | property.getTaggedValue('ViewObject',viewObjectString, false).oclAsSet().oclAsType(Property))]
+	<g:TreeItem ui:field="[prop.name/]" text="[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]">
+		[if (prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+			[newTreeItems (prop, 'viewNavigationObject')/]
+		[/if]
+		[if (prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
+			[newTreeItems (prop, 'viewObject')/]
+		[/if]
+	</g:TreeItem>
+	[/for]
+[/if]
+[/template]
+
+[template public activity(class : Class, packageName : String, string:String)]
+[file (generatePackage(class, packageName, string)+class.name+'Activity.java', false, 'UTF-8')]
+package [generatePackageDeclaration(class, packageName, string)/];
 
 import com.google.gwt.place.shared.PlaceController;
 import com.google.gwt.user.client.ui.AcceptsOneWidget;
@@ -159,30 +421,68 @@ public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.na
 		this.placeController = placeController;
 
 	}
+	@Override
+	public void start(final AcceptsOneWidget panel,
+			final com.google.gwt.event.shared.EventBus pEventBus) {
+		view.setPresenter(this);
 
-	//TODO Ovverrides einfuegen
+		panel.setWidget(view);
+
+	}
+
+		[for (property: Property | class.attribute)]
+			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+				[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+		@Override
+		void on[property.name.toUpperFirst()/]Clicked(){
+			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+		}
+
+				[/if]
+			[/if]
+		[/for]
+		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+				[if (i<=1)]				
+	@Override
+	void onButtonClicked(String buttonName){
+		switch(buttonName) {
+				[/if]
+		case "[property.name/]":
+			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+			break;
+			[/if]
+		[/for]
+		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+				[if (i<=1)]	
+		}
+	}
+				[/if]
+			[/if]
+	[/for]
 }
 [/file]
 [/template]
 
-[template public place(className : String, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+ className +'Place.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public place(class : Class, packageName : String, string:String)]
+[file (generatePackage(class, packageName, string)+class.name+'Place.java', false, 'UTF-8')]
+package [generatePackageDeclaration(class, packageName, string)/];
 
 import com.google.gwt.place.shared.Place;
 import com.google.gwt.place.shared.PlaceTokenizer;
 
-public class [className/]Place extends Place {
+public class [class.name/]Place extends Place {
 	public static class Tokenizer implements
-			PlaceTokenizer<[className/]Place> {
+			PlaceTokenizer<[class.name/]Place> {
 
 		@Override
-		public [className/]Place getPlace(final String token) {
-			return new [className/]Place();
+		public [class.name/]Place getPlace(final String token) {
+			return new [class.name/]Place();
 		}
 
 		@Override
-		public String getToken(final [className/]Place place) {
+		public String getToken(final [class.name/]Place place) {
 			return ""; //$NON-NLS-1$
 		}
 
@@ -191,9 +491,9 @@ public class [className/]Place extends Place {
 [/file]
 [/template]
 
-[template public view(class : Class, packageName : String)]
-[file (quallyName(packageName) + 'client/view/'+class.name+'View.java', false, 'UTF-8')]
-package [packageName/]client.view;
+[template public view(class : Class, packageName : String, string:String)]
+[file (generatePackage(class, packageName, string)+class.name+'View.java', false, 'UTF-8')]
+package [generatePackageDeclaration(class, packageName, string)/];
 
 import com.google.gwt.user.client.ui.IsWidget;
 
@@ -210,15 +510,13 @@ public class [class.name/]View extends IsWidget {
 			[/if]
 		[/if]
 		[/for]
-		[if (class.attribute->notEmpty())]
-			[if (class.attribute.getAppliedStereotypes()->notEmpty())]
-				[if (not class.attribute.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject').oclIsUndefined())]
-					[if (class.attribute.getValue(class.attribute.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON')->notEmpty())]
-				void onButtonClicked(String buttonName);
-					[/if]
+		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
+			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+				[if (i<=1)]				
+		void onButtonClicked(String buttonName);
 				[/if]
 			[/if]
-		[/if]
+		[/for]
 
 	}
 

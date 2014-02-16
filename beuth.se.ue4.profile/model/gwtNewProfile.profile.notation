@@ -157,7 +157,7 @@
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4e_wrpT6EeOgb7PnCEGbYw"/>
     </children>
     <element xmi:type="uml:Stereotype" href="gwtNewProfile.profile.uml#_4e97cJT6EeOgb7PnCEGbYw"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4e_JkZT6EeOgb7PnCEGbYw" x="-10" y="460"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4e_JkZT6EeOgb7PnCEGbYw" x="-5" y="475"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_5onEEJT6EeOgb7PnCEGbYw" type="1026" fontName="Segoe UI" lineColor="0">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5onrIJT6EeOgb7PnCEGbYw" source="ShadowFigure">
