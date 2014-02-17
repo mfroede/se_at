@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7 ../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ">
   <uml:Model xmi:id="_GWaNwJerEeOhWtSHHTFXMQ" name="beuth.se.ue4.Portfolio">
     <packagedElement xmi:type="uml:Class" xmi:id="_Gm1FAJfPEeO8tqObuErIaw" name="Header">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Phf58JfPEeO8tqObuErIaw" name="Menu" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Phf58JfPEeO8tqObuErIaw" name="menu" visibility="public">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PpkQ0JfPEeO8tqObuErIaw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ppk34JfPEeO8tqObuErIaw" value="1"/>
         <defaultValue xmi:type="uml:LiteralString" xmi:id="_Pple8JfPEeO8tqObuErIaw">
@@ -54,74 +54,84 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Xh2bsJfPEeO8tqObuErIaw" name="Home">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_YhsdMJfREeO8tqObuErIaw" name="info" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ys19QJfREeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ys19QZfREeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ys19QpfREeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Package" xmi:id="_sf3hMJfkEeOSjvqnqJ_p1w" name="Projects">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Z846wJfPEeO8tqObuErIaw" name="Projects">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jZdQ8JfREeO8tqObuErIaw" name="project1" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j0gOMJfREeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j0gOMZfREeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_j0hcUJfREeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_potBcJfREeO8tqObuErIaw" name="projectList" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p0TNcJfREeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0TNcZfREeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_p0T0gJfREeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_YnTA0JfPEeO8tqObuErIaw" name="Impressum">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_SwK_8JfQEeO8tqObuErIaw" name="value" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S65pQJfQEeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S65pQZfQEeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_S66QUJfQEeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Package" xmi:id="_w7rlMJfkEeOSjvqnqJ_p1w" name="News">
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZYvr4JfPEeO8tqObuErIaw" name="News">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DPMlYJfQEeO8tqObuErIaw" name="current" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbVj8JfQEeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbWLAJfQEeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_DbWyEJfQEeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_ZYvr4JfPEeO8tqObuErIaw" name="News">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_DPMlYJfQEeO8tqObuErIaw" name="currend" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DbVj8JfQEeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DbWLAJfQEeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_DbWyEJfQEeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ySZggJfkEeOSjvqnqJ_p1w" name="Home">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Xh2bsJfPEeO8tqObuErIaw" name="Home">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YhsdMJfREeO8tqObuErIaw" name="info" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ys19QJfREeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ys19QZfREeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Ys19QpfREeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_Z846wJfPEeO8tqObuErIaw" name="Projects">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_jZdQ8JfREeO8tqObuErIaw" name="project1" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_j0gOMJfREeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_j0gOMZfREeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_j0hcUJfREeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_potBcJfREeO8tqObuErIaw" name="projectList" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p0TNcJfREeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p0TNcZfREeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_p0T0gJfREeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0XpVwJfkEeOSjvqnqJ_p1w" name="Impressum">
+      <packagedElement xmi:type="uml:Class" xmi:id="_YnTA0JfPEeO8tqObuErIaw" name="Impressum">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SwK_8JfQEeO8tqObuErIaw" name="value" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S65pQJfQEeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S65pQZfQEeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_S66QUJfQEeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_cwSPcJfPEeO8tqObuErIaw" name="Portfolio">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_3q4_QJfQEeO8tqObuErIaw" name="lebenslauf" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_34evUJfQEeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_34evUZfQEeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_34fWYJfQEeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_9ZdroJfQEeO8tqObuErIaw" name="name" visibility="public">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_PjgaMJfREeO8tqObuErIaw">
-          <body>Hans-Peter Mueller</body>
-        </ownedComment>
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9gtjIJfQEeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9guKMJfQEeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_9guxQJfQEeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_QkUW8JfREeO8tqObuErIaw" name="adresse" visibility="public">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QzMgcJfREeO8tqObuErIaw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QzMgcZfREeO8tqObuErIaw" value="1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_QzNHgJfREeO8tqObuErIaw">
-          <value xsi:nil="true"/>
-        </defaultValue>
-      </ownedAttribute>
+    <packagedElement xmi:type="uml:Package" xmi:id="_3AyiQJfkEeOSjvqnqJ_p1w" name="Portfolio">
+      <packagedElement xmi:type="uml:Class" xmi:id="_cwSPcJfPEeO8tqObuErIaw" name="Portfolio">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_3q4_QJfQEeO8tqObuErIaw" name="lebenslauf" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_34evUJfQEeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_34evUZfQEeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_34fWYJfQEeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9ZdroJfQEeO8tqObuErIaw" name="name" visibility="public">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_PjgaMJfREeO8tqObuErIaw">
+            <body>Hans-Peter Mueller</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9gtjIJfQEeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9guKMJfQEeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_9guxQJfQEeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_QkUW8JfREeO8tqObuErIaw" name="adresse" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QzMgcJfREeO8tqObuErIaw" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QzMgcZfREeO8tqObuErIaw" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_QzNHgJfREeO8tqObuErIaw">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_P2LT0JerEeOhWtSHHTFXMQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P2ZWQJerEeOhWtSHHTFXMQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -132,21 +142,21 @@
   </uml:Model>
   <profile:Header xmi:id="_H3W4wJfPEeO8tqObuErIaw" base_Class="_Gm1FAJfPEeO8tqObuErIaw"/>
   <profile:Footer xmi:id="_KjgV8JfPEeO8tqObuErIaw" base_Class="_JCB8IJfPEeO8tqObuErIaw"/>
-  <profile:ViewObject xmi:id="_QtP7YJfPEeO8tqObuErIaw" viewNavigationObject="_UqChEJfPEeO8tqObuErIaw _lKe0kJfPEeO8tqObuErIaw _rL914JfPEeO8tqObuErIaw _vymp0JfPEeO8tqObuErIaw _0U8zoJfPEeO8tqObuErIaw" base_Property="_Phf58JfPEeO8tqObuErIaw" type="MENU" value="menu" label="Menu"/>
-  <profile:ViewNavigationObject xmi:id="_UqChEJfPEeO8tqObuErIaw" base_Property="_S9jxIJfPEeO8tqObuErIaw" type="ITEM" value="toHome" label="Home" goToView="_etyd8JfPEeO8tqObuErIaw"/>
+  <profile:ViewObject xmi:id="_QtP7YJfPEeO8tqObuErIaw" viewNavigationObject="_UqChEJfPEeO8tqObuErIaw _lKe0kJfPEeO8tqObuErIaw _rL914JfPEeO8tqObuErIaw _vymp0JfPEeO8tqObuErIaw _0U8zoJfPEeO8tqObuErIaw" base_Property="_Phf58JfPEeO8tqObuErIaw" type="MENU" value="Menu" label="Menu"/>
+  <profile:ViewNavigationObject xmi:id="_UqChEJfPEeO8tqObuErIaw" base_Property="_S9jxIJfPEeO8tqObuErIaw" type="ITEM" value="Home" label="Home" goToView="_etyd8JfPEeO8tqObuErIaw"/>
   <profile:ViewImpl xmi:id="_etyd8JfPEeO8tqObuErIaw" base_Class="_Xh2bsJfPEeO8tqObuErIaw"/>
   <profile:ViewImpl xmi:id="_fRjSUJfPEeO8tqObuErIaw" base_Class="_YnTA0JfPEeO8tqObuErIaw"/>
   <profile:ViewImpl xmi:id="_fzrvAJfPEeO8tqObuErIaw" base_Class="_ZYvr4JfPEeO8tqObuErIaw"/>
   <profile:ViewImpl xmi:id="_gU0tMJfPEeO8tqObuErIaw" base_Class="_Z846wJfPEeO8tqObuErIaw"/>
   <profile:ViewImpl xmi:id="_gwPd4JfPEeO8tqObuErIaw" base_Class="_cwSPcJfPEeO8tqObuErIaw"/>
-  <profile:ViewNavigationObject xmi:id="_lKe0kJfPEeO8tqObuErIaw" base_Property="_ja4fMJfPEeO8tqObuErIaw" type="ITEM" value="toNews" label="News" goToView="_fzrvAJfPEeO8tqObuErIaw"/>
-  <profile:ViewNavigationObject xmi:id="_rL914JfPEeO8tqObuErIaw" base_Property="_n-vE4JfPEeO8tqObuErIaw" type="ITEM" value="toPortfolio" label="Portfolio" goToView="_gwPd4JfPEeO8tqObuErIaw"/>
-  <profile:ViewNavigationObject xmi:id="_vymp0JfPEeO8tqObuErIaw" base_Property="_tymg8JfPEeO8tqObuErIaw" type="ITEM" value="toProjects" label="Projects" goToView="_gU0tMJfPEeO8tqObuErIaw"/>
-  <profile:ViewNavigationObject xmi:id="_0U8zoJfPEeO8tqObuErIaw" base_Property="_x7awcJfPEeO8tqObuErIaw" type="ITEM" value="toImpressum" label="Impressum" goToView="_fRjSUJfPEeO8tqObuErIaw"/>
+  <profile:ViewNavigationObject xmi:id="_lKe0kJfPEeO8tqObuErIaw" base_Property="_ja4fMJfPEeO8tqObuErIaw" type="ITEM" value="News" label="News" goToView="_fzrvAJfPEeO8tqObuErIaw"/>
+  <profile:ViewNavigationObject xmi:id="_rL914JfPEeO8tqObuErIaw" base_Property="_n-vE4JfPEeO8tqObuErIaw" type="ITEM" value="Portfolio" label="Portfolio" goToView="_gwPd4JfPEeO8tqObuErIaw"/>
+  <profile:ViewNavigationObject xmi:id="_vymp0JfPEeO8tqObuErIaw" base_Property="_tymg8JfPEeO8tqObuErIaw" type="ITEM" value="Projects" label="Projects" goToView="_gU0tMJfPEeO8tqObuErIaw"/>
+  <profile:ViewNavigationObject xmi:id="_0U8zoJfPEeO8tqObuErIaw" base_Property="_x7awcJfPEeO8tqObuErIaw" type="ITEM" value="Impressum" label="Impressum" goToView="_fRjSUJfPEeO8tqObuErIaw"/>
   <profile:ViewObject xmi:id="_EwFwYJfQEeO8tqObuErIaw" base_Property="_DPMlYJfQEeO8tqObuErIaw" type="LABEL" value="currend" label="this are News"/>
   <profile:ViewNavigationObject xmi:id="_OC5_kJfQEeO8tqObuErIaw" base_Property="_Mr3UIJfQEeO8tqObuErIaw" value="toImpressum" label="Impressum" goToView="_fRjSUJfPEeO8tqObuErIaw"/>
-  <profile:ViewObject xmi:id="_UCPEwJfQEeO8tqObuErIaw" base_Property="_SwK_8JfQEeO8tqObuErIaw" type="LABEL" value="value" label="Nutzungsbedingungen&#xD;&#xA;&#xD;&#xA;Die Inhalte, sowohl Text- als auch Bildmaterial, werden den Internet-NutzerInnen ausschließlich zum privaten, eigenen Gebrauch zur Verfügung gestellt. Jede gewerbliche Nutzung der Inhalte dieser Website ist unzulässig. &#xD;&#xA;&#xD;&#xA;Hinweis&#xD;&#xA;&#xD;&#xA;Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."/>
-  <profile:ViewObject xmi:id="_6LO1EJfQEeO8tqObuErIaw" viewObject="_JYaw8JfREeO8tqObuErIaw _SBGeAJfREeO8tqObuErIaw" base_Property="_3q4_QJfQEeO8tqObuErIaw" type="TREE" value="lebenslauf" label="Lebenslauf"/>
+  <profile:ViewObject xmi:id="_UCPEwJfQEeO8tqObuErIaw" base_Property="_SwK_8JfQEeO8tqObuErIaw" type="LABEL" value="Impressum" label="impressum"/>
+  <profile:ViewObject xmi:id="_6LO1EJfQEeO8tqObuErIaw" viewObject="_JYaw8JfREeO8tqObuErIaw _SBGeAJfREeO8tqObuErIaw" base_Property="_3q4_QJfQEeO8tqObuErIaw" type="TABLE" value="lebenslauf" label="Lebenslauf"/>
   <profile:ViewObject xmi:id="_JYaw8JfREeO8tqObuErIaw" base_Property="_9ZdroJfQEeO8tqObuErIaw" type="LABEL" value="Hans-Peter Mueller" label="name"/>
   <profile:ViewObject xmi:id="_SBGeAJfREeO8tqObuErIaw" base_Property="_QkUW8JfREeO8tqObuErIaw" type="TEXTFIELD" value="Musterweg 5&#xD;&#xA;15236 Stadt" label="adresse"/>
   <profile:ViewObject xmi:id="_aFBRIJfREeO8tqObuErIaw" base_Property="_YhsdMJfREeO8tqObuErIaw" type="LABEL" value="info Text" label="info"/>

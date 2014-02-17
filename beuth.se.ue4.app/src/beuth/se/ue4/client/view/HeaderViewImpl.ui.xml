@@ -2,50 +2,21 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		<!-- Start of user code Projects 
+		<!-- Start of user code Header 
 		     Start protectetRegion -->
 		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
-	<!-- Start of user code Projects 
+	<!-- Start of user code Header 
 	     Start protectetRegion -->
-
-				
-				
-
-				
-					<g:Grid ui:field="projectList">
-						<g:row>
-							<g:customCell>
-								<g:Label text="Projects 1"/>
-							
-							
-							</g:customCell>
-						</g:row>
-				</g:Grid>
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
+				<g:MenuBar ui:field="Menu">
+					<g:MenuItem ui:field="toHome" text="Home"/>
+					<g:MenuItem ui:field="toNews" text="News"/>
+					<g:MenuItem ui:field="toPortfolio" text="Portfolio"/>
+					<g:MenuItem ui:field="Projects" text="Projects"/>
+					<g:MenuItem ui:field="toImpressum" text="Impressum"/>
+				</g:MenuBar>
 	<!-- End of user code -->
 	</g:FlowPanel>
-	
 </ui:UiBinder> 

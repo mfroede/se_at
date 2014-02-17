@@ -2,29 +2,15 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		<!-- Start of user code Impressum 
+		<!-- Start of user code Footer 
 		     Start protectetRegion -->
 		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
-	<!-- Start of user code Impressum 
+	<!-- Start of user code Footer 
 	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-					<g:Label text="value"/>
-									
-				
+					<g:Button ui:field="toImpressum" text="Impressum"/>
 	<!-- End of user code -->
 	</g:FlowPanel>
-	
 </ui:UiBinder> 

@@ -21,4 +21,16 @@ h1 {
 .gwt-DialogBox {
   width: 400px;
 }
+
+.project{
+	font-size: :2em;
+}
+
+.impressum{
+  border-width:1px;
+  border-style:solid;
+  border-color:black;
+  margin: 0px 40px; 
+  text-align: center;
+}
 	/** End of user code */

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="srcgen"/>
-	<classpathentry kind="src" path="srcgenneu"/>
 	<classpathentry kind="src" path="srcgenpre"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="gin-2.0.jar"/>

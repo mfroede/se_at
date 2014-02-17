@@ -10,92 +10,13 @@
 	<!-- InteractionElements -->
 	<!-- Start of user code Header 
 	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
 				<g:MenuBar ui:field="Menu">
-					<g:MenuItem ui:field="toHome" text="toHome"/>
-					<g:MenuItem ui:field="toNews" text="toNews"/>
-					<g:MenuItem ui:field="toPortfolio" text="toPortfolio"/>
-					<g:MenuItem ui:field="Projects" text="toProjects"/>
-					<g:MenuItem ui:field="toImpressum" text="toImpressum"/>
+					<g:MenuItem ui:field="toHome" text="Home"/>
+					<g:MenuItem ui:field="toNews" text="News"/>
+					<g:MenuItem ui:field="toPortfolio" text="Portfolio"/>
+					<g:MenuItem ui:field="Projects" text="Projects"/>
+					<g:MenuItem ui:field="toImpressum" text="Impressum"/>
 				</g:MenuBar>
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
 	<!-- End of user code -->
 	</g:FlowPanel>
-	
 </ui:UiBinder> 
