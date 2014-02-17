@@ -3,8 +3,65 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code Header 
-		     Start protectetRegion -->
-		<!-- End of user code -->
+	     Start protectetRegion -->
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				<g:MenuBar ui:field="menuBar">
+					<g:MenuItem ui:field="about" text="about"/>
+					<g:MenuItem ui:field="portfolio" text="portfolio"/>
+					<g:MenuItem ui:field="news" text="news"/>
+				</g:MenuBar>
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+	<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
