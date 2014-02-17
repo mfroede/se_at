@@ -3,128 +3,8 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code Portfolio 
-	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-					<g:Label text="Hans-Peter Mueller"/>
-									
-				
-
-				
-				
-
-				
-				
-
-				
-					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
-				
-					
-				
-									
-				
-
-				
-				
-
-				<g:Grid ui:field="lebenslauf">
-						<g:row>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-							
-							
-							</g:column>
-							<g:column>
-								<g:Label text="Hans-Peter Mueller"/>
-							
-							
-							</g:column>
-							<g:column>
-								<g:Label text="Hans-Peter Mueller"/>
-							
-							
-							</g:column>
-							<g:column>
-							
-								<g:TextField ui:field="adresse" text="Musterweg 5
-							15236 Stadt"/>			
-							
-							</g:column>
-							<g:column>
-							
-								<g:TextField ui:field="adresse" text="Musterweg 5
-							15236 Stadt"/>			
-							
-							</g:column>
-						</g:row>
-				</g:Grid>
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-					<g:TextField ui:field="adresse" text="Musterweg 5
-				15236 Stadt"/>			
-				
-									
-				
-	<!-- End of user code -->
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
@@ -148,20 +28,6 @@
 				
 				
 
-				
-				
-
-				
-					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
-				
-					
-				
-									
-				
-
-				
-				
-
 				<g:Grid ui:field="lebenslauf">
 						<g:row>
 							<g:column>
@@ -229,7 +95,22 @@
 				
 
 				
-					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
+				
+					
+					<g:TextField ui:field="adresse" text="Musterweg 5
+				15236 Stadt"/>			
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
 				
 					
 				
@@ -243,10 +124,9 @@
 				
 
 				
+					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
 				
 					
-					<g:TextField ui:field="adresse" text="Musterweg 5
-				15236 Stadt"/>			
 				
 									
 				

@@ -3,21 +3,8 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code MyObject 
-	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-	<!-- End of user code -->
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->

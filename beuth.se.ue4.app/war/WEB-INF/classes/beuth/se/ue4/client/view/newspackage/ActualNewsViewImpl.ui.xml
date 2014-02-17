@@ -3,76 +3,8 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code ActualNews 
-	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-					<g:Button ui:field="portButton" text=""/>
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-					<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
-				
-									
-				
-
-				
-				
-
-				
-				
-
-					<g:Button ui:field="newsButton" text=""/>
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-					<g:Grid ui:field="NewsList">
-						<g:row>
-							<g:column>
-								<g:Button ui:field="newsButton" text=""/>
-							
-							</g:column>
-							<g:column>
-							
-								<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
-							
-							</g:column>
-						</g:row>
-				</g:Grid>
-				
-
-				
-				
-					
-				
-									
-				
-	<!-- End of user code -->
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
@@ -85,34 +17,6 @@
 				
 				
 
-					<g:Button ui:field="portButton" text=""/>
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-					<g:Button ui:field="newsButton" text=""/>
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
 				
 				
 					
@@ -140,6 +44,34 @@
 				</g:Grid>
 				
 
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="newsButton" text=""/>
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="portButton" text=""/>
 				
 				
 					

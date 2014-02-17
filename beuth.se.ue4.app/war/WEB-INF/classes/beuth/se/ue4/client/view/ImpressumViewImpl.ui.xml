@@ -3,22 +3,8 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code Impressum 
-	     Start protectetRegion -->
-
-				
-				
-
-				
-				
-
-				
-				
-					
-					<g:TextField ui:field="Button1" text="setsetrezetzhsefrqwrsyfasfeatfwetsg"/>			
-				
-									
-				
-	<!-- End of user code -->
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
 	<!-- InteractionElements -->
