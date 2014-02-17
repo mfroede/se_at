@@ -103,7 +103,7 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 					[elseif (isValueExists(property, 'type', 'TEXTFIELD') and getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')->isEmpty())]
 							//TODO Value must be set
 							@UiField
-							TextField [property.name/];
+							TextArea [property.name/];
 					[elseif(isValueExists(property, 'type', 'POPUP'))]
 							DialogBox [property.name/];	
 					[elseif(isValueExists(property, 'type', 'DATEPICKER'))]
@@ -165,9 +165,9 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 				
 			[if (i<=1)]	
 	@UiHandler({ "[class.attribute->select(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON')).name->sep('\", "')/]" })
-	void onButtonPressed(ClickEvent e) {
+	public void onButtonPressed(ClickEvent e) {
 		Widget w = (Widget) e.getSource();
-		presenter.onButtonClick(w.getTitle());
+		presenter.onButtonClicked(w.getTitle());
 	}		
 			[/if]	
 			[/if]
@@ -387,7 +387,7 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 
 [template public newTextField (property : Property) ]
 [if (isValueExists(property, 'type', 'TEXTFIELD'))]
-	<g:TextField ui:field="[property.name/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>			
+	<g:TextArea ui:field="[property.name/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>			
 [/if]
 [/template]
 
@@ -455,8 +455,8 @@ public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.na
 			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
 				[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
 		@Override
-		void on[property.name.toUpperFirst()/]Clicked(){
-			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+		public void on[property.name.toUpperFirst()/]Clicked(){
+			placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 		}
 
 				[/if]
@@ -466,11 +466,11 @@ public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.na
 			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
 				[if (i<=1)]				
 	@Override
-	void onButtonClicked(String buttonName){
+	public void onButtonClicked(String buttonName){
 		switch(buttonName) {
 				[/if]
 		case "[property.name/]":
-			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+			placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 			break;
 			[/if]
 		[/for]
@@ -528,14 +528,14 @@ public interface [class.name/]View extends IsWidget {
 		[for (property: Property | class.attribute)]
 		[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
 			[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
-				void on[property.name.toUpperFirst()/]Clicked();
+				public void on[property.name.toUpperFirst()/]Clicked();
 			[/if]
 		[/if]
 		[/for]
 		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
 			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
 				[if (i<=1)]				
-		void onButtonClicked(String buttonName);
+		public void onButtonClicked(String buttonName);
 				[/if]
 			[/if]
 		[/for]

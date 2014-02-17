@@ -1,0 +1,58 @@
+package beuth.se.ue4.client.common;
+import beuth.se.ue4.client.view.HomeActivity;
+import beuth.se.ue4.client.view.HomePlace;
+import beuth.se.ue4.client.view.ImpressumActivity;
+import beuth.se.ue4.client.view.ImpressumPlace;
+import beuth.se.ue4.client.view.NewsActivity;
+import beuth.se.ue4.client.view.NewsPlace;
+import beuth.se.ue4.client.view.PortfolioActivity;
+import beuth.se.ue4.client.view.PortfolioPlace;
+import beuth.se.ue4.client.view.ProjectsActivity;
+import beuth.se.ue4.client.view.ProjectsPlace;
+
+import com.google.gwt.activity.shared.Activity;
+import com.google.gwt.activity.shared.ActivityMapper;
+import com.google.gwt.place.shared.Place;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+public class ActivityMapperImpl implements ActivityMapper {
+	
+		//Start of user code beuth.se.ue4.Portfolio
+		// TODO Auto generated Method
+		//End of user code
+	@Inject
+	Provider<NewsActivity> newsActivityProvider;	
+	@Inject
+	Provider<PortfolioActivity> portfolioActivityProvider;	
+	@Inject
+	Provider<ImpressumActivity> impressumActivityProvider;	
+	@Inject
+	Provider<ProjectsActivity> projectsActivityProvider;	
+	@Inject
+	Provider<HomeActivity> homeActivityProvider;	
+	
+	@Override
+	public Activity getActivity(Place place) {
+	if (place instanceof NewsPlace) {
+			return newsActivityProvider.get();
+		}
+	if (place instanceof PortfolioPlace) {
+			return portfolioActivityProvider.get();
+		}
+	if (place instanceof ImpressumPlace) {
+			return impressumActivityProvider.get();
+		}
+	if (place instanceof ProjectsPlace) {
+			return projectsActivityProvider.get();
+		}
+	if (place instanceof HomePlace) {
+			return homeActivityProvider.get();
+		}
+			//Start of user code getActivity
+			// TODO Auto generated Method
+			//End of user code
+		return null;
+	}
+
+}

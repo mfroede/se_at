@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		<!-- Start of user code Projects 
+		     Start protectetRegion -->
+		<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code Projects 
+	     Start protectetRegion -->
+
+				
+				
+
+				
+					<g:Grid ui:field="projectList">
+						<g:row>
+							<g:column>
+								<g:Label text="Projects 1"/>
+							
+							
+							</g:column>
+						</g:row>
+				</g:Grid>
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+					<g:Label text="Projects 1"/>
+									
+				
+	<!-- End of user code -->
+	</g:FlowPanel>
+	
+</ui:UiBinder> 

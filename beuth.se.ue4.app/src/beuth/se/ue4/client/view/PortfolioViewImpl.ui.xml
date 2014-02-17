@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		<!-- Start of user code Portfolio 
+		     Start protectetRegion -->
+		<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code Portfolio 
+	     Start protectetRegion -->
+
+
+									
+				
+
+				
+				<g:Tree ui:field="lebenslauf">
+					
+						<g:TreeItem ui:field="name" text="Hans-Peter Mueller">
+								
+								
+						</g:TreeItem>
+						<g:TreeItem ui:field="adresse" text="Musterweg 5
+					15236 Stadt">
+								
+								
+						</g:TreeItem>
+					
+				</g:Tree>
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+	<!-- End of user code -->
+	</g:FlowPanel>
+	
+</ui:UiBinder> 

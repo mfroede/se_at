@@ -10,12 +10,11 @@
 [placeControllerProvider(modelName)/]
 
 [indexHTML(modelName.substring(modelName.lastIndex('.')+1))/]
-[styleCSS(modelName.substring(modelName.lastIndex('.')+1))/]
+[stylesCSS(modelName.substring(modelName.lastIndex('.')+1))/]
 [/template]
 
 [template public configXML(modelName : String)]
-[file (quallyName(modelName) + '.xml', false, 'UTF-8')]
-[quallyName(modelName) + '.xml'/]
+[file (quallyName(modelName) + '.gwt.xml', false, 'UTF-8')]
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- When updating your version of GWT, you should also update this DTD reference, 
 	so that your app can take advantage of the latest GWT module capabilities. -->
@@ -195,13 +194,13 @@ public class PlaceControllerProvider implements Provider<PlaceController> {
 [comment][quallyName(packageName(modelName)) + 'client/AppEntryPoint.java'/][/comment]
 [/file]
 [/template]
-[template public styleCSS(modelName : String)]
-[file ('style.css', false, 'UTF-8')]
+[template public stylesCSS(modelName : String)]
+[file ('styles.css', false, 'UTF-8')]
 /** Add css rules here for your application. */
 
 
 /** Example rules used by the template application (remove for your app) */
-	/** [protected ('style.css')] 
+	/** [protected ('styles.css')] 
 	     Start protectetRegion */
 h1 {
   font-size: 2em;

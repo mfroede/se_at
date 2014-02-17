@@ -92,13 +92,13 @@ public class [class.name/] extends Widget{
 [/template]
 [template public newRadioButton (property : Property) ]
 [if (isValueExists(property, 'type', 'RADIOBUTTON'))]
-	private RadoButton [property.name/]; [property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]" />
+	private RadoButton [property.name/]; //[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]" text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]" />
 [/if]
 [/template]
 
 [template public newCheckBox (property : Property) ]
 [if (isValueExists(property, 'type', 'CHECKBOX'))]
-	private CheckBox [property.name/]; [property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]</g:CheckBox>
+	private CheckBox [property.name/]; //[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]</g:CheckBox>
 [/if]
 [/template]
 
@@ -114,7 +114,7 @@ public class [class.name/] extends Widget{
 	private MenuBar [property.name/];
 [if(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
 	[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
-	private MenuItem [prop.name/]; [prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+	private MenuItem [prop.name/]; //[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
 	[/for]
 [/if]
 [/if]
@@ -122,26 +122,26 @@ public class [class.name/] extends Widget{
 
 [template public newTextField (property : Property) ]
 [if (isValueExists(property, 'type', 'TEXTFIELD'))]
-	private TextField [property.name/]; text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>			
+	private TextArea [property.name/]; //text="[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>			
 [/if]
 [/template]
 
 [template public newLabel (prop : Property) ]
 [if (isValueExists(prop, 'type', 'LABEL'))]
-	private Label [prop.name/]; [prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+	private Label [prop.name/]; //[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
 [/if]
 [/template]
 
 [template public newButton (property : Property) ]
 [if (isValueExists(property, 'type', 'BUTTON'))]
-	private Button [property.name/]; [property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+	private Button [property.name/]; //[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
 [/if]
 [/template]
 
 [template public newTreeItems (property : Property, viewObjectString: String) ]
 [if(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), viewObjectString)->notEmpty())]
 	[for (prop : Property | property.getTaggedValue('ViewObject',viewObjectString, false).oclAsSet().oclAsType(Property))]
-	private TreeItem [prop.name/]; [prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]">
+	private TreeItem [prop.name/]; //[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]">
 		[if (prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
 			[newTreeItems (prop, 'viewNavigationObject')/]
 		[/if]

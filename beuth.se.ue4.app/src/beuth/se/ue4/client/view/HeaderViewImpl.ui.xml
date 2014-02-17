@@ -1,0 +1,101 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		<!-- Start of user code Header 
+		     Start protectetRegion -->
+		<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code Header 
+	     Start protectetRegion -->
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				<g:MenuBar ui:field="Menu">
+					<g:MenuItem ui:field="toHome" text="toHome"/>
+					<g:MenuItem ui:field="toNews" text="toNews"/>
+					<g:MenuItem ui:field="toPortfolio" text="toPortfolio"/>
+					<g:MenuItem ui:field="Projects" text="toProjects"/>
+					<g:MenuItem ui:field="toImpressum" text="toImpressum"/>
+				</g:MenuBar>
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+	<!-- End of user code -->
+	</g:FlowPanel>
+	
+</ui:UiBinder> 

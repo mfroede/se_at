@@ -16,7 +16,7 @@
 package [packageName(model.name)/]client;
 
 import [packageName(model.name)/]client.common.AppPlaceHistoryMapper;
-import [packageName(model.name)/]client.gin.AppGinjector;
+import [packageName(model.name)/]client.common.gin.AppGinjector;
 
 import com.google.gwt.activity.shared.ActivityManager;
 import com.google.gwt.activity.shared.ActivityMapper;
@@ -51,7 +51,7 @@ public class AppEntryPoint implements EntryPoint {
 [for (class : Class | pack.ownedElement)]
 	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
 		ActivityMapper activityMapper[getClassName(class)/] = injector
-				.getNavigationViewActivityMapper();
+				.get[getClassName(class)/]ViewActivityMapper();
 		SimplePanel [getClassName(class).toLowerFirst()/] = new SimplePanel();
 
 		ActivityManager contentActivityManager[class.name/] = new ActivityManager(
@@ -63,7 +63,7 @@ public class AppEntryPoint implements EntryPoint {
 [for (class : Class | model.ownedElement)]
 	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
 		ActivityMapper activityMapper[getClassName(class)/] = injector
-				.getNavigationViewActivityMapper();
+				.get[getClassName(class)/]ViewActivityMapper();
 		SimplePanel [getClassName(class).toLowerFirst()/] = new SimplePanel();
 
 		ActivityManager contentActivityManager[class.name/] = new ActivityManager(
@@ -173,7 +173,8 @@ import com.google.gwt.place.shared.WithTokenizers;
 	[for (interface : Interface | model.ownedElement)]
 		[interface.name/]Place.Tokenizer.class,
 	[/for]
-	[generateProtectetRegion(model.name)/] })
+	[generateProtectetRegion(model.name)/] 
+	})
 public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {
 
 }
