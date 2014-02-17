@@ -24,6 +24,45 @@
 									
 				
 
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
 				<g:MenuBar ui:field="Menu">
 					<g:MenuItem ui:field="toHome" text="toHome"/>
 					<g:MenuItem ui:field="toNews" text="toNews"/>
@@ -31,6 +70,19 @@
 					<g:MenuItem ui:field="Projects" text="toProjects"/>
 					<g:MenuItem ui:field="toImpressum" text="toImpressum"/>
 				</g:MenuBar>
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+									
+				
+
 				
 				
 

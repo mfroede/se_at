@@ -37,6 +37,7 @@ Doku
 	StatPlace muss Manuel gesetzt werden
 	Gin Lib muss eingebunden werden
 	Guice Lib muss eingebunden werden
+	Guice-assistedinject Lib muss eingebunden werden
 
 	style.css & index.html in den war ordner verschieben, nach Generierung
 

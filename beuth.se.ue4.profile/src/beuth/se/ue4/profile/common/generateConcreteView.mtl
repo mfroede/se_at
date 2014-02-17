@@ -266,32 +266,32 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 	[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty() and property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
 		<g:row>
 		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
-			<g:column>
+			<g:customCell>
 			[newButton(prop)/]
-			</g:column>
+			</g:customCell>
 			[/for]
 			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
-			<g:column>
+			<g:customCell>
 			[newLabel(prop)/]
 			[newTextField(prop)/]
-			</g:column>
+			</g:customCell>
 		[/for]
 		</g:row>
 	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
 		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
 		<g:row>
-			<g:column>
+			<g:customCell>
 			[newButton(prop)/]
-			</g:column>
+			</g:customCell>
 		</g:row>
 		[/for]
 	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
 		[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
 		<g:row>
-				<g:column>
+				<g:customCell>
 				[newLabel(prop)/]
 				[newTextField(prop)/]
-				</g:column>
+				</g:customCell>
 		</g:row>
 		[/for]
 	[/if]
@@ -305,46 +305,46 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 	[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty() and property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
 		<g:row>
 		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
-			<g:column>
+			<g:customCell>
 			[newButton(prop)/]
-			</g:column>
-			<g:column>
+			</g:customCell>
+			<g:customCell>
 			[newButton(prop)/]
-			</g:column>
+			</g:customCell>
 			[/for]
 			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
-			<g:column>
+			<g:customCell>
 			[newLabel(prop)/]
 			[newTextField(prop)/]
-			</g:column>
-			<g:column>
+			</g:customCell>
+			<g:customCell>
 			[newLabel(prop)/]
 			[newTextField(prop)/]
-			</g:column>
+			</g:customCell>
 		[/for]
 		</g:row>
 	[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
 		[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
     	<g:row>
-			<g:column>
+			<g:customCell>
       		[newButton(prop)/]
-			</g:column>
-			<g:column>
+			</g:customCell>
+			<g:customCell>
       		[newButton(prop)/]
-			</g:column>
+			</g:customCell>
     	</g:row>
 		[/for]
 		[elseif(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewObject')->notEmpty())]
 			[for (prop : Property | property.getTaggedValue('ViewObject','viewObject', false).oclAsSet().oclAsType(Property))]
     	<g:row>
-			<g:column>
+			<g:customCell>
       		[newLabel(prop)/]
 			[newTextField(prop)/]
-			</g:column>
-			<g:column>
+			</g:customCell>
+			<g:customCell>
       		[newLabel(prop)/]
 			[newTextField(prop)/]
-			</g:column>
+			</g:customCell>
     	</g:row>
 		[/for]
 	[/if]
@@ -467,17 +467,15 @@ public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.na
 				[if (i<=1)]				
 	@Override
 	public void onButtonClicked(String buttonName){
-		switch(buttonName) {
 				[/if]
-		case "[property.name/]":
+		if(buttonName.equals("[property.name/]")) {
 			placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
-			break;
+		}
 			[/if]
 		[/for]
 		[for (property : Property | class.attribute->sortedBy(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name))]	
 			[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
 				[if (i<=1)]	
-		}
 	}
 				[/if]
 			[/if]
