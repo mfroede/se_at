@@ -2,7 +2,7 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
-		<!-- Start of user code Projects 
+		<!-- Start of user code Footer 
 		     Start protectetRegion -->
 		<!-- End of user code -->
 	</ui:style>
@@ -25,22 +25,7 @@
 						</g:row>
 				</g:Grid>
 				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
+		
 					
 				
 					<g:Label text="Projects 1"/>

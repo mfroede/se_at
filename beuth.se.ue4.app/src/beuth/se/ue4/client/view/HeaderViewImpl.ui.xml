@@ -24,58 +24,6 @@
 									
 				
 
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
-				
-					
-				
-									
-				
-
 				<g:MenuBar ui:field="Menu">
 					<g:MenuItem ui:field="toHome" text="toHome"/>
 					<g:MenuItem ui:field="toNews" text="toNews"/>
