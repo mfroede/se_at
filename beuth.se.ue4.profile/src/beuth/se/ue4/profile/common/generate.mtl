@@ -3,11 +3,12 @@
 [import beuth::se::ue4::profile::common::generateStructure /]
 [import beuth::se::ue4::profile::common::generateBasicStaticStructure /]
 [import beuth::se::ue4::profile::common::generateMVP /]
+[import beuth::se::ue4::profile::common::generateOwnViewObject /]
 
 [template public generate(model : Model)]
 [comment @main/]
 [generateBasicStaticStructure(model.name)/]
 [generateStructure(model)/]
 [generateMVP(model)/]
-
+[generateOwnViewObject(model)/]
 [/template]

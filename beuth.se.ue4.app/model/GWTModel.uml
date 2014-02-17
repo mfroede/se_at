@@ -146,6 +146,16 @@
         </defaultValue>
       </ownedAttribute>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IcwN0JdsEeOJBLS8VIwxyQ" name="MyObject">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5abWwJduEeOJBLS8VIwxyQ" name="myPanel" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_53tIoJduEeOJBLS8VIwxyQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_53tIoZduEeOJBLS8VIwxyQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_53tIopduEeOJBLS8VIwxyQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__y4toJduEeOJBLS8VIwxyQ" name="myOperaration"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_9XdZYJc0EeOJBLS8VIwxyQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9Xq0wJc0EeOJBLS8VIwxyQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ"/>
@@ -161,7 +171,7 @@
   <profile:Footer xmi:id="_kY_7QJc1EeOJBLS8VIwxyQ" base_Class="_iGUuAJc1EeOJBLS8VIwxyQ"/>
   <profile:ViewImpl xmi:id="_8JEeMJc1EeOJBLS8VIwxyQ" base_Class="_5LSecJc1EeOJBLS8VIwxyQ"/>
   <profile:View xmi:id="_CBfqIJc2EeOJBLS8VIwxyQ" base_Interface="_1Lx78Jc1EeOJBLS8VIwxyQ"/>
-  <profile:ViewImpl xmi:id="_DS_HMJc2EeOJBLS8VIwxyQ" base_Class="_CcbSoJc2EeOJBLS8VIwxyQ" concreteBinding="false"/>
+  <profile:ViewImpl xmi:id="_DS_HMJc2EeOJBLS8VIwxyQ" ownViewObject="_Kkum8JdsEeOJBLS8VIwxyQ" base_Class="_CcbSoJc2EeOJBLS8VIwxyQ" concreteBinding="false"/>
   <profile:ViewImpl xmi:id="_LG69kJc2EeOJBLS8VIwxyQ" base_Class="_E9pSMJc2EeOJBLS8VIwxyQ"/>
   <profile:ViewNavigationObject xmi:id="_RAsNUJc2EeOJBLS8VIwxyQ" base_Property="_PvxYAJc2EeOJBLS8VIwxyQ" value="actNews" label="actNews" goToView="_8JEeMJc1EeOJBLS8VIwxyQ"/>
   <profile:ViewObject xmi:id="_aYOkcJc2EeOJBLS8VIwxyQ" viewObject="_nuCH8Jc2EeOJBLS8VIwxyQ" viewNavigationObject="_vG8PMJc2EeOJBLS8VIwxyQ" base_Property="_Xl94MJc2EeOJBLS8VIwxyQ" type="LIST" value="newsList" label="newsList"/>
@@ -179,4 +189,6 @@
   <profile:ViewObject xmi:id="_uuTa0Jc4EeOJBLS8VIwxyQ" base_Property="_saN4UJc4EeOJBLS8VIwxyQ" type="LABEL" value="Hans-Peter Mueller" label="name"/>
   <profile:ViewObject xmi:id="_6XK7YJc4EeOJBLS8VIwxyQ" base_Property="_39d5EJc4EeOJBLS8VIwxyQ" type="TEXTFIELD" value="Musterweg 5&#xD;&#xA;15236 Stadt" label="adresse"/>
   <profile:ViewObject xmi:id="_NECDIJc5EeOJBLS8VIwxyQ" base_Property="_K-ONMJc5EeOJBLS8VIwxyQ" type="TEXTFIELD" value="setsetrezetzhsefrqwrsyfasfeatfwetsg" label="impressumText"/>
+  <profile:OwnViewObject xmi:id="_Kkum8JdsEeOJBLS8VIwxyQ" base_Class="_IcwN0JdsEeOJBLS8VIwxyQ"/>
+  <profile:ViewObject xmi:id="_78pb4JduEeOJBLS8VIwxyQ" base_Property="_5abWwJduEeOJBLS8VIwxyQ" type="PANEL" value="hsdvb" label="myPanel"/>
 </xmi:XMI>

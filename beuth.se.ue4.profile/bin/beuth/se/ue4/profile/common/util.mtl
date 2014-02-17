@@ -6,6 +6,11 @@
 	'getTaggedValue(org.eclipse.uml2.uml.Element, java.lang.String, java.lang.String, java.lang.Boolean)',
 	Sequence{ element, stereotypeName, property, isClass }) /]
 
+[comment][query public getTaggedValueClass(element:Class, stereotypeName:String ,property:String, isClass:Boolean ) : Sequence(Class) = 
+	invoke('beuth.se.ue4.profile.common.ClassHelper', 
+	'getTaggedValue(org.eclipse.uml2.uml.Element, java.lang.String, java.lang.String, java.lang.Boolean)',
+	Sequence{ element, stereotypeName, property, isClass }) /][/comment]
+
 [query public setIsExisting( isExisting:Boolean ) : Boolean=
 	invoke('beuth.se.ue4.profile.common.SingletonHelper', 
 	'setIsExisting(java.lang.Boolean)',

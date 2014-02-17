@@ -13,10 +13,25 @@
 				
 
 				
-					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
+				
+					
+					<g:TextField ui:field="adresse" text="Musterweg 5
+				15236 Stadt"/>			
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
 				
 					
 				
+					<g:Label text="Hans-Peter Mueller"/>
 									
 				
 
@@ -90,21 +105,6 @@
 				
 
 				
-				
-					
-					<g:TextField ui:field="adresse" text="Musterweg 5
-				15236 Stadt"/>			
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
 					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
 				
 					
@@ -119,10 +119,10 @@
 				
 
 				
+					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
 				
 					
 				
-					<g:Label text="Hans-Peter Mueller"/>
 									
 				
 	</g:FlowPanel>

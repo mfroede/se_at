@@ -12,10 +12,10 @@
 				
 				
 
+					<g:Button ui:field="portButton" text=""/>
 				
 				
 					
-					<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
 				
 									
 				
@@ -52,10 +52,10 @@
 				
 				
 
-					<g:Button ui:field="newsButton" text=""/>
 				
 				
 					
+					<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
 				
 									
 				
@@ -66,7 +66,7 @@
 				
 				
 
-					<g:Button ui:field="portButton" text=""/>
+					<g:Button ui:field="newsButton" text=""/>
 				
 				
 					
