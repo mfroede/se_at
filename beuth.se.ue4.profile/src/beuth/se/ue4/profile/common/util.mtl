@@ -45,10 +45,19 @@
 
 [template public operation(o : Operation)]
 [o.visibility/][for (pa:Parameter | o.ownedParameter)][if (pa.direction = (ParameterDirectionKind::return))][if( not pa.type.oclIsUndefined())] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if][else] void[/if][/if][/for] [o.name/]([for (pa:Parameter | (o.ownedParameter->select(not (direction = ParameterDirectionKind::return))))separator (',')] [if (pa.upperBound() = -1)] java.util.List<[pa.type.name/]>[else][pa.type.name/][/if] [pa.name /][/for]){ 
-	//[protected (o.name)]
+[generateProtectetRegion(o.name)/]
+}
+[/template]
+
+[template public generateProtectetRegion (name:String) ]
+	//[protected (name)]
 	// TODO Auto generated Method
 	//[/protected]
-}
+[/template]
+[template public generateProtectetRegionXML (name:String) ]
+	<!-- [protected (name)] 
+	     Start protectetRegion -->
+	<!-- [/protected] -->
 [/template]
 [template public getClassName(class : Class)]
 [if (isNotViewExisting(class))][class.name/][else][class.clientDependency.target.oclAsType(Interface).name/][/if]

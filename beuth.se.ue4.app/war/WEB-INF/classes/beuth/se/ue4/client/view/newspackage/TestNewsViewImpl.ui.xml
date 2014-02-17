@@ -2,9 +2,14 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
+		<!-- Start of user code TestNews 
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
-	//InteractionElements
+	<!-- InteractionElements -->
+	<!-- Start of user code TestNews 
+	     Start protectetRegion -->
 
 				
 				
@@ -19,6 +24,7 @@
 				
 									
 				
+	<!-- End of user code -->
 	</g:FlowPanel>
 	
 </ui:UiBinder> 

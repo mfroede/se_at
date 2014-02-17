@@ -28,8 +28,11 @@ package [generatePackageDeclarationI(interface, packageName, packString)/];
 
 import com.google.gwt.user.client.ui.IsWidget;
 
-public class [interface.name/]View extends IsWidget {
+public interface [interface.name/]View extends IsWidget {
 	public interface Presenter {
+
+	//[protected (name)]
+	// TODO Auto generated Method
 [for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
 	[for (property: Property | class.attribute)]
 		[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
@@ -64,10 +67,11 @@ public class [interface.name/]View extends IsWidget {
 				[/if]
 			[/if]
 		[/if]
+	//[/protected]
 	}
 
 	void setPresenter(Presenter presenter);
-
+	[generateProtectetRegion(interface.name)/]
 	[for(o: Operation | interface.getAllOperations())]
 	[operationIA(o)/]
 	[/for]
@@ -130,9 +134,10 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 		view.setPresenter(this);
 
 		panel.setWidget(view);
-
+		[generateProtectetRegion(interface.name)/]
 	}
-
+	//[protected (name)]
+	// TODO Auto generated Method
 	[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
 		[for (property: Property | class.attribute)]
 			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
@@ -198,6 +203,7 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 			[/if]
 		[/if]
 	[/if]
+	//[/protected]
 }
 [/file]
 [/template]

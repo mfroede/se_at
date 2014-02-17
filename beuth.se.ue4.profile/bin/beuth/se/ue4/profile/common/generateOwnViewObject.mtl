@@ -34,12 +34,13 @@ package [generatePackageDeclaration(class, model.name, 'client.view.ownviewobjec
 public class [class.name/] extends Widget{
 	// You must adding your upper/outers objects to this Panel
 	private FlowPanel [class.name.toLowerFirst()+'Panel'/] = new FlowPanel();
+
 		[for (p:Property | class.attribute)]
 				[comment ToDo: Visibility/]
 			[attribute(p)/] [comment ToDo: Default/]
 		[/for]
 
-
+	[generateProtectetRegion(class.name)/]
 	[for (o:Operation | class.getOperations())]
 	[operation(o)/]
 	[/for]

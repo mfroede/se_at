@@ -85,7 +85,15 @@
           </argument>
           <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/substring"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'>&#xD;&#xA;&#x9;&lt;!-- Inherit the core Web Toolkit stuff. -->&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.user.User' />&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- Inherit the default GWT style sheet. You can change -->&#xD;&#xA;&#x9;&lt;!-- the theme of your GWT application by uncommenting -->&#xD;&#xA;&#x9;&lt;!-- any one of the following lines. -->&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.clean.Clean' /> -->&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.user.theme.standard.Standard'/>&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.dark.Dark'/> -->&#xD;&#xA;&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.activity.Activity' />&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.place.Place' />&#xD;&#xA;&#x9;&lt;inherits name=&quot;com.google.gwt.i18n.I18N&quot; />&#xD;&#xA;&#x9;&lt;inherits name=&quot;com.google.gwt.inject.Inject&quot; />&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- Specify the app entry point class. -->&#xD;&#xA;&#x9;&lt;entry-point class='"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="'>&#xD;&#xA;&#x9;&lt;!-- Inherit the core Web Toolkit stuff. -->&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.user.User' />&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- Inherit the default GWT style sheet. You can change -->&#xD;&#xA;&#x9;&lt;!-- the theme of your GWT application by uncommenting -->&#xD;&#xA;&#x9;&lt;!-- any one of the following lines. -->&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.clean.Clean' /> -->&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.user.theme.standard.Standard'/>&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->&#xD;&#xA;&#x9;&lt;!-- &lt;inherits name='com.google.gwt.user.theme.dark.Dark'/> -->&#xD;&#xA;&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.activity.Activity' />&#xD;&#xA;&#x9;&lt;inherits name='com.google.gwt.place.Place' />&#xD;&#xA;&#x9;&lt;inherits name=&quot;com.google.gwt.i18n.I18N&quot; />&#xD;&#xA;&#x9;&lt;inherits name=&quot;com.google.gwt.inject.Inject&quot; />&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="util.emtl#/0/generateProtectetRegionXML"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="modelName" referredVariable="/0/configXML/modelName">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;&#x9;&lt;!-- Specify the app entry point class. -->&#xD;&#xA;&#x9;&lt;entry-point class='"/>
         <body xsi:type="mtl:QueryInvocation">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <definition href="util.emtl#/0/packageName"/>
@@ -126,7 +134,14 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.dom.client.Style.Unit;&#xD;&#xA;import com.google.gwt.user.client.ui.IsWidget;&#xD;&#xA;import com.google.gwt.user.client.ui.LayoutPanel;&#xD;&#xA;import com.google.gwt.user.client.ui.Widget;&#xD;&#xA;&#xD;&#xA;public class AbstractView implements IsWidget {&#xD;&#xA;&#x9;protected LayoutPanel content;&#xD;&#xA;&#xD;&#xA;&#x9;public AbstractView() {&#xD;&#xA;&#x9;&#x9;content = new LayoutPanel();&#xD;&#xA;&#x9;&#x9;content.getElement().getStyle().setWidth(/*width here*/, Unit.PC);&#xD;&#xA;&#x9;&#x9;content.getElement().getStyle().setHeight(/*height here*/, Unit.PC);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public Widget asWidget() {&#xD;&#xA;&#x9;&#x9;return content;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.dom.client.Style.Unit;&#xD;&#xA;import com.google.gwt.user.client.ui.IsWidget;&#xD;&#xA;import com.google.gwt.user.client.ui.LayoutPanel;&#xD;&#xA;import com.google.gwt.user.client.ui.Widget;&#xD;&#xA;&#xD;&#xA;public class AbstractView implements IsWidget {&#xD;&#xA;&#x9;protected LayoutPanel content;&#xD;&#xA;&#xD;&#xA;&#x9;public AbstractView() {&#xD;&#xA;&#x9;&#x9;content = new LayoutPanel();&#xD;&#xA;&#x9;&#x9;//"/>
+        <body xsi:type="mtl:ProtectedAreaBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;&#x9;// TODO Auto generated Method&#xD;&#xA;&#x9;&#x9;content.getElement().getStyle().setWidth(/*width here*/, Unit.PC);&#xD;&#xA;&#x9;&#x9;content.getElement().getStyle().setHeight(/*height here*/, Unit.PC);&#xD;&#xA;&#x9;&#x9;//"/>
+          <marker xsi:type="ocl.ecore:VariableExp" name="modelName" referredVariable="/0/activityView/modelName">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </marker>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public Widget asWidget() {&#xD;&#xA;&#x9;&#x9;return content;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:QueryInvocation">
@@ -163,7 +178,15 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.activity.shared.AbstractActivity;&#xD;&#xA;import com.google.gwt.event.shared.EventBus;&#xD;&#xA;import com.google.gwt.place.shared.Place;&#xD;&#xA;import com.google.gwt.user.client.ui.AcceptsOneWidget;&#xD;&#xA;&#xD;&#xA;public class AbstractActivityDefaultImpl&lt;T extends Place> extends&#xD;&#xA;&#x9;&#x9;AbstractActivity {&#xD;&#xA;&#xD;&#xA;&#x9;protected Place place;&#xD;&#xA;&#xD;&#xA;&#x9;public Place getPlace() {&#xD;&#xA;&#x9;&#x9;return place;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;public void setPlace(Place place) {&#xD;&#xA;&#x9;&#x9;this.place = place;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public void start(AcceptsOneWidget panel, EventBus eventBus) {&#xD;&#xA;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.activity.shared.AbstractActivity;&#xD;&#xA;import com.google.gwt.event.shared.EventBus;&#xD;&#xA;import com.google.gwt.place.shared.Place;&#xD;&#xA;import com.google.gwt.user.client.ui.AcceptsOneWidget;&#xD;&#xA;&#xD;&#xA;public class AbstractActivityDefaultImpl&lt;T extends Place> extends&#xD;&#xA;&#x9;&#x9;AbstractActivity {&#xD;&#xA;&#xD;&#xA;&#x9;protected Place place;&#xD;&#xA;&#xD;&#xA;&#x9;public Place getPlace() {&#xD;&#xA;&#x9;&#x9;return place;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;public void setPlace(Place place) {&#xD;&#xA;&#x9;&#x9;this.place = place;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public void start(AcceptsOneWidget panel, EventBus eventBus) {&#xD;&#xA;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="util.emtl#/0/generateProtectetRegion"/>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="start">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:QueryInvocation">
@@ -200,7 +223,15 @@
             <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           </argument>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common.gin;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.place.shared.PlaceController;&#xD;&#xA;import com.google.inject.Inject;&#xD;&#xA;import com.google.inject.Provider;&#xD;&#xA;import com.google.web.bindery.event.shared.EventBus;&#xD;&#xA;&#xD;&#xA;public class PlaceControllerProvider implements Provider&lt;PlaceController> {&#xD;&#xA;&#xD;&#xA;&#x9;private final EventBus eventBus;&#xD;&#xA;&#xD;&#xA;&#x9;@Inject&#xD;&#xA;&#x9;public PlaceControllerProvider(EventBus eventBus) {&#xD;&#xA;&#x9;&#x9;this.eventBus = eventBus;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public PlaceController get() {&#xD;&#xA;&#x9;&#x9;return new PlaceController(eventBus);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="client.common.gin;&#xD;&#xA;&#xD;&#xA;import com.google.gwt.place.shared.PlaceController;&#xD;&#xA;import com.google.inject.Inject;&#xD;&#xA;import com.google.inject.Provider;&#xD;&#xA;import com.google.web.bindery.event.shared.EventBus;&#xD;&#xA;&#xD;&#xA;public class PlaceControllerProvider implements Provider&lt;PlaceController> {&#xD;&#xA;&#xD;&#xA;&#x9;private final EventBus eventBus;&#xD;&#xA;&#xD;&#xA;&#x9;@Inject&#xD;&#xA;&#x9;public PlaceControllerProvider(EventBus eventBus) {&#xD;&#xA;&#x9;&#x9;this.eventBus = eventBus;&#xD;&#xA;&#x9;&#x9;"/>
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="util.emtl#/0/generateProtectetRegion"/>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="PlaceControllerProvider">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;@Override&#xD;&#xA;&#x9;public PlaceController get() {&#xD;&#xA;&#x9;&#x9;return new PlaceController(eventBus);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="mtl:QueryInvocation">
@@ -320,6 +351,30 @@
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="modelName">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateProtectetRegion">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="util.emtl#/0/generateProtectetRegion"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="name">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateProtectetRegionXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="util.emtl#/0/generateProtectetRegionXML"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="name">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </eParameters>
       </eOperations>
@@ -467,30 +522,6 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -530,6 +561,51 @@
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -549,6 +625,15 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
@@ -633,12 +718,12 @@
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/configXML">
       <details key="start" value="382"/>
-      <details key="end" value="2056"/>
+      <details key="end" value="2102"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/configXML/%">
       <details key="start" value="431"/>
-      <details key="end" value="2043"/>
+      <details key="end" value="2089"/>
       <details key="line" value="14"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/configXML/%/%">
@@ -713,253 +798,318 @@
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/configXML/%/%.3">
       <details key="start" value="996"/>
-      <details key="end" value="1806"/>
+      <details key="end" value="1741"/>
       <details key="line" value="21"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/configXML/%/%.4">
-      <details key="start" value="1807"/>
-      <details key="end" value="1829"/>
+      <details key="start" value="1742"/>
+      <details key="end" value="1779"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/configXML/%/%.4/modelName">
-      <details key="start" value="1819"/>
-      <details key="end" value="1828"/>
+      <details key="start" value="1769"/>
+      <details key="end" value="1778"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/configXML/%/%.5">
-      <details key="start" value="1831"/>
-      <details key="end" value="1948"/>
+      <details key="start" value="1781"/>
+      <details key="end" value="1852"/>
       <details key="line" value="39"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/configXML/%/%.6">
+      <details key="start" value="1853"/>
+      <details key="end" value="1875"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/configXML/%/%.6/modelName">
+      <details key="start" value="1865"/>
+      <details key="end" value="1874"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/configXML/%/%.7">
+      <details key="start" value="1877"/>
+      <details key="end" value="1994"/>
+      <details key="line" value="41"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/configXML/%/%.8">
       <details key="start" value="438"/>
       <details key="end" value="468"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/configXML/%/%.6/%">
+    <eAnnotations source="positions.37" references="/0/configXML/%/%.8/%">
       <details key="start" value="438"/>
       <details key="end" value="459"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/configXML/%/%.6/%/modelName">
+    <eAnnotations source="positions.38" references="/0/configXML/%/%.8/%/modelName">
       <details key="start" value="449"/>
       <details key="end" value="458"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/configXML/%/%.6/%.1">
+    <eAnnotations source="positions.39" references="/0/configXML/%/%.8/%.1">
       <details key="start" value="462"/>
       <details key="end" value="468"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/configXML/%/%.7">
+    <eAnnotations source="positions.40" references="/0/configXML/%/%.9">
       <details key="start" value="477"/>
       <details key="end" value="484"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/configXML/modelName">
+    <eAnnotations source="positions.41" references="/0/configXML/modelName">
       <details key="start" value="409"/>
       <details key="end" value="427"/>
       <details key="line" value="13"/>
     </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/activityView">
-      <details key="start" value="2060"/>
-      <details key="end" value="2833"/>
-      <details key="line" value="48"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/activityView/%">
-      <details key="start" value="2113"/>
-      <details key="end" value="2820"/>
-      <details key="line" value="49"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/activityView/%/%">
-      <details key="start" value="2210"/>
-      <details key="end" value="2218"/>
+    <eAnnotations source="positions.42" references="/0/activityView">
+      <details key="start" value="2106"/>
+      <details key="end" value="2959"/>
       <details key="line" value="50"/>
     </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/activityView/%/%.1">
-      <details key="start" value="2219"/>
-      <details key="end" value="2241"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/activityView/%/%.1/modelName">
-      <details key="start" value="2231"/>
-      <details key="end" value="2240"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/activityView/%/%.2">
-      <details key="start" value="2243"/>
-      <details key="end" value="2813"/>
-      <details key="line" value="50"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/activityView/%/%.3">
-      <details key="start" value="2120"/>
-      <details key="end" value="2190"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/activityView/%/%.3/%">
-      <details key="start" value="2120"/>
-      <details key="end" value="2154"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/activityView/%/%.3/%/%">
-      <details key="start" value="2131"/>
-      <details key="end" value="2153"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/activityView/%/%.3/%/%/modelName">
-      <details key="start" value="2143"/>
-      <details key="end" value="2152"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/activityView/%/%.3/%.1">
-      <details key="start" value="2157"/>
-      <details key="end" value="2190"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/activityView/%/%.4">
-      <details key="start" value="2199"/>
-      <details key="end" value="2206"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/activityView/modelName">
-      <details key="start" value="2090"/>
-      <details key="end" value="2108"/>
-      <details key="line" value="48"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/abstractActivityDefaultImpl">
-      <details key="start" value="2837"/>
-      <details key="end" value="3650"/>
-      <details key="line" value="75"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/abstractActivityDefaultImpl/%">
-      <details key="start" value="2905"/>
-      <details key="end" value="3637"/>
-      <details key="line" value="76"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/abstractActivityDefaultImpl/%/%">
-      <details key="start" value="3017"/>
-      <details key="end" value="3025"/>
-      <details key="line" value="77"/>
-    </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/abstractActivityDefaultImpl/%/%.1">
-      <details key="start" value="3026"/>
-      <details key="end" value="3048"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/abstractActivityDefaultImpl/%/%.1/modelName">
-      <details key="start" value="3038"/>
-      <details key="end" value="3047"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/abstractActivityDefaultImpl/%/%.2">
-      <details key="start" value="3050"/>
-      <details key="end" value="3630"/>
-      <details key="line" value="77"/>
-    </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/abstractActivityDefaultImpl/%/%.3">
-      <details key="start" value="2912"/>
-      <details key="end" value="2997"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/abstractActivityDefaultImpl/%/%.3/%">
-      <details key="start" value="2912"/>
+    <eAnnotations source="positions.43" references="/0/activityView/%">
+      <details key="start" value="2159"/>
       <details key="end" value="2946"/>
+      <details key="line" value="51"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/activityView/%/%">
+      <details key="start" value="2256"/>
+      <details key="end" value="2264"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/activityView/%/%.1">
+      <details key="start" value="2265"/>
+      <details key="end" value="2287"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/abstractActivityDefaultImpl/%/%.3/%/%">
-      <details key="start" value="2923"/>
-      <details key="end" value="2945"/>
+    <eAnnotations source="positions.46" references="/0/activityView/%/%.1/modelName">
+      <details key="start" value="2277"/>
+      <details key="end" value="2286"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/abstractActivityDefaultImpl/%/%.3/%/%/modelName">
-      <details key="start" value="2935"/>
-      <details key="end" value="2944"/>
+    <eAnnotations source="positions.47" references="/0/activityView/%/%.2">
+      <details key="start" value="2289"/>
+      <details key="end" value="2646"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/activityView/%/%.3">
+      <details key="start" value="2646"/>
+      <details key="end" value="2862"/>
+      <details key="line" value="64"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/activityView/%/%.3/%">
+      <details key="start" value="2669"/>
+      <details key="end" value="2850"/>
+      <details key="line" value="65"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/activityView/%/%.3/modelName">
+      <details key="start" value="2658"/>
+      <details key="end" value="2667"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/abstractActivityDefaultImpl/%/%.3/%.1">
-      <details key="start" value="2949"/>
-      <details key="end" value="2997"/>
+    <eAnnotations source="positions.51" references="/0/activityView/%/%.4">
+      <details key="start" value="2862"/>
+      <details key="end" value="2939"/>
+      <details key="line" value="69"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/activityView/%/%.5">
+      <details key="start" value="2166"/>
+      <details key="end" value="2236"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/abstractActivityDefaultImpl/%/%.4">
-      <details key="start" value="3006"/>
-      <details key="end" value="3013"/>
+    <eAnnotations source="positions.53" references="/0/activityView/%/%.5/%">
+      <details key="start" value="2166"/>
+      <details key="end" value="2200"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/abstractActivityDefaultImpl/modelName">
-      <details key="start" value="2882"/>
-      <details key="end" value="2900"/>
-      <details key="line" value="75"/>
+    <eAnnotations source="positions.54" references="/0/activityView/%/%.5/%/%">
+      <details key="start" value="2177"/>
+      <details key="end" value="2199"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/placeControllerProvider">
-      <details key="start" value="3652"/>
-      <details key="end" value="4394"/>
-      <details key="line" value="104"/>
+    <eAnnotations source="positions.55" references="/0/activityView/%/%.5/%/%/modelName">
+      <details key="start" value="2189"/>
+      <details key="end" value="2198"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/placeControllerProvider/%">
-      <details key="start" value="3716"/>
-      <details key="end" value="4379"/>
-      <details key="line" value="105"/>
+    <eAnnotations source="positions.56" references="/0/activityView/%/%.5/%.1">
+      <details key="start" value="2203"/>
+      <details key="end" value="2236"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/placeControllerProvider/%/%">
-      <details key="start" value="3828"/>
-      <details key="end" value="3836"/>
+    <eAnnotations source="positions.57" references="/0/activityView/%/%.6">
+      <details key="start" value="2245"/>
+      <details key="end" value="2252"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/activityView/modelName">
+      <details key="start" value="2136"/>
+      <details key="end" value="2154"/>
+      <details key="line" value="50"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/abstractActivityDefaultImpl">
+      <details key="start" value="2963"/>
+      <details key="end" value="3815"/>
+      <details key="line" value="80"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/abstractActivityDefaultImpl/%">
+      <details key="start" value="3031"/>
+      <details key="end" value="3802"/>
+      <details key="line" value="81"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/abstractActivityDefaultImpl/%/%">
+      <details key="start" value="3143"/>
+      <details key="end" value="3151"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/abstractActivityDefaultImpl/%/%.1">
+      <details key="start" value="3152"/>
+      <details key="end" value="3174"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/abstractActivityDefaultImpl/%/%.1/modelName">
+      <details key="start" value="3164"/>
+      <details key="end" value="3173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/abstractActivityDefaultImpl/%/%.2">
+      <details key="start" value="3176"/>
+      <details key="end" value="3751"/>
+      <details key="line" value="82"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/abstractActivityDefaultImpl/%/%.3">
+      <details key="start" value="3752"/>
+      <details key="end" value="3784"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/abstractActivityDefaultImpl/%/%.3/%">
+      <details key="start" value="3776"/>
+      <details key="end" value="3783"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/abstractActivityDefaultImpl/%/%.4">
+      <details key="start" value="3786"/>
+      <details key="end" value="3795"/>
       <details key="line" value="106"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/placeControllerProvider/%/%.1">
-      <details key="start" value="3837"/>
-      <details key="end" value="3859"/>
+    <eAnnotations source="positions.68" references="/0/abstractActivityDefaultImpl/%/%.5">
+      <details key="start" value="3038"/>
+      <details key="end" value="3123"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/placeControllerProvider/%/%.1/modelName">
-      <details key="start" value="3849"/>
-      <details key="end" value="3858"/>
+    <eAnnotations source="positions.69" references="/0/abstractActivityDefaultImpl/%/%.5/%">
+      <details key="start" value="3038"/>
+      <details key="end" value="3072"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/placeControllerProvider/%/%.2">
-      <details key="start" value="3861"/>
-      <details key="end" value="4372"/>
-      <details key="line" value="106"/>
-    </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/placeControllerProvider/%/%.3">
-      <details key="start" value="3723"/>
-      <details key="end" value="3808"/>
+    <eAnnotations source="positions.70" references="/0/abstractActivityDefaultImpl/%/%.5/%/%">
+      <details key="start" value="3049"/>
+      <details key="end" value="3071"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/placeControllerProvider/%/%.3/%">
-      <details key="start" value="3723"/>
-      <details key="end" value="3757"/>
+    <eAnnotations source="positions.71" references="/0/abstractActivityDefaultImpl/%/%.5/%/%/modelName">
+      <details key="start" value="3061"/>
+      <details key="end" value="3070"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/placeControllerProvider/%/%.3/%/%">
-      <details key="start" value="3734"/>
-      <details key="end" value="3756"/>
+    <eAnnotations source="positions.72" references="/0/abstractActivityDefaultImpl/%/%.5/%.1">
+      <details key="start" value="3075"/>
+      <details key="end" value="3123"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/placeControllerProvider/%/%.3/%/%/modelName">
-      <details key="start" value="3746"/>
-      <details key="end" value="3755"/>
+    <eAnnotations source="positions.73" references="/0/abstractActivityDefaultImpl/%/%.6">
+      <details key="start" value="3132"/>
+      <details key="end" value="3139"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/placeControllerProvider/%/%.3/%.1">
-      <details key="start" value="3760"/>
-      <details key="end" value="3808"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.74" references="/0/abstractActivityDefaultImpl/modelName">
+      <details key="start" value="3008"/>
+      <details key="end" value="3026"/>
+      <details key="line" value="80"/>
     </eAnnotations>
-    <eAnnotations source="positions.76" references="/0/placeControllerProvider/%/%.4">
+    <eAnnotations source="positions.75" references="/0/placeControllerProvider">
       <details key="start" value="3817"/>
-      <details key="end" value="3824"/>
+      <details key="end" value="4616"/>
+      <details key="line" value="110"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/placeControllerProvider/%">
+      <details key="start" value="3881"/>
+      <details key="end" value="4601"/>
+      <details key="line" value="111"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/placeControllerProvider/%/%">
+      <details key="start" value="3993"/>
+      <details key="end" value="4001"/>
+      <details key="line" value="112"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/placeControllerProvider/%/%.1">
+      <details key="start" value="4002"/>
+      <details key="end" value="4024"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.77" references="/0/placeControllerProvider/%.1">
-      <details key="start" value="4381"/>
-      <details key="end" value="4383"/>
-      <details key="line" value="129"/>
+    <eAnnotations source="positions.79" references="/0/placeControllerProvider/%/%.1/modelName">
+      <details key="start" value="4014"/>
+      <details key="end" value="4023"/>
+      <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.78" references="/0/placeControllerProvider/modelName">
-      <details key="start" value="3693"/>
-      <details key="end" value="3711"/>
-      <details key="line" value="104"/>
+    <eAnnotations source="positions.80" references="/0/placeControllerProvider/%/%.2">
+      <details key="start" value="4026"/>
+      <details key="end" value="4438"/>
+      <details key="line" value="112"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/placeControllerProvider/%/%.3">
+      <details key="start" value="4439"/>
+      <details key="end" value="4489"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/placeControllerProvider/%/%.3/%">
+      <details key="start" value="4463"/>
+      <details key="end" value="4488"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/placeControllerProvider/%/%.4">
+      <details key="start" value="4491"/>
+      <details key="end" value="4594"/>
+      <details key="line" value="127"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/placeControllerProvider/%/%.5">
+      <details key="start" value="3888"/>
+      <details key="end" value="3973"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/placeControllerProvider/%/%.5/%">
+      <details key="start" value="3888"/>
+      <details key="end" value="3922"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/placeControllerProvider/%/%.5/%/%">
+      <details key="start" value="3899"/>
+      <details key="end" value="3921"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/placeControllerProvider/%/%.5/%/%/modelName">
+      <details key="start" value="3911"/>
+      <details key="end" value="3920"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/placeControllerProvider/%/%.5/%.1">
+      <details key="start" value="3925"/>
+      <details key="end" value="3973"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/placeControllerProvider/%/%.6">
+      <details key="start" value="3982"/>
+      <details key="end" value="3989"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/placeControllerProvider/%.1">
+      <details key="start" value="4603"/>
+      <details key="end" value="4605"/>
+      <details key="line" value="136"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/placeControllerProvider/modelName">
+      <details key="start" value="3858"/>
+      <details key="end" value="3876"/>
+      <details key="line" value="110"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

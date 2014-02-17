@@ -20,6 +20,10 @@ beuth/se/ue4/PortfolioDemo.xml
 	<inherits name='com.google.gwt.place.Place' />
 	<inherits name="com.google.gwt.i18n.I18N" />
 	<inherits name="com.google.gwt.inject.Inject" />
+	
+		<!-- Start of user code beuth.se.ue4.PortfolioDemo 
+		     Start protectetRegion -->
+		<!-- End of user code -->
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class='beuth.se.ue4.client.AppEntryPoint' />
