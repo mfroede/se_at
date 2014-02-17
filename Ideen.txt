@@ -36,6 +36,9 @@ Feststellungen:
 Doku
 	StatPlace muss Manuel gesetzt werden
 	Gin Lib muss eingebunden werden
+	Guice Lib muss eingebunden werden
+
+	style.css & index.html in den war ordner verschieben, nach Generierung
 
 Überlegung:
 	@Overrides bei methoden in view impl als boolean setzen können-> gibt viewImpl methoden die müssen vererbt werden und welche die müssen nicht über View gemacht werden

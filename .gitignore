@@ -3,6 +3,7 @@
 # Package Files #
 *.jar
 *.war
+*/bin/*
 
 # gwt caches and compiled units #
 war/gwt_bree/
@@ -19,3 +20,4 @@ war/WEB-INF/classes/
 /tmp
 */srcgen/*
 */srcgenneu/*
+*/srcgenpre/*
