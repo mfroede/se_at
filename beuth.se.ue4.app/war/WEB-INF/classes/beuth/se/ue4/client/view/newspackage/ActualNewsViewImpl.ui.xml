@@ -3,12 +3,6 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code ActualNews 
-		     Start protectetRegion -->
-		<!-- End of user code -->
-	</ui:style>
-	<g:FlowPanel>
-	<!-- InteractionElements -->
-	<!-- Start of user code ActualNews 
 	     Start protectetRegion -->
 
 				
@@ -21,6 +15,20 @@
 				
 				
 					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+					<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
 				
 									
 				
@@ -64,6 +72,40 @@
 				
 									
 				
+	<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code ActualNews 
+	     Start protectetRegion -->
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="portButton" text=""/>
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="newsButton" text=""/>
+				
+				
+					
+				
+									
+				
 
 				
 				
@@ -75,6 +117,32 @@
 				
 					
 					<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
+				
+									
+				
+
+				
+				
+
+				
+					<g:Grid ui:field="NewsList">
+						<g:row>
+							<g:column>
+								<g:Button ui:field="newsButton" text=""/>
+							
+							</g:column>
+							<g:column>
+							
+								<g:TextField ui:field="firstNews" text="ifgilsfhilsuefglwefgweiufgeflweFGLwauegfriwuefgsjdh"/>			
+							
+							</g:column>
+						</g:row>
+				</g:Grid>
+				
+
+				
+				
+					
 				
 									
 				

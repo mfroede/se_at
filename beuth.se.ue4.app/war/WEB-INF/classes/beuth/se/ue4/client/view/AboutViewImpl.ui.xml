@@ -3,13 +3,21 @@
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 		<!-- Start of user code About 
-		     Start protectetRegion -->
-		<!-- End of user code -->
-	</ui:style>
-	<g:FlowPanel>
-	<!-- InteractionElements -->
-	<!-- Start of user code About 
 	     Start protectetRegion -->
+
+				
+				
+
+				
+				
+
+				
+				
+					
+					<g:TextField ui:field="infoText" text="resfjhiugigkhjjlkhiuhiu"/>			
+				
+									
+				
 
 				
 				
@@ -24,6 +32,12 @@
 				
 									
 				
+	<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code About 
+	     Start protectetRegion -->
 
 				
 				
@@ -35,6 +49,20 @@
 				
 					
 					<g:TextField ui:field="infoText" text="resfjhiugigkhjjlkhiuhiu"/>			
+				
+									
+				
+
+				
+				
+
+				
+				
+
+					<g:Button ui:field="Button1" text=""/>
+				
+				
+					
 				
 									
 				
