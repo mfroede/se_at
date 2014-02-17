@@ -43,12 +43,12 @@
 						</g:row>
 						<g:row>
 							<g:customCell>
-								<g:Label styleName="{style.project}" text="magna aliquyam erat"/>
+								<g:Label styleName="{style.project}" text="7. magna aliquyam erat"/>
 							</g:customCell>
 						</g:row>
 						<g:row>
 							<g:customCell>
-								<g:Label styleName="{style.project}" text="sed diam voluptua"/>
+								<g:Label styleName="{style.project}" text="8. sed diam voluptua"/>
 							</g:customCell>
 						</g:row>
 				</g:Grid>

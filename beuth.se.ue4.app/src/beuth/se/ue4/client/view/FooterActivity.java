@@ -36,7 +36,7 @@ public class FooterActivity extends AbstractActivityDefaultImpl<FooterPlace> imp
 	// TODO Auto generated Method
 	@Override
 	public void onButtonClicked(String buttonName){
-		if(buttonName.equals("toImpressum")) {
+		if(buttonName.equals("Impressum")) {
 			placeController.goTo(new ImpressumPlace());
 		}
 	}

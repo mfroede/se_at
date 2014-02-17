@@ -42,8 +42,7 @@ public class FooterViewImpl extends AbstractView implements FooterView {
 				
 	@UiHandler({ "toImpressum" })
 	public void onButtonPressed(ClickEvent e) {
-		Widget w = (Widget) e.getSource();
-		presenter.onButtonClicked(w.getTitle());
+		presenter.onButtonClicked(e.getRelativeElement().getInnerText());
 	}		
 	@Override
 	public void setPresenter(final Presenter presenter) {

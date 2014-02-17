@@ -166,8 +166,7 @@ public class [class.name/]ViewImpl extends AbstractView implements [getClassName
 			[if (i<=1)]	
 	@UiHandler({ "[class.attribute->select(e|e.getValue(e.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON')).name->sep('\", "')/]" })
 	public void onButtonPressed(ClickEvent e) {
-		Widget w = (Widget) e.getSource();
-		presenter.onButtonClicked(w.getTitle());
+		presenter.onButtonClicked(e.getRelativeElement().getInnerText());
 	}		
 			[/if]	
 			[/if]
@@ -468,7 +467,7 @@ public class [class.name/]Activity extends AbstractActivityDefaultImpl<[class.na
 	@Override
 	public void onButtonClicked(String buttonName){
 				[/if]
-		if(buttonName.equals("[property.name/]")) {
+		if(buttonName.equals("[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]")) {
 			placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
 		}
 			[/if]
