@@ -66,7 +66,9 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_qBM54Jc1EeOJBLS8VIwxyQ" name="newspackage">
-      <packagedElement xmi:type="uml:Interface" xmi:id="_1Lx78Jc1EeOJBLS8VIwxyQ" name="INews"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_1Lx78Jc1EeOJBLS8VIwxyQ" name="INews">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_At_xwJfBEeORGezMWaYR3Q" name="machWas"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_5LSecJc1EeOJBLS8VIwxyQ" clientDependency="_NvIV8Jc2EeOJBLS8VIwxyQ" name="ActualNews">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_Xl94MJc2EeOJBLS8VIwxyQ" name="NewsList" visibility="public">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X8WX4Jc2EeOJBLS8VIwxyQ" value="1"/>

@@ -2,9 +2,14 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
+		<!-- Start of user code Portfolio 
+		     Start protectetRegion -->
+		<!-- End of user code -->
 	</ui:style>
 	<g:FlowPanel>
-	//InteractionElements
+	<!-- InteractionElements -->
+	<!-- Start of user code Portfolio 
+	     Start protectetRegion -->
 
 				
 				
@@ -28,10 +33,10 @@
 				
 
 				
+					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
 				
 					
 				
-					<g:Label text="Hans-Peter Mueller"/>
 									
 				
 
@@ -105,26 +110,27 @@
 				
 
 				
-					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
-				
-					
-				
-									
-				
-
-				
-				
-
-				
-				
-
-				
 					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
 				
 					
 				
 									
 				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+					<g:Label text="Hans-Peter Mueller"/>
+									
+				
+	<!-- End of user code -->
 	</g:FlowPanel>
 	
 </ui:UiBinder> 

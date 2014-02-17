@@ -34,6 +34,8 @@
 	<inherits name='com.google.gwt.place.Place' />
 	<inherits name="com.google.gwt.i18n.I18N" />
 	<inherits name="com.google.gwt.inject.Inject" />
+	
+	[generateProtectetRegionXML(modelName)/]
 
 	<!-- Specify the app entry point class. -->
 	<entry-point class='[packageName(modelName)/]client.AppEntryPoint' />
@@ -59,8 +61,11 @@ public class AbstractView implements IsWidget {
 
 	public AbstractView() {
 		content = new LayoutPanel();
+		//[protected (modelName)]
+		// TODO Auto generated Method
 		content.getElement().getStyle().setWidth(/*width here*/, Unit.PC);
 		content.getElement().getStyle().setHeight(/*height here*/, Unit.PC);
+		//[/protected]
 	}
 
 	@Override
@@ -97,6 +102,7 @@ public class AbstractActivityDefaultImpl<T extends Place> extends
 	@Override
 	public void start(AcceptsOneWidget panel, EventBus eventBus) {
 		// TODO Auto-generated method stub
+		[generateProtectetRegion('start')/]
 	}
 }
 [/file]
@@ -117,6 +123,7 @@ public class PlaceControllerProvider implements Provider<PlaceController> {
 	@Inject
 	public PlaceControllerProvider(EventBus eventBus) {
 		this.eventBus = eventBus;
+		[generateProtectetRegion('PlaceControllerProvider')/]
 	}
 
 	@Override

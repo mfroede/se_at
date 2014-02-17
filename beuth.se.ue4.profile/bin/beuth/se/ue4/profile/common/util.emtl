@@ -744,20 +744,45 @@
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </each>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="){ &#xD;&#xA;&#x9;//"/>
-      <body xsi:type="mtl:ProtectedAreaBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;// TODO Auto generated Method&#xD;&#xA;&#x9;//"/>
-        <marker xsi:type="ocl.ecore:PropertyCallExp">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="){ &#xD;&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation" definition="/0/generateProtectetRegion">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="o" referredVariable="/0/operation/o">
             <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eclipse.org/uml2/4.0.0/UML#//NamedElement/name"/>
-        </marker>
+        </argument>
       </body>
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;}"/>
       <parameter name="o">
         <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateProtectetRegion" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;//"/>
+      <body xsi:type="mtl:ProtectedAreaBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#x9;// TODO Auto generated Method&#xD;&#xA;&#x9;//"/>
+        <marker xsi:type="ocl.ecore:VariableExp" name="name" referredVariable="/0/generateProtectetRegion/name">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </marker>
+      </body>
+      <parameter name="name">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateProtectetRegionXML" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;!-- "/>
+      <body xsi:type="mtl:ProtectedAreaBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &#xD;&#xA;&#x9;     Start protectetRegion -->&#xD;&#xA;&#x9;&lt;!-- "/>
+        <marker xsi:type="ocl.ecore:VariableExp" name="name" referredVariable="/0/generateProtectetRegionXML/name">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </marker>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" -->"/>
+      <parameter name="name">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </parameter>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="getClassName" visibility="Public">
@@ -962,6 +987,26 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="o">
           <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateProtectetRegion">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateProtectetRegion"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="name">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateProtectetRegionXML">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateProtectetRegionXML"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="name">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </eParameters>
       </eOperations>
       <eOperations name="getClassName">
@@ -1301,6 +1346,36 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/uml2/4.0.0/UML#//Operation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
@@ -2194,7 +2269,7 @@
     </eAnnotations>
     <eAnnotations source="positions.173" references="/0/operation">
       <details key="start" value="2663"/>
-      <details key="end" value="3285"/>
+      <details key="end" value="3247"/>
       <details key="line" value="46"/>
     </eAnnotations>
     <eAnnotations source="positions.174" references="/0/operation/%">
@@ -2544,153 +2619,213 @@
     </eAnnotations>
     <eAnnotations source="positions.243" references="/0/operation/%.6">
       <details key="start" value="3192"/>
-      <details key="end" value="3200"/>
+      <details key="end" value="3197"/>
       <details key="line" value="47"/>
     </eAnnotations>
     <eAnnotations source="positions.244" references="/0/operation/%.7">
-      <details key="start" value="3200"/>
-      <details key="end" value="3269"/>
-      <details key="line" value="48"/>
+      <details key="start" value="3198"/>
+      <details key="end" value="3229"/>
+      <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.245" references="/0/operation/%.7/%">
-      <details key="start" value="3220"/>
-      <details key="end" value="3257"/>
+      <details key="start" value="3222"/>
+      <details key="end" value="3228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.246" references="/0/operation/%.7/%/o">
+      <details key="start" value="3222"/>
+      <details key="end" value="3223"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.247" references="/0/operation/%.8">
+      <details key="start" value="3231"/>
+      <details key="end" value="3234"/>
       <details key="line" value="49"/>
     </eAnnotations>
-    <eAnnotations source="positions.246" references="/0/operation/%.7/%.1">
-      <details key="start" value="3212"/>
-      <details key="end" value="3218"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.247" references="/0/operation/%.7/%.1/o">
-      <details key="start" value="3212"/>
-      <details key="end" value="3213"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.248" references="/0/operation/%.8">
-      <details key="start" value="3269"/>
-      <details key="end" value="3272"/>
-      <details key="line" value="51"/>
-    </eAnnotations>
-    <eAnnotations source="positions.249" references="/0/operation/o">
+    <eAnnotations source="positions.248" references="/0/operation/o">
       <details key="start" value="2690"/>
       <details key="end" value="2703"/>
       <details key="line" value="46"/>
     </eAnnotations>
-    <eAnnotations source="positions.250" references="/0/getClassName">
-      <details key="start" value="3287"/>
-      <details key="end" value="3460"/>
+    <eAnnotations source="positions.249" references="/0/generateProtectetRegion">
+      <details key="start" value="3249"/>
+      <details key="end" value="3388"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.250" references="/0/generateProtectetRegion/%">
+      <details key="start" value="3306"/>
+      <details key="end" value="3309"/>
       <details key="line" value="53"/>
     </eAnnotations>
-    <eAnnotations source="positions.251" references="/0/getClassName/%">
-      <details key="start" value="3334"/>
-      <details key="end" value="3447"/>
-      <details key="line" value="54"/>
-    </eAnnotations>
-    <eAnnotations source="positions.252" references="/0/getClassName/%/%">
-      <details key="start" value="3366"/>
+    <eAnnotations source="positions.251" references="/0/generateProtectetRegion/%.1">
+      <details key="start" value="3309"/>
       <details key="end" value="3376"/>
-      <details key="line" value="0"/>
+      <details key="line" value="53"/>
     </eAnnotations>
-    <eAnnotations source="positions.253" references="/0/getClassName/%/%/class">
-      <details key="start" value="3366"/>
-      <details key="end" value="3371"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.254" references="/0/getClassName/%/%.1">
-      <details key="start" value="3338"/>
+    <eAnnotations source="positions.252" references="/0/generateProtectetRegion/%.1/%">
+      <details key="start" value="3327"/>
       <details key="end" value="3364"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.255" references="/0/getClassName/%/%.1/class">
-      <details key="start" value="3357"/>
-      <details key="end" value="3362"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.256" references="/0/getClassName/%/%.2">
-      <details key="start" value="3378"/>
-      <details key="end" value="3442"/>
       <details key="line" value="54"/>
     </eAnnotations>
-    <eAnnotations source="positions.257" references="/0/getClassName/%/%.2/collect">
-      <details key="start" value="3385"/>
-      <details key="end" value="3440"/>
+    <eAnnotations source="positions.253" references="/0/generateProtectetRegion/%.1/name">
+      <details key="start" value="3321"/>
+      <details key="end" value="3325"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.258" references="/0/getClassName/%/%.2/collect/collect">
-      <details key="start" value="3385"/>
-      <details key="end" value="3435"/>
+    <eAnnotations source="positions.254" references="/0/generateProtectetRegion/name">
+      <details key="start" value="3291"/>
+      <details key="end" value="3302"/>
+      <details key="line" value="52"/>
+    </eAnnotations>
+    <eAnnotations source="positions.255" references="/0/generateProtectetRegionXML">
+      <details key="start" value="3390"/>
+      <details key="end" value="3546"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.256" references="/0/generateProtectetRegionXML/%">
+      <details key="start" value="3451"/>
+      <details key="end" value="3457"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.257" references="/0/generateProtectetRegionXML/%.1">
+      <details key="start" value="3457"/>
+      <details key="end" value="3529"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.258" references="/0/generateProtectetRegionXML/%.1/%">
+      <details key="start" value="3475"/>
+      <details key="end" value="3517"/>
+      <details key="line" value="58"/>
+    </eAnnotations>
+    <eAnnotations source="positions.259" references="/0/generateProtectetRegionXML/%.1/name">
+      <details key="start" value="3469"/>
+      <details key="end" value="3473"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.259" references="/0/getClassName/%/%.2/collect/collect/collect">
-      <details key="start" value="3385"/>
-      <details key="end" value="3414"/>
+    <eAnnotations source="positions.260" references="/0/generateProtectetRegionXML/%.2">
+      <details key="start" value="3529"/>
+      <details key="end" value="3533"/>
+      <details key="line" value="60"/>
+    </eAnnotations>
+    <eAnnotations source="positions.261" references="/0/generateProtectetRegionXML/name">
+      <details key="start" value="3435"/>
+      <details key="end" value="3446"/>
+      <details key="line" value="57"/>
+    </eAnnotations>
+    <eAnnotations source="positions.262" references="/0/getClassName">
+      <details key="start" value="3548"/>
+      <details key="end" value="3721"/>
+      <details key="line" value="62"/>
+    </eAnnotations>
+    <eAnnotations source="positions.263" references="/0/getClassName/%">
+      <details key="start" value="3595"/>
+      <details key="end" value="3708"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.264" references="/0/getClassName/%/%">
+      <details key="start" value="3627"/>
+      <details key="end" value="3637"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.260" references="/0/getClassName/%/%.2/collect/collect/collect/%">
-      <details key="start" value="3385"/>
-      <details key="end" value="3407"/>
+    <eAnnotations source="positions.265" references="/0/getClassName/%/%/class">
+      <details key="start" value="3627"/>
+      <details key="end" value="3632"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.261" references="/0/getClassName/%/%.2/collect/collect/collect/%/class">
-      <details key="start" value="3385"/>
-      <details key="end" value="3390"/>
+    <eAnnotations source="positions.266" references="/0/getClassName/%/%.1">
+      <details key="start" value="3599"/>
+      <details key="end" value="3625"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.262" references="/0/getClassName/%/%.2/collect/collect/collect/%.1">
-      <details key="start" value="3408"/>
-      <details key="end" value="3414"/>
+    <eAnnotations source="positions.267" references="/0/getClassName/%/%.1/class">
+      <details key="start" value="3618"/>
+      <details key="end" value="3623"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.263" references="/0/getClassName/%/%.2/collect/collect/collect/%.1/temp1">
+    <eAnnotations source="positions.268" references="/0/getClassName/%/%.2">
+      <details key="start" value="3639"/>
+      <details key="end" value="3703"/>
+      <details key="line" value="63"/>
+    </eAnnotations>
+    <eAnnotations source="positions.269" references="/0/getClassName/%/%.2/collect">
+      <details key="start" value="3646"/>
+      <details key="end" value="3701"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.270" references="/0/getClassName/%/%.2/collect/collect">
+      <details key="start" value="3646"/>
+      <details key="end" value="3696"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.271" references="/0/getClassName/%/%.2/collect/collect/collect">
+      <details key="start" value="3646"/>
+      <details key="end" value="3675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.272" references="/0/getClassName/%/%.2/collect/collect/collect/%">
+      <details key="start" value="3646"/>
+      <details key="end" value="3668"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.273" references="/0/getClassName/%/%.2/collect/collect/collect/%/class">
+      <details key="start" value="3646"/>
+      <details key="end" value="3651"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.274" references="/0/getClassName/%/%.2/collect/collect/collect/%.1">
+      <details key="start" value="3669"/>
+      <details key="end" value="3675"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.275" references="/0/getClassName/%/%.2/collect/collect/collect/%.1/temp1">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.264" references="/0/getClassName/%/%.2/collect/collect/collect/temp5">
+    <eAnnotations source="positions.276" references="/0/getClassName/%/%.2/collect/collect/collect/temp5">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.265" references="/0/getClassName/%/%.2/collect/collect/%">
+    <eAnnotations source="positions.277" references="/0/getClassName/%/%.2/collect/collect/%">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.266" references="/0/getClassName/%/%.2/collect/collect/%/temp2">
+    <eAnnotations source="positions.278" references="/0/getClassName/%/%.2/collect/collect/%/temp2">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.267" references="/0/getClassName/%/%.2/collect/collect/%/%">
-      <details key="start" value="3425"/>
-      <details key="end" value="3434"/>
+    <eAnnotations source="positions.279" references="/0/getClassName/%/%.2/collect/collect/%/%">
+      <details key="start" value="3686"/>
+      <details key="end" value="3695"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.268" references="/0/getClassName/%/%.2/collect/collect/temp6">
+    <eAnnotations source="positions.280" references="/0/getClassName/%/%.2/collect/collect/temp6">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.269" references="/0/getClassName/%/%.2/collect/%">
-      <details key="start" value="3436"/>
-      <details key="end" value="3440"/>
+    <eAnnotations source="positions.281" references="/0/getClassName/%/%.2/collect/%">
+      <details key="start" value="3697"/>
+      <details key="end" value="3701"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.270" references="/0/getClassName/%/%.2/collect/%/temp3">
+    <eAnnotations source="positions.282" references="/0/getClassName/%/%.2/collect/%/temp3">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.271" references="/0/getClassName/%/%.2/collect/temp7">
+    <eAnnotations source="positions.283" references="/0/getClassName/%/%.2/collect/temp7">
       <details key="start" value="-1"/>
       <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.272" references="/0/getClassName/class">
-      <details key="start" value="3317"/>
-      <details key="end" value="3330"/>
-      <details key="line" value="53"/>
+    <eAnnotations source="positions.284" references="/0/getClassName/class">
+      <details key="start" value="3578"/>
+      <details key="end" value="3591"/>
+      <details key="line" value="62"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

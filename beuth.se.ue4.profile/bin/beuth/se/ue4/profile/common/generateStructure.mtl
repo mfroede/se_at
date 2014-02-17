@@ -109,7 +109,7 @@ public class AppEntryPoint implements EntryPoint {
 		RootPanel.get().add( [getClassName(class).toLowerFirst()/] );
 	[/if]
 [/for]
-
+		[generateProtectetRegion(model.name)/]
 		AppPlaceHistoryMapper historyMapper = GWT
 				.create(AppPlaceHistoryMapper.class);
 		PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(
@@ -172,7 +172,8 @@ import com.google.gwt.place.shared.WithTokenizers;
 	[/for]
 	[for (interface : Interface | model.ownedElement)]
 		[interface.name/]Place.Tokenizer.class,
-	[/for] })
+	[/for]
+	[generateProtectetRegion(model.name)/] })
 public interface AppPlaceHistoryMapper extends PlaceHistoryMapper {
 
 }
@@ -200,10 +201,12 @@ public class [getClassName(class)/]ViewActivityMapper implements ActivityMapper 
 	
 	@Inject
 	Provider<[getClassName(class)/]Activity> [getClassName(class).toLowerFirst()/]ActivityProvider;
-	
+	[generateProtectetRegion(model.name)/]
 	@Override
 	public Activity getActivity(Place place) {
+		[generateProtectetRegion('getActivity')/]
 		return [getClassName(class).toLowerFirst()/]ActivityProvider.get();
+		
 	}
 
 }
@@ -231,10 +234,13 @@ public class [getClassName(class)/]ViewActivityMapper implements ActivityMapper 
 	
 	@Inject
 	Provider<[getClassName(class)/]Activity> [getClassName(class).toLowerFirst()/]ActivityProvider;
-	
+	[generateProtectetRegion(model.name)/]
+
 	@Override
 	public Activity getActivity(Place place) {
+		[generateProtectetRegion('getActivity')/]
 		return [getClassName(class).toLowerFirst()/]ActivityProvider.get();
+
 	}
 
 }
@@ -261,10 +267,13 @@ public class [interface.name/]ViewActivityMapper implements ActivityMapper {
 	
 	@Inject
 	Provider<[interface.name/]Activity> [interface.name.toLowerFirst()/]ActivityProvider;
-	
+	[generateProtectetRegion(model.name)/]	
+
 	@Override
 	public Activity getActivity(Place place) {
+		[generateProtectetRegion('getActivity')/]
 		return [interface.name.toLowerFirst()/]ActivityProvider.get();
+
 	}
 
 }
@@ -290,10 +299,13 @@ public class [interface.name/]ViewActivityMapper implements ActivityMapper {
 	
 	@Inject
 	Provider<[interface.name/]Activity> [interface.name.toLowerFirst()/]ActivityProvider;
-	
+	[generateProtectetRegion(model.name)/]	
+
 	@Override
 	public Activity getActivity(Place place) {
+		[generateProtectetRegion('getActivity')/]
 		return [interface.name.toLowerFirst()/]ActivityProvider.get();
+
 	}
 
 }
@@ -333,6 +345,8 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 
 public class ActivityMapperImpl implements ActivityMapper {
+	
+	[generateProtectetRegion(model.name)/]
 [for (pack : Package | model.allOwnedElements()->select(oclIsTypeOf(Package)))]	
 [for (class : Class | pack.ownedElement)]
 	[if (isNotViewExisting(class))]
@@ -404,6 +418,7 @@ public class ActivityMapperImpl implements ActivityMapper {
 		}
 	[/if]
 [/for]
+		[generateProtectetRegion('getActivity')/]
 		return null;
 	}
 
@@ -549,6 +564,7 @@ public interface AppGinjector extends Ginjector {
 	public [interface.name/]ViewActivityMapper get[interface.name/]ViewActivityMapper();
 [/if]
 [/for]
+	[generateProtectetRegion(model.name)/]
 }
 [/file]
 
@@ -594,7 +610,8 @@ public class ProductionGinModule extends AbstractGinModule {
 		bind(PlaceController.class).toProvider(PlaceControllerProvider.class)
 				.in(Singleton.class);
 		bind(ActivityMapperImpl.class).in(Singleton.class);
-
+		//[protected (model.name)]
+		// TODO Auto generated Method
 		bind(YourStartHereActivity.class);
 [for (pack : Package | model.allOwnedElements()->select(oclIsTypeOf(Package)))]
 [for (class : Class | pack.ownedElement)]
@@ -628,6 +645,7 @@ public class ProductionGinModule extends AbstractGinModule {
 		bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
 	[/if]	
 [/for]
+		//[/protected]
 	}
 }
 [/file]
