@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:profile="http:///schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/profile/_BJhAoJczEeOJBLS8VIwxyQ/7 file:/C:/Users/Marcus/Studium/git/se_at/beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ">
+  <uml:Model xmi:id="_GWaNwJerEeOhWtSHHTFXMQ" name="beuth.se.ue4.Portfolio">
+    <packagedElement xmi:type="uml:Class" xmi:id="_G0wWoJerEeOhWtSHHTFXMQ" name="Header">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0XbDMJerEeOhWtSHHTFXMQ" name="Menu" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0us6wJerEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0uth0JerEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_0uuI4JerEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_cMYJkJetEeOhWtSHHTFXMQ" name="toHome" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cnFvoJetEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cnFvoZetEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_cnGWsJetEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_c6d-oJetEeOhWtSHHTFXMQ" name="toPortfolio" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dCw_AJetEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dCxmEJetEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dCyNIJetEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dLYvgJetEeOhWtSHHTFXMQ" name="toImpressum" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dWtOsJetEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dWt1wJetEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dWt1wZetEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dciJ4JetEeOhWtSHHTFXMQ" name="toProjects" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dl_A0JetEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dl_A0ZetEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_dl_A0petEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dtxD0JetEeOhWtSHHTFXMQ" name="toNews" visibility="public">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d5hA0JetEeOhWtSHHTFXMQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d5hA0ZetEeOhWtSHHTFXMQ" value="1"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_d5hn4JetEeOhWtSHHTFXMQ">
+          <value xsi:nil="true"/>
+        </defaultValue>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_HhJGEJesEeOhWtSHHTFXMQ" name="Footer"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_U037EJeuEeOhWtSHHTFXMQ" name="Home">
+      <packagedElement xmi:type="uml:Class" xmi:id="_7WFecJerEeOhWtSHHTFXMQ" name="Home">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OU5cYJetEeOhWtSHHTFXMQ" name="News" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OspOAJetEeOhWtSHHTFXMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OspOAZetEeOhWtSHHTFXMQ" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_Osp1EJetEeOhWtSHHTFXMQ">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Rw9TkJetEeOhWtSHHTFXMQ" name="currendNews" visibility="public">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_R5EGsJetEeOhWtSHHTFXMQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_R5EtwJetEeOhWtSHHTFXMQ" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_R5EtwZetEeOhWtSHHTFXMQ">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_fioeQJeuEeOhWtSHHTFXMQ" name="News">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Bf1D4JesEeOhWtSHHTFXMQ" name="News"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gPPFkJeuEeOhWtSHHTFXMQ" name="Portfolio">
+      <packagedElement xmi:type="uml:Class" xmi:id="_8Gb9UJerEeOhWtSHHTFXMQ" name="Portfolio"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_hvtZ0JeuEeOhWtSHHTFXMQ" name="Projects">
+      <packagedElement xmi:type="uml:Class" xmi:id="_EkSTYJesEeOhWtSHHTFXMQ" name="Pojects"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jDKlwJeuEeOhWtSHHTFXMQ" name="Impressum">
+      <packagedElement xmi:type="uml:Class" xmi:id="__QNKoJerEeOhWtSHHTFXMQ" name="Impressum"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_P2LT0JerEeOhWtSHHTFXMQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P2ZWQJerEeOhWtSHHTFXMQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_BJkrAJczEeOJBLS8VIwxyQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../../beuth.se.ue4.profile/model/gwtNewProfile.profile.uml#_cDXdgJT6EeOgb7PnCEGbYw"/>
+    </profileApplication>
+  </uml:Model>
+  <profile:Header xmi:id="_eSXQkJerEeOhWtSHHTFXMQ" base_Class="_G0wWoJerEeOhWtSHHTFXMQ"/>
+  <profile:ViewObject xmi:id="_2K9dYJerEeOhWtSHHTFXMQ" viewNavigationObject="_mYFvoJetEeOhWtSHHTFXMQ _1rlH0JetEeOhWtSHHTFXMQ _CLqkQJeuEeOhWtSHHTFXMQ _JvUi8JeuEeOhWtSHHTFXMQ _Mq_C0JeuEeOhWtSHHTFXMQ" base_Property="_0XbDMJerEeOhWtSHHTFXMQ" type="MENU"/>
+  <profile:Footer xmi:id="_JQzF0JesEeOhWtSHHTFXMQ" base_Class="_HhJGEJesEeOhWtSHHTFXMQ"/>
+  <profile:ViewNavigationObject xmi:id="_mYFvoJetEeOhWtSHHTFXMQ" base_Property="_cMYJkJetEeOhWtSHHTFXMQ" type="ITEM" value="toHome" label="Home"/>
+  <profile:ViewNavigationObject xmi:id="_1rlH0JetEeOhWtSHHTFXMQ" base_Property="_c6d-oJetEeOhWtSHHTFXMQ" type="ITEM" value="toPortfolio" label="Portfolio"/>
+  <profile:ViewNavigationObject xmi:id="_CLqkQJeuEeOhWtSHHTFXMQ" base_Property="_dLYvgJetEeOhWtSHHTFXMQ" type="ITEM" value="toImpressum" label="Impressum"/>
+  <profile:ViewNavigationObject xmi:id="_JvUi8JeuEeOhWtSHHTFXMQ" base_Property="_dciJ4JetEeOhWtSHHTFXMQ" type="ITEM" value="toProjects" label="Projects"/>
+  <profile:ViewNavigationObject xmi:id="_Mq_C0JeuEeOhWtSHHTFXMQ" base_Property="_dtxD0JetEeOhWtSHHTFXMQ" type="ITEM" value="toNews" label="News"/>
+</xmi:XMI>
