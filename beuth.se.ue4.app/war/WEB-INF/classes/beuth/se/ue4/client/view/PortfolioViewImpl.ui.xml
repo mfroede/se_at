@@ -1,0 +1,136 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		<!-- Start of user code Portfolio 
+		     Start protectetRegion -->
+		<!-- End of user code -->
+	</ui:style>
+	<g:FlowPanel>
+	<!-- InteractionElements -->
+	<!-- Start of user code Portfolio 
+	     Start protectetRegion -->
+
+				
+				
+
+				<g:Grid ui:field="lebenslauf">
+						<g:row>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+							
+							</g:customCell>
+							<g:customCell>
+								<g:Label text="Hans-Peter Mueller"/>
+							
+							
+							</g:customCell>
+							<g:customCell>
+								<g:Label text="Hans-Peter Mueller"/>
+							
+							
+							</g:customCell>
+							<g:customCell>
+							
+								<g:TextArea ui:field="adresse" text="Musterweg 5
+							15236 Stadt"/>			
+							
+							</g:customCell>
+							<g:customCell>
+							
+								<g:TextArea ui:field="adresse" text="Musterweg 5
+							15236 Stadt"/>			
+							
+							</g:customCell>
+						</g:row>
+				</g:Grid>
+				
+				
+
+				
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+					<g:TextArea ui:field="adresse" text="Musterweg 5
+				15236 Stadt"/>			
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+					<g:CheckBox ui:field="verheiratet">verheiratet</g:CheckBox>
+				
+					
+				
+									
+				
+
+				
+				
+
+				
+				
+
+				
+				
+					
+				
+					<g:Label text="Hans-Peter Mueller"/>
+									
+				
+
+				
+				
+
+				
+				
+
+				
+					<g:CheckBox ui:field="ledig">ledig</g:CheckBox>
+				
+					
+				
+									
+				
+	<!-- End of user code -->
+	</g:FlowPanel>
+	
+</ui:UiBinder> 

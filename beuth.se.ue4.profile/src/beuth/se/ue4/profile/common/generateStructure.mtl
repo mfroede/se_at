@@ -57,6 +57,7 @@ public class AppEntryPoint implements EntryPoint {
 		ActivityManager contentActivityManager[class.name/] = new ActivityManager(
 				activityMapper[getClassName(class)/], eventBus);
 		contentActivityManager[getClassName(class)/].setDisplay([class.name.toLowerFirst()/]);
+
 	[/if]
 [/for]
 [/for]
@@ -69,6 +70,7 @@ public class AppEntryPoint implements EntryPoint {
 		ActivityManager contentActivityManager[class.name/] = new ActivityManager(
 				activityMapper[getClassName(class)/], eventBus);
 		contentActivityManager[getClassName(class)/].setDisplay([class.name.toLowerFirst()/]);
+
 	[/if]
 [/for]
 //--------------------------------------------------
@@ -109,14 +111,16 @@ public class AppEntryPoint implements EntryPoint {
 		RootPanel.get().add( [getClassName(class).toLowerFirst()/] );
 	[/if]
 [/for]
-		[generateProtectetRegion(model.name)/]
+		//[protected (model.name)]
+		// TODO Auto generated Method
+	
 		AppPlaceHistoryMapper historyMapper = GWT
 				.create(AppPlaceHistoryMapper.class);
 		PlaceHistoryHandler historyHandler = new PlaceHistoryHandler(
 				historyMapper);
 		historyHandler.register(injector.getPlaceController(), eventBus,
 				new YourStartHerePlace());
-
+		//[/protected]
 		historyHandler.handleCurrentHistory();
 	}
 }
@@ -426,67 +430,6 @@ public class ActivityMapperImpl implements ActivityMapper {
 }
 [/file]
 [/template]
-
-[comment][template public newModelTemplate (model : Model) ]
-[for (pack : Package | model.allOwnedElements()->select(oclIsTypeOf(Package)))]	
-[for (class : Class | pack.ownedElement)]
-	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
-[file (packageName(model.name).replaceAll('[.]', '/') + 'client/common/'+getClassName(class)+'ViewActivityMapper.java', false, 'UTF-8')]
-package [packageName(model.name)/]client.common;
-
-import [packageName(model.name)/]client.view.[getClassName(class)/]Activity;
-
-import com.google.gwt.activity.shared.Activity;
-import com.google.gwt.activity.shared.ActivityMapper;
-import com.google.gwt.place.shared.Place;
-import com.google.inject.Inject;
-import com.google.inject.Provider;
-
-public class [getClassName(class)/]ViewActivityMapper implements ActivityMapper {
-
-	
-	@Inject
-	Provider<[getClassName(class)/]Activity> [getClassName(class).toLowerFirst()/]ActivityProvider;
-	
-	@Override
-	public Activity getActivity(Place place) {
-		return [getClassName(class).toLowerFirst()/]ActivityProvider.get();
-	}
-
-}
-[/file]
-	[/if]
-[/for]
-[/for]
-[for (class : Class | model.ownedElement)]
-	[if (class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('PermanentViewImpl') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') or class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Footer'))]
-[file (packageName(model.name).replaceAll('[.]', '/') + 'client/common/'+getClassName(class)+'ViewActivityMapper.java', false, 'UTF-8')]
-package [packageName(model.name)/]client.common;
-
-import [packageName(model.name)/]client.view.[getClassName(class)/]Activity;
-
-import com.google.gwt.activity.shared.Activity;
-import com.google.gwt.activity.shared.ActivityMapper;
-import com.google.gwt.place.shared.Place;
-import com.google.inject.Inject;
-import com.google.inject.Provider;
-
-public class [getClassName(class)/]ViewActivityMapper implements ActivityMapper {
-
-	
-	@Inject
-	Provider<[getClassName(class)/]Activity> [getClassName(class).toLowerFirst()/]ActivityProvider;
-	
-	@Override
-	public Activity getActivity(Place place) {
-		return [getClassName(class).toLowerFirst()/]ActivityProvider.get();
-	}
-
-}
-[/file]
-	[/if]
-[/for]
-[/template][/comment]
 
 [template public gin(model : Model) ]
 

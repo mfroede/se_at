@@ -167,20 +167,18 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 								[if (i<=1)]				
 	@Override
 	void onButtonClicked(String buttonName){
-		switch(buttonName) {
 								[/if]
-		case "[property.name/]":
-			placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
-			break;
+		if(buttonName.equals("[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]")) {
+			placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+		}
 							[else]
 								[if (i<=1)]	
 	// @Override
 	// void onButtonClicked(String buttonName){
-	//	 switch(buttonName) {
 								[/if]
-	// 	 case "[property.name/]":
-	// 		 placeController.gotTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
-	// 		 break;
+	//	if(buttonName.equals("[property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'label')/]")) {
+	//		placeController.goTo(new [getClassName(property.getTaggedValue('ViewNavigationObject', 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+	//	}
 							[/if]
 						[/if]
 					[/for]
@@ -188,12 +186,10 @@ public class [interface.name/]Activity extends AbstractActivityDefaultImpl<[inte
 						[if (property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
 							[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]	
 								[if (i<=1)]	
-		}
 	}
 								[/if]
 							[else]
 								[if (i<=1)]	
-	//	 }
 	// }
 								[/if]
 							[/if]
