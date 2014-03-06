@@ -8,9 +8,14 @@
 \contentsline {subsection}{\numberline {2.2.1}MVP}{4}
 \contentsline {subsection}{\numberline {2.2.2}UI-Binder}{4}
 \contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{4}
-\contentsline {chapter}{\numberline {3.}Konzeption}{5}
-\contentsline {chapter}{\numberline {4.}UML Profil auf M2 Ebene}{6}
-\contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{7}
-\contentsline {chapter}{\numberline {6.}Generator}{8}
-\contentsline {chapter}{\numberline {7.}Ergebnis}{9}
-\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{10}
+\contentsline {chapter}{\numberline {3.}Idee}{5}
+\contentsline {section}{\numberline {3.1}Ziel-Architektur}{5}
+\contentsline {section}{\numberline {3.2}Profil}{10}
+\contentsline {section}{\numberline {3.3}M1-Modell}{11}
+\contentsline {section}{\numberline {3.4}Generator}{12}
+\contentsline {section}{\numberline {3.5}Anwendungsfall}{13}
+\contentsline {chapter}{\numberline {4.}UML Profil auf M2 Ebene}{14}
+\contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{15}
+\contentsline {chapter}{\numberline {6.}Generator}{16}
+\contentsline {chapter}{\numberline {7.}Ergebnis}{17}
+\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{18}

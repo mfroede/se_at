@@ -1,2 +1,23 @@
 \chapter{UML Profil auf M2 Ebene}
 \label{UMLProfil}
+In diesem Projekt wurde sich dafür entschieden, den bestehenden Sprachumfang der UML, durch UML-Profile zu erweitern. Ein UML-Profil ist genau genommen eine Erweiterung des Metamodells der UML und somit des Standard Sprachumfangs der UML und es ist gleichzeitig ein UML-Modell.
+
+Das UML Profil wird mit eigens definierten Meta Klassen erweitert. Grund
+dafür ist, dass im späterem UML Model Zuständigkeiten besser zugewiesen und
+erkannt werden können.
+Diese Erweiterungen werden als Stereotyp im Profil bezeichnet, die von vordefinierten Metaklassen abgeleitet werden.
+
+- keine extra Metaklasse „Class“ für Activity und Place
+	- üblich im GWT MVP (View, Activity, Place)   
+	- zur Erleichterung für gwt Entwickler, die Erzeugung von Activity 	und Place geschieht passend zu jeder View automatisch im Generator
+- keine „Model“ Metaklasse, da es sich bei diesem Projekt um eine reine Frontend handelt und das Backend nicht betrachtet wird. Daten können später direkt in dem UML Modell angegeben werden oder über XML Dateien geladen werden.
+- um statische Views zu ermöglichen wurde das Profil um eine Metaklasse „PermanentView“ 
+erweitert. So ist es später möglich in eine View Elemente einer PermanentView zu setzen. Eine spezielle Form der PermanentView sind Header und Footer, da diese zusätzlich eine feste Position besitzen
+
+
+
+
+- goTo Änderung
+- ViewNavigationTypeÄnderung
+- Änderung PermanentView
+- Änderung nicht mehr View Implementierung sondern View Interface als goTo

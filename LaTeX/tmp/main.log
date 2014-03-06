@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.3)  12 FEB 2014 11:14
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.3)  6 MAR 2014 01:44
 entering extended mode
 **main.tex
 
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\main.tex
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\main.tex"
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -321,8 +321,8 @@ File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
 \epsfxsize=\dimen106
 \epsfysize=\dimen107
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\main.aux)
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\main.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
@@ -357,99 +357,149 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 {C:/Users/Claudia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Pages/Inhaltsverzeichnis.tex
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\main.toc)
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Pages/Inhaltsverzeichnis.tex"
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\main.toc")
 \tf@toc=\write3
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/Einleitung.tex [1
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/Einleitung.tex" [1
 
 ]
 Kapitel 1.
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/Grundlagen.tex [2
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/Grundlagen.tex" [2
 
 ]
 Kapitel 2.
 
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\MDA.tex)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\PIM.tex)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\PSM.tex)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\GWT.tex)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\MVP.tex [3
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\MDA.tex")
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\PIM.tex")
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\PSM.tex")
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\GWT.tex")
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\MVP.tex" [3
 
 ])
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\UIBinder.tex)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Sections\GIN.tex))
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/Konzeption.tex [4]
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\UIBinder.tex")
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\GIN.tex"))
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/Konzeption.tex" [4]
 Kapitel 3.
-)
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/UMLProfil.tex [5
+
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\GrundlegenderAufbau.tex" [5
 
 ]
+Overfull \hbox (6.84225pt too wide) in paragraph at lines 28--33
+\T1/cmr/m/n/10 le Views und er-mög-licht als Ober-klas-se den Aus-tausch der An
+sichten.---
+ []
+
+
+Overfull \hbox (27.72604pt too wide) in paragraph at lines 37--47
+\T1/cmr/m/n/10 sprüng-lich exis-tie-ren-den ViewActivityMapper-Implementierung 
+definiert.---
+ []
+
+
+Overfull \hbox (11.56332pt too wide) in paragraph at lines 51--56
+\T1/cmr/m/n/10 Über die-se Ja-va Klas-se wird es u.A. er-mög-licht die ViewActi
+vityMapper-
+ []
+
+
+Overfull \hbox (32.44711pt too wide) in paragraph at lines 51--56
+\T1/cmr/m/n/10 Implementierungen so-wie den Event-Bus zu er-hal-ten, wel-cher d
+ie Navigations-
+ []
+
+
+Overfull \hbox (7.61984pt too wide) in paragraph at lines 56--61
+\T1/cmr/m/n/10 ViewActivityMapper-Implementierung auf-ge-ru-fen wer-den und da-
+durch
+ []
+
+[6] [7] [8] [9]
+Overfull \hbox (26.75363pt too wide) in paragraph at lines 209--226
+\T1/cmr/m/it/10 mePlace.java\T1/cmr/m/n/10 , \T1/cmr/m/it/10 Na-meView.java\
+T1/cmr/m/n/10 , \T1/cmr/m/it/10 Na-meViewImpl.java \T1/cmr/m/n/10 und \T1/cmr
+/m/it/10 Na-meViewImpl.ui.xml
+ []
+
+[10] [11] [12])
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\Anwendungsfall.tex"))
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/UMLProfil.tex" [13]
 Kapitel 4.
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/M1Modell.tex [6
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/M1Modell.tex" [14
 
 ]
 Kapitel 5.
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/Generator.tex [7
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/Generator.tex" [15
 
 ]
 Kapitel 6.
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/Ergebnis.tex [8
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/Ergebnis.tex" [16
 
 ]
 Kapitel 7.
 )
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\Chapters/FazitAusblick.tex [9
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Chapters/FazitAusblick.tex" [17
 
 ]
 Kapitel 8.
-) [10
 
-]
-(C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\se_
-at\LaTeX\Source\main.aux) ) 
+Overfull \hbox (0.19714pt too wide) in paragraph at lines 39--43
+[][]\T1/cmr/m/n/10 Weiterhin müs-sen struk-tu-rel-le Än-de-run-gen z.B. das Um-
+set-zen der in-dex.html
+ []
+
+[18
+
+]) [19]
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\main.aux") ) 
 Here is how much of TeX's memory you used:
- 2104 strings out of 494053
- 28692 string characters out of 3147792
- 81535 words of memory out of 3000000
- 5341 multiletter control sequences out of 15000+200000
- 9162 words of font info for 21 fonts, out of 3000000 for 9000
+ 2119 strings out of 494053
+ 29953 string characters out of 3147792
+ 83593 words of memory out of 3000000
+ 5348 multiletter control sequences out of 15000+200000
+ 10624 words of font info for 23 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 32i,7n,24p,196b,203s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/miktex/fonts/enc/dvips/cm-su
-per/cm-super-t1.enc}<C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/
-cm/cmmi10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmr
-10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Pr
-ogram Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program F
-iles (x86)/miktex/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files (x
-86)/miktex/fonts/type1/public/cm-super/sfsl0900.pfb><C:/Program Files (x86)/mik
-tex/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program Files (x86)/miktex/fon
-ts/type1/public/cm-super/sfsl1200.pfb>
-Output written on main.pdf (11 pages, 149480 bytes).
+ 32i,8n,24p,324b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/miktex/fonts/
+enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files (x86)/miktex/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfbx1000.pf
+b><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1000.pfb><C:/P
+rogram Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program 
+Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files (
+x86)/miktex/fonts/type1/public/cm-super/sfsl0900.pfb><C:/Program Files (x86)/mi
+ktex/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program Files (x86)/miktex/fo
+nts/type1/public/cm-super/sfsl1200.pfb><C:/Program Files (x86)/miktex/fonts/typ
+e1/public/cm-super/sfti1000.pfb>
+Output written on main.pdf (20 pages, 248515 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
