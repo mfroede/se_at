@@ -2,15 +2,34 @@
 \label{GWT}
 Das Google Web Toolkit, kurz GWT, ist ein open-source Projekt von Google. Es
 dient der Entwicklung von Webanwendungen mittels Java. Dabei übersetzt der GWT
-Compiler den gesamten Java Source-Code in JavaScript Code und DOM-Elemente.
-Während der Übersetzung des Java Codes zu JavaScript Code werden darüber hinaus Optimierungen vorgenommen wie das Löschen von dead-Code. Dies führt potenziell dazu, dass komplexe
-Anwendungen im Browser schneller ausgeführt werden können. Darüber hinaus bietet
-GWT noch weitere Möglichkeiten, die dem Entwickler einer Webanwendung zu Gute
-kommen. Dazu zählen u. A. das Integrieren von JavaScript Code oder von
-JavaScript Bibliotheken innerhalb des Java Codes durch das JavaScript Native
-Interface, kurz JSNI und das sogenannte Code-Splitting, welches einem Entwickler
-ermöglicht sogenannte Split Points innerhalb des Codes zu setzen, welche dazu
-führen, dass bei der Ausführung der Anwendung bestimmte Inhalte ab dem Split
-Point später nachgeladen werden und dadurch die Startladezeit verringern.
-Google bietet mit zu den genannten Eigenschaften weitere positive
-Software Engineering Aspekte. Durch GIN (GWT INjection) 
+Compiler den gesamten Java Source-Code in JavaScript Code.
+Zudem werden während der Übersetzung Code Optimierungen vorgenommen, welche u.A.
+das Löschen von nicht benötigtem Code, z.B beim Einsatz von mehreren
+Browsern als Plattformen, betreffen. 
+
+Weiterhin bietet GWT die Möglichkeit zur Interaktion mit JavaScript durch
+das JavaScript Native Interface, kurz JSNI.
+Dadurch können JavaScript Bibliotheken angebunden bzw. verwendet oder die
+Nutzung von JSON erleichtert werden \cite[S. 4-9]{bib:GWTinAction}\cite[S.
+237-238]{bib:GWToReilly}.
+
+Darüber hinaus ist dadurch eine Kommunikation mit dem Backend
+möglich. Zusätzlich kann diese Kommunikation durch Remote Procedure Calls,
+kurz RCPs, u.A. mittels RequestBuilder oder GWT-RCP erfolgen. Beide setzen auf
+dem XMLHttpRequest JavaScript Objekt auf, welches die Kommunikation zwischen dem
+Browser und dem Server ohne Seitenneuladen erlaubt. Der RequestBuilder ist ein
+Wrapper für das genannte JavaScript Objekt und GWT-RCP ermöglicht den Austausch
+von konkreten Java Objekten \cite[S. 16]{bib:GWTinAction}\cite[S.
+222]{bib:GWToReilly}.
+
+Dies zeigt einen kurzen Einblick in die verschieden Möglichkeiten mit
+GWT, welche folgend nicht näher erläutert werden, weil eine Generierung einer
+GWT Frontend Anwendung ohne Server Kommunikation erfolgen soll.
+
+Der Einsatz mit GWT ist flexibel und durch den GWT Compiler wird 
+eine bessere Laufzeitausfürhung der Webanwendung erlangt\cite{bib:GWTStarted}.
+Dies sind 2 Vorteile des Nutzens von GWT. Zusätzlich sind die durch Google
+gebotenen Architekturkonzepte durch u.A. Model-View-Presenter, kurz MVP, ein
+Ansatz und Grund einen Generator für GWT Frontend Anwnedungen zu schreiben.
+Dafür werden im weiterem Verlauf MVP, UiBinder sowie GIN erläutert, welche die
+Grundlage der umzusetzenden Architektur bilden.

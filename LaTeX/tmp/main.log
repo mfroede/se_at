@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.3)  6 MAR 2014 01:44
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.5.3)  7 MAR 2014 08:10
 entering extended mode
 **main.tex
 
@@ -321,38 +321,121 @@ File: pdftex.def 2011/01/28 v0.05d Graphics/color for pdfTeX
 \epsfxsize=\dimen106
 \epsfysize=\dimen107
 )
+("C:\Program Files (x86)\miktex\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen108
+\lightrulewidth=\dimen109
+\cmidrulewidth=\dimen110
+\belowrulesep=\dimen111
+\belowbottomsep=\dimen112
+\aboverulesep=\dimen113
+\abovetopsep=\dimen114
+\cmidrulesep=\dimen115
+\cmidrulekern=\dimen116
+\defaultaddspace=\dimen117
+\@cmidla=\count92
+\@cmidlb=\count93
+\@aboverulesep=\dimen118
+\@belowrulesep=\dimen119
+\@thisruleclass=\count94
+\@lastruleclass=\count95
+\@thisrulewidth=\dimen120
+)
+("C:\Program Files (x86)\miktex\tex\latex\listings\listings.sty"
+\lst@mode=\count96
+\lst@gtempboxa=\box26
+\lst@token=\toks17
+\lst@length=\count97
+\lst@currlwidth=\dimen121
+\lst@column=\count98
+\lst@pos=\count99
+\lst@lostspace=\dimen122
+\lst@width=\dimen123
+\lst@newlines=\count100
+\lst@lineno=\count101
+\lst@maxwidth=\dimen124
+
+("C:\Program Files (x86)\miktex\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
+\lst@framebox=\box27
+)
+("C:\Program Files (x86)\miktex\tex\latex\listings\listings.cfg"
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+("C:\Program Files (x86)\miktex\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\miktex\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\miktex\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+("C:\Program Files (x86)\miktex\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen125
+\extrarowheight=\dimen126
+\NC@list=\toks18
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+\everycr=\toks19
+\minrowclearance=\skip48
+)
+\rownum=\count104
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+
+("C:\Program Files (x86)\miktex\tex\latex\graphics\dvipsnam.def"
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
 uer Ordner\se_at\LaTeX\Source\main.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 ("C:\Program Files (x86)\miktex\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count92
-\scratchdimen=\dimen108
-\scratchbox=\box26
-\nofMPsegments=\count93
-\nofMParguments=\count94
-\everyMPshowfont=\toks17
-\MPscratchCnt=\count95
-\MPscratchDim=\dimen109
-\MPnumerator=\count96
-\everyMPtoPDFconversion=\toks18
+\scratchcounter=\count105
+\scratchdimen=\dimen127
+\scratchbox=\box28
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen128
+\MPnumerator=\count109
+\everyMPtoPDFconversion=\toks21
 )
+\c@lstlisting=\count110
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 19.
+(Font)              <7> on input line 68.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 19.
+(Font)              <5> on input line 68.
  [1
 
 
@@ -382,124 +465,169 @@ uer Ordner\se_at\LaTeX\Source\Sections\PIM.tex")
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
 uer Ordner\se_at\LaTeX\Source\Sections\PSM.tex")
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Sections\GWT.tex")
-("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Sections\MVP.tex" [3
+uer Ordner\se_at\LaTeX\Source\Sections\GWT.tex" [3
 
 ])
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Sections\UIBinder.tex")
+uer Ordner\se_at\LaTeX\Source\Sections\MVP.tex"
+<./img/MVP.pdf, id=20, 237.6338pt x 150.5625pt>
+File: ./img/MVP.pdf Graphic file (type pdf)
+ <use ./img/MVP.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--22
+
+ []
+
+[4])
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\Sections\UIBinder.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 3--19
+
+ []
+
+[5 <C:/Users/Claudia/Documents/Studium/Master/Semester1/SE/neu/Semesterprojekt/
+Neuer Ordner/se_at/LaTeX/Source/img/MVP.pdf>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 19.
+
+("C:\Program Files (x86)\miktex\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 20.
+ [6])
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
 uer Ordner\se_at\LaTeX\Source\Sections\GIN.tex"))
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/Konzeption.tex" [4]
+uer Ordner\se_at\LaTeX\Source\Chapters/Konzeption.tex" [7]
 Kapitel 3.
 
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Sections\GrundlegenderAufbau.tex" [5
+uer Ordner\se_at\LaTeX\Source\Sections\GrundlegenderAufbau.tex" [8
 
-]
-Overfull \hbox (6.84225pt too wide) in paragraph at lines 28--33
-\T1/cmr/m/n/10 le Views und er-mög-licht als Ober-klas-se den Aus-tausch der An
-sichten.---
+] [9]
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 123--165
+
  []
 
 
-Overfull \hbox (27.72604pt too wide) in paragraph at lines 37--47
-\T1/cmr/m/n/10 sprüng-lich exis-tie-ren-den ViewActivityMapper-Implementierung 
-definiert.---
+Underfull \hbox (badness 10000) in paragraph at lines 123--165
+
  []
 
-
-Overfull \hbox (11.56332pt too wide) in paragraph at lines 51--56
-\T1/cmr/m/n/10 Über die-se Ja-va Klas-se wird es u.A. er-mög-licht die ViewActi
-vityMapper-
- []
-
-
-Overfull \hbox (32.44711pt too wide) in paragraph at lines 51--56
-\T1/cmr/m/n/10 Implementierungen so-wie den Event-Bus zu er-hal-ten, wel-cher d
-ie Navigations-
- []
-
-
-Overfull \hbox (7.61984pt too wide) in paragraph at lines 56--61
-\T1/cmr/m/n/10 ViewActivityMapper-Implementierung auf-ge-ru-fen wer-den und da-
-durch
- []
-
-[6] [7] [8] [9]
-Overfull \hbox (26.75363pt too wide) in paragraph at lines 209--226
-\T1/cmr/m/it/10 mePlace.java\T1/cmr/m/n/10 , \T1/cmr/m/it/10 Na-meView.java\
-T1/cmr/m/n/10 , \T1/cmr/m/it/10 Na-meViewImpl.java \T1/cmr/m/n/10 und \T1/cmr
-/m/it/10 Na-meViewImpl.ui.xml
- []
-
-[10] [11] [12])
+[11] [12] [13] [14])
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
 uer Ordner\se_at\LaTeX\Source\Sections\Anwendungsfall.tex"))
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/UMLProfil.tex" [13]
+uer Ordner\se_at\LaTeX\Source\Chapters/UMLProfil.tex" [15]
 Kapitel 4.
 )
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/M1Modell.tex" [14
+uer Ordner\se_at\LaTeX\Source\Chapters/M1Modell.tex" [16
 
 ]
 Kapitel 5.
 )
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/Generator.tex" [15
+uer Ordner\se_at\LaTeX\Source\Chapters/Generator.tex" [17
 
 ]
 Kapitel 6.
 )
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/Ergebnis.tex" [16
+uer Ordner\se_at\LaTeX\Source\Chapters/Ergebnis.tex" [18
 
 ]
 Kapitel 7.
 )
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
-uer Ordner\se_at\LaTeX\Source\Chapters/FazitAusblick.tex" [17
+uer Ordner\se_at\LaTeX\Source\Chapters/FazitAusblick.tex" [19
 
 ]
 Kapitel 8.
+[20
 
-Overfull \hbox (0.19714pt too wide) in paragraph at lines 39--43
+]
+Overfull \hbox (0.19714pt too wide) in paragraph at lines 48--52
 [][]\T1/cmr/m/n/10 Weiterhin müs-sen struk-tu-rel-le Än-de-run-gen z.B. das Um-
 set-zen der in-dex.html
  []
 
-[18
+)
+("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
+uer Ordner\se_at\LaTeX\Source\main.bbl" [21]
+Underfull \hbox (badness 1009) in paragraph at lines 4--9
+[][]\T1/cmr/m/n/10 Chandel, S. (2009).  Tes-ting.  $\T1/cmtt/m/n/10 http : / / 
+www . gwtproject .$
+ []
 
-]) [19]
+
+Underfull \hbox (badness 1226) in paragraph at lines 23--27
+[][]\T1/cmr/m/n/10 gwt-mvc (2010).  gwt-mvc: MVC layer built on top of
+ []
+
+) [22
+
+]
 ("C:\Users\Claudia\Documents\Studium\Master\Semester1\SE\neu\Semesterprojekt\Ne
 uer Ordner\se_at\LaTeX\Source\main.aux") ) 
 Here is how much of TeX's memory you used:
- 2119 strings out of 494053
- 29953 string characters out of 3147792
- 83593 words of memory out of 3000000
- 5348 multiletter control sequences out of 15000+200000
- 10624 words of font info for 23 fonts, out of 3000000 for 9000
+ 4517 strings out of 494053
+ 61239 string characters out of 3147792
+ 198336 words of memory out of 3000000
+ 7704 multiletter control sequences out of 15000+200000
+ 12016 words of font info for 26 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 32i,8n,24p,324b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,10n,40p,324b,1150s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/miktex/fonts/
 enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files (x86)/miktex/fonts/type1/p
 ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/
 amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/amsfonts/cm/c
 msy7.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfbx1000.pf
-b><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1000.pfb><C:/P
-rogram Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program 
-Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files (
-x86)/miktex/fonts/type1/public/cm-super/sfsl0900.pfb><C:/Program Files (x86)/mi
-ktex/fonts/type1/public/cm-super/sfsl1000.pfb><C:/Program Files (x86)/miktex/fo
-nts/type1/public/cm-super/sfsl1200.pfb><C:/Program Files (x86)/miktex/fonts/typ
-e1/public/cm-super/sfti1000.pfb>
-Output written on main.pdf (20 pages, 248515 bytes).
+b><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sfrm0500.pfb><C:/P
+rogram Files (x86)/miktex/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Program 
+Files (x86)/miktex/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files (
+x86)/miktex/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files (x86)/mi
+ktex/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files (x86)/miktex/fo
+nts/type1/public/cm-super/sfsl0900.pfb><C:/Program Files (x86)/miktex/fonts/typ
+e1/public/cm-super/sfsl1000.pfb><C:/Program Files (x86)/miktex/fonts/type1/publ
+ic/cm-super/sfsl1200.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/cm-s
+uper/sfti1000.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sf
+tt0900.pfb><C:/Program Files (x86)/miktex/fonts/type1/public/cm-super/sftt1000.
+pfb>
+Output written on main.pdf (23 pages, 477787 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 161 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

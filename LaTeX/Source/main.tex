@@ -10,18 +10,71 @@
 \usepackage{url}
 \usepackage{breakcites}
 \usepackage{epsfig} 
-
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\definecolor{SourceGrau}{gray}{0.98}
+\definecolor{lightblue}{rgb}{0.71,0.85,0.96}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{lightgrey}{rgb}{0.7,0.7,0.85}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+	basicstyle=\small\ttfamily,						% kleine Schrift, Typewriter
+	numbers=left,									% Zeilennummern auf der linken Seite
+	tabsize=2,										% Tabs brauchen 2 Leerzeichen
+	numberstyle=\tiny,								% Zeilennummern sind winzig
+	frame=single,									% einfacher Rahmen um den Code
+	aboveskip=1em,									% Abstand zwischen Code(rahmen) und dem Text darüber
+	breaklines=true,								% überlange Zeilen werden umgebrochen
+	breakautoindent=true, 							% Bei Zeilenumbruch einrücken
+	breakindent=2em,
+	lineskip=-0.1em,  								% definiert den Zeilenabstand
+	showstringspaces=false,							% keine Leerzeichen in Strings anzeigen
+	extendedchars=true, 							% Erweiterte Symbole
+	keywordstyle=\color{mauve}\bfseries,			% ein bischen bunt kann nicht schaden
+	commentstyle=\color{dkgreen}, 
+	stringstyle=\color{blue},
+  backgroundcolor=\color{SourceGrau},
+  columns=flexible,									% Zeichen stehen enger beieinander
+  xleftmargin=0.95cm,								% Rand nach links
+  xrightmargin=0.75cm,								% Rand nach rechts
+  captionpos=b										% Beschriftung unter dem Listing
+}
+\lstdefinelanguage{gwt}{
+  morekeywords={private, public, protected, void, interface, static, this,
+  extends, implements},
+  morecomment=[l][\color{dkgreen}]{//},
+  moredelim=[is][\color{lightgrey}]{|}{|},
+  moredelim=[is][\color{blue}]{$}{$},
+  morecomment=[s]{/*}{*/},
+  morestring=[s][\color{blue}]{"}{"},
+}
+\lstdefinelanguage{uixml}{
+%   morecomment=[s][\color{dkgreen}]{<}{>},
+  alsoletter={:,=},
+  morekeywords={ styleName=, text=, ui:field=, xmlns:ui=, xmlns:my=, xmlns:g=},
+  keywordstyle=\color{mauve}\bfseries,
+  morecomment=[s][\color{blue}]{"}{"}
+}
+\lstdefinelanguage{mtl}{
+morecomment=[s][\color{blue}]{"}{"}
+}
 \begin{document}
 \pagenumbering{roman}
 \title{Generierung einer frontendseitigen GWT Anwendung unter Verwendung
 von dem MVP Pattern und Dependency Injection}
 \author{Claudia Schäfer	|	Marcus Fabarius	|	Stephanie Lehmann\\ CMS}
 \maketitle
-
-
+%----------------------------------------------------------------------------------------
+%	Table of Contents
+%----------------------------------------------------------------------------------------
 \input{Pages/Inhaltsverzeichnis}
 
 \pagenumbering{arabic}
+%----------------------------------------------------------------------------------------
+%	Chapters
+%----------------------------------------------------------------------------------------
 \input{Chapters/Einleitung}
 \input{Chapters/Grundlagen}
 \input{Chapters/Konzeption}
@@ -30,5 +83,10 @@ von dem MVP Pattern und Dependency Injection}
 \input{Chapters/Generator}
 \input{Chapters/Ergebnis}
 \input{Chapters/FazitAusblick}
-
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\label{Literaturverzeichnis}
+\bibliographystyle{apalike}
+\bibliography{bib}
 \end{document}

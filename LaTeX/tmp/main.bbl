@@ -1,0 +1,45 @@
+\begin{thebibliography}{}
+
+\bibitem[Chandel, 2009]{bib:MVP1}
+Chandel, S. (2009).
+\newblock {Testing}.
+\newblock
+  {\url{http://www.gwtproject.org/articles/testing_methodologies_using_gwt.html}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[{Google}, 2010]{bib:GWTStarted}
+{Google} (2010).
+\newblock {Overview}.
+\newblock {\url{http://www.gwtproject.org/overview.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[Google, 2010]{bib:uiBind}
+Google (2010).
+\newblock {Ui Binder}.
+\newblock {\url{http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[{gwt-mvc}, 2010]{bib:MVCvsMVP}
+{gwt-mvc} (2010).
+\newblock {gwt-mvc: MVC layer built on top of GWT}.
+\newblock {\url{http://code.google.com/p/gwt-mvc/wiki/MVCvsMVP}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Hanson and Tacy, 2007]{bib:GWTinAction}
+Hanson, R. and Tacy, A. (2007).
+\newblock {\em GWT in Action: Easy Ajax with the Google Web Toolkit}.
+\newblock Manning Publications Co., Greenwich, CT, USA.
+
+\bibitem[Ramsdale, 2010]{bib:MVP2}
+Ramsdale, C. (2010).
+\newblock {MVP Part1}.
+\newblock {\url{http://www.gwtproject.org/articles/mvp-architecture.html}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Seemann, 2008]{bib:GWToReilly}
+Seemann, M. (2008).
+\newblock {\em Das Google Web Toolkit: GWT}.
+\newblock {O'Reilly Verlag GmbH \& Co. KG}, Köln, Germany.
+\newblock Auflage 1.
+
+\end{thebibliography}

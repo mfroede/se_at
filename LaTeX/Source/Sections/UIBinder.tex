@@ -1,2 +1,77 @@
-\subsection{UI-Binder}
-\label{UIBinder}
+\subsection{UiBinder}
+\label{UiBinder}
+Das UiBinder Framework für GWT Anwendungen ist ähnlich zu betrachten wie HTML
+und CSS. Dieses Framework ermöglicht das Layouting von GWT Websites. Dabei
+wird die Website nicht nur über den Code erzeugt, sondern zusätzlich mittels
+einer xml-Datei, die ui.xml Datei. In dieser Datei können z.B. Style
+Eigenschaften ähnlich wie bei CSS gesetzt werden innerhalb eines ui:Style
+Tags (vgl. Listing \ref{lst:BSPCodeUIXML}). Dies bietet die Möglichkeit die
+View Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
+Möglichkeiten zur Entkopplung der View Implementierung z.B.
+sodass die View Komponenten die statisch sind z.B. nur innerhalb der ui.xml
+Datei enthalten sind und somit ein Overload der View Implementierung vermindert
+werden kann. Weiterhin können die Komponenten innerhalb dieser Datei gebunden
+werden an die, in der View Implementierung enthaltenen Komponenten
+\cite{bib:uiBind}. Dazu folgender Codeauszug von einem vorangegangenem GWT
+Projekt zur Erläuterung dieses Zusammenhangs.\\
+\lstset{language=gwt}
+\begin{lstlisting}[caption={Beispielcode UiBinder in View
+Implementierung}, label={lst:BSPCodeView}]
+	private static LoginViewImplUiBinder $uiBinder$ = GWT
+			.create(LoginViewImplUiBinder.class);
+
+	interface LoginViewImplUiBinder extends 
+			UiBinder<Widget, LoginViewImpl> {}
+
+	|@UiField|
+	TextBox $name$;
+		
+	//Constructor
+	|@Inject|
+	public LoginViewImpl() {
+		$content$.add($uiBinder$.createAndBindUi(this));
+	}
+	|@UiHandler|({ "button" })
+	void onButtonPressed(ClickEvent e) {
+		// do something
+	}
+\end{lstlisting}
+\lstset{language=uixml}
+\begin{lstlisting}[caption={Beispielcode UiBinder in ui.xml},
+label={lst:BSPCodeUIXML}]
+<!DOCTYPE ui:UiBinder SYSTEM 
+	"http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:my="urn:import:myprojectpackage">
+	<ui:style>
+		.enterbutton {
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px;
+			color: #336699;
+		}
+	</ui:style>
+	<g:FlowPanel>
+		<g:Label text="Anmeldename"></g:Label>
+		<g:TextBox ui:field="name"></g:TextBox>
+		<g:Button text="Einloggen" ui:field="button" 
+			styleName="{style.enterbutton}"></g:Button>
+	</g:FlowPanel> 
+</ui:UiBinder> 
+\end{lstlisting}
+Die Annotationen @UiField und @UiHandler in der View Implementierung (vgl.
+Listing \ref{lst:BSPCodeView}) ermöglichen den Zugriff auf die View Komponenten
+mit dem jeweiligem Attribut ui:field in der ui.xml (vgl. Listing
+\ref{lst:BSPCodeUIXML}). @UiField ist dabei dafür zuständig die Instanz zu
+erhalten. Diese kann dann z.B. über den Java Code definiert oder Style
+Eigenschaften gesetzt werden. Entgegen dem ermöglicht @UiHandler die Anmeldung
+einer Methode auf der Instanz. Darüber kann dann im Falle des Beispiels ein
+Klick Event auf dem Button ausgeführt werden.
+
+Damit zeigen die Listings \ref{lst:BSPCodeView} und \ref{lst:BSPCodeUIXML}
+nur kleine Beispiele für die Nutzung von dem UiBinder Framework, welche
+innerhalb des Generator Projektes umgesetzt werden sollen.
+
+
+

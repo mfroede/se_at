@@ -12,10 +12,10 @@ einfache Austausch von Views weiterhin und teilweise leichter nutzbar z.B.
 durch Aus- und Einkommentierung bei dem Austausch von Views. Zur Gestaltung der
 Website stehen einem Entwickler alle Möglichkeiten z.B. die
 Nutzung von Ui-Editoren weiterhin ohne Einschränkungen zur Verfügung und die
-Anwnendungsfälle sind frei wählbar, wie anhand der 2 M1-Modelle deutlich wird.
+Anwendungsfälle sind frei wählbar, wie anhand der 2 M1-Modelle deutlich wird.
 Es können eigene View Elemente erstellt und eingebunden werden, welches die
-Architekturkonzepte zusätzlich unterstützt. Des weiteren wird die Navigation
-über ViewNavigationObjects innerhalb der Seiten generiert, jedoch ist weiteres
+Architekturkonzepte zusätzlich unterstützt. Des Weiteren wird die Navigation
+über ViewNavigationObjects innerhalb der Seiten generiert, jedoch sind weitere
 Verhalten wie z.B. das Öffnen eines Popups nicht umgesetzt.
 
 Durch Abschnitt \ldots ref wird ersichtlich, dass die vorzunehmende Änderung im
@@ -24,7 +24,7 @@ dadurch, dass ViewObjects weitere ViewObjects beinhalten können und somit in de
 ui.xml mehrfach enthalten sein können. Dies führt zu dem Gedanken, dass eine
 andere Generierungssprache außerhalb von OCL potenziell besser geeignet wäre, da
 keine weitere Möglichkeit gefunden werden konnte einen optimalen Lösungsansatz
-umzusetzen u.A. durch das verändern einer Variable innerhalb einer if-Bedingung.
+umzusetzen u.A. durch das Verändern einer Variable innerhalb einer if-Bedingung.
 Eine weitere Möglichkeit der Optimierung an dieser Stelle könnte darin bestehen,
 dass Backend generierbar zu machen. Dadurch können Datenmodelle zu dem
 UML-Profil hinzugefügt werden, welche auch die Grundlage für View Komponenten
@@ -33,8 +33,17 @@ Beispiels kann das Datenmodell einer Produktklasse mit den Attributen Name,
 Preis und Verkaufsort dazu genutzt werden, dass innerhalb einer View automatisch
 eine Tabelle generiert wird, welche als Spalten die Attribute beinhaltet und
 alle Produkte anzeigt. Dieser Lösungsansatz wäre einerseits eine
-Weiterentwicklung des Generatorprojekten bietet jedoch noch keine Komplettlösung, sollten Views auch
-ohne Datenmodelle generiebar sein.
+Weiterentwicklung des Generator Projektes bietet jedoch noch keine
+Komplettlösung, sollten Views auch ohne Datenmodelle generierbar sein.
+
+Innerhalb des Generators wurde bereits in Abschnitt \ldots ersichtlich, dass
+nicht alle Optimierungen im Bereich Struktur und Redundanz vorgenommen wurden.
+Dies muss weiterhin geschehen unterliegt jedoch trotzdem dem Aspekt der
+Verwendbarkeit von OCL. Dies liegt daran, dass viele
+unterschiedliche if-Bedingungen und viele if-Bedingungen mit ähnlichen
+if-else-Zweigen enthalten sind. Eine Überlegung wie dies mit OCL lösbar wäre
+ist weiterhin erforderlich, wobei ein Test mit anderen Generierungssprachen,
+die diesbezüglich mehr Möglichkeiten zur Strukturierung bieten, denkbar ist.
 
 Weiterhin müssen strukturelle Änderungen z.B. das Umsetzen der
 index.html oder das Hinzufügen von Bibliotheken z.B. GIN (vgl. Abschnitt ref
@@ -44,7 +53,7 @@ durch die Verbindung des Generator Projektes mit Maven vermieden werden.
 Das zu generierende M1-Modell weist keine Assoziationen auf, wodurch viele
 Eigenschaften wie das Beinhalten von eigenen View Objekten in Views versteckt
 bleiben. Aus diesem Grund wäre eine Generierung eines UML Klassendiagramms als
-Weiterentwicklung ein wichtiger aspekt. Dadurch wird zusätzlich der im Fokus
+Weiterentwicklung ein wichtiger Aspekt. Dadurch wird zusätzlich der im Fokus
 liegende architektonische Aspekt des Generator Projektes hervorhebt. Darüber
 hinaus sind viele Teile wie z.B. die einmalig vorhandenen Klassen sowie die View
 Klassen z.B. Activity, Place und ViewImpl.ui.xml in dem M1-Modell nicht
@@ -52,7 +61,7 @@ ersichtlich bzw. nicht vorhanden, wodurch das generierte unübersichtlich werden
 kann. Weshalb ein UML Klassendiagramm weiterhin stark unterstützend wirkt. 
 
 Eine weitere Möglichkeit Übersicht zu schaffen besteht zusätzlich darin
-Activitätsdiagramme zu generieren. Dies ermöglicht einen weiteren Überblick über
+Activitydiagramme zu generieren. Dies ermöglicht einen weiteren Überblick über
 die generierte Navigation.
 
 Zusammenfassend ist zu erwähnen, dass das Generatorprojekt eine gute
