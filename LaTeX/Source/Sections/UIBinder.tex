@@ -3,17 +3,16 @@
 Das UiBinder Framework für GWT Anwendungen ist ähnlich zu betrachten wie HTML
 und CSS. Dieses Framework ermöglicht das Layouting von GWT Websites. Dabei
 wird die Website nicht nur über den Code erzeugt, sondern zusätzlich mittels
-einer xml-Datei, die ui.xml Datei. In dieser Datei können z.B. Style
-Eigenschaften ähnlich wie bei CSS gesetzt werden innerhalb eines ui:Style
-Tags (vgl. Listing \ref{lst:BSPCodeUIXML}). Dies bietet die Möglichkeit die
+einer xml-Datei, die ui.xml Datei. In dieser Datei können innerhalb eines ui:Style
+Tags (vgl. Listing \ref{lst:BSPCodeUIXML}) Style
+Eigenschaften ähnlich wie bei CSS gesetzt werden. Dies bietet die Möglichkeit die
 View Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
-Möglichkeiten zur Entkopplung der View Implementierung z.B.
-sodass die View Komponenten die statisch sind z.B. nur innerhalb der ui.xml
+Möglichkeiten zur Entkopplung der View Implementierung, sodass z.B.
+statische View Komponenten nur innerhalb der ui.xml
 Datei enthalten sind und somit ein Overload der View Implementierung vermindert
 werden kann. Weiterhin können die Komponenten innerhalb dieser Datei gebunden
-werden an die, in der View Implementierung enthaltenen Komponenten
-\cite{bib:uiBind}. Dazu folgender Codeauszug von einem vorangegangenem GWT
-Projekt zur Erläuterung dieses Zusammenhangs.\\
+werden an die Komponenten in der View Implementierung \cite{bib:uiBind}. Dazu
+folgender Codeauszug von einem vorangegangenem GWT Projekt zur Erläuterung dieses Zusammenhangs.\\
 \lstset{language=gwt}
 \begin{lstlisting}[caption={Beispielcode UiBinder in View
 Implementierung}, label={lst:BSPCodeView}]

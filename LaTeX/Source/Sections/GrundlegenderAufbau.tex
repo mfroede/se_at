@@ -163,7 +163,7 @@ Jedoch soll für einen Entwickler die Möglichkeit bleiben innerhalb des view
 Packages, die Views in Packages zu gliedern. Aus diesem Grund soll an dieser
 Stelle das view Package nicht Generator-seitig tiefer gegliedert werden.
 
-Anhand der beschrieben Architektur wird ersichtlich, dass die Erstellung eines
+Anhand der beschriebenen Architektur wird ersichtlich, dass die Erstellung eines
 GWT Projektes hauptsächlich im Bereich der einmalig vorhanden Dateien und
 Klassen und die Erstellung einer View im groben immer gleich ist. Dies bietet
 zwar den Vorteil der Vereinheitlichung mehrerer GWT Projekte und gewährleistet
@@ -263,9 +263,9 @@ kann.
 Im Bereich von Views, z.B. ein Header, die auf allen Views innerhalb des
 Browsers sichtbar sind, soll eine weitere Stereotypenbildung stattfinden. Diese Views
 sind \textbf{permanente Views} und sollen sich zusätzlich in \textbf{Header} und
-\textbf{Footer} gliedern, da diese konkrete permanente Views sind durch
-ihre Positionierung in einer View (Header oben, Footer unten). Diese Views
-verhalten sich simultan zu den normalen Views (vgl. Abschnitt \ref{AufBZielArchitektur}),
+\textbf{Footer} gliedern, da diese, durch
+ihre Positionierung in einer View (Header oben, Footer unten), konkrete
+permanente Views sind. Diese Views verhalten sich simultan zu den normalen Views (vgl. Abschnitt \ref{AufBZielArchitektur}),
 weshalb die permanenten Views als View Implementierung von dem View Interface umgesetzt werden können.
 Dadurch wird zusätzlich der Austausch von View Implementierungen ermöglicht.
 % ---------------------------------------------

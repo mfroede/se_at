@@ -33,12 +33,12 @@ Beispiels kann das Datenmodell einer Produktklasse mit den Attributen Name,
 Preis und Verkaufsort dazu genutzt werden, dass innerhalb einer View automatisch
 eine Tabelle generiert wird, welche als Spalten die Attribute beinhaltet und
 alle Produkte anzeigt. Dieser Lösungsansatz wäre einerseits eine
-Weiterentwicklung des Generator Projektes bietet jedoch noch keine
+Weiterentwicklung des Generator Projektes, bietet jedoch noch keine
 Komplettlösung, sollten Views auch ohne Datenmodelle generierbar sein.
 
 Innerhalb des Generators wurde bereits in Abschnitt \ldots ersichtlich, dass
 nicht alle Optimierungen im Bereich Struktur und Redundanz vorgenommen wurden.
-Dies muss weiterhin geschehen unterliegt jedoch trotzdem dem Aspekt der
+Dies muss weiterhin geschehen, unterliegt jedoch trotzdem dem Aspekt der
 Verwendbarkeit von OCL. Dies liegt daran, dass viele
 unterschiedliche if-Bedingungen und viele if-Bedingungen mit ähnlichen
 if-else-Zweigen enthalten sind. Eine Überlegung wie dies mit OCL lösbar wäre
@@ -54,8 +54,8 @@ Das zu generierende M1-Modell weist keine Assoziationen auf, wodurch viele
 Eigenschaften wie das Beinhalten von eigenen View Objekten in Views versteckt
 bleiben. Aus diesem Grund wäre eine Generierung eines UML Klassendiagramms als
 Weiterentwicklung ein wichtiger Aspekt. Dadurch wird zusätzlich der im Fokus
-liegende architektonische Aspekt des Generator Projektes hervorhebt. Darüber
-hinaus sind viele Teile wie z.B. die einmalig vorhandenen Klassen sowie die View
+liegende architektonische Aspekt des Generator Projektes hervorgehoden.
+Darüber hinaus sind viele Teile wie z.B. die einmalig vorhandenen Klassen sowie die View
 Klassen z.B. Activity, Place und ViewImpl.ui.xml in dem M1-Modell nicht
 ersichtlich bzw. nicht vorhanden, wodurch das generierte unübersichtlich werden
 kann. Weshalb ein UML Klassendiagramm weiterhin stark unterstützend wirkt. 
@@ -64,6 +64,6 @@ Eine weitere Möglichkeit Übersicht zu schaffen besteht zusätzlich darin
 Activitydiagramme zu generieren. Dies ermöglicht einen weiteren Überblick über
 die generierte Navigation.
 
-Zusammenfassend ist zu erwähnen, dass das Generatorprojekt eine gute
-Grundlage für die Weiterentwicklung darstellt unter der Vorrausetzung, dass die
+Zusammenfassend ist zu erwähnen, dass das Generator Projekt eine gute
+Grundlage für die Weiterentwicklung darstellt, unter der Vorrausetzung, dass die
 Redundanz und Strukturierung des Generators verbessert wird.
