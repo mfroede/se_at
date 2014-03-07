@@ -1,0 +1,21 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1.}Einleitung}{2}
+\contentsline {chapter}{\numberline {2.}Grundlagen}{3}
+\contentsline {section}{\numberline {2.1}Model Driven Architecture}{3}
+\contentsline {subsection}{\numberline {2.1.1}Platform Independent Model}{3}
+\contentsline {subsection}{\numberline {2.1.2}Platform Specific Model}{3}
+\contentsline {section}{\numberline {2.2}GWT}{4}
+\contentsline {subsection}{\numberline {2.2.1}MVP}{4}
+\contentsline {subsection}{\numberline {2.2.2}UI-Binder}{4}
+\contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{4}
+\contentsline {chapter}{\numberline {3.}Idee}{6}
+\contentsline {section}{\numberline {3.1}Ziel-Architektur}{6}
+\contentsline {section}{\numberline {3.2}Profil}{11}
+\contentsline {section}{\numberline {3.3}M1-Modell}{12}
+\contentsline {section}{\numberline {3.4}Generator}{13}
+\contentsline {section}{\numberline {3.5}Anwendungsfall}{14}
+\contentsline {chapter}{\numberline {4.}UML Profil auf M2 Ebene}{15}
+\contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{17}
+\contentsline {chapter}{\numberline {6.}Generator}{18}
+\contentsline {chapter}{\numberline {7.}Ergebnis}{19}
+\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{20}

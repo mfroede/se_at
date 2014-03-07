@@ -1,6 +1,6 @@
 \subsection{Platform Specific Model} \label{PSM}
-Kombiniert man die Funktionalitäten, die im Platform Independent Model definiert
-sind, mit den Designanforderungen der gewünschten Plattform, so erhält man das
-Platform Specific Model (PSM, dt. Plattformspezifisches Model). Im Gegensatz zum
-PIM, welches nur die fachlichen Anforderungen definiert, werden beim PSM auch
-die technischen Aspekte eingebunden.
+Kombiniert man nun die Funktionalitäten, die im Platform Independent Model definiert sind, mit den Designanforderungen der gewünschten Plattform, so erhält man das Platform Specific Model (PSM, dt. Plattformspezifisches Model). Dies geschieht über Modelltransformationen. Das nun entstandene PSM kann durch weitere Transformationen immer spezifischere Modelle erstellen, bis letztendlich der Quellcode für eine Plattform generiert wird. Im Gegensatz zum PIM, welches nur die
+fachlichen Anforderungen definiert, werden beim PSM auch die technischen Aspekte
+eingebunden.
+ 
+Allerdings ist zu beachten, dass es sich bei PIM und PSM um relative Konzepte handelt. Ein PSM kann zwar beispielsweise spezifisch für eine Java EE sein, aber noch unabhängig von der Frage für welchen Applikationsserver es optimiert ist. Es stellt in diesem Fall also ein PIM bezüglich des konkreten Systems für die Applikationsserverplattform dar.
