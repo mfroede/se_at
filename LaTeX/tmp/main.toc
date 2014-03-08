@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}Model Driven Architecture}{3}
 \contentsline {subsection}{\numberline {2.1.1}Platform Independent Model und Plattform Specific Model}{3}
 \contentsline {section}{\numberline {2.2}GWT}{4}
-\contentsline {subsection}{\numberline {2.2.1}MVP}{4}
+\contentsline {subsection}{\numberline {2.2.1}MVP}{5}
 \contentsline {subsection}{\numberline {2.2.2}UiBinder}{5}
 \contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{7}
 \contentsline {subsection}{\numberline {2.3.1}GIN}{7}

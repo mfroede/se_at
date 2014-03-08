@@ -2,14 +2,15 @@
 \label{UiBinder}
 Das UiBinder Framework für GWT Anwendungen ist ähnlich zu betrachten wie HTML
 und CSS. Dieses Framework ermöglicht das Layouting von GWT Websites. Dabei
-wird die Website nicht nur über den Code erzeugt, sondern zusätzlich mittels
-einer xml-Datei, die ui.xml Datei. In dieser Datei können innerhalb eines ui:Style
-Tags (vgl. Listing \ref{lst:BSPCodeUIXML}) Style
-Eigenschaften ähnlich wie bei CSS gesetzt werden. Dies bietet die Möglichkeit die
-View Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
+wird die Website nicht länger ausschließlich in Java Code gestaltet, sondern
+deren Komponenten und Layout über eine spezielle, HTML ähnliche, Expression Language deklarativ
+formuliert. Dies geschieht innerhalb einer ui.xml-Datei. In dieser Sprache
+können neben Komponenten und Layout auch Styles innerhalb eines ui:Style
+Tags (vgl. Listing \ref{lst:BSPCodeUIXML}) definiert werden. Dies bietet die
+Möglichkeit die View Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
 Möglichkeiten zur Entkopplung der View Implementierung, sodass z.B.
 statische View Komponenten nur innerhalb der ui.xml
-Datei enthalten sind und somit ein Overload der View Implementierung vermindert
+Datei enthalten sind und somit ein Überladen der View Implementierung vermindert
 werden kann. Weiterhin können die Komponenten innerhalb dieser Datei gebunden
 werden an die Komponenten in der View Implementierung \cite{bib:uiBind}. Dazu
 folgender Codeauszug von einem vorangegangenem GWT Projekt zur Erläuterung dieses Zusammenhangs.\\
@@ -62,11 +63,11 @@ label={lst:BSPCodeUIXML}]
 Die Annotationen @UiField und @UiHandler in der View Implementierung (vgl.
 Listing \ref{lst:BSPCodeView}) ermöglichen den Zugriff auf die View Komponenten
 mit dem jeweiligem Attribut ui:field in der ui.xml (vgl. Listing
-\ref{lst:BSPCodeUIXML}). @UiField ist dabei dafür zuständig die Instanz zu
-erhalten. Diese kann dann z.B. über den Java Code definiert oder Style
-Eigenschaften gesetzt werden. Entgegen dem ermöglicht @UiHandler die Anmeldung
-einer Methode auf der Instanz. Darüber kann dann im Falle des Beispiels ein
-Klick Event auf dem Button ausgeführt werden.
+\ref{lst:BSPCodeUIXML}). @UiField ist dabei dafür zuständig die Instanz, der im
+UiBinder-Template definierten Komponente, zu erhalten. Diese kann dann z.B. über
+den Java Code instanziiert oder Style Eigenschaften gesetzt werden. @UiHandler
+dagegen ermöglicht die Anmeldung einer Methode auf der Instanz.
+Darüber kann dann im Falle des Beispiels ein Klick Event auf dem Button ausgeführt werden.
 
 Damit zeigen die Listings \ref{lst:BSPCodeView} und \ref{lst:BSPCodeUIXML}
 nur kleine Beispiele für die Nutzung von dem UiBinder Framework, welche
