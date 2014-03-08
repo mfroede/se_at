@@ -41,8 +41,12 @@
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}Beispielcode UiBinder in View Implementierung}{6}}
 \newlabel{lst:BSPCodeUIXML}{{2.2}{6}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2.2}Beispielcode UiBinder in ui.xml}{6}}
+\citation{bib:DI}
+\citation{bib:gin}
+\citation{bib:guice}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{7}}
 \newlabel{GIN}{{2.3}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}GIN}{7}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3.}Idee}{8}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
@@ -65,25 +69,58 @@
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \newlabel{M1Modell}{{5}{18}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6.}Generator}{19}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Projetaufbau}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Name des Modelles und gleichzeitig Hauptpakte des GWT-Projekts}}{18}}
+\newlabel{Fig:mainpackage}{{5.1}{18}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Klassenaufbau}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces \texttt  {ViewImpl}-Klassen zur Erzeugung von Seiten f\IeC {\"u}r den Webauftritt.}}{19}}
+\newlabel{Fig:viewimpl}{{5.2}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Ein Beispiel f\IeC {\"u}r die Verwendung der \texttt  {ViewInterface}-Klassen um mit Hilfe einer Vielzahl \texttt  {ViewImpl}-Klassen eine Austauschbare Ansicht zu erzeugen.}}{20}}
+\newlabel{Fig:viewInterface}{{5.3}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \texttt  {PermanentView}-Elemente am Beispiel eines Header, mit Menu, und eines Footers.}}{20}}
+\newlabel{Fig:headerFooter}{{5.4}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Seitenaufbau}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Definition der Stereotypen einer Klassen, oben eine \texttt  {ViewImpl} Definition und unten ein \texttt  {Header}}}{21}}
+\newlabel{Fig:SideProp}{{5.5}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Eigenschaften eines \texttt  {ViewObject}-Elementes }}{22}}
+\newlabel{Fig:ViewProp}{{5.6}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Eigenschaften eines \texttt  {ViewNavigationObject}-Elementes }}{22}}
+\newlabel{Fig:ViewNavProp}{{5.7}{22}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6.}Generator}{23}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\newlabel{Generator}{{6}{19}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7.}Ergebnis}{20}}
+\newlabel{Generator}{{6}{23}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7.}Ergebnis}{24}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\newlabel{Ergebnis}{{7}{20}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{21}}
+\newlabel{Ergebnis}{{7}{24}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Beispiel Anwendung}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Verwendetes Modell}}{25}}
+\newlabel{Fig:ergModell}{{7.1}{25}}
+\newlabel{lst:appEntryPoint}{{7.1}{25}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7.1}\IeC {\"A}nderung an der AppEntryPoint Klasse zur Bestimmung der Startseite}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Generierte Paketstrucktur, links gesamte Paketstrucktur im \IeC {\"U}berblick; rechts Beispiel f\IeC {\"u}r das Strukturieren im Modell, mit zus\IeC {\"a}tzlichen Paketen}}{26}}
+\newlabel{Fig:packegeModel}{{7.2}{26}}
+\newlabel{lst:ProductionGinModule}{{7.2}{26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7.2}\IeC {\"A}nderung an der ProductionGinModule Klasse zur Bestimmung der Startseite}{26}}
+\newlabel{lst:conntentJava}{{7.3}{26}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7.3}Einf\IeC {\"u}gen von Inhalten auf einer Seite durch Ver\IeC {\"a}nderungen am Java-Code, hier in der \texttt  {NewsViewImpl.java}}{26}}
+\newlabel{lst:conntentUI}{{7.4}{27}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7.4}Einf\IeC {\"u}gen von Inhalten auf einer Seite durch Ver\IeC {\"a}nderungen am UI.XML-Datei, hier in der \texttt  {HomeViewImpl.ui.xml}}{27}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{28}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\newlabel{FazitAusblick}{{8}{21}}
+\newlabel{FazitAusblick}{{8}{28}}
 \bibstyle{apalike}
 \bibdata{bib}
-\newlabel{Literaturverzeichnis}{{8}{22}}
+\newlabel{Literaturverzeichnis}{{8}{29}}
 \bibcite{bib:MVP1}{Chandel, 2009}
+\bibcite{bib:guice}{{Google}, 2008}
 \bibcite{bib:GWTStarted}{{Google}, 2010}
 \bibcite{bib:uiBind}{Google, 2010}
+\bibcite{bib:gin}{{Google}, 2011}
 \bibcite{bib:MVCvsMVP}{{gwt-mvc}, 2010}
 \bibcite{bib:GWTinAction}{Hanson and Tacy, 2007}
+\bibcite{bib:DI}{{Martin Fowler}, 2004}
 \bibcite{bib:MVP2}{Ramsdale, 2010}
 \bibcite{bib:GWToReilly}{Seemann, 2008}

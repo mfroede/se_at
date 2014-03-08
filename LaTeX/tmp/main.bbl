@@ -7,6 +7,12 @@ Chandel, S. (2009).
   {\url{http://www.gwtproject.org/articles/testing_methodologies_using_gwt.html}}.
 \newblock Letzter Aufruf: 06.03.2014.
 
+\bibitem[{Google}, 2008]{bib:guice}
+{Google} (2008).
+\newblock {Guice}.
+\newblock {\url{https://code.google.com/p/google-guice/}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
 \bibitem[{Google}, 2010]{bib:GWTStarted}
 {Google} (2010).
 \newblock {Overview}.
@@ -19,6 +25,12 @@ Google (2010).
 \newblock {\url{http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html}}.
 \newblock Letzter Aufruf: 07.03.2014.
 
+\bibitem[{Google}, 2011]{bib:gin}
+{Google} (2011).
+\newblock {Gin}.
+\newblock {\url{https://code.google.com/p/google-gin/}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
 \bibitem[{gwt-mvc}, 2010]{bib:MVCvsMVP}
 {gwt-mvc} (2010).
 \newblock {gwt-mvc: MVC layer built on top of GWT}.
@@ -29,6 +41,11 @@ Google (2010).
 Hanson, R. and Tacy, A. (2007).
 \newblock {\em GWT in Action: Easy Ajax with the Google Web Toolkit}.
 \newblock Manning Publications Co., Greenwich, CT, USA.
+
+\bibitem[{Martin Fowler}, 2004]{bib:DI}
+{Martin Fowler} (2004).
+\newblock {\url{http://martinfowler.com/articles/injection.html}}.
+\newblock Letzter Aufruf: 08.03.2014.
 
 \bibitem[Ramsdale, 2010]{bib:MVP2}
 Ramsdale, C. (2010).

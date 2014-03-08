@@ -8,6 +8,7 @@
 \contentsline {subsection}{\numberline {2.2.1}MVP}{4}
 \contentsline {subsection}{\numberline {2.2.2}UiBinder}{5}
 \contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{7}
+\contentsline {subsection}{\numberline {2.3.1}GIN}{7}
 \contentsline {chapter}{\numberline {3.}Idee}{8}
 \contentsline {section}{\numberline {3.1}Ziel-Architektur}{8}
 \contentsline {section}{\numberline {3.2}UML-Profil}{12}
@@ -16,6 +17,10 @@
 \contentsline {section}{\numberline {3.5}Anwendungsfall}{15}
 \contentsline {chapter}{\numberline {4.}UML Profil auf M2 Ebene}{16}
 \contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{18}
-\contentsline {chapter}{\numberline {6.}Generator}{19}
-\contentsline {chapter}{\numberline {7.}Ergebnis}{20}
-\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{21}
+\contentsline {section}{\numberline {5.1}Projetaufbau}{18}
+\contentsline {section}{\numberline {5.2}Klassenaufbau}{19}
+\contentsline {section}{\numberline {5.3}Seitenaufbau}{21}
+\contentsline {chapter}{\numberline {6.}Generator}{23}
+\contentsline {chapter}{\numberline {7.}Ergebnis}{24}
+\contentsline {section}{\numberline {7.1}Beispiel Anwendung}{25}
+\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{28}
