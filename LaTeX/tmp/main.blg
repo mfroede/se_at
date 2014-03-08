@@ -11,10 +11,12 @@ Warning--entry type for "bib:MVP2" isn't style-file defined
 --line 34 of file bib.bib
 Warning--entry type for "bib:uiBind" isn't style-file defined
 --line 45 of file bib.bib
+Warning--entry type for "bib:MDA3" isn't style-file defined
+--line 56 of file bib.bib
 Warning--entry type for "bib:DI" isn't style-file defined
---line 77 of file bib.bib
+--line 88 of file bib.bib
 Warning--entry type for "bib:gin" isn't style-file defined
---line 87 of file bib.bib
-Warning--entry type for "bib:guice" isn't style-file defined
 --line 98 of file bib.bib
-(There were 8 warnings)
+Warning--entry type for "bib:guice" isn't style-file defined
+--line 109 of file bib.bib
+(There were 9 warnings)

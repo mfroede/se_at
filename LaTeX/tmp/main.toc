@@ -2,8 +2,7 @@
 \contentsline {chapter}{\numberline {1.}Einleitung}{2}
 \contentsline {chapter}{\numberline {2.}Grundlagen}{3}
 \contentsline {section}{\numberline {2.1}Model Driven Architecture}{3}
-\contentsline {subsection}{\numberline {2.1.1}Platform Independent Model}{3}
-\contentsline {subsection}{\numberline {2.1.2}Platform Specific Model}{3}
+\contentsline {subsection}{\numberline {2.1.1}Platform Independent Model und Plattform Specific Model}{3}
 \contentsline {section}{\numberline {2.2}GWT}{4}
 \contentsline {subsection}{\numberline {2.2.1}MVP}{4}
 \contentsline {subsection}{\numberline {2.2.2}UiBinder}{5}
@@ -16,11 +15,15 @@
 \contentsline {section}{\numberline {3.4}Generator}{14}
 \contentsline {section}{\numberline {3.5}Anwendungsfall}{15}
 \contentsline {chapter}{\numberline {4.}UML Profil auf M2 Ebene}{16}
-\contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{18}
-\contentsline {section}{\numberline {5.1}Projetaufbau}{18}
-\contentsline {section}{\numberline {5.2}Klassenaufbau}{19}
-\contentsline {section}{\numberline {5.3}Seitenaufbau}{21}
-\contentsline {chapter}{\numberline {6.}Generator}{23}
-\contentsline {chapter}{\numberline {7.}Ergebnis}{24}
-\contentsline {section}{\numberline {7.1}Beispiel Anwendung}{25}
-\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{28}
+\contentsline {chapter}{\numberline {5.}Aufbau und Struktur M1 Modell}{20}
+\contentsline {section}{\numberline {5.1}Projetaufbau}{20}
+\contentsline {section}{\numberline {5.2}Klassenaufbau}{21}
+\contentsline {section}{\numberline {5.3}Seitenaufbau}{23}
+\contentsline {chapter}{\numberline {6.}Generator}{25}
+\contentsline {section}{\numberline {6.1}Queries}{25}
+\contentsline {section}{\numberline {6.2}Struktur}{26}
+\contentsline {section}{\numberline {6.3}Funktion}{27}
+\contentsline {section}{\numberline {6.4}Probleme}{31}
+\contentsline {chapter}{\numberline {7.}Ergebnis}{32}
+\contentsline {section}{\numberline {7.1}Beispiel Anwendung}{33}
+\contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{36}

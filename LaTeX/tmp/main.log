@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.8)  8 MAR 2014 14:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.8)  8 MAR 2014 14:28
 entering extended mode
 **main.tex
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.tex
@@ -460,11 +460,14 @@ Kapitel 1.
 ]
 Kapitel 2.
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\MDA.tex)
-(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\PIM.tex)
-(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\PSM.tex [3
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\PIMPSM.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
 
-])
-(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\GWT.tex)
+ []
+
+[3
+
+]) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\GWT.tex)
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\MVP.tex
 <./img/MVP.pdf, id=20, 237.6338pt x 150.5625pt>
 File: ./img/MVP.pdf Graphic file (type pdf)
@@ -508,28 +511,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--165
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\Anwendungsfall.tex))
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/UMLProfil.tex [15]
 Kapitel 4.
+<./img/ProfilProp.pdf, id=87, 611.28375pt x 349.305pt>
+File: ./img/ProfilProp.pdf Graphic file (type pdf)
+
+<use ./img/ProfilProp.pdf>
+Package pdftex.def Info: ./img/ProfilProp.pdf used on input line 11.
+(pdftex.def)             Requested size: 345.0pt x 197.13916pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+
+ []
+
 [16
 
-]) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/M1Modell.tex
-[17]
+ <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/ProfilProp.pdf>]
+<./img/ProfilClass.pdf, id=103, 611.28375pt x 465.74pt>
+File: ./img/ProfilClass.pdf Graphic file (type pdf)
+
+<use ./img/ProfilClass.pdf>
+Package pdftex.def Info: ./img/ProfilClass.pdf used on input line 24.
+(pdftex.def)             Requested size: 345.0pt x 262.85222pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
+
+ []
+
+[17] [18 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/ProfilClass.pdf>])
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/M1Modell.tex [19]
 Kapitel 5.
-<./img/ProjectPackage.png, id=93, 635.37375pt x 216.81pt>
+<./img/ProjectPackage.png, id=126, 635.37375pt x 216.81pt>
 File: ./img/ProjectPackage.png Graphic file (type png)
 
 <use ./img/ProjectPackage.png>
 Package pdftex.def Info: ./img/ProjectPackage.png used on input line 32.
 (pdftex.def)             Requested size: 276.00105pt x 94.18256pt.
- [18
+ [20
 
  <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/ProjectPackage.png>]
-<./img/GWT-Model-Views-alg.png, id=99, 424.58624pt x 265.74281pt>
+<./img/GWT-Model-Views-alg.png, id=131, 424.58624pt x 265.74281pt>
 File: ./img/GWT-Model-Views-alg.png Graphic file (type png)
 
 <use ./img/GWT-Model-Views-alg.png>
 Package pdftex.def Info: ./img/GWT-Model-Views-alg.png used on input line 47.
 (pdftex.def)             Requested size: 345.0pt x 215.93982pt.
 
-<./img/GWT-Model-Views-interface.png, id=100, 515.67656pt x 230.36063pt>
+<./img/GWT-Model-Views-interface.png, id=132, 515.67656pt x 230.36063pt>
 File: ./img/GWT-Model-Views-interface.png Graphic file (type png)
 
 <use ./img/GWT-Model-Views-interface.png>
@@ -542,30 +573,30 @@ Overfull \hbox (8.27484pt too wide) in paragraph at lines 70--77
 ie Na-meViewImpl.java
  []
 
-[19 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/GWT-Model-Views-alg.png
+[21 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/GWT-Model-Views-alg.png
 >]
 Overfull \hbox (4.50165pt too wide) in paragraph at lines 83--87
 [][]\T1/cmr/m/n/10 Das Letz-te Klas-sen-kon-strukt, sind die so-ge-nann-ten \T1
 /cmtt/m/n/10 PermanentView\T1/cmr/m/n/10 -Elemente,
  []
 
-<./img/Header_Footer.png, id=104, 246.1697pt x 216.81pt>
+<./img/Header_Footer.png, id=136, 246.1697pt x 216.81pt>
 File: ./img/Header_Footer.png Graphic file (type png)
 
 <use ./img/Header_Footer.png>
 Package pdftex.def Info: ./img/Header_Footer.png used on input line 90.
 (pdftex.def)             Requested size: 189.75105pt x 167.12616pt.
- [20 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/GWT-Model-Views-interf
+ [22 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/GWT-Model-Views-interf
 ace.png> <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Header_Footer.png>
 ]
-<./img/Prop-ViewImp.png, id=108, 347.04657pt x 261.22594pt>
+<./img/Prop-ViewImp.png, id=140, 347.04657pt x 261.22594pt>
 File: ./img/Prop-ViewImp.png Graphic file (type png)
 
 <use ./img/Prop-ViewImp.png>
 Package pdftex.def Info: ./img/Prop-ViewImp.png used on input line 108.
 (pdftex.def)             Requested size: 276.00105pt x 207.75732pt.
 
-<./img/Prop-Header.png, id=109, 380.92313pt x 240.9pt>
+<./img/Prop-Header.png, id=141, 380.92313pt x 240.9pt>
 File: ./img/Prop-Header.png Graphic file (type png)
 
 <use ./img/Prop-Header.png>
@@ -578,16 +609,16 @@ mtt/m/n/10 ViewObject\T1/cmr/m/n/10 s und \T1/cmtt/m/n/10 ViewNavigationObject\
 T1/cmr/m/n/10 s
  []
 
-[21 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Prop-ViewImp.png> <C:/U
+[23 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Prop-ViewImp.png> <C:/U
 sers/Marcus/Studium/git/se_at/LaTeX/Source/img/Prop-Header.png>]
-<./img/Prop-ViewObjects.png, id=113, 430.60875pt x 235.63031pt>
+<./img/Prop-ViewObjects.png, id=145, 430.60875pt x 235.63031pt>
 File: ./img/Prop-ViewObjects.png Graphic file (type png)
 
 <use ./img/Prop-ViewObjects.png>
 Package pdftex.def Info: ./img/Prop-ViewObjects.png used on input line 124.
 (pdftex.def)             Requested size: 276.00105pt x 151.03299pt.
 
-<./img/Prop-ViewNavigationObjects.png, id=114, 405.76593pt x 237.88875pt>
+<./img/Prop-ViewNavigationObjects.png, id=146, 405.76593pt x 237.88875pt>
 File: ./img/Prop-ViewNavigationObjects.png Graphic file (type png)
 
 <use ./img/Prop-ViewNavigationObjects.png>
@@ -595,43 +626,211 @@ Package pdftex.def Info: ./img/Prop-ViewNavigationObjects.png used on input lin
 e 136.
 (pdftex.def)             Requested size: 276.00105pt x 161.81664pt.
 )
-(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/Generator.tex [22 <C:/
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/Generator.tex [24 <C:/
 Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Prop-ViewObjects.png> <C:/Users
 /Marcus/Studium/git/se_at/LaTeX/Source/img/Prop-ViewNavigationObjects.png>]
 Kapitel 6.
-) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/Ergebnis.tex
-[23
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\Queries.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2013/08/26 1.5b listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2013/08/26 1.5b listings language file
+) [25
 
 ]
-Kapitel 7.
-[24
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+))
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\StrukturFunktion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
-] <./img/Model2.png, id=125, 618.81187pt x 442.65375pt>
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|[]\T1/cmr/m/n/10 generate-Ba-sic-Sta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/cmr/m/n/10 Generierung al-ler
+ []
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 10--10
+[]|\T1/cmr/m/n/10 Erstellung der XML für
+ []
+
+
+Overfull \hbox (9.08783pt too wide) in paragraph at lines 12--12
+[]|[]\T1/cmr/m/n/10 generateStructure.mtl| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]|\T1/cmr/m/n/10 Generierung der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\T1/cmr/m/n/10 ab-hän-gi-gen Klas-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\T1/cmr/m/n/10 sen, spe-zi-ell der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\T1/cmr/m/n/10 ViewImpl-Klassen,
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 12--12
+\T1/cmr/m/n/10 an-hand der GWT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+[]|\T1/cmr/m/n/10 AppGinjector.java, App-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+\T1/cmr/m/n/10 Ent-ry-Point.java oder
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 14--14
+[]|\T1/cmr/m/n/10 stellt die Ge-ne-rie-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+\T1/cmr/m/n/10 rung al-ler MVP
+ []
+
+
+Underfull \hbox (badness 5316) in paragraph at lines 14--14
+[]|\T1/cmr/m/n/10 View In-ter-face mit ent-
+ []
+
+
+Underfull \hbox (badness 4441) in paragraph at lines 14--14
+\T1/cmr/m/n/10 spre-chen-den Ac-tiv-ty und
+ []
+
+
+Underfull \hbox (badness 1394) in paragraph at lines 14--14
+\T1/cmr/m/n/10 Place Klas-sen, Im-ple-men-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+\T1/cmr/m/n/10 tie-run-gen der kon-kre-ten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+\T1/cmr/m/n/10 View-Im-pls mit da-zu-ge-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+\T1/cmr/m/n/10 hö-ri-gen ui.xml Da-tei-en
+ []
+
+
+Underfull \hbox (badness 5726) in paragraph at lines 14--14
+\T1/cmr/m/n/10 des Pre-sen-ters über die
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|[]\T1/cmr/m/n/10 generate-Own-View-
+ []
+
+
+Underfull \hbox (badness 7558) in paragraph at lines 16--16
+[]|\T1/cmr/m/n/10 Template, wel-ches
+ []
+
+
+Underfull \hbox (badness 8151) in paragraph at lines 16--16
+\T1/cmr/m/n/10 der-te Ge-ne-rie-rung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\T1/cmr/m/n/10 des Ow-n-View-Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|\T1/cmr/m/n/10 Generierung ei-ner Ow-n-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\T1/cmr/m/n/10 View-Ob-ject Java-Klasse
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 16--16
+\T1/cmr/m/n/10 mit im M1 fest-ge-leg-ten
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+\T1/cmr/m/n/10 Widget-Attributen und
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 24--26
+
+ []
+
+[27] [28] [29])
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Sections\Probleme.tex [30]))
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/Ergebnis.tex [31]
+Kapitel 7.
+[32
+
+] <./img/Model2.png, id=176, 618.81187pt x 442.65375pt>
 File: ./img/Model2.png Graphic file (type png)
 
 <use ./img/Model2.png>
 Package pdftex.def Info: ./img/Model2.png used on input line 50.
 (pdftex.def)             Requested size: 276.00105pt x 197.4362pt.
- <./img/Packages.png, id=126, 191.21437pt x 152.06813pt>
+ <./img/Packages.png, id=177, 191.21437pt x 152.06813pt>
 File: ./img/Packages.png Graphic file (type png)
 
 <use ./img/Packages.png>
 Package pdftex.def Info: ./img/Packages.png used on input line 70.
 (pdftex.def)             Requested size: 137.9979pt x 109.75116pt.
 
-<./img/PackagesExample.png, id=127, 158.09062pt x 230.36063pt>
+<./img/PackagesExample.png, id=178, 158.09062pt x 230.36063pt>
 File: ./img/PackagesExample.png Graphic file (type png)
 
 <use ./img/PackagesExample.png>
 Package pdftex.def Info: ./img/PackagesExample.png used on input line 71.
 (pdftex.def)             Requested size: 137.9979pt x 201.09753pt.
- [25 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Model2.png>] [26 <C:/U
+ [33 <C:/Users/Marcus/Studium/git/se_at/LaTeX/Source/img/Model2.png>] [34 <C:/U
 sers/Marcus/Studium/git/se_at/LaTeX/Source/img/Packages.png> <C:/Users/Marcus/S
 tudium/git/se_at/LaTeX/Source/img/PackagesExample.png>])
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/FazitAusblick.tex
-[27]
+[35]
 Kapitel 8.
-[28
+[36
 
 ]
 Overfull \hbox (0.19714pt too wide) in paragraph at lines 48--52
@@ -639,65 +838,77 @@ Overfull \hbox (0.19714pt too wide) in paragraph at lines 48--52
 set-zen der in-dex.html
  []
 
-) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.bbl [29]
-Underfull \hbox (badness 1009) in paragraph at lines 4--9
+) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.bbl [37]
+Underfull \hbox (badness 1009) in paragraph at lines 10--15
 [][]\T1/cmr/m/n/10 Chandel, S. (2009).  Tes-ting.  $\T1/cmtt/m/n/10 http : / / 
 www . gwtproject .$
  []
 
 
-Underfull \hbox (badness 4279) in paragraph at lines 11--15
+Underfull \hbox (badness 4279) in paragraph at lines 24--28
 [][]\T1/cmr/m/n/10 Google (2008).  Gui-ce.  $\T1/cmtt/m/n/10 https : / / code .
  google . com / p /$
  []
 
 
-Underfull \hbox (badness 7759) in paragraph at lines 29--33
+Underfull \hbox (badness 7759) in paragraph at lines 42--46
 [][]\T1/cmr/m/n/10 Google (2011).  Gin.  $\T1/cmtt/m/n/10 https : / / code . go
 ogle . com / p /$
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 35--39
+Underfull \hbox (badness 6608) in paragraph at lines 48--53
+[][]\T1/cmr/m/n/10 Google (2013).  MDA.  $\T1/cmtt/m/n/10 http : / / www . itwi
+ssen . info /$
+ []
+
+
+Underfull \hbox (badness 1097) in paragraph at lines 48--53
+$\T1/cmtt/m/n/10 definition / lexikon / modell-[]driven-[]architecture-[]MDA . 
+html$\T1/cmr/m/n/10 .  Letz-ter
+ []
+
+
+Underfull \hbox (badness 1226) in paragraph at lines 55--59
 [][]\T1/cmr/m/n/10 gwt-mvc (2010).  gwt-mvc: MVC layer built on top of
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 46--49
+Underfull \hbox (badness 1248) in paragraph at lines 66--69
 [][]\T1/cmr/m/n/10 Martin Fow-ler (2004).  $\T1/cmtt/m/n/10 http : / / martinfo
 wler . com /$
  []
 
-) [30
+[38
 
-] (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.aux) ) 
+]) [39] (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.aux) ) 
 Here is how much of TeX's memory you used:
- 4774 strings out of 493921
- 62613 string characters out of 3147280
- 201093 words of memory out of 3000000
- 7947 multiletter control sequences out of 15000+200000
+ 5059 strings out of 493921
+ 67212 string characters out of 3147280
+ 238274 words of memory out of 3000000
+ 8212 multiletter control sequences out of 15000+200000
  12016 words of font info for 26 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,10n,40p,1018b,1731s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/
-MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx
-1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0500.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/cm-super/sfsl0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/cm-super/sfsl1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-sup
-er/sfsl1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti10
-00.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (31 pages, 620429 bytes).
+ 41i,10n,41p,1315b,1735s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program 
+Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-supe
+r/sfbx1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm050
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm0900.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/cm-super/sfsl0900.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/cm-super/sfsl1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+cm-super/sfsl1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/
+sfti1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (40 pages, 987823 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
+ 254 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

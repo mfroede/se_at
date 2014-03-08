@@ -1,11 +1,24 @@
 \begin{thebibliography}{}
 
+\bibitem[Andresen, 2004]{bib:MDA1}
+Andresen, A. (2004).
+\newblock {\em Komponentenbasierte Softwarentwicklung: mit MDA,UML2 und XML}.
+\newblock {Carl Hanser Verlag München Wien}, München, Germany.
+\newblock Auflage 2.
+
 \bibitem[Chandel, 2009]{bib:MVP1}
 Chandel, S. (2009).
 \newblock {Testing}.
 \newblock
   {\url{http://www.gwtproject.org/articles/testing_methodologies_using_gwt.html}}.
 \newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Efftinge et~al., 2007]{bib:MDA2}
+Efftinge, S., Haase, A., Stahl, T., and Völter, M. (2007).
+\newblock {\em Modellgetriebene Softwarentwicklung: Techniken, Engineering,
+  Management}.
+\newblock {dpunkt.Verlag GmbH}, Heidelberg, Germany.
+\newblock Auflage 2.
 
 \bibitem[{Google}, 2008]{bib:guice}
 {Google} (2008).
@@ -30,6 +43,13 @@ Google (2010).
 \newblock {Gin}.
 \newblock {\url{https://code.google.com/p/google-gin/}}.
 \newblock Letzter Aufruf: 08.03.2014.
+
+\bibitem[Google, 2013]{bib:MDA3}
+Google (2013).
+\newblock {MDA}.
+\newblock
+  {\url{http://www.itwissen.info/definition/lexikon/modell-driven-architecture-MDA.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
 
 \bibitem[{gwt-mvc}, 2010]{bib:MVCvsMVP}
 {gwt-mvc} (2010).
