@@ -1,0 +1,99 @@
+\section{Struktur} \label{StrukturFunktion}
+Der Generator ist so konzipiert, dass er mit Hilfe des kleinsten gemeinsamen Nenners, der ViewImpl, alle GWT relevanten Klassen erzeugen kann. Daher ist es auch möglich mit nur einer einzigen Klasse vom Stereotype ViewImpl eine gesamte GWT-Anwendung zu generieren.
+Der Hauptgenerator bzw. das Haupttemplate im MTL \textbf{generate.mtl} ist die Einstiegsstelle zum Verarbeiten, wenn eine Klasse aus dem UML Modell gelesen wird. In diesem Template werden folgenden Templates aufgerufen, die die Struktur für GWT und damit auch die des Generators sicherstellen: \\
+
+\begin{center} 
+    \begin{tabular}{   p{0.25\textwidth}   p{0.25\textwidth}  p{0.35\textwidth} } 
+  
+    \textbf{MTL} & \textbf{Zuständigkeit} & \textbf{Beispiele}\\ \hline
+\hline
+   generate"-Basic"-Static"-Structure.mtl   &  Generierung aller einmaligen Klassen, die unabhängig von M1 Modell sind  &   Erstellung der XML für GWT, der index.html oder der style.css\\ \hline
+
+    generateStructure.mtl &  Generierung der über das M1 Modell abhängigen Klassen, speziell der ViewImpl-Klassen, anhand der GWT Struktur.& AppGinjector.java, App"-Entry"-Point.java oder Production"-Gin"-Module.java\\ \hline
+
+ generateMVP &  stellt die Generierung aller MVP spezifischen Objekte sicher. &  View Interface mit entsprechenden Activty und Place Klassen, Implementierungen der konkreten ViewImpls mit dazugehörigen ui.xml Dateien sowie die Implementierung des Presenters über die ‚View’Activity.java \\ \hline
+
+generate"-Own"-View"-Object.mtl &  Template, welches sich um die gesonderte Generierung des OwnViewObject kümmert. & Generierung einer OwnViewObject Java-Klasse mit im M1 festgelegten Widget-Attributen und Operationen \\\hline
+
+    \end{tabular}
+\end{center}
+
+\section{Funktion}
+Um die Funktion des Generations zu verdeutlichen, wird im nächsten Abschnitt auf wichtigsten Strukturelemente ausführlicher eingegangen.
+
+Eines dieser wichtigen Elemente stellt die Klasse des \textbf{AppEntryPoint} dar. Durch diese wird die Zugriffsklasse für GWT beschrieben und es werden von dieser gleichzeitig die ersten UI-Panel gesetzt. Hierbei ist im Generator zwischen einer PermanentView und einer ContentView zu unterscheiden. Es können durchaus mehrere PermanentViews vorhanden sein. Der Contentbereich ist dagegen immer nur einmal vorhanden und dient so als Container für alle /textif{ViewImpls}. So müssen alle PermanentViews mittels for-Schleife durchlaufen werden. Zudem sind die Spezialfälle der PermanentView, Footer oder Header, auch unterschiedlich zu behandeln, da diese eine feste Positionierung besitzen. Alle anderen Layout-spezifischen Entscheidungen müssen vom späteren Entwickler gesetzt werden. Sämtliche PermanentViews und der Content werden dann als SimplePanel zu dem GWT \textbf{RootPanel} hinzugefügt. \\
+\lstset{language=OCL}
+\begin{lstlisting}[caption={Hinzufügen eines Panels zum RootPanel, am Beipsiel eines Header}]
+[for (class : Class | pack.ownedElement)]
+	[if ( class.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('Header') )]
+		RootPanel.get().add( [getClassName(class).toLowerFirst()/] );
+	[/if]
+[/for]
+\end{lstlisting}
+Ein weiteres wichtiges Element ist der aus GIN stammende bind-Befehl, der sicherstellt, dass im Anwendungsfall die richtige Seite (View) angezeigt wird.
+Damit der bind-Befehl in der ProductionGinModule-Klasse, richtig gesetzt wird, muss mittels Generator aus dem M1 Modell das /textif{concreteBinding} Attribut einer ViewImpl Klasse ausgelesen und entsprechend seines Wertes behandelt werden. Wenn die \textbf{concreteBinding} Variable den Wert true annimmt, wird das View Interface an die entsprechende View Implementierung gebunden. Sollte der Wert auf false gesetzt sein, so wird dieser bind-Befehl trotzdem ausgeführt, allerdings in kommentierter Form. So ist es später möglich bei Wechsel einer View, den entsprechenden bind-Befehl auszutauschen, ohne neuen Code schreiben zu müssen.
+Zudem werden im Generator bewusst Fehler erzeugt, die dem Entwickler später darauf hinweisen sollen, an welchen Klassen noch von Hand Änderungen vorzunehmen sind. So passiert dies beispielsweise immer dann, wenn in einer Klasse ein ‚YourStartHere‘ steht. Hier ist der Entwickler gezwungen, den Namen seiner Start-View einzutragen. Dies geschieht auch bei den bind-Befehlen, bei denen es wichtig ist, dass zuerst die Start-View das binding erhält und anschließend den anderen View Interfaces ihr jeweiliges binding an deren Implementierung zugewiesen wird.
+\lstset{language=OCL}
+\begin{lstlisting}[caption={Auszug aus der Generierung des bind-Befehls}]
+bind(YourStartHereActivity.class);   
+[for (class : Class | pack.ownedElement)]
+	[if (not isNotViewExisting(class))]
+		[for (p : Property | class.getAppliedStereotypes()->asOrderedSet()->first().attribute)]
+		[if (p.name.endsWith('concreteBinding'))]
+			[if(not class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(),p.name).oclAsType(Boolean))]
+		// bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+			[else]
+		bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+			[/if]
+		[/if]
+		[/for]
+	[else]
+		bind([getClassName(class)/]View.class).to([class.name/]ViewImpl.class).in(Singleton.class);
+	[/if]	
+[/for]
+\end{lstlisting}
+
+Als weiteres Strukturelement wird im Folgenden die Generator-seitige Umsetzung des MVP Patterns beschreiben. Dieser wurde nach zwei Templates getrennt. Zum einen nach den View Interfaces mit entsprechenden Place und Activity Klassen und zum anderen nach den View Implementierungen mit dazugehörigen ui.xml Dateien.
+Jedes View Interface besitzt einen Interface Presenter und die entsprechende set-Methode setPresenter () sowie andere Methoden, soweit im Modell festgehalten. Zusätzlich enthält das Interface für jedes Navigations Objekt eine onClicked Methode. Auch hier wird zusätzlich wie bei dem bind-Befehl die gleiche Methode als Kommentar geschrieben, sofern deren concreteBinding-Attribute auf false gesetzt ist. Ein Sonderfall bietet der Button, deren onButtonClicked() Methode nur einmal generiert wird, unabhängig davon wie viele Buttons existieren. Denn die Buttons werden während der Implementierung mit Hilfe von if-Bedingungen innerhalb dieser Methode von einander unterschieden und entsprechend behandelt. 
+In der Activity Klasse wird der Presenter implementiert und über die goto-Methode des PlaceControllers die Navigation zwischen den Webseiten geschaffen. Durch die Implementierung der View Methoden, muss vor jeder onClicked() Methode die @Override Annotation hinzugefügt werden. Diese dient dann als Wrapper Methode für die eigentliche goto-Methode. Innerhalb der zuvor erwähnten onButtonClicked() Methode wird geprüft, ob der übergebende\textbf{buttonName} identisch mit dem String der Ziel-Seite ist, denn nur so ist sichergestellt, dass es sich um ein Navigations-Button handelt und dieser dann auch mittels goto-Methode auf die richtige Seite verweisen kann.
+\lstset{language=OCL}
+\begin{lstlisting}[caption={Auszug der Generieung der on''Clicked() Methode}]
+[for (class: Class | interface.getTargetDirectedRelationships().source.oclAsType(Class))]
+		[for (property: Property | class.attribute)]
+			[if (property.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('NavigationObject'))]
+				[if (not getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'type').oclAsType(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
+					[if (class.getValue(class.getAppliedStereotypes()->asOrderedSet()->first(), 'concreteBinding').oclAsType(Boolean))]						
+		@Override
+		void on[property.name.toUpperFirst()/]Clicked(){
+			placeController.gotTo(new [getClassName(property.getTaggedValue(property.getApplicableStereotypes()->asOrderedSet()->first().name, 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+		}
+					[else]
+		// @Override
+		// void on[property.name.toUpperFirst()/]Clicked(){
+		//	placeController.gotTo(new [getClassName(property.getTaggedValue(property.getApplicableStereotypes()->asOrderedSet()->first().name, 'goToView', true)->asOrderedSet()->first().oclAsType(uml::Class))/]Place());
+		// }
+					[/if]
+				[/if]
+			[/if]
+		[/for]
+	[/for]
+\end{lstlisting}
+
+Sollte zu einer View Implementierung kein View Interface vorhanden sein, wird View, Activity und Place anhand der Implementierung ähnlich zu dem Interface generiert.
+In der konkreten ViewImpl werden die ViewObjects und ViewNavigationObjects als \textbf{@UIField} entsprechend ihres Types gesetzt. Zur Vereinfachung wurde beispielsweise für eine Liste oder eine Tabelle das GWT-UI Element grid verwendet. Des Weiteren ist noch zu beachten, dass wenn ein Tree oder Menu vorhanden ist, für jedes weitere innere Element ein TreeItem oder MenuItem erzeugt werden musste. So ist sichergestellt, dass die Struktur der Widgets erhalten bleibt und entsprechend ihre GWT Deklarationen funktionieren.
+Darüber hinaus werden für alle UI-Elemente die ui.xml zur entsprechenden ViewImpl in einem separaten \textbf{viewXML}-Template generiert. Hierfür wurde für jedes UI Element ein eigenes Template geschrieben, das dann in dem \textbf{viewXML}-Template aufgerufen wird. 
+\lstset{language=OCL}
+\begin{lstlisting}[caption={Template für die XML - Generierung eines Menus}]
+[template public newMenu (property : Property) ]
+[if (isValueExists(property, 'type', 'MENU'))]
+<g:MenuBar ui:field="[property.name/]">
+[if(property.getValue(property.getAppliedStereotypes()->asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+	[for (prop : Property | property.getTaggedValue('ViewObject','viewNavigationObject', false).oclAsSet().oclAsType(Property))]
+	<g:MenuItem ui:field="[prop.name/]" text="[prop.getValue(prop.getAppliedStereotypes()->asOrderedSet()->first(), 'value')/]"/>
+	[/for]
+[/if]
+</g:MenuBar>
+[/if]
+[/template]
+\end{lstlisting}
+Abschließend ist zum OwnViewObject zu sagen, dass dieses durch Vererbung der GWT - Widget Klasse als eigenständiges Widget erzeugt wird. Das OwnViewObject besitzt keinen eigenen Konstruktor, da keine Kenntnis von deren Inhalt bekannt ist. Denn das Aussehen dieser Klasse wird komplett dem Entwickler überlassen und steht zum Zeitpunkt der Generierung noch nicht fest. Dies hat zur Folge, dass die Generierung dieser Klasse weitestgehend als eine normale Klasse behandelt wird, die schon aus dem Modell vorhandene UI Elemente als eigene Attribute und Operationen generiert. 

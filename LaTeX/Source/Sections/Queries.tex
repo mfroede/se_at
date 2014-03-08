@@ -1,0 +1,36 @@
+\section{Queries} \label{Queries}
+Um das Arbeiten innerhalb des MTL Generators zu erleichtern, werden für häufig verwendete bzw. auch spezielle Ausdrücke sog. Queries benutzt. Diese können dann in dem Generator an Stelle des komplexeren Ausdruck eingesetzt werden. Die verwendeten Queries dieses Projektes sind in der \textbf{util.mtl} zusammengefasst. So wird beispielsweise in \textbf{isNotViewExisting} über die Klasse abgefragt, ob diese von einem Interface des Stereotypes View implementiert wurde. Ist dies der Fall, gibt das Query ein false zurück anderenfalls ein true. Dieser längere Ausdruck kann auf diese Weise später kompakt als Query an einer geeigneten Stelle verwendet werden.\\
+
+\lstset{language=OCL}
+\begin{lstlisting}[caption={Query für isNotViewExisting}]
+[query public isNotViewExisting(class : Class) : Boolean = 
+   if(class.interfaceRealization->notEmpty())
+	then if(class.interfaceRealization.target.getAppliedStereotypes()->asOrderedSet()->first().name.endsWith('View')) 
+		then false 
+		else true 
+        endif 
+   else true 
+   endif\]
+\end{lstlisting}
+
+Mithilfe der zur Verfügung gestellten Query \textbf{getTaggedValue} und deren Java-Methode konnten Tagged Values von Stereotypen über Assoziationen als Liste wiedergeben werden. Die Query musste für dieses Projekt soweit angepasst werden, als dass zu dieser ein weiterer Boolean Parameter \textbf{isClass} ergänzt wurde. Dies war notwendig, da die Query sowohl für Klassen als auch für Properties benötigt wurde.
+Die Hilfsmethode \textbf{addToResult} in der \textbf{PropertyHelper.java} speichert anhand dieser Boolean Variable die richtigen Elemente als Klasse oder Property in eine Liste.
+\lstset{language=Java}
+\begin{lstlisting}[caption={Hilfsmethode addToResult der PropertyHelper.java}]
+private void addToResult(String property, Boolean isClass,
+			List<Object> result, Object values) {
+		if(values instanceof DynamicEObjectImpl) {
+			final DynamicEObjectImpl objectImpl = (DynamicEObjectImpl) values;
+			final EClass c = objectImpl.eClass();
+			EStructuralFeature sf = null;
+			if( isClass ){
+				sf = c.getEStructuralFeature("base_Class");
+			} else {
+				sf = c.getEStructuralFeature("base_Property");
+			}
+			if( sf !=null ){
+				result.add(objectImpl.eDynamicGet(sf, true));
+			}
+		}
+	}
+\end{lstlisting}

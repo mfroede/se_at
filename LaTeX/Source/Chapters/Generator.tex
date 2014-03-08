@@ -1,21 +1,9 @@
 \chapter{Generator}
 \label{Generator}
-Der “Model Transformation Language” (MTL) Generator dient zur Erstellung von
-Quellcode, indem ein zuvor definiertes UML Model mit einem verknüpften
-UML-Profil verarbeitet werden kann. Hierbei können eigens definierte Regelungen
-und Vereinbarungen beachtet und miteinbezogen werden. Dies heißt, dass im
-UML-Model etwas definiert und im MTL Generator entsprechend behandelt wird. Es
-können somit verschiedene MTL Generatoren zu einem und mehr UML Modellen mit UML
-Profil angelegt werden. Es kann bzw. soll auch möglich sein, verschiedene UML
-Modelle, die sich an das UML Profil halten und implementiert haben, Quellcode zu
-generieren.
+Der “Model Transformation Language” (MTL) Generator, in welchem ein zuvor definiertes UML Model mit einem verknüpften UML-Profil verarbeitet werden kann, dient zur Erstellung von Quellcode. Hierbei können eigens definierte Regelungen und Vereinbarungen beachtet und miteinbezogen werden. Dies heißt, dass im UML-Model etwas definiert und im MTL Generator entsprechend behandelt wird. Es können somit verschiedene MTL Generatoren zu einem und mehreren UML Modellen mit UML Profil angelegt werden. Darüber hinaus kann es bzw. soll es auch möglich sein, aus verschiedenen UML Modellen, die sich an das UML Profil halten und entsprechend implementiert wurden, Quellcode zu generieren.
 
-Die nachfolgenden Quellcodeauszuüge aus dem MTL Generator werden mit dem Eclipse
-Plugin Acceleo ausgeführt. Mit der “Object Constraint Language” (OCL) stehen
-einem MTL Generator diverse zusätzliche Funktionalitäten zur Verfügung. So
-können verschiedene String oder Mengenoperationen angewendet werden, um ein
-feineres oder konkreteres Ergebnis zu erhalten. Wiederkehrende und in sich
-geschlossene Abfragen ohne Seiteneffekte können als “Queries” definiert werden.
-Diese können anschließend an fast beliebiger Stelle im MTL Generator aufgerufen
-werden, die stets immer das gleiche Ergebnis liefern. Gleiche Aufrufe werden
-ebenso gecached, so dass eine schnellere Ausfuührung der Quellcodeerzeugung erzielt wird.
+Die nachfolgenden Quellcodeauszüge aus dem MTL Generator werden mit dem Eclipse Plugin Acceleo ausgeführt. Mit der “Object Constraint Language” (OCL) stehen einem MTL Generator diverse zusätzliche Funktionalitäten zur Verfügung. So können verschiedene String- oder Mengenoperationen angewendet werden, um daraus ein konkreteres Ergebnis zu erhalten.
+
+\input{./Sections/Queries}
+\input{./Sections/StrukturFunktion}
+\input{./Sections/Probleme}
