@@ -1,23 +1,24 @@
 \section{Dependency Injection mittels GIN} \label{GIN}
 Bei Dependency Injection handelt es sich um einen Begriff aus der
-objektorientierten Programmierung, welcher zuerst von Martin Fowler 2004
-verwendet worden ist \cite{bib:DI}. Beim Dependency Injection handelt es sich um
+objektorientierten Programmierung, welcher erstmalig von Martin Fowler 2004
+verwendet wurde \cite{bib:DI}. Bei Dependency Injection handelt es sich um
 ein Verfahren, bei dem zur Laufzeit eines Programmes zusätzliche Informationen,
-beispielzweise beim Aufruf einer Funktion, zur Verfügung gestellt werden. Dies
+beispielsweise beim Aufruf einer Funktion, zur Verfügung gestellt werden. Dies
 wird von einem extra Dependency Injection Framework vorgenommen, in dieser
-Arbeit wird handelt es sich dabei um das GIN Framework.
+Arbeit handelt es sich dabei um das GIN Framework.
 
 \subsection{GIN}
-Das GIN-Framwork, ist ein Framwork für Dependency Injection, es wurde von Google
+GIN ist ein Framwork für Dependency Injection, es wurde von Google
 für GWT entwickelt \cite[GIN]{bib:gin}. GIN setzt auf Google Guice
 \cite[Guice]{bib:guice} auf und erweitert die Java Dependency Injection für den
-speziellen Anwendungsfall von GWT.  GIN wurde direkt in den GWT Generator
-eingebaut, wodurch es möglich ist die Dependency Injection teilweise schon zur
-Compile Zeit einzufügen, dies Sorgt dafür das es kaum Laufzeit Overhead gibt.
+speziellen Anwendungsfall von GWT. Die zu generierende Ziel-Architektur nutzt
+GIN zur Dependency Injection, es wurde direkt in den GWT Generator eingebaut,
+wodurch Dependency Injection teilweise schon zur Compile Zeit erfolgen kann,
+dies sorgt dafür, dass es kaum Laufzeit Overhead gibt.
 
 Guice wurde 2008 von Google für Dependency Injection mit Java entwickelt und war
 das erste Framwork, das Dependency Injection mit Hilfe von Annotationen
 ermöglicht hat. Bei Guice werden mittels bind-Befehlen eine Verbindung zwischen
-Interfasen und deren konkreten Klassen hergestellt, dadurch sind die konkreten
-Implementierungen leichter Austauschbar.
+Interfaces und deren konkreten Klassen hergestellt, dadurch sind die konkreten
+Implementierungen leichter austauschbar.
 
