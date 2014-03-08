@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.8)  8 MAR 2014 17:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.3.8)  8 MAR 2014 17:04
 entering extended mode
 **main.tex
 (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.tex
@@ -843,7 +843,13 @@ Overfull \hbox (0.19714pt too wide) in paragraph at lines 48--52
 set-zen der in-dex.html
  []
 
-) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.bbl [37]
+)
+(C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\Chapters/Arbeitsaufteilung.tex
+[37]
+Kapitel 9.
+) (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.bbl [38
+
+]
 Underfull \hbox (badness 1009) in paragraph at lines 10--15
 [][]\T1/cmr/m/n/10 Chandel, S. (2009).  Tes-ting.  $\T1/cmtt/m/n/10 http : / / 
 www . gwtproject .$
@@ -884,14 +890,14 @@ Underfull \hbox (badness 1248) in paragraph at lines 66--69
 wler . com /$
  []
 
-[38
+[39
 
-]) [39] (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.aux) ) 
+]) [40] (C:\Users\Marcus\Studium\git\se_at\LaTeX\Source\main.aux) ) 
 Here is how much of TeX's memory you used:
- 5079 strings out of 493921
- 67410 string characters out of 3147280
- 238283 words of memory out of 3000000
- 8223 multiletter control sequences out of 15000+200000
+ 5083 strings out of 493921
+ 67600 string characters out of 3147280
+ 238292 words of memory out of 3000000
+ 8224 multiletter control sequences out of 15000+200000
  16137 words of font info for 35 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  41i,10n,41p,1315b,1738s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -914,9 +920,9 @@ pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfsl1200.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (40 pages, 1034981 bytes).
+Output written on main.pdf (41 pages, 1036530 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
+ 269 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -27,3 +27,4 @@
 \contentsline {chapter}{\numberline {7.}Ergebnis}{32}
 \contentsline {section}{\numberline {7.1}Beispiel Anwendung}{33}
 \contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{36}
+\contentsline {chapter}{\numberline {9.}Arbeitsaufteilung}{38}
