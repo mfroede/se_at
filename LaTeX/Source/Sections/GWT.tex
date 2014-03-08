@@ -1,8 +1,11 @@
 \section{GWT}
 \label{GWT}
-Das Google Web Toolkit, kurz GWT, ist ein open-source Projekt von Google. Es
-dient der Entwicklung von Webanwendungen mittels Java. Dabei übersetzt der GWT
-Compiler den gesamten Java Source-Code in JavaScript Code.
+Das Google Web Toolkit\footnote{GWT wurde umbenannt zu Gwit Web Toolkit, seitdem
+es ein open-source Projekt ist. In dieser Arbeit wird jedoch
+weiterhin von GWT gesprochen, da das Gwit Web Toolkit weiterhin auch unter GWT
+anzutreffen ist.}, kurz GWT, ist ein open-source Projekt von Google.
+Es dient der Entwicklung von komplexen Webanwendungen mittels Java.
+Dabei übersetzt der GWT Compiler den gesamten Java Source-Code in JavaScript Code.
 Zudem werden während der Übersetzung Code Optimierungen vorgenommen, welche u.A.
 das Löschen von nicht benötigtem Code, z.B beim Einsatz von mehreren
 Browsern als Plattformen, betreffen. 
@@ -15,9 +18,9 @@ Nutzung von JSON erleichtert werden \cite[S. 4-9]{bib:GWTinAction}\cite[S.
 
 Darüber hinaus ist dadurch eine Kommunikation mit dem Backend
 möglich. Zusätzlich kann diese Kommunikation durch Remote Procedure Calls,
-kurz RCPs, u.A. mittels RequestBuilder oder GWT-RCP erfolgen. Beide setzen auf
-dem XMLHttpRequest JavaScript Objekt auf, welches die Kommunikation zwischen dem
-Browser und dem Server ohne Seitenneuladen erlaubt. Der RequestBuilder ist ein
+kurz RCPs, u.A. mittels RequestBuilder oder GWT-RCP erfolgen. Beide
+setzen auf dem XMLHttpRequest JavaScript Objekt auf, welches die Kommunikation zwischen dem
+Browser und dem Server mittels Ajax erlaubt. Der RequestBuilder ist ein
 Wrapper für das genannte JavaScript Objekt und GWT-RCP ermöglicht den Austausch
 von konkreten Java Objekten \cite[S. 16]{bib:GWTinAction}\cite[S.
 222]{bib:GWToReilly}.
@@ -27,8 +30,8 @@ GWT, welche folgend nicht näher erläutert werden, weil eine Generierung einer
 GWT Frontend Anwendung ohne Server Kommunikation erfolgen soll.
 
 Der Einsatz mit GWT ist flexibel und durch den GWT Compiler wird 
-eine bessere Laufzeitausfürhung der Webanwendung erlangt\cite{bib:GWTStarted}.
-Dies sind 2 Vorteile des Nutzens von GWT. Zusätzlich sind die durch Google
+eine bessere Laufzeitausführung der Webanwendung erlangt\cite{bib:GWTStarted}.
+Dies sind 2 Vorteile die Nutzung von GWT. Zusätzlich sind die durch Google
 gebotenen Architekturkonzepte durch u.A. Model-View-Presenter, kurz MVP, ein
 Ansatz und Grund einen Generator für GWT Frontend Anwnedungen zu schreiben.
 Dafür werden im weiterem Verlauf MVP, UiBinder sowie GIN erläutert, welche die

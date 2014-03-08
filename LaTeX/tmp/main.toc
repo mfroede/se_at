@@ -22,3 +22,4 @@
 \contentsline {section}{\numberline {6.4}Probleme}{27}
 \contentsline {chapter}{\numberline {7.}Ergebnis}{28}
 \contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{29}
+\contentsline {chapter}{\numberline {9.}Arbeitsaufteilung}{31}
