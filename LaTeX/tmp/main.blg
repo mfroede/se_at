@@ -11,4 +11,11 @@ Warning--entry type for "bib:MVP2" isn't style-file defined
 --line 34 of file bib.bib
 Warning--entry type for "bib:uiBind" isn't style-file defined
 --line 45 of file bib.bib
-(There were 5 warnings)
+Warning--entry type for "bib:MDA3" isn't style-file defined
+--line 56 of file bib.bib
+Illegal end of database file---line 111 of file bib.bib
+ : 
+ : 
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There was 1 error message)
