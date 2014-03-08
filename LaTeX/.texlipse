@@ -1,8 +1,8 @@
 #TeXlipse project settings
-#Tue Dec 03 09:51:14 CET 2013
+#Sat Mar 08 14:27:03 CET 2014
 markTmpDer=true
 builderNum=2
-outputDir=Output
+outputDir=Output/
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
@@ -11,4 +11,4 @@ mainTexFile=main.tex
 outputFile=SE_AT_GWT_CMS.pdf
 langSpell=de
 markDer=true
-srcDir=Source
+srcDir=Source/

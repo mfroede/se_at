@@ -20,6 +20,12 @@ Efftinge, S., Haase, A., Stahl, T., and Völter, M. (2007).
 \newblock {dpunkt.Verlag GmbH}, Heidelberg, Germany.
 \newblock Auflage 2.
 
+\bibitem[{Google}, 2008]{bib:guice}
+{Google} (2008).
+\newblock {Guice}.
+\newblock {\url{https://code.google.com/p/google-guice/}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
 \bibitem[{Google}, 2010]{bib:GWTStarted}
 {Google} (2010).
 \newblock {Overview}.
@@ -31,6 +37,12 @@ Google (2010).
 \newblock {Ui Binder}.
 \newblock {\url{http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html}}.
 \newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[{Google}, 2011]{bib:gin}
+{Google} (2011).
+\newblock {Gin}.
+\newblock {\url{https://code.google.com/p/google-gin/}}.
+\newblock Letzter Aufruf: 08.03.2014.
 
 \bibitem[Google, 2013]{bib:MDA3}
 Google (2013).
@@ -49,6 +61,11 @@ Google (2013).
 Hanson, R. and Tacy, A. (2007).
 \newblock {\em GWT in Action: Easy Ajax with the Google Web Toolkit}.
 \newblock Manning Publications Co., Greenwich, CT, USA.
+
+\bibitem[{Martin Fowler}, 2004]{bib:DI}
+{Martin Fowler} (2004).
+\newblock {\url{http://martinfowler.com/articles/injection.html}}.
+\newblock Letzter Aufruf: 08.03.2014.
 
 \bibitem[Ramsdale, 2010]{bib:MVP2}
 Ramsdale, C. (2010).
