@@ -89,7 +89,7 @@ Webanwendung darstellen. Aus diesem Grund wurde entsprechend in der
 \texttt{AppEntryPoint}- und der \texttt{ProductionGinModule}-Klasse die
 jeweilige Klasse für die StartView angegeben. (Listing \ref{lst:appEntryPoint}
 und \ref{lst:ProductionGinModule}) 
-\lstset{language=gwt, firstnumber=56}
+\lstset{language=gwt}
 \begin{lstlisting}[caption={Änderung an der \texttt{AppEntryPoint}-Klasse zur
 Bestimmung der Startseite}, label={lst:appEntryPoint}] 
 [..]
@@ -97,7 +97,7 @@ Bestimmung der Startseite}, label={lst:appEntryPoint}]
       eventBus, new HomePlace());
 [..]
 \end{lstlisting}
-\lstset{language=gwt, firstnumber=35}
+\lstset{language=gwt}
 \begin{lstlisting}[caption={Änderung an der \texttt{ProductionGinModule}-Klasse
 zur Bestimmung der Startseite}, label={lst:ProductionGinModule}] 
 [..]
@@ -110,7 +110,7 @@ einerseits dadurch möglich, dass innerhalb der \texttt{ViewImpl} Klasse
 zusätzlicher Inhalt eingefügt werden kann (Listing \ref{lst:conntentJava}), aber
 anderseits innerhalb der \texttt{.ui.xml}-Datei (Listing \ref{lst:conntentUI}).
 
-\lstset{language=gwt, firstnumber=32}
+\lstset{language=gwt}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
 Veränderungen am Java-Code},
 label={lst:conntentJava}] 
@@ -121,7 +121,7 @@ label={lst:conntentJava}]
   content.add(html);
 [..]
 \end{lstlisting}
-\lstset{language=uixml, firstnumber=8}
+\lstset{language=uixml}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
 Veränderungen am \texttt{ui.xml}-Datei},
 label={lst:conntentUI}] 
