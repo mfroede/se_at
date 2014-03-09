@@ -4,99 +4,110 @@
 \section{Ziel-Architektur}\label{AufBZielArchitektur}
 Die für die Generierung vorgesehene Architektur basiert auf 
 Architekturkonzepten verschiedener Entwickler und entstand bei der Entwicklung
-von vorhergehenden GWT Projekten. Diese Architektur stellte sich dabei als Best
-Practice Lösung heraus, welche jedoch aufwändig und fehleranfällig bei der
-Umsetzung ist. Dies ist einer der Gründe für dieses Generator Projekt mit OCL.
+von vorhergehenden GWT Projekten. Diese Architektur stellte sich dabei als 'Best
+Practice' Lösung heraus, welche jedoch aufwändig und fehleranfällig bei der
+Umsetzung ist. Dies ist einer der Gründe für dieses Generator Projekt.
 Im Folgendem wird die umzusetzende Architektur kategorisiert und anhand der zu
 erstellenden Klassen und Dateien vorgestellt.
 % -------------------Struktur Erklärungen--------------------------
 \begin{itemize}
   \item einmalig vorhandene Dateien und Klassen
   \begin{itemize}
-    \item \textbf{index.html}\\
-    HTML Seite über die durch GWT, die in Java erzeugten View Klassen
+    \item \texttt{index.html}\\
+    HTML Seite über die durch GWT, die in Java erzeugten Views
     eingebunden werden.
-    \item \textbf{styles.css}\\
-    CSS Datei für die Festlegung der Style-Eigenschaften.
-    \item \textbf{\grqq{}Name\grqq{}.gwt.xml}\\
+    \item \texttt{styles.css}\\
+    CSS Datei für die Festlegung der Style Eigenschaften.
+    \item \texttt{'Name'.gwt.xml}\\
     Konfigurationsdatei in der u.A. verwendete Bibliotheken sowie
-    Browsereinstellungen und der AppEntryPoint eingetragen wird.
-    \item \textbf{AppEntryPoint.java}\\
-    Bildet die Einstiegsklasse für die GWT Anwendung und erstellt u.A. die
-    MainView, die permanenten Views und die HistoryMapper.
-    \item \textbf{AbstractView.java}\\
+    Browsereinstellungen und der \texttt{AppEntryPoint} eingetragen wird.
+    \item \texttt{AppEntryPoint.java}\\
+    Bildet die Einstiegsklasse für die GWT Anwendung. Darin sind elementare
+    Strukturen festgelegt. Dazu zählt bespielsweise der grundlegende
+    Webseiteninhalt, welcher zu dem \texttt{RootPanel} hinzugefügt und durch die
+    \texttt{ViewActivityMapper} erreichbar ist, sowie die zum
+    History Management gehörenden Komponenten, durch die die Startwebseite
+    (durch Angabe des jeweiligen \texttt{Places}) registriert wird.
+    \item \texttt{AbstractView.java}\\
     Die Oberklasse aller View Implementierungen innerhalb einer GWT
-    Anwendung. Dadurch wird der Wechsel der Views u.A. der genannten
-    MainView über die index.html ermöglicht und Eigenschaften wie die Größe aller
-    Views definiert.
-    \item \textbf{AbstractActivityDefaultImpl.java}\\
-    Diese Klasse wird von allen View Activities erweitert. Sie dient
-    mittels einer \textit{start}-Methode dem Aufruf der View Klassen und
-    dem Browserzugriff der Views mittels des View \textit{Places}.
-    \item \textbf{\grqq{}Name\grqq{}ViewActivityMapperImpl.java}\\
-    Instanziiert die \textit{Provider} der Activities (außer die anderer
-    ViewActivityMapper), um darüber den View Place, welcher die
-    Browseradresse angibt, aufzurufen. Diese Klasse existiert prinzipiell einmal, außer es existieren permanente Views wie ein Header. Je
-    permanenter View wird ein weiterer ViewActivityMapper implementiert, welcher
-    jeweils einen \textit{Provider} für die eigene Activity instanziiert.
-    \item \textbf{AppPlaceHistoryMapper.java}\\
+    Anwendung. Darin können grundlegende Eigenschaften wie die Größe aller
+    View Implementierungen definiert werden.
+    \item \texttt{AbstractActivityDefaultImpl.java}\\
+    Diese Klasse ist ein GenericType mit dem Typparameter \texttt{Place} und
+    wird von allen \texttt{Activity}-Klassen mit dem jeweiligem
+    \texttt{Place} als Typparameter erweitert. 
+ 	Diese Klasse stellt eine Verbindung zwischen einem \texttt{Place} und der
+ 	dazugehörigen \texttt{Activity} her.
+    \item \texttt{'Name'ViewActivityMapperImpl.java}\\
+    Instanziiert die \texttt{Provider} mit dem Typparameter
+    einer konkreten \texttt{Activity}, außer die anderer
+    \texttt{ViewActivityMapper}. Die Klasse existiert für jede vorhandene
+    permanente View sowie prizipiell einmal für alle normale
+    \texttt{Views}. Durch die überschriebene Methode des GWT
+    \texttt{ActivityMapper} \texttt{getActivity} wird mittels des \texttt{Place}
+    die \texttt{Activity} zurückgeliefert. Dies wird benötigt, damit der
+    Browserzugriff auf die jeweilige Webseite durch GWT umgesetzt werden kann.
+    \item \texttt{AppPlaceHistoryMapper.java}\\
     Dient dem History Management, damit der Zugriff auf die View
     Implementierungen im Browser über den Place stattfinden und eine
     back-Funktionalität implementiert werden kann.
-    \item \textbf{AppGinjector.java}\\
+    \item \texttt{AppGinjector.java}\\
     Die Schnittstelle zum Zugriff u.A. auf die
-    ViewActivityMapper sowie dem EventBus. Der EventBus dient
-    wie der \textbf{AppPlaceHistoryMapper.java} dem History Management und wird
-    u.A. zur Registrierung der Start View benötigt.
-    \item \textbf{PlaceControllerProvider.java}\\
-    Die Schnittstelle zu den View Places, welche in
-    den ViewActivityMappern aufgerufen werden und dadurch den Browserzugriff 
-    auf die View Implementierungen ermöglichen.
-    \item \textbf{ProductionGinModule.java}\\
-    In dieser Klasse werden die für GIN typischen bind-Befehle definiert. Diese
-    dienen u.A. dazu die View Interfaces an die View Implementierungen zu
-    binden sowie die Start View festzulegen.
+    \texttt{ViewActivityMapper} sowie dem \texttt{EventBus}. Der
+    \texttt{EventBus} dient wie der \texttt{AppPlaceHistoryMapper} dem
+    History Management und wird u.A. zur Registrierung der Start View benötigt.
+    \item \texttt{PlaceControllerProvider.java}\\
+    Die Schnittstelle zu den View Places, welche wie erwähnt in
+    den \texttt{ViewActivityMappern} aufgerufen werden und somit den
+    Browserzugriff auf die View Implementierungen ermöglichen.
+    \item \texttt{ProductionGinModule.java}\\
+    In dieser Klasse werden die für GIN typischen \texttt{bind}-Befehle
+    verwendet. Diese dienen u.A. dazu die View Interfaces an die View
+    Implementierungen zu binden sowie die Start View festzulegen.
   \end{itemize}  
   \item View Klassen und Dateien, welche für jede View implementiert werden,
   basierend auf dem MVP-Pattern und den UiBindern
     \begin{itemize}
-    \item \textbf{\grqq{}Name\grqq{}Activity.java}\\
-    Diese Klasse implementiert den Presenter. Darüber hinaus werden die View
-    sowie der PlaceController definiert. Durch den PlaceController wird z.B. die
-    Navigation zwischen den Views ermöglicht mittels einer \textit{goTo}-Methode.
-    \item \textbf{\grqq{}Name\grqq{}Place.java}\\
+    \item \texttt{'Name'Activity.java}\\
+    Diese Klasse implementiert den Presenter und beinhaltet
+    eine Instanz der \texttt{View} sowie des \texttt{PlaceController}.
+    Durch den \texttt{PlaceController} wird z.B. die Navigation zwischen den Views
+    ermöglicht mittels einer darauf angewendeten \textit{goTo}-Methode, welcher
+ 	ein \texttt{Place} übergeben wird.
+    \item \texttt{'Name'Place.java}\\
     Diese Implementierungen sehen prinzipiell immer gleich aus. Unterschieden
-    wird hierbei die dazugehörige View. Über den Place wird die
-    Navigation zwischen den Views ermöglicht, wobei der Name des Places in der
-    URI Zeile des Browsers steht.
-    \item \textbf{\grqq{}Name\grqq{}View.java}\\
+    wird hierbei die dazugehörige \texttt{View}. Über den \texttt{Place} wird
+    die Navigation zwischen den Webseiten ermöglicht, wobei der Name des
+    \texttt{Place} in der URI Zeile des Browsers steht.
+    \item \texttt{'Name'View.java}\\
     Hierbei handelt es sich um ein Interface, welches das Presenter Interface
-    beinhaltet und die Oberklasse für die jeweiligen View Implementierungen ist.
+    definiert und die Oberklasse für die jeweiligen View Implementierungen ist.
     Dadurch wird der einfache View Austausch durch MVP ermöglicht, welches
-    zusätzlich über einen \textit{bind}-Befehl innerhalb des \textit{ProductionGinModule} festgelegt
-    werden muss.
-    \item \textbf{\grqq{}Name\grqq{}ViewImpl.java}\\
-    Die View Implementierung, welche im Browser sichtbar ist. Sie
-    implementiert die jeweilige View und beinhaltet eine Instanz des durch
-    View und Activity definierten Presenters, wodurch die Kontrolle gemäß MVP
-    abgegeben wird. Die Klasse kann entweder das gesamte GUI erstellen oder
-    mittels UiBinder einen Teil der View Komponenten abgeben z.B. im Fall von
-    vordefinierten Labels.
-    \item \textbf{\grqq{}Name\grqq{}ViewImpl.ui.xml}\\
-    Innherhalb dieser Datei können Style-Eigenschaften für View Komponenten
-    sowie View-Komponenten definiert werden.
+    zusätzlich über einen \texttt{bind}-Befehl innerhalb des
+    \texttt{ProductionGinModule} festgelegt werden muss.
+    \item \texttt{'Name'ViewImpl.java}\\
+    Die im Browser als Webseite sichtbare View Implementierung beinhaltet eine
+    Instanz, des durch der jewiligen \texttt{View} und \texttt{Activity}
+    definierten Presenters. Dadurch wird die Kontrolle gemäß MVP abgegeben. Die
+    Klasse kann entweder das gesamte GUI erstellen oder mittels UiBinder einen
+    Teil der View Komponenten abgeben, wie im Fall von vordefinierten
+    \texttt{Labels}.
+    \item \texttt{'Name'ViewImpl.ui.xml}\\
+    Innherhalb dieser Datei können View Komponenten sowie dessen
+    Style-Eigenschaften definiert werden.
   \end{itemize} 
-  \item View Klassen und Elemente die auf jeder Ansicht zu sehen sind:
+  \item \texttt{View}-Klassen und Elemente, die auf jeder Webseite zu sehen
+  sind,
     \begin{itemize}
-    \item werden gemäß dem MVP Pattern und wie eine View erstellt.
-    \item innerhalb des AppEntryPoint enthalten und definiert.
+    \item werden gemäß dem MVP Pattern und wie eine \texttt{View} erstellt.
+    \item sind innerhalb des \texttt{AppEntryPoint} enthalten und definiert.
     \item implementieren jeweils einen eigenen
-    \textit{ViewActivityMapper}.
+    \texttt{ViewActivityMapper}.
   \end{itemize} 
 \end{itemize}
 % -------------------View Eintragungen--------------------------
 Unter Betrachtung, dass ausschließlich eine View Implementierung existiert
-und basierend auf dieser Architektur muss zur Erzeugung einer View:\\
+und basierend auf dieser Architektur muss zur Erzeugung einer Webseite:\\
 \begin{tabular}{ll} 
 \addlinespace
 ein Eintrag dazu in den &  \quad \quad folgende Klassen und\\
@@ -105,74 +116,82 @@ werden}
 \\
 \addlinespace
 \addlinespace
-  - \grqq{}Name\grqq{}ActivityMapperImpl.java & \quad \quad - \grqq{}Name\grqq{}Activity.java\\
-  - AppPlaceHistoryMapper.java & \quad \quad - \grqq{}Name\grqq{}Place.java\\
-  - ProductionGinModule.java & \quad \quad - \grqq{}Name\grqq{}View.java\\
-    	& \quad \quad - \grqq{}Name\grqq{}ViewImpl.java\\
-    	& \quad \quad - \grqq{}Name\grqq{}ViewImpl.ui.xml\\
+  - \texttt{'Name'ActivityMapperImpl.java} & \quad \quad -
+  \texttt{'Name'Activity.java}\\
+  - \texttt{AppPlaceHistoryMapper.java} & \quad \quad -
+  \texttt{'Name'Place.java}\\
+  - \texttt{ProductionGinModule.java} & \quad \quad -
+  \texttt{'Name'View.java}\\
+    	& \quad \quad - \texttt{'Name'ViewImpl.java}\\
+    	& \quad \quad - \texttt{'Name'ViewImpl.ui.xml}\\
 \end{tabular}\\
-Existieren zu einer View mehrere View Implementierungen so müssen mehrere
-Eintragungen innerhalb des \textit{ProductionGinModule} getätigt werden und
-mehrere \textit{\grqq{}Name\grqq{}ViewImpl.java} und
-\textit{\grqq{}Name\grqq{}ViewImpl.ui.xml} erstellt werden. Dadurch wird eine
+Existieren zu einer \texttt{View} mehrere View Implementierungen so müssen
+mehrere Eintragungen innerhalb des \texttt{ProductionGinModule} getätigt und
+mehrere \texttt{'Name'ViewImpl.java} und
+\texttt{'Name'ViewImpl.ui.xml} erstellt werden. Dadurch wird eine
 gute Abstraktion und lose Kopplung geschaffen. Dies ist jedoch sehr
-aufwändig und fehleranfällig, da leicht ein Eintrag vergessen werden kann und
-viele Klassen erzeugt werden müssen.
+aufwändig und fehleranfällig, da bei der Erstellung einer Vielzahl von
+Klassen schnell ein Eintrag vergessen werden kann.
 
 % -------------------Packages--------------------------
 Zu den genannten Architekturvorstellungen gehört zusätzlich eine Paketierung,
-die auch durch vorherige GWT-Projekte entstand. Der Vorteil der folgenden
+die auch durch vorherige GWT Projekte entstand. Der Vorteil der folgenden
 Gliederung der Pakete besteht darin, dass innerhalb der
-\textit{\grqq{}Name\grqq{}.gwt.xml} Konfigurationsdatei das source-Tag, welches
-den Pfad für den zu übersetzenden Java Code angibt, wie folgt: $<source
-path='client'/>$ definiert werden kann. Folgend die Gliederung der Klassen und
+\texttt{'Name'.gwt.xml} Konfigurationsdatei das \texttt{source}-Tag, welches
+den Pfad für den zu übersetzenden Java Code angibt, wie folgt: \texttt{<source
+path='client'/>} definiert werden kann. Folgend die Gliederung der Klassen und
 Dateien innerhalb ihrer Packages:\\\\
 \begin{tabular}{ll} 
 Package &  \quad \quad Klassen und Dateien\\
 \addlinespace
 \hline
 \addlinespace
-  \grqq{}projektname\grqq{} & \quad \quad \grqq{}Name\grqq{}.gwt.xml\\
+  \texttt{'projektname'} & \quad \quad \texttt{'Name'.gwt.xml}\\
   \addlinespace
   \hline
   \addlinespace
-  \grqq{}projektname\grqq{}.client & \quad \quad AppEntryPoint.java\\
+  \texttt{'projektname'.client} & \quad \quad \texttt{AppEntryPoint.java}\\
   \addlinespace
   \hline
   \addlinespace
-  \grqq{}projektname\grqq{}.client.common & \quad \quad AbstractView.java\\
-    	& \quad \quad AbstractActivityDefaultImpl.java\\
-    	& \quad \quad \grqq{}Name\grqq{}ViewActivityMapperImpl.java\\
-    	& \quad \quad AppPlaceHistoryMapper.java\\
+  \texttt{'projektname'.client.common} & \quad \quad
+  \texttt{AbstractView.java}\\
+    	& \quad \quad \texttt{AbstractActivityDefaultImpl.java}\\
+    	& \quad \quad \texttt{'Name'ViewActivityMapperImpl.java}\\
+    	& \quad \quad \texttt{AppPlaceHistoryMapper.java}\\
    \addlinespace
    \hline
    \addlinespace
-  \grqq{}projektname\grqq{}.client.gin & \quad \quad AppGinjector.java\\
-      	& \quad \quad PlaceControllerProvider.java\\
-    	& \quad \quad ProductionGinModule.java\\
+  \texttt{'projektname'.client.gin} & \quad \quad
+  \texttt{AppGinjector.java}\\
+      	& \quad \quad \texttt{PlaceControllerProvider.java}\\
+    	& \quad \quad \texttt{ProductionGinModule.java}\\
   \addlinespace
   \hline
   \addlinespace
-  \grqq{}projektname\grqq{}.client.view & \quad \quad \grqq{}Name\grqq{}Activity.java\\
-  		& \quad \quad \grqq{}Name\grqq{}Place.java\\
-    	& \quad \quad \grqq{}Name\grqq{}View.java\\
-    	& \quad \quad \grqq{}Name\grqq{}ViewImpl.java\\
-    	& \quad \quad \grqq{}Name\grqq{}ViewImpl.ui.xml\\
+  \texttt{'projektname'.client.view} & \quad \quad
+  \texttt{'Name'Activity.java}\\
+  		& \quad \quad \texttt{'Name'Place.java}\\
+    	& \quad \quad \texttt{'Name'View.java}\\
+    	& \quad \quad \texttt{'Name'ViewImpl.java}\\
+    	& \quad \quad \texttt{'Name'ViewImpl.ui.xml}\\
 \end{tabular}\\\\
-Jedoch soll für einen Entwickler die Möglichkeit bleiben innerhalb des view
-Packages, die Views in Packages zu gliedern. Aus diesem Grund soll an dieser
-Stelle das view Package nicht Generator-seitig tiefer gegliedert werden.
+Jedoch soll für einen Entwickler die Möglichkeit bleiben innerhalb des
+\texttt{view}-Packages, die \texttt{Views} und ihre dazugehörigen Klassen in
+Packages zu gliedern.
+Aus diesem Grund soll an dieser Stelle das \texttt{view}-Package nicht
+Generator-seitig tiefer gegliedert werden.
 
 Anhand der beschriebenen Architektur wird ersichtlich, dass die Erstellung eines
 GWT Projektes hauptsächlich im Bereich der einmalig vorhanden Dateien und
 Klassen und die Erstellung einer View im groben immer gleich ist. Dies bietet
 zwar den Vorteil der Vereinheitlichung mehrerer GWT Projekte und gewährleistet
 eine gewisse Übersichtlichkeit und kurze Einarbeitungszeit in verschiedenen GWT
-Projekten, ist aber sehr aufwändig und fehleranfällig. Beispielsweise kann über
-\grqq{}Copy-Paste\grqq{} viel erstellt und implementiert werden, jedoch ist
-dabei das Risiko erhöht, dass Einträge vergessen werden abzuändern oder
-hinzuzufügen. Darüber hinaus kann es passieren, das Einträge enthalten sind wie
-z.B. einer Bibliothek, welche jedoch nicht mehr benötigt werden und somit nicht
+Projekten, ist aber wie erwähnt sehr aufwändig und fehleranfällig.
+Beispielsweise kann über \grqq{}CopyPaste\grqq{} viel erstellt und implementiert werden. Jedoch ist
+dabei das Risiko erhöht, dass es vergessen wird Einträge abzuändern oder
+hinzuzufügen. Darüber hinaus kann es passieren, das Einträge enthalten sind, wie
+der einer Bibliothek, welche jedoch nicht mehr benötigt werden und somit nicht
 im Build-Path enthalten sind.
 Diese Beispiele führen potenziell alle dazu, dass die gesamte GWT Anwendung nicht mehr startet
 und die Suche nach dem Fehler erschwert wird, da oftmals viele dieser
@@ -180,38 +199,38 @@ Fehler flüchtig geschehen können.
 % ---------------------------------------------
 % Profil
 % ---------------------------------------------
-\section{UML-Profil}\label{AufBProfil}
+\section{UML Profil}\label{AufBProfil}
 Eines der Hauptziele ist wie erwähnt die erleichterte Erstellung von GWT
 Projekten unter Einbezug der durch die Architektur gegebenen Vorteile. Zu
-welchen auch der einfache Austausch von View Implementierungen unabhängig vom Model
-gehört. Des Weiteren sollen der Aufwand und die Fehleranfälligkeit bei der
-Erstellung eines GWT Projektes sowie zur Erstellung von Views (vgl.
+welchen auch der einfache Austausch von View Implementierungen unabhängig vom
+Model (des MVP) gehört. Des Weiteren sollen der Aufwand und die
+Fehleranfälligkeit bei der Erstellung eines GWT Projektes sowie zur Erstellung von Views (vgl.
 Abschnitt \ref{AufBZielArchitektur}) minimiert werden. Diese Ziele
 erfordern einen hohen Abstraktionsgrad innerhalb des Profils sowie weiterhin des
-M1-Modells.
+M1 Modells.
 
 Deswegen soll eine der ersten Überlegungen dazu führen, dass das
 gesamte GWT Projekt auf ein gemeinsames Element reduziert werden soll. Dieses
 Element erscheint im Rahmen des umzusetzenden
 MVP-Patterns innerhalb der View Klassen und Dateien
-\textit{Activity.java}, \textit{Place.java},
-\textit{View.java}, \textit{ViewImpl.java}
-und \textit{ViewImpl.ui.xml}. Jedoch erschien dadurch der Aufwand bei der
+\texttt{Activity.java}, \texttt{Place.java},
+\texttt{View.java}, \texttt{ViewImpl.java}
+und \texttt{ViewImpl.ui.xml}. Jedoch erschien dadurch der Aufwand bei der
 Erstellung von Views nicht minimiert, da durch diese Stereotypenbildung, diese
-im M1-Modell weiterhin Einsatz finden müssen. Aus diesem Grund ist eine weitere
-Suche nach dem gemeinsamen Element erforderlich. Dies führt, durch die sich
+im M1 Modell weiterhin Einsatz finden müssen. Aus diesem Grund ist eine weitere
+Suche nach einem gemeinsamen Element erforderlich. Dies führt, durch die sich
 auch in diesem Bereich als vorteilhaft herausstellende Architektur, dazu, dass
-dieses das unterste Element, die \textbf{View Implementierung}, ist. Sie
-erscheint ausreichend für die Erstellung der gesamten einmalig vorhandenen Klassen und
-Dateien sowie der View Klassen und Dateien, da innerhalb der View
+dieses das unterste Element, die \textit{View Implementierung}, ist. Sie
+erscheint ausreichend für die Erstellung der gesamten, einmalig vorhandenen
+Klassen und Dateien sowie der View Klassen und Dateien, da innerhalb der View
 Implementierung und der simultanen und vereinheitlichten Namensbennenung alle
 notwendigen Teile generierbar wären. 
 
 Eine weitere Anforderung ist der Austausch der View Implementierungen durch den
 Einsatz von MVP. Dieser kann jedoch nicht ausschließlich durch die View
-Implementierungen erfolgen, da hierbei eine Möglichkeit zu der
+Implementierungen erfolgen, da hierbei eine Möglichkeit für die
 Verbindung mehrerer View Implementierungen gegeben werden muss. Aus diesem Grund
-soll das \textbf{View Interfaces} genutzt werden. Dies stellt die Verbindung von mehreren
+soll das \textit{View Interface} genutzt werden. Dies stellt die Verbindung von mehreren
 View Implementierungen in Form einer Oberklasse her. Zusätzlich bietet dies die
 Möglichkeit bestimmte Methoden zu definieren, welche für jede implementierende
 View nützlich ist. 
@@ -220,15 +239,15 @@ View Implementierungen haben zusätzlich View Komponenten und darüber hinaus is
 die Umsetzung einer Navigation bzw. das Verhalten bei Interaktion mit
 View Komponenten ein weiteres umzusetzendes Ziel. In vorhergehenden Generator
 Projekten ging die Umsetzung dessen mittels Enumerations hervor. Diese sind
-sinnvoll wenn eine View Komponente mehrere Attribute z.B. eine Value haben
-und kein konkreter Nachbau von bestehenden Frameworks erfolgen soll. In dem Profil
+sinnvoll wenn eine View Komponente mehrere Attribute z.B. eine \texttt{value}
+haben und kein konkreter Nachbau von bestehenden Frameworks erfolgen soll. In dem Profil
 wird ein hoher Abstraktionsgrad erwartet, damit eine Vereinfachung gewährleistet
 werden kann. Deswegen bildet der Einsatz von Enumerations als Typ für
 View Komponenten einen Mehrwert für die Umsetzung des Profils. Zusätzlich wird ein Layouting als
 Ziel ausgeschlossen, wodurch die Nachteile der Verwendung von Enumerations
-verringert werden. Dadurch ergibt sich zusätzlich der Einsatz von \textbf{View
-Komponenten} als Stereotypen mit dem Attribut \textit{type} vom Typ
-\textbf{Enumeration View Objekt Typ}.
+verringert werden. Dadurch ergibt sich zusätzlich der Einsatz von \textit{View
+Komponenten} als Stereotypen mit dem Attribut \texttt{type} vom Typ
+\textit{Enumeration View Objekt Typ}.
 
 Für Navigationselemente wie Buttons und Umsetzung der Navigation ist eine
 Überlegung ein weiteres Profil für ActivityDiagramme und somit ein
@@ -237,112 +256,109 @@ ActivityDiagramm als M1 Modell zu nutzen. Dieses Mittel ermöglicht eine
 und ist somit gut geeignet. Dennoch ist das Ziel der Vereinfachung nicht
 gegeben, da für jedes Navigationselement ein extra Eintrag in einem
 ActivityDiagramm erfolgen muss. Somit entsteht eine Redundanz innerhalb der
-verschiedenen M1-Modelle und der Mehrwert der Navigationsgenerierung wird
+verschiedenen M1 Modelle und der Mehrwert der Navigationsgenerierung wird
 gemindert aufgrund des Mehraufwandes. Die Verwendung von Enumerations für View
-Objekte ermöglichte die Idee, dass für navigierbare bzw. verhaltensbasierte Elemente
-eine ähnliche Handhabung dienlich sein kann. Diese ermöglichen die Erfüllung der
+Komponenten ermöglichte die Idee, dass für navigierbare bzw. verhaltensbasierte
+Elemente eine ähnliche Handhabung dienlich sein kann. Diese ermöglichen die Erfüllung der
 Zielsetzung und bieten über die Angabe eines Attributes \textit{goTo} die
 Navigation sowie über weiterer Attribute z.B. \textit{openPopup} eine
-Generierung verhaltensbezogener Inhalte über das M1-Modell. Dies führt zu der
-Stereotypenbildung der \textbf{Navigations View Komponenten} mit
-\textbf{Enumeration Navigations View Objekt Typen}. Diese Enumeration enthält
-dann z.B. TreeItem, Button oder MenuItem, d.h. View Komponenten von GWT, welche
-für Navigation oder Verhaltensspezifikationen vorgesehen sein sollen.
+Generierung verhaltensbezogener Inhalte über das M1 Modell. Dies führt zu der
+Stereotypenbildung der \textit{Navigations View Komponenten} mit
+\textit{Enumeration Navigations View Objekt Typen}. Diese Enumeration enthält
+dann z.B. \texttt{TREEITEM}, \texttt{BUTTON} oder \texttt{MENUITEM}, d.h. View
+Komponenten von GWT, welche für Navigation oder Verhaltensspezifikationen vorgesehen sein sollen.
 
-\textbf{Navigations View Komponente} und \textbf{View Komponenten} sollen 
+\textit{Navigations View Komponente} und \textit{View Komponenten} sollen 
 Properties sein, da eine View Implementierung diese View Komponenten enthalten
 kann.
 
-Zur Kopplung von großen Views und zur Erweiterung der vorgegebenen Mittel anhand
-der Architektur soll eine weitere Klasse als Stereotyp dienen, die
-\textbf{eigenen View Komponenten}. Darin sollen bestehende View Komponenten
+Zur Kopplung von großen View Implementierungen und zur Erweiterung der
+vorgegebenen Mittel anhand der Architektur soll eine weitere Klasse als Stereotyp dienen, die
+\textit{eigenen View Komponenten}. Darin sollen bestehende View Komponenten
 enthalten sein und somit eine eigene View Komponente, z.B. eine große
 Datentabelle, bilden, die innerhalb mehrerer View Implementierung enthalten sein
 kann.
 
-Im Bereich von Views, z.B. ein Header, die auf allen Views innerhalb des
+Im Bereich von Views, z.B. ein Header, die auf allen Websites innerhalb des
 Browsers sichtbar sind, soll eine weitere Stereotypenbildung stattfinden. Diese Views
-sind \textbf{permanente Views} und sollen sich zusätzlich in \textbf{Header} und
-\textbf{Footer} gliedern, da diese, durch
-ihre Positionierung in einer View (Header oben, Footer unten), konkrete
+sind \textit{permanente Views} und sollen sich zusätzlich in \textit{Header} und
+\textit{Footer} gliedern, da diese, durch
+ihre Positionierung in einer Webseite (Header oben, Footer unten), konkrete
 permanente Views sind. Diese Views verhalten sich simultan zu den normalen Views (vgl. Abschnitt \ref{AufBZielArchitektur}),
 weshalb die permanenten Views als View Implementierung von dem View Interface umgesetzt werden können.
-Dadurch wird zusätzlich der Austausch von View Implementierungen ermöglicht.
+Dadurch wird zusätzlich der Austausch von View Implementierungen bei
+permanenten Views ermöglicht.
 % ---------------------------------------------
 % M1-Modell
 % ---------------------------------------------
-\section{M1-Modell}\label{AufBM1}
-Basierend auf dem UML-Profil soll das Modell View Implementierungen enthalten,
+\section{M1 Modell}\label{AufBM1}
+Basierend auf dem UML Profil soll das Modell View Implementierungen enthalten,
 welche wiederum View Komponenten als Properties beinhalten und eigene
 View Objekte zu diesen View Komponenten zugeordnet sein können. Darüber hinaus
 sollen über Attribute innerhalb von dem Stereotyp Navigations View Komponenten,
-im M1-Modell enthaltene View Implementierungen angegeben werden. Somit kann z.B. über das Attribut goTo
-die Navigation zu dieser View Implementierung durch die Generierung
-dessen erfolgen.
+im M1 Modell enthaltene View Implementierungen angegeben werden. Somit kann z.B.
+über das Attribut \texttt{goTo} die Navigation zu dieser View Implementierung
+durch die Generierung dessen erfolgen.
 Weiterhin sollen permanente View Implementierungen in Form z.B. eines
 Headers erstellt werden, welche dann auf jeder View innerhalb des Browsers
-sichtbar sind. Eine Implementierung eines Headers soll eine MenuBar enthalten,
-die durch MenuItems die Navigation zu verschiedenen Seiten ermöglicht.
+sichtbar sind. Eine Implementierung eines Headers soll ein Menu enthalten,
+das durch MenuItems die Navigation zu verschiedenen Webseiten ermöglicht.
 Zusätzlich sollen View Interfaces, welche verschiedene
-Implementierungen haben, erstellt werden, damit eine Auslegung der
-angezeigten Views in der GWT Anwendung für verschiedene Plattformen auf
-verschiedenen Devices getestet werden kann. Diese Plattformen können z.B.
-ein Browser auf einen Desktop und ein Browser auf einem mobilem Endgerät sein.
-Dieser Anwendungsfall würde zusätzlich das Generator Projekt auf höchste Ebene 
-prüfen.
+Implementierungen haben, erstellt werden. Dadurch kann die Generierung des
+MVP Patterns getestet werden.
 % ---------------------------------------------
 % Generator
 % ---------------------------------------------
 \section{Generator}\label{AufBGenerator}
-Im Bereich des UML-Profils sowie des M1-Modells sind außer der Views und ihren
+Im Bereich des UML Profils sowie des M1 Modells sind außer der Views und ihren
 Implementierungen und ihren View Komponenten die weiteren Klassen und Dateien
 ungeachtet geblieben. Aus diesem Grund muss der Generator so geschrieben werden,
-sodass aus dem M1-Modell ein gesamtes GWT Projekt generiert werden kann. Dies
-soll potenziell auch ermöglicht werden in dem ausschließlich eine View
+dass aus dem M1 Modell die gesamte Ziel-Architektur generiert werden kann.
+Dies soll potenziell auch ermöglicht werden indem ausschließlich eine View
 Implementierung erstellt wird, welche ohne Attribute und Methoden ausgestattet ist. Dazu soll
 eine Unterleitung erfolgen, welche einerseits die einmalig vorhandenen Klassen
-mit Inhalten (auch View abhängiger Inhalte) generiert und andererseits die Views
+mit Inhalten (auch View abhängig) und andererseits die Views
 generiert. In dem Fall, dass View Interfaces existieren, sollen die Klassen
-\textit{\grqq{}Interfacename\grqq{}View.java}, \textit{\grqq{}Interfacename\grqq{}Activity.java} und
-\textit{\grqq{}Interfacename\grqq{}Place.java} den Interfacenamen tragen. Die
-Implementierungsklassen bzw. Dateien \textit{\grqq{}Klassenname\grqq{}ViewImpl.java} und
-\textit{\grqq{}Klassenname\grqq{}ViewImpl.ui.xml} der View, haben die
+\texttt{'Interfacename'View.java},
+\texttt{'Interfacename'Activity.java} und \texttt{'Interfacename'Place.java} den Interfacenamen tragen. Die
+Implementierungsklassen bzw. Dateien \texttt{'Klassenname'ViewImpl.java}
+und \texttt{'Klassenname'ViewImpl.ui.xml} der View, haben die
 Implementierungsklassennamen. Darüber hinaus sollen die viewabhängigen Inhalte,
-wenn mehr als eine View Implementierung vorhanden ist, mittels eines boolean
-\textit{binding} dementsprechend unterschieden werden. Dadurch sollen alle
-Inhalte basierend auf View Implementierungen mit dem
-\textit{binding} gleich false auskommentiert werden.
-Dadurch kann ein einfacher Austausch bei einem Wechsel der View über das
-MVP-Pattern ermöglicht werden, ohne Code hinzufügen zu müssen.
+wenn mehr als eine View Implementierung vorhanden ist, mittels eines
+\texttt{boolean} \textit{binding} dementsprechend unterschieden werden. Dadurch
+sollen alle Inhalte basierend auf View Implementierungen mit dem
+\textit{binding} gleich \texttt{false} auskommentiert werden.
+Dadurch kann ein einfacher Austausch bei einem Wechsel der View Implementierung
+über das MVP-Pattern ermöglicht werden, ohne Code hinzufügen zu müssen.
 In dem Fall, dass kein View Interface zu einer Implementierung gehört, so werden
 alle Klassen, Dateien und View abhängigen Inhalte mittels des
 Implementierungsklassennamens generiert.
 
 Für alle permanenten Views gilt ein
 ähnliches Vorgehen wie bei den normalen Views. Jedoch haben diese die
-Besonderheit, dass sie in jeder View zu sehen sind und somit zusätzlich zu der
-\textit{MainView} in dem \textit{AppEntryPoint.java} eingetragen
+Besonderheit, dass sie in jeder View zu sehen sind und somit zusätzlich zu dem
+Hauptinhalt bzw. der HauptView in dem \texttt{AppEntryPoint} eingetragen
 werden müssen. Dazu erfolgt eine durch das Profil vorgegebene Unterscheidung
 zwischen normalen permanenten Views und Header und Footer. Da Header (oben) und Footer
 (unten) eine feste Positionierung auf einer Webseite haben, sollen diese durch
-den Generator dementsprechend in dem \textit{AppEntryPoint.java} positioniert
+den Generator dementsprechend in dem \texttt{AppEntryPoint} positioniert
 werden.
 Alle anderen vorhandenen permanenten Views sollen dazwischen eingetragen werden
 und müssen später durch den Entwickler positioniert werden, da dies
 layoutspezifisch ist.
 
 Der Entwickler soll weiterhin zusätzliche Änderungen vornehmen müssen. Diese
-betreffen die Startseite der GWT Webanwendung, welche in dem generiertem
+betreffen die Startwebseite der GWT Webanwendung, welche in dem generiertem
 Code anstatt einer konkreten Angabe des Klassennamens, innerhalb des Befehls,
 über \grqq{}Start\grqq{} gekennzeichnet wird. Dieses Vorgehen kann das Verständnis
 für die Architektur stärken und es werden überflüssige und überfüllende
-Attribute innerhalb des Profils und M1-Modells vermieden.
+Attribute innerhalb des Profils und M1 Modells vermieden.
 
 Darüber hinaus soll der Generator auch strukturelle und redundanzfreie
 Anforderungen erfüllen. Dazu sollen Util Generatoren für u.A.
-Package Declarations, Constants und abfragebedingter Query-Blöcke, welche
-mehrfach Verwendung finden, geschrieben werden. Zusätzlich sollen weitere
-Trennungen erfolgen innerhalb der generierbaren Teile. Zu diesen gehören die
+Package Declarations, Constants und abfragebedingter \texttt{Query}-Blöcke,
+welche mehrfach Verwendung finden, geschrieben werden. Zusätzlich sollen weitere
+Trennungen innerhalb der generierbaren Teile erfolgen. Zu diesen gehören die
 Generierung der View Interfaces und die Generierung der konkreten View Implementierungen. Wobei
 hierbei nochmals anzumerken ist, dass die Interface Generierung für die View
 Implementierungen auf die Generierung der konkreten View Implementierungen

@@ -1,19 +1,21 @@
 \subsection{UiBinder}
 \label{UiBinder}
 Das UiBinder Framework für GWT Anwendungen ist ähnlich zu betrachten wie HTML
-und CSS. Dieses Framework ermöglicht das Layouting von GWT Websites. Dabei
-wird die Website nicht länger ausschließlich in Java Code gestaltet, sondern
-deren Komponenten und Layout über eine spezielle, HTML ähnliche, Expression Language deklarativ
-formuliert. Dies geschieht innerhalb einer ui.xml-Datei. In dieser Sprache
-können neben Komponenten und Layout auch Styles innerhalb eines ui:Style
-Tags (vgl. Listing \ref{lst:BSPCodeUIXML}) definiert werden. Dies bietet die
-Möglichkeit die View Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
-Möglichkeiten zur Entkopplung der View Implementierung, sodass z.B.
-statische View Komponenten nur innerhalb der ui.xml
-Datei enthalten sind und somit ein Überladen der View Implementierung vermindert
-werden kann. Weiterhin können die Komponenten innerhalb dieser Datei gebunden
-werden an die Komponenten in der View Implementierung \cite{bib:uiBind}. Dazu
-folgender Codeauszug von einem vorangegangenem GWT Projekt zur Erläuterung dieses Zusammenhangs.\\
+und CSS. Dieses Framework ermöglicht das Layouting von GWT Webseiten. Dabei
+wird die Webseite nicht länger ausschließlich in Java Code gestaltet, sondern
+deren View Komponenten und Layout über eine spezielle, HTML ähnliche, Expression
+Language deklarativ formuliert. Dies geschieht innerhalb einer
+\texttt{.ui.xml}-Datei. In dieser Sprache können neben View Komponenten und
+Layout auch Styles innerhalb eines \texttt{ui:Style}-Tags (vgl. Listing
+\ref{lst:BSPCodeUIXML}) definiert werden. Dies bietet die Möglichkeit die View
+Implementierung zu entkoppeln. Darüber hinaus existieren noch weitere
+Möglichkeiten zur Entkopplung der View Implementierung, sodass beispielsweise
+statische View Komponenten nur innerhalb der \texttt{.ui.xml}-Datei enthalten
+sind und somit ein Überladen der View Implementierung vermindert werden kann.
+Weiterhin können die View Komponenten innerhalb dieser Datei an die
+View Komponenten in der View Implementierung gebunden werden\cite{bib:uiBind}.
+Dazu folgende Codeauszüge von einem vorangegangenem GWT Projekt zur Erläuterung
+dieses Zusammenhangs.\\
 \lstset{language=gwt}
 \begin{lstlisting}[caption={Beispielcode UiBinder in View
 Implementierung}, label={lst:BSPCodeView}]
@@ -60,18 +62,18 @@ label={lst:BSPCodeUIXML}]
 	</g:FlowPanel> 
 </ui:UiBinder> 
 \end{lstlisting}
-Die Annotationen @UiField und @UiHandler in der View Implementierung (vgl.
+Die Annotationen \texttt{@UiField} und \texttt{@UiHandler} in der View
+Implementierung (vgl.
 Listing \ref{lst:BSPCodeView}) ermöglichen den Zugriff auf die View Komponenten
-mit dem jeweiligem Attribut ui:field in der ui.xml (vgl. Listing
-\ref{lst:BSPCodeUIXML}). @UiField ist dabei dafür zuständig die Instanz, der im
-UiBinder-Template definierten Komponente, zu erhalten. Diese kann dann z.B. über
-den Java Code instanziiert oder Style Eigenschaften gesetzt werden. @UiHandler
-dagegen ermöglicht die Anmeldung einer Methode auf der Instanz.
-Darüber kann dann im Falle des Beispiels ein Klick Event auf dem Button ausgeführt werden.
+mit dem jeweiligem Attribut \texttt{ui:field} in der \texttt{.ui.xml}-Datei
+(vgl.
+Listing \ref{lst:BSPCodeUIXML}). \texttt{@UiField} ist dabei dafür zuständig die
+Instanz, der im UiBinder-Template definierten View Komponente, zu erhalten.
+Diese kann dann über den Java Code instanziiert oder Style Eigenschaften gesetzt werden.
+Die Annotation \texttt{@UiHandler} dagegen ermöglicht die Anmeldung einer
+Methode auf der Instanz. Darüber kann dann im Falle des Beispiels ein Klick Event auf dem Button
+ausgeführt werden.
 
 Damit zeigen die Listings \ref{lst:BSPCodeView} und \ref{lst:BSPCodeUIXML}
-nur kleine Beispiele für die Nutzung von dem UiBinder Framework, welche
+nur kleine Beispiele für die Nutzung des UiBinder Frameworks, welche
 innerhalb des Generator Projektes umgesetzt werden sollen.
-
-
-
