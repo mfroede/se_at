@@ -43,7 +43,7 @@
 }
 \lstdefinelanguage{gwt}{
   morekeywords={private, public, protected, void, interface, static, this,
-  extends, implements, new},
+  extends, implements, new, class},
   morecomment=[l][\color{dkgreen}]{//},
   moredelim=[is][\color{lightgrey}]{|}{|},
   moredelim=[is][\color{blue}]{$}{$},
@@ -53,9 +53,10 @@
 \lstdefinelanguage{uixml}{
 %   morecomment=[s][\color{dkgreen}]{<}{>},
   alsoletter={:,=},
-  morekeywords={ styleName=, text=, ui:field=, xmlns:ui=, xmlns:my=, xmlns:g=},
-  keywordstyle=\color{mauve}\bfseries,
-  morecomment=[s][\color{blue}]{"}{"}
+  morekeywords={ styleName=, text=, ui:field=, xmlns:ui=, xmlns:my=, xmlns:g=,
+  g:FlowPanel, g:Label}, keywordstyle=\color{mauve}\bfseries,
+  morestring=[s][\color{blue}]{"}{"},
+  morecomment=[s][\color{dkgreen}]{<!--}{-->}
 }
 \lstdefinelanguage{mtl}{
 morecomment=[s][\color{blue}]{"}{"}

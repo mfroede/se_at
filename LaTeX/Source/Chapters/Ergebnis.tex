@@ -1,6 +1,5 @@
 \chapter{Ergebnis} \label{Ergebnis}
-
-Das Ziel bestand darin eine Grundarchitektur für ein GWT-Projekt zu erzeugen,
+Das Ziel bestand darin eine Grundarchitektur für ein GWT Projekt zu erzeugen,
 welche es dem Entwickler vereinfachen soll seine Anwendung gemäß dieser
 Architektur zu erstellen.
 Um das Projekt vollständig lauffähig zu machen, sind noch ein paar Handgriffe
@@ -34,9 +33,9 @@ Zum Zeitpunkt der Entstehung dieser Arbeit ist es noch die folgenden
 zwei Schritte notwendig.
 \begin{itemize}
   \item \texttt{Imports} \\
-  Es ist notwendig die noch fehlenden Imports in den Java-Klassen
+  Es ist notwendig die noch fehlenden Imports in den Java Klassen
   einzufügen, da diese aus Zeitgründen nicht vollständig eingearbeitet worden
-  sind.
+  sind. 
   \item \texttt{'Name'ViewImpl.ui.xml} \\
   In diesen Dateien müssen doppelte Elemente entfernt werden, die der Generator zu
   viel eingefügt hat, näheres dazu in Abschnitt \ref{Probleme}.
@@ -94,8 +93,8 @@ und \ref{lst:ProductionGinModule})
 \begin{lstlisting}[caption={Änderung an der \texttt{AppEntryPoint}-Klasse zur
 Bestimmung der Startseite}, label={lst:appEntryPoint}] 
 [..]
-  historyHandler.register(injector.getPlaceController(), eventBus,
-      new HomePlace());
+  historyHandler.register(injector.getPlaceController(), 
+      eventBus, new HomePlace());
 [..]
 \end{lstlisting}
 \lstset{language=gwt}
@@ -122,7 +121,7 @@ label={lst:conntentJava}]
   content.add(html);
 [..]
 \end{lstlisting}
-\lstset{language=gwt}
+\lstset{language=uixml}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
 Veränderungen am \texttt{ui.xml}-Datei},
 label={lst:conntentUI}] 
