@@ -8,7 +8,7 @@ von vorhergehenden GWT Projekten. Diese Architektur stellte sich dabei als
 \glqq{}Best Practice\grqq{} Lösung heraus, welche jedoch aufwändig und
 fehleranfällig bei der Umsetzung ist. Dies ist einer der Gründe für dieses Generator Projekt.
 Im Folgendem wird die umzusetzende Architektur kategorisiert und anhand der zu
-erstellenden Klassen und Dateien vorgestellt.
+erstellenden Klassen und Dateien vorgestellt.\\
 % -------------------Struktur Erklärungen--------------------------
 \begin{itemize}
   \item einmalig vorhandene Dateien und Klassen
@@ -39,9 +39,9 @@ erstellenden Klassen und Dateien vorgestellt.
  	Diese Klasse stellt eine Verbindung zwischen einem \texttt{Place} und der
  	dazugehörigen \texttt{Activity} her.
     \item \texttt{'Name'ViewActivityMapperImpl.java}\\
-    Instanziiert die \texttt{Activity}-Klassen, außer die anderer
-    \texttt{ViewActivityMapper}. Die Klasse existiert für jede vorhandene
-    permanente View sowie prinzipiell einmal für alle normale
+    In dieser Klasse werden die \texttt{Activity}-Klassen, außer
+    die anderer \texttt{ViewActivityMapper}, instanziiert. Die Klasse
+    existiert für jede vorhandene permanente View sowie prinzipiell einmal für alle normale
     Views. Durch die überschriebene Methode des GWT
     \texttt{ActivityMapper} \texttt{getActivity} wird mittels des \texttt{Place}
     die \texttt{Activity} zurückgeliefert. Dies wird benötigt, damit der
