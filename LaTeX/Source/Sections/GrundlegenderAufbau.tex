@@ -39,8 +39,7 @@ erstellenden Klassen und Dateien vorgestellt.
  	Diese Klasse stellt eine Verbindung zwischen einem \texttt{Place} und der
  	dazugehörigen \texttt{Activity} her.
     \item \texttt{'Name'ViewActivityMapperImpl.java}\\
-    Instanziiert die \texttt{Provider} mit dem Typparameter
-    einer konkreten \texttt{Activity}, außer die anderer
+    Instanziiert die \texttt{Activity}-Klassen, außer die anderer
     \texttt{ViewActivityMapper}. Die Klasse existiert für jede vorhandene
     permanente View sowie prinzipiell einmal für alle normale
     Views. Durch die überschriebene Methode des GWT
@@ -189,8 +188,8 @@ Klassen und die Erstellung einer View im groben immer gleich ist. Dies bietet
 zwar den Vorteil der Vereinheitlichung mehrerer GWT Projekte und gewährleistet
 eine gewisse Übersichtlichkeit und kurze Einarbeitungszeit in verschiedenen GWT
 Projekten, ist aber wie erwähnt sehr aufwändig und fehleranfällig.
-Beispielsweise kann über \glqq{}CopyPaste\grqq{} viel erstellt und implementiert
-werden. Jedoch ist dabei das Risiko erhöht, dass es vergessen wird Einträge abzuändern oder
+Beispielsweise kann über \glqq{}Copy-Paste\grqq{} viel erstellt und
+implementiert werden. Jedoch ist dabei das Risiko erhöht, dass es vergessen wird Einträge abzuändern oder
 hinzuzufügen. Darüber hinaus kann es passieren, das Einträge enthalten sind, wie
 der einer Bibliothek, welche jedoch nicht mehr benötigt werden und somit nicht
 im Build-Path enthalten sind.

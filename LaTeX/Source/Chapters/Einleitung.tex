@@ -1,2 +1,33 @@
 \chapter{Einleitung}
 \label{Einleitung}
+Diese Ausarbeitung beschäftigt sich mit der Generierung eines Google Web
+Toolkit (GWT) Projektes.
+Dies erfolgt durch eine Model-to-Text-Transformation mittels eines Model
+Transformation Language (MTL) Generators, welchem mit der Object Constraint Language (OCL), weitere
+Funktionalitäten zur Verfügung stehen. 
+
+Dabei wird ein besonderes Augenmerk auf die Architektur gelegt, ohne den
+Einsatz von Layouting. Deshalb findet eine Generierung anhand einer vorgegebenen
+Grundstruktur bzw. -architektur statt. Mit dem erstelltem Generator Projekt in
+dieser Ausarbeitung, ist es einem Entwickler möglich basierend auf einem M1 Modell in Form eines UML
+Klassendiagramms eine vollständige Struktur einer GWT Frontend Webanwendung zu
+erzeugen, welche mit kleineren Änderungen vollständig lauffähig ist. Die
+Grundlage des M1 Modells bildet ein UML Profil, welches so gestaltet wird,
+sodass eine GWT Frontend Webanwendung gemäß der vorgegebenen Architektur einfach
+umgesetzt werden kann. Dies hat den Grund, dass die vorgegebene Architektur eine
+durch den Einsatz des Model-View-Presenter (MVP) Patterns sowie verschiedener
+Frameworks, eine durch verschiedene Entwickler angefertigte \glqq{}Best
+Practice\grqq{} Lösung ist. Diese Herangehensweise ist jedoch aufwändig und
+fehleranfällig in der Umsetzung. 
+\\\\
+In dem weiterem Verlauf dieser Ausarbeitung werden die zugrundeliegenden
+Konzepte und Frameworks (vgl. Abschnitt \ref{Grundlagen}) vorgestellt. Weiterhin
+wird die Idee und knozeptionellen Aspekte (vgl. Abschnitt \ref{Konzeption}),
+auch hinsichtlich der Ziel-Architektur, erläutert, welche im Weiterem mit sich
+ergebenden Änderungen umgesetzt (vgl. Abschnitte \ref{UMLProfil},
+\ref{M1Modell}, \ref{Generator}) werden.
+Anhand des Ergebnisses (vgl. Abschnitt \ref{Ergebnis}) wird gezeigt, dass eine
+GWT Anwendung anhand zweier Anwendungsfälle generiert und mit kleinen
+Änderungen lauffähig gemacht werden kann. Zusammenfassend folgt eine Bewertung
+des Generator Projektes mit Erweiterungsmöglichkeiten (vgl. Abschnitt
+\ref{FazitAusblick}).
