@@ -8,18 +8,22 @@ solchen Anwendung vereinfacht und die Fehleranfälligkeit auf ein geringes Maß 
 Einschränkungen bei der vorgegebenen Ziel-Architektur (vgl. Abschnitt
 \ref{AufBZielArchitektur}).
 Darüber hinaus sind die durch GWT und MVP gegebenen Vorteile z.B. der
-einfache Austausch von Views weiterhin und teilweise leichter nutzbar z.B.
-durch Aus- und Einkommentierung bei dem Austausch von View Implementierungen.
+einfache Austausch von Views weiterhin und teilweise leichter nutzbar
+beispielsweise durch Aus- und Einkommentierung bei dem Austausch von View
+Implementierungen.
 Zur Gestaltung der Webseite stehen einem Entwickler alle Möglichkeiten z.B. die
 Nutzung von UI Editoren weiterhin ohne Einschränkungen zur Verfügung und die
 Anwendungsfälle sind frei wählbar, wie anhand der zwei M1 Modelle deutlich wird.
 Es können eigene View Elemente in Form von \textit{OwnViewObjects} erstellt und
 eingebunden werden, welches die Architekturkonzepte zusätzlich unterstützt. Des Weiteren wird die Navigation
 über \textit{ViewNavigationObjects} innerhalb der View Implementierung
-generiert, jedoch sind weitere Verhalten wie z.B. das Öffnen eines Popups nicht umgesetzt.
+generiert, jedoch sind weitere Verhalten wie das Öffnen eines Popups nicht
+umgesetzt. Zusätzlich sind nicht alle View sowie View Komponenten abhängige
+imports, da nur notwendige imports generiert werden sollen, vollständig umgesetzt
+und müssen somit vervollständigt werden.
 
-Durch Abschnitt \ref{Probleme} wird ersichtlich, dass die vorzunehmende Änderung im
-Bereich der View Komponenten innerhalb der \texttt{.ui.xml}-Datei keine optimale
+Durch Abschnitt \ref{Probleme} wird ersichtlich, dass die
+vorzunehmende Änderung im Bereich der View Komponenten innerhalb der \texttt{.ui.xml}-Datei keine optimale
 Lösung ist. Dies wird hervorgerufen dadurch, dass \textit{ViewObjects} weitere
 \textit{ViewObjects} beinhalten können und somit in der \texttt{.ui.xml}
 mehrfach enthalten sein können. Dies führt zu dem Gedanken, dass eine andere
