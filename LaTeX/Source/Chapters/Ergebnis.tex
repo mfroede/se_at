@@ -1,24 +1,25 @@
 \chapter{Ergebnis} \label{Ergebnis}
 Das Ziel bestand darin eine Grundarchitektur für ein GWT Projekt zu erzeugen,
 welche es dem Entwickler vereinfachen soll seine Anwendung gemäß dieser
-Architektur zu erstellen.
-Um das Projekt vollständig lauffähig zu machen, sind noch ein paar Handgriffe
-vornehmen.
+Architektur zu erstellen. Um das Projekt vollständig lauffähig zu machen, sind
+noch ein paar Handgriffe vorzunehmen.
 
 \begin{itemize}
   \item \texttt{AppEntryPoint.java} \\
-  Hier muss defieniert werden, welche der Views die Start Seite werden soll.
+  Hier muss definiert werden, welche der Views die Startseite werden soll.
   \item \texttt{AbstractView.java} \\
-  In dieser Klasse ist es möglich eine Standard Größe für alle Seiten zu
-  bestimmen.
+  In dieser Klasse ist es möglich Standardeigenschaften für alle View
+  Implementierungen zu bestimmen, der Befehl für die Größe ist hier
+  vorgeneriert und muss vervollständigt werden.
   \item \texttt{ProductionGinModule.java} \\
-  Auch hier muss wie in der AppEntryPoint-Klasse noch einmal die Start Seite
-  definiert werden.
+  Auch hier muss wie in der \texttt{AppEntryPoint}-Klasse noch einmal die
+  Starteite definiert werden.
   \item \texttt{index.html und style.css} \\
-  Diese beiden Dateien müssen nach dem Durchlauf des Generators in den 'war'
-  Ordner verschoben werden. Sie dienen als Ausgangspunkt für die Webanwendung.
+  Diese beiden Dateien müssen nach dem Durchlauf des Generators in den
+  \texttt{war}-Ordner verschoben werden. Sie dienen als Ausgangspunkt für die
+  Webanwendung.
   \item \texttt{Zusätzliche Bibliotheken}\\
-  	Zusätzlich zu den \texttt{GWT SDK} und \texttt{App Engine SDK} müssen die
+  	Zusätzlich zu dem \texttt{GWT SDK} und \texttt{App Engine SDK} müssen die
     hier aufgeführten \texttt{.jar} Bibliotheken in das Projekt hinzugefügt
     werden.
   	\begin{itemize}
@@ -29,29 +30,29 @@ vornehmen.
   	  \item \texttt{javax.inject.jar}
 	\end{itemize}
 \end{itemize}
-Zum Zeitpunkt der Entstehung dieser Arbeit ist es noch die folgenden
-zwei Schritte notwendig.
+Derzeit sind noch folgende Schritte notwendig.
 \begin{itemize}
-  \item \texttt{Imports} \\
+  \item \texttt{import} \\
   Es ist notwendig die noch fehlenden Imports in den Java Klassen
-  einzufügen, da diese aus Zeitgründen nicht vollständig eingearbeitet worden
-  sind. 
+  einzufügen, da diese aus Zeitgründen nicht vollständig eingearbeitet
+  worden sind, um nicht überflüssige Imports zu generieren. 
   \item \texttt{'Name'ViewImpl.ui.xml} \\
   In diesen Dateien müssen doppelte Elemente entfernt werden, die der Generator zu
-  viel eingefügt hat, näheres dazu in Abschnitt \ref{Probleme}.
+  viel eingefügt hat, näheres dazu in Abschnitt \ref{FazitAusblick} zweiter
+  Absatz.
 \end{itemize} 
 
-Sind diese Änderungen vorgenommen, ist das Projekt lauffähig. Zusätzlich können
-weitere Änderungen vorgenommen werden, zum Beispiel können weitere Texte eingefügt
-oder das Design angepasst werden, dieses wurde von dem Generator nur rudimentär,
-in Form einer \texttt{css}-Datei angelegt.
+Sind diese Maßnahmen durchgeführt, ist das Projekt lauffähig. Zusätzlich können
+weitere Änderungen vorgenommen werden, zum Beispiel können weitere Elemente
+eingefügt oder das Design angepasst werden, dieses wurde von dem Generator nur
+rudimentär, in Form einer \texttt{css}-Datei angelegt.
 
 \section{Beispiel Anwendung}
 Für das in diesem Abschnitt gezeigte Beispiel wurde das M1 Modell aus Abbildung
-\ref{Fig:ergModell} verwendet. Zu sehen sind fünf Seiten, welche in Paketen
-gegliedert sind. Darüber hinaus wurden zwei PermanentViews modelliert. Eine
-Betrifft den Header, mit einem eingebautem Menu und eine den Footer, in dem
-eine Navigation zum Impressum vorgesehen ist.
+\ref{Fig:ergModell} verwendet. Zu sehen sind fünf Seiten, welche in Pakete
+gegliedert sind. Darüber hinaus wurden zwei \textit{PermanentViewImpl}
+modelliert. Eine betrifft den Header, mit einem eingebautem Menu und eine den
+Footer, in dem eine Navigation zum Impressum vorgesehen ist.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -61,18 +62,18 @@ eine Navigation zum Impressum vorgesehen ist.
 \end{figure}
 
 Durch die extra eingebauten Pakete erweitert sich die Grundstruktur des
-Projektes, in Abbildung \ref{Fig:packegeModel} ist auf der linken Seite die
-komplette Packetstruktur des Projektes zu sehen. Hier ist zu erkennen, dass
-für die fünf Seiten separate Pakete existieren. Jedoch für den Header und den
-Footer keine zusätzlichen Pakete angelegt worden sind. Auf der rechten Seite in
-Abbildung \ref{Fig:packegeModel}, wird der Inhalt einiger der Pakete näher
-gezeigt. Hier ist zu erkennen, dass die beiden \texttt{ViewImpl}, die nicht in
-Paketen liegen, direkt in dem \texttt{view} Paket liegen. Zusätzlich sind die
-Klassen \texttt{Activity}, \texttt{Place}, \texttt{View} und die
-\texttt{.ui.xml} Datei in dem Paket zu sehen. Am Beispiel der
-\texttt{Home}-Seite ist gezeigt, dass die hierfür generierten Klassen und
-Dateien in einem separaten Paket von \texttt{view}, nämlich in \texttt{home}
-liegen.
+Projektes. In Abbildung \ref{Fig:packegeModel} ist auf der linken Seite die
+komplette Paketstruktur des Projektes zu sehen. Hier ist zu erkennen, dass
+für die fünf Seiten separate Pakete existieren, welche in Abbildung
+\ref{Fig:ergModell} zusehen sind. Jedoch für den Header und den Footer keine
+zusätzlichen Pakete angelegt worden sind. Auf der rechten Seite in Abbildung
+\ref{Fig:packegeModel}, wird der Inhalt einiger der Pakete näher gezeigt. Hier
+ist zu erkennen, dass die beiden \texttt{ViewImpls}, die nicht in Paketen
+liegen, direkt in dem \texttt{View}-Paket liegen. Zusätzlich sind die Klassen
+\texttt{Activity}, \texttt{Place}, \texttt{View} und die \texttt{.ui.xml}-Datei
+in dem Paket zu sehen. Am Beispiel der \texttt{Home}-Seite ist gezeigt, dass die
+hierfür generierten Klassen und Dateien in einem separaten Paket von
+\texttt{view}, nämlich in \texttt{home} liegen.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -84,7 +85,7 @@ Strukturieren im Modell, mit zusätzlichen Paketen}\label{Fig:packegeModel}
 \end{center}
 \end{figure}
  
-In diesem Beispiel soll die \texttt{home} Seite die Startseite für die
+In diesem Beispiel soll die \texttt{Home}-Seite die Startseite für die
 Webanwendung darstellen. Aus diesem Grund wurde entsprechend in der
 \texttt{AppEntryPoint}- und der \texttt{ProductionGinModule}-Klasse die
 jeweilige Klasse für die StartView angegeben (vgl. Listing
@@ -93,8 +94,8 @@ jeweilige Klasse für die StartView angegeben (vgl. Listing
 \begin{lstlisting}[caption={Änderung an der \texttt{AppEntryPoint}-Klasse zur
 Bestimmung der Startseite}, label={lst:appEntryPoint}] 
 [..]
-  historyHandler.register(injector.getPlaceController(), 
-      eventBus, new HomePlace());
+  $historyHandler$.register($injector$.getPlaceController(), 
+      $eventBus$, new HomePlace());
 [..]
 \end{lstlisting}
 \lstset{language=gwt}
@@ -106,9 +107,9 @@ zur Bestimmung der Startseite}, label={lst:ProductionGinModule}]
 \end{lstlisting}
 
 Zusätzlich wurde an einigen Stellen der Inhalt der Seiten erweitert. Dies ist
-einerseits dadurch möglich, dass innerhalb der \texttt{ViewImpl} Klasse
-zusätzlicher Inhalt eingefügt werden kann (vgl. Listing \ref{lst:conntentJava}),
-aber anderseits innerhalb der \texttt{.ui.xml}-Datei (vgl. Listing
+einerseits dadurch möglich, dass innerhalb der \texttt{ViewImpl}-Klasse
+zusätzlicher Inhalt eingefügt werden kann (vgl. Listing \ref{lst:conntentJava})
+und andererseits auch innerhalb der \texttt{.ui.xml}-Datei (vgl. Listing
 \ref{lst:conntentUI}).
 
 \lstset{language=gwt}
@@ -116,15 +117,15 @@ aber anderseits innerhalb der \texttt{.ui.xml}-Datei (vgl. Listing
 Veränderungen am Java-Code},
 label={lst:conntentJava}] 
 [..] 
-  HTML html = new HTML("<div><h1>Brandhei&szlig;e News</h1>"
+  HTML $html$ = new HTML("<div><h1>Brandhei&szlig;e News</h1>"
 	+"Lorem ipsum [..] amet."
 	+"<div/>");
-  content.add(html);
+  $content$.add($html$);
 [..]
 \end{lstlisting}
 \lstset{language=uixml}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
-Veränderungen am \texttt{ui.xml}-Datei},
+Veränderungen in der \texttt{.ui.xml}-Datei},
 label={lst:conntentUI}] 
 [..] 
  <g:FlowPanel>
@@ -143,6 +144,6 @@ nachdem der Quellecode aus dem M1 Modell generiert worden ist. Zum Einen
 unterstützen der Generator und das Profil derzeit nicht alle von GWT
 bereitgestellten UI Elemente, sodass diese nachträglich eingefügt werden
 müssen. Da diverse UI Editoren existieren, welche das Erzeugen einer
-Benutzeroberfläche grafisch unterstützen, wurde sich in dieser Arbeit bewusst
-gegen das Erzeugen einer Webanwendung, die vollständig designt worden ist,
+Benutzeroberfläche grafisch unterstützen, wurde sich in dieser Ausarbeitung
+bewusst gegen das Erzeugen einer Webanwendung, die vollständig designt wurde,
 entschieden. 
