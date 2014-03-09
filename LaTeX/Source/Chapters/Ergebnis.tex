@@ -7,35 +7,36 @@ Um das Projekt vollständig lauffähig zu machen, sind noch ein paar Handgriffe
 vornehmen.
 
 \begin{itemize}
-  \item \textbf{AppEntryPoint.java} \\
+  \item \texttt{AppEntryPoint.java} \\
   Hier muss defieniert werden, welche der Views die Start Seite werden soll.
-  \item \textbf{AbstractView.java} \\
+  \item \texttt{AbstractView.java} \\
   In dieser Klasse ist es möglich eine Standard Größe für alle Seiten zu
   bestimmen.
-  \item \textbf{ProductionGinModule.java} \\
+  \item \texttt{ProductionGinModule.java} \\
   Auch hier muss wie in der AppEntryPoint-Klasse noch einmal die Start Seite
   definiert werden.
-  \item \textbf{index.html und style.css} \\
-  Diese beiden Dateien müssen nach dem Durchlauf des Generators in den "`war"'
+  \item \texttt{index.html und style.css} \\
+  Diese beiden Dateien müssen nach dem Durchlauf des Generators in den 'war'
   Ordner verschoben werden. Sie dienen als Ausgangspunkt für die Webanwendung.
-  \item \textbf{Zusätzliche Bibliotheken}\\
-  	Zusätzlich zu den "`GWT SDK"' und "`App Engine SDK"' müssen die
-    hier aufgeführten .jar Bibliotheken in das Projekt hinzugefügt werden.
+  \item \texttt{Zusätzliche Bibliotheken}\\
+  	Zusätzlich zu den \texttt{GWT SDK} und \texttt{App Engine SDK} müssen die
+    hier aufgeführten \texttt{.jar} Bibliotheken in das Projekt hinzugefügt
+    werden.
   	\begin{itemize}
-  	  \item \textbf{gin-2.0.jar}
-  	  \item \textbf{guice-3.0-no\_aop.jar}
-  	  \item \textbf{guice-assistedinject-3.0.jar}
-  	  \item \textbf{gwt-servlet.jar}
-  	  \item \textbf{javax.inject.jar}
+  	  \item \texttt{gin-2.0.jar}
+  	  \item \texttt{guice-3.0-no\_aop.jar}
+  	  \item \texttt{guice-assistedinject-3.0.jar}
+  	  \item \texttt{gwt-servlet.jar}
+  	  \item \texttt{javax.inject.jar}
 	\end{itemize}
 \end{itemize}
 Zum Zeitpunkt der Entstehung dieser Arbeit ist es noch die folgenden
 zwei Schritte notwendig, näheres dazu in Abschnitt \ref{Probleme}.
 \begin{itemize}
-  \item \textbf{Imports} \\
+  \item \texttt{Imports} \\
   Zum einen ist es notwendig die noch fehlenden Imports in den Java-Klassen
   einzufügen. 
-  \item \textbf{*.ui.xml} \\
+  \item \texttt{'Name'ViewImpl.ui.xml} \\
   In diesen Dateien müssen doppelte Elemente entfernt werden, die der Generator zu
   viel eingefügt hat.
 \end{itemize} 
@@ -43,11 +44,11 @@ zwei Schritte notwendig, näheres dazu in Abschnitt \ref{Probleme}.
 Sind diese Änderungen vorgenommen, ist das Projekt lauffähig. Zusätzlich können
 weitere Änderungen vorgenommen werden, zum Beispiel können weitere Texte eingefügt
 oder das Design angepasst werden, dieses wurde von dem Generator nur rudimentär,
-in Form einer css-Datei angelegt.
+in Form einer \texttt{css}-Datei angelegt.
 
 \section{Beispiel Anwendung}
-Für das in diesem Abschnitt gezeigte Beispiel wurde das M1-Modell aus Abbildung
-\ref{Fig:ergModell} verwendet. Zu sehen sind 5 Seiten, welche in Paketen
+Für das in diesem Abschnitt gezeigte Beispiel wurde das M1 Modell aus Abbildung
+\ref{Fig:ergModell} verwendet. Zu sehen sind fünf Seiten, welche in Paketen
 gegliedert sind. Darüber hinaus wurden zwei PermanentViews modelliert. Eine
 Betrifft den Header, mit einem eingebautem Menu und eine den Footer, in dem
 eine Navigation zum Impressum vorgesehen ist.
@@ -68,9 +69,10 @@ Abbildung \ref{Fig:packegeModel}, wird der Inhalt einiger der Pakete näher
 gezeigt. Hier ist zu erkennen, dass die beiden \texttt{ViewImpl}, die nicht in
 Paketen liegen, direkt in dem \texttt{view} Paket liegen. Zusätzlich sind die
 Klassen \texttt{Activity}, \texttt{Place}, \texttt{View} und die
-\texttt{.ui.xml} Datei in dem Paket zu sehen. Am Beispiel der "`Home"' Seite
-ist gezeigt, dass die hierfür generierten Klassen und Dateien in einem separaten
-Paket von \texttt{view}, nämlich in \texttt{home} liegen.
+\texttt{.ui.xml} Datei in dem Paket zu sehen. Am Beispiel der
+\texttt{Home}-Seite ist gezeigt, dass die hierfür generierten Klassen und
+Dateien in einem separaten Paket von \texttt{view}, nämlich in \texttt{home}
+liegen.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -88,16 +90,16 @@ Webanwendung darstellen. Aus diesem Grund wurde entsprechend in der
 jeweilige Klasse für die StartView angegeben. (Listing \ref{lst:appEntryPoint}
 und \ref{lst:ProductionGinModule}) 
 \lstset{language=gwt}
-\begin{lstlisting}[caption={Änderung an der AppEntryPoint-Klasse zur Bestimmung
-der Startseite}, label={lst:appEntryPoint}] 
+\begin{lstlisting}[caption={Änderung an der \texttt{AppEntryPoint}-Klasse zur
+Bestimmung der Startseite}, label={lst:appEntryPoint}] 
 [..]
   historyHandler.register(injector.getPlaceController(), eventBus,
       new HomePlace());
 [..]
 \end{lstlisting}
 \lstset{language=gwt}
-\begin{lstlisting}[caption={Änderung an der ProductionGinModule-Klasse zur
-Bestimmung der Startseite}, label={lst:ProductionGinModule}] 
+\begin{lstlisting}[caption={Änderung an der \texttt{ProductionGinModule}-Klasse
+zur Bestimmung der Startseite}, label={lst:ProductionGinModule}] 
 [..]
   bind(HomeView.class);
 [..]
@@ -106,7 +108,7 @@ Bestimmung der Startseite}, label={lst:ProductionGinModule}]
 Zusätzlich wurde an einigen Stellen der Inhalt der Seiten erweitert. Dies ist
 einerseits dadurch möglich, dass innerhalb der \texttt{ViewImpl} Klasse
 zusätzlicher Inhalt eingefügt werden kann (Listing \ref{lst:conntentJava}), aber
-anderseits innerhalb der \texttt{.ui.xml} Datei (Listing \ref{lst:conntentUI}).
+anderseits innerhalb der \texttt{.ui.xml}-Datei (Listing \ref{lst:conntentUI}).
 
 \lstset{language=gwt}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
@@ -121,7 +123,7 @@ label={lst:conntentJava}]
 \end{lstlisting}
 \lstset{language=gwt}
 \begin{lstlisting}[caption={Einfügen von Inhalten auf einer Seite durch
-Veränderungen am ui.xml-Datei},
+Veränderungen am \texttt{ui.xml}-Datei},
 label={lst:conntentUI}] 
 [..] 
  <g:FlowPanel>
@@ -136,10 +138,10 @@ label={lst:conntentUI}]
 \end{lstlisting}
 
 Dieses sind nur zwei Arten wie die Anwendung weiter bearbeitet werden kann,
-nachdem der Quellecode aus dem M1-Modell generiert worden ist. Zum Einen
+nachdem der Quellecode aus dem M1 Modell generiert worden ist. Zum Einen
 unterstützen der Generator und das Profil derzeit nicht alle von GWT
-bereitgestellten UI-Elemente, sodass diese nachträglich eingefügt werden
-müssen. Da diverse UI-Editoren existieren, welche das Erzeugen einer
+bereitgestellten UI Elemente, sodass diese nachträglich eingefügt werden
+müssen. Da diverse UI Editoren existieren, welche das Erzeugen einer
 Benutzeroberfläche grafisch unterstützen, wurde sich in dieser Arbeit bewusst
 gegen das Erzeugen einer Webanwendung, die vollständig designt worden ist,
 entschieden. 
