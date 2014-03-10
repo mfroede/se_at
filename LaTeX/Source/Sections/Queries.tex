@@ -1,5 +1,5 @@
 \section{Queries} \label{Queries}
-Um das Arbeiten innerhalb des MTL Generators zu erleichtern, werden für häufig verwendete bzw. auch spezielle Ausdrücke sog. Queries benutzt. Diese können dann in dem Generator an Stelle des komplexeren Ausdruck eingesetzt werden. Die verwendeten Queries dieses Projektes sind in der \texttt{util.mtl} zusammengefasst. So wird beispielsweise in \texttt{isNotViewExisting} (siehe Listing \ref{lst:BSPCodeQuery}) über die Klasse abgefragt, ob diese von einem Interface des Stereotypes View implementiert wurde. Ist dies der Fall, gibt der Query false zurück anderenfalls true. Dieser längere Ausdruck kann auf diese Weise später kompakt als Query an einer geeigneten Stelle verwendet werden.\\
+Um das Arbeiten innerhalb des MTL Generators zu erleichtern, werden für häufig verwendete bzw. auch spezielle Ausdrücke sog. Queries benutzt. Diese können dann in dem Generator an Stelle des komplexeren Ausdrucks eingesetzt werden. Die verwendeten Queries dieses Projektes sind in der \texttt{util.mtl} zusammengefasst. So wird beispielsweise in \texttt{isNotViewExisting} (siehe Listing \ref{lst:BSPCodeQuery}) über die Klasse abgefragt, ob diese von einem Interface des Stereotypes View implementiert wurde. Ist dies der Fall, gibt der Query \texttt{false} zurück anderenfalls \texttt{true}. Dieser längere Ausdruck kann auf diese Weise später kompakt als Query an einer geeigneten Stelle verwendet werden.\\
 
 \lstset{language=mtl}
 \begin{lstlisting}[caption={Query für \texttt{isNotViewExisting}}, label={lst:BSPCodeQuery}]
@@ -16,7 +16,7 @@ Um das Arbeiten innerhalb des MTL Generators zu erleichtern, werden für häufig
 \end{lstlisting}
 
 Mithilfe der zur Verfügung gestellten Query \texttt{getTaggedValue} und deren Java-Methode konnten Tagged Values von Stereotypen über Assoziationen als Liste wiedergeben werden. Der Query musste für dieses Projekt soweit angepasst werden, als dass zu diesem ein weiterer Boolean Parameter \texttt{isClass} ergänzt wurde. Dies war notwendig, da der Query sowohl für Klassen als auch für Properties benötigt wurde.
-Die Hilfsmethode \texttt{addToResult} in der \texttt{PropertyHelper.java} speichert anhand dieser Boolean Variable die richtigen Elemente als Klasse oder Property in einer Liste (siehe Listing \ref{lst:BSPCodeIsClass}).
+Die Hilfsmethode \texttt{addToResult} in der \texttt{PropertyHelper.java} speichert anhand dieser \texttt{Boolean} Variable die richtigen Elemente als Klasse oder Property in einer Liste (siehe Listing \ref{lst:BSPCodeIsClass}).
 \lstset{language=gwt}
 \begin{lstlisting}[caption={Hilfsmethode \texttt{addToResult} der \texttt{PropertyHelper.java}}, label={lst:BSPCodeIsClass}]
 private void addToResult(String $property$, Boolean $isClass$,
