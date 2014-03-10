@@ -1,70 +1,71 @@
 \chapter{Aufbau und Struktur M1 Modell} \label{M1Modell}
 Beim M1 Modell handelt es sich um die direkte Darstellung der zu generierenden
-Seiten für die Webanwendung. Dieses Modell wird direkt durch den Generator,
+Views für die Webanwendung. Dieses Modell wird direkt durch den Generator,
 siehe Abschnitt \ref{Generator}, umgesetzt und um alle zusätzlichen Dateien
-erweitert, die für die Zielarchitektur notwendig sind. In dem, in dieser Arbeit,
-beschriebenen Generator, ist es nicht vorgesehen ein Projekt vollständig, mit
-allen Einzelheiten, zu modellieren und erzeugen zu können, aus diesem Grund ist
-auch das M1 Modell nicht als vollständige Abbildung für das Projekt zu
-verstehen, das Ziel lag vor allem darauf die Architektur mit möglichst wenig
-aufwand für den Entwickler zu generieren.
+erweitert, die für die Ziel-Architektur notwendig sind. Das Ziel, in dieser
+Ausarbeit, lag vor allem darin die Ziel-Architektur mit möglichst wenig Aufwand
+für den Entwickler zu generieren, somit ist das M1 Modell nicht als vollständige
+Abbildung des Projektes zu verstehen. Das Erzeugen des Modells sollte
+übersichtlich gestaltet werden, um einerseits den Programieraufwand zu
+minimieren und anderseits die Fehlerquote zu verringern.
 
-In dieser Arbeit, soll der Generator aus dem M1 Modell, eine möglichen
-Grundstruktur für ein GWT Projekt erzeugen, welches dur kleine änderunge
-lauffähig ist. Das M1 Modell ist so angedacht, dass alle Seiten eine
-eigenständige Klasse darstellen. Des Weiteren können einfache Elemente, wie
-Beispielsweise Label und Textfelder den Seiten hinzugefügt werden.
-Zu dem ist es möglich die Navigation zwischen den Seiten, beispielsweise mit
-Hilfe eines Menüs, in das Modell mit einzubringen. 
+In dieser Arbeit, soll der Generator aus dem M1 Modell, die im Abschnitt
+\ref{AufBZielArchitektur} beschriebene mögliche Grundstruktur für ein GWT
+Projekt erzeugt werden. Dieses kann durch kleine Änderungen lauffähig gemacht
+werden. Das M1 Modell ist so angedacht, dass alle Seiten, der Webanwendung, als
+eine eigenständige View dargestellt werden. Des Weiteren können
+einfache Elemente, wie beispielsweise Label und Textfelder den Views hinzugefügt
+werden. Zudem ist es möglich die Navigation zwischen den Seiten, beispielsweise
+mit Hilfe eines Menus, in das Modell mit einzubringen. 
 
 Durch die Verwendung eines Profils sind in dem M1 Modell keine Assoziationen
-zu sehen. Dies sorg dafür, dass keine Verbindung zwischen den einzelnen Seiten
-zu sehen ist. Die Navigation wird ausschließlich über die Properties der
-Navigations Elemente erstellt, in dieser Arbeit mit
-\textit{viewNavigationObject} benannt. Dies sorgt für eine leichtere Erstellung
-dessen Im M1 Modell durch den Entwickler, erschwert allerdings das Erkennen
-der Navigation.
+zu sehen. Die Navigation wird ausschließlich über die Properties in den
+Navigations Elementen erstellt, in dieser Arbeit werden diese Elemente mit dem
+Stereotyp \textit{ViewNavigationObject} gekennzeichnet. Der einfache
+Grundaufbau des M1 Modells, sorgt für eine leichtere Modellierung, erschwert
+allerdings das Erkennen der Navigation.
 
 \section{M1 Modellaufbau}
 Wenn ein neues Projekt angelegt wird, muss in den Properties des M1 Modells
-neben der Angabe des Profils, ein Name definiert werden. Dieser Name stellt
+neben der Angabe des Profils ein Name definiert werden. Dieser Name stellt
 später den Hauptpaketnamen des GWT Projektes dar und legt somit den Grundstein
-für die Paketstruktur (siehe Abbildung \ref{Fig:mainpackage}).
+für die Paketstruktur (vgl. Abbildung \ref{Fig:mainpackage}).
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./img/ProjectPackage.png}
-\caption{Name des Modelles und gleichzeitig Hauptpaket des
+\caption{Name des Modells und gleichzeitig Hauptpaket des
 GWT Projekts}\label{Fig:mainpackage}
 \end{center}
 \end{figure}
 
 \newpage
 \section{Klassenaufbau}
-Die grundlegendsten Elemente in dem Modell sind \texttt{ViewImpl}-Klassen. Ein
+Die grundlegendsten Elemente in dem Modell sind \textit{ViewImpl} Klassen. Ein
 Beispiel dafür ist in Abbildung \ref{Fig:viewimpl} zu sehen. Für jede dieser
-Klassen Objekte werden mithilfe des Generators alle notwendigen Dateien
-erzeugt, die für den späteren Seiteaufruf notwendig sind.
+Klassen, werden durch den Generators, alle notwendigen Dateien
+erzeugt die für den späteren Aufruf, der Seite, notwendig sind.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=1.0\textwidth]{./img/GWT-Model-Views-alg.png}
-\caption{\texttt{ViewImpl}-Klassen zur Erzeugung von Seiten
+\caption{\textit{ViewImpl} Klassen zur Erzeugung von Seiten
 für den Webauftritt.}\label{Fig:viewimpl}
 \end{center}
 \end{figure}
 
-Des weiteren ist in der Abbildung \ref{Fig:viewimpl} ein Beispiel für ein
-\textit{ownViewObject} zu sehen. Diese sind für komplexere oder mehrfach
-verwendete UI-Struckturen gedacht und werden vom Generator als eigenständige
+Des Weiteren ist in der Abbildung \ref{Fig:viewimpl} ein Beispiel für ein
+\textit{OwnViewObject} zu sehen. Diese sind für komplexere oder mehrfach
+verwendete UI Strukturen gedacht und werden vom Generator als eigenständige
 Klasse generiert.
 
-GWT bietet, durch Verwendung des MVP Pattern, eine einfache Möglichkeit Seiten
-auszutauschen. Um dieses Verfahren mit zu generieren wurde sich dazu
-entschlossen, neben der Standardgenerierung von Seiten, eine zusätzliche
-Methode einzubauen. Diese Methode bietet die Möglichkeit beliebig viele
-alternativ Seiten für eine Ansicht im Webauftritt zu erzeugen (siehe Abbildung
-\ref{Fig:viewInterface}). Die Möglichkeit der einfachen Austauschbarketi von
+Die Ziel-Architektur bietet, durch Verwendung des MVP Pattern, eine einfache
+Möglichkeit View Implementierungen auszutauschen. Um dieses Verfahren in
+jedem Fall für den Entwickler nutzbar zu machen, wurde sich dazu entschlossen,
+neben der Generierung von View Implementierungen, eine zusätzliche Methode
+einzubauen. Diese Methode bietet die Möglichkeit beliebig viele alternativ
+Seiten für ein View Interface zu erzeugen (vgl. Abbildung
+\ref{Fig:viewInterface}). Die Möglichkeit der einfachen Austauschbarkeit von
 Views, wurde bei GWT unter anderem für Testzwecke angedacht.
 
 \begin{figure}[htbp]
@@ -77,40 +78,41 @@ eine austauschbare Ansicht zu erzeugen.}\label{Fig:viewInterface}
 \end{figure} 
 
 Bei dem, in Abbildung \ref{Fig:viewInterface}, gezeigtem M1 Modell Ausschnitt
-wird die Komplette Klassenstruktur nicht zweimal erzeugt, anders als im
+wird die komplette Klassenstruktur nicht zweimal erzeugt, anders als im
 allgemeinem Fall (siehe Abbildung \ref{Fig:viewimpl}). Die
 \texttt{'Name'Activity.java}, \texttt{'Name'Place.java} und \\
 \texttt{'Name'View.java} Klassen werden hierbei nur einmal für das Interface
 und die \texttt{'Name'ViewImpl.java} und \texttt{'Name'ViewImpl.ui.xml}
-Dateien für jede realisierende \texttt{ViewImpl}-Klassen generiert. 
+Dateien für jede realisierende \texttt{ViewImpl}-Klasse generiert. 
 
 Darüber hinaus ist in Abbildung \ref{Fig:viewInterface} zu sehen, dass es
 möglich ist, Klassen zu Paketen zuzuordnen. Auf diese Weise wird es
 ermöglicht die zu generierenden Dateien zu gruppieren. 
 
 \newpage
-Das letzte in dem Modellen genutzte Klassenkonstrukt, sind die sogenannten
-\texttt{PermanentView}-Elemente. Diese sind dazu gedacht, um zum Beispiel Menüs
-zu erzeugen. Diese haben die Eigenschaft das sie auf allen Seiten zur Verfügung
-stehen und nicht mehrfach generiert werden sollen.
+Das letzte in den Modellen genutzte Klassenkonstrukt, sind die sogenannten
+\textit{PermanentViewImpl}-Klassen. Diese sind dazu gedacht, um zum Beispiel
+Menus zu erzeugen. Diese haben die Eigenschaft das sie auf allen Webseiten zur
+Verfügung stehen und bei der Generierung nicht mehrfach in die normalen Views
+eingebunden werden sollen.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.55\textwidth]{./img/Header_Footer.png}
-\caption{\texttt{PermanentView}-Elemente am Beispiel
+\caption{\textit{PermanentViewImpl}-Klassen am Beispiel
 eines Headers, mit Menu, und eines Footers.}\label{Fig:headerFooter}
 \end{center}
 \end{figure} 
 
 \section{Seitenaufbau}
-Je nach Art der Seite muss zuerst definiert werden, um was für einen Typ von
-Seite es sich handelt. In Abbildung \ref{Fig:SideProp} ist ein Beispiel dafür
+Je nach Art der View muss zuerst definiert werden, um was für einen Typ von
+View es sich handelt. In Abbildung \ref{Fig:SideProp} ist ein Beispiel dafür
 zu sehen, welches eine \textit{ViewImpl} und ein \textit{Header} zeigt, eine
-spezialisierte Form der \textit{PermanentView}, zu sehen. Wichtig ist hier
+spezialisierte Form der \textit{PermanentViewImpl}. Wichtig ist hier
 die \texttt{concreteBinding}-Eigenschaft. An dieser Stelle kann bei Verwendung
-eines separaten Interfaces festgelegt werden, welche konkrete implementierung
-dargestellt werden soll, um keine Laufzeitfehler zu erzeugen muss zu jeder View
-exakt eine ViewImpl angegeben werden. Diese Einstellung kann später im
+eines separaten Interfaces festgelegt werden, welche konkrete Implementierung
+dargestellt werden soll. Um keine Laufzeitfehler zu erzeugen muss zu jeder View
+exakt eine \textit{ViewImpl} angegeben werden. Diese Einstellung kann später im
 Quellecode geändert werden.
 
 \newpage
@@ -123,21 +125,21 @@ eine \textit{ViewImpl} und unten ein \textit{Header}}\label{Fig:SideProp}
 \end{center}
 \end{figure} 
 
-Um diese Seite mit Inhalten zu befüllen, können \textit{ViewObject}s und 
+Um diese Views mit Inhalten zu befüllen, können \textit{ViewObject}s und 
 \textit{ViewNavigationObject}s als Attribute hinzugefügt werden.
 
 \newpage
-Bei \texttt{ViewObject}-Elementen können die in Abbildung \ref{Fig:ViewProp}
+Bei \textit{ViewObject}-Elementen können die in Abbildung \ref{Fig:ViewProp}
 dargestellten Eigenschaften verändert werden.
 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./img/Prop-ViewObjects.png}
-\caption{Eigenschaften eines \texttt{ViewObject}-Elementes }\label{Fig:ViewProp}
+\caption{Eigenschaften eines \textit{ViewObject}-Elementes }\label{Fig:ViewProp}
 \end{center}
 \end{figure} 
 
-Bei \texttt{ViewNavigationObject}-Elementen können die in Abbildung
+Bei \textit{ViewNavigationObject}-Elementen können die in Abbildung
 \ref{Fig:ViewNavProp} dargestellten Eigenschaften verändert werden. Hier ist
 vor allem die letzte Eigenschaft \texttt{goToView} zu beachten, welche angibt
 wohin dieses navigieren soll.
@@ -145,7 +147,7 @@ wohin dieses navigieren soll.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.8\textwidth]{./img/Prop-ViewNavigationObjects.png}
-\caption{Eigenschaften eines \texttt{ViewNavigationObject}-Elementes
+\caption{Eigenschaften eines \textit{ViewNavigationObject}-Elementes
 }\label{Fig:ViewNavProp}
 \end{center}
 \end{figure}
