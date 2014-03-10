@@ -24,4 +24,5 @@
 \contentsline {section}{\numberline {7.1}Beispiel Anwendung}{33}{section.7.1}
 \contentsline {chapter}{\numberline {8.}Fazit und Ausblick}{36}{chapter.8}
 \contentsline {chapter}{\numberline {9.}Arbeitsaufteilung}{38}{chapter.9}
-\contentsline {chapter}{\numberline {10.}Anhang}{41}{chapter.10}
+\contentsline {chapter}{Literaturverzeichnis}{40}{chapter*.5}
+\contentsline {chapter}{Anhang}{41}{chapter*.6}
