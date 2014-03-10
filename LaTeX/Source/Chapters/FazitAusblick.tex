@@ -15,12 +15,11 @@ Zur Gestaltung der Webseite stehen einem Entwickler alle Möglichkeiten z.B. die
 Nutzung von UI Editoren weiterhin ohne Einschränkungen zur Verfügung und die
 Anwendungsfälle sind frei wählbar, wie anhand der zwei M1 Modelle deutlich wird.
 Es können eigene View Elemente in Form von \textit{OwnViewObjects} erstellt und
-eingebunden werden, welches die Architekturkonzepte zusätzlich unterstützt. Des Weiteren wird die Navigation
-über \textit{ViewNavigationObjects} innerhalb der View Implementierung
+eingebunden werden, welche die Architekturkonzepte zusätzlich unterstützen. Des
+Weiteren wird die Navigation über \textit{ViewNavigationObjects} innerhalb der View Implementierung
 generiert, jedoch sind weitere Verhalten wie das Öffnen eines Popups nicht
 umgesetzt. Zusätzlich sind nicht alle View sowie View Komponenten abhängige
-imports, da nur notwendige imports generiert werden sollen, vollständig umgesetzt
-und müssen somit vervollständigt werden.
+\texttt{imports} vollständig umgesetzt und müssen somit vervollständigt werden.
 
 Durch Abschnitt \ref{Probleme} wird ersichtlich, dass die
 vorzunehmende Änderung im Bereich der View Komponenten innerhalb der \texttt{.ui.xml}-Datei keine optimale
@@ -56,9 +55,9 @@ unterschiedliche \texttt{if}-Bedingungen und viele \texttt{if}-Bedingungen mit
 OCL lösbar wäre ist weiterhin erforderlich, wobei ein Test mit anderen Generierungssprachen,
 die diesbezüglich mehr Möglichkeiten zur Strukturierung bieten, denkbar ist.
 
-Weiterhin müssen strukturelle Änderungen z.B. das Umsetzen der
+Weiterhin müssen strukturelle Änderungen, beispielsweise das Umsetzen der
 \texttt{index.html} oder das Hinzufügen von Bibliotheken z.B. GIN (vgl.
-Abschnitt \ref{Ergebnis}) innerhalb des GWT Projektes vorgenommen werden. Diese
+Abschnitt \ref{Ergebnis}), innerhalb des GWT Projektes vorgenommen werden. Diese
 Änderungen können durch die Verbindung des Generator Projektes mit Maven vermieden werden.
 \\\\
 Das zu generierende M1 Modell weist keine Assoziationen auf, wodurch viele

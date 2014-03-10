@@ -3,7 +3,7 @@
 % ---------------------------------------------
 \section{Ziel-Architektur}\label{AufBZielArchitektur}
 Die für die Generierung vorgesehene Architektur basiert auf 
-Architekturkonzepten verschiedener Entwickler und entstand bei der Entwicklung
+Architekturkonzepte verschiedener Entwickler und entstand bei der Entwicklung
 von vorhergehenden GWT Projekten. Diese Architektur stellte sich dabei als
 \glqq{}Best Practice\grqq{} Lösung heraus, welche jedoch aufwändig und
 fehleranfällig bei der Umsetzung ist. Dies ist einer der Gründe für dieses Generator Projekt.
@@ -48,7 +48,7 @@ erstellenden Klassen und Dateien vorgestellt.\\
     Browserzugriff auf die jeweilige Webseite durch GWT umgesetzt werden kann.
     \item \texttt{AppPlaceHistoryMapper.java}\\
     Dient dem History Management, damit der Zugriff auf die View
-    Implementierungen im Browser über den Place stattfinden und eine
+    Implementierungen im Browser über den \texttt{Place} stattfinden und eine
     back-Funktionalität implementiert werden kann.
     \item \texttt{AppGinjector.java}\\
     Die Schnittstelle zum Zugriff u.A. auf die
@@ -93,7 +93,7 @@ erstellenden Klassen und Dateien vorgestellt.\\
     Labels.
     \item \texttt{'Name'ViewImpl.ui.xml}\\
     Innherhalb dieser Datei können View Komponenten sowie dessen
-    Style-Eigenschaften definiert werden.
+    Style Eigenschaften definiert werden.
   \end{itemize} 
   \item Views und Elemente, die auf jeder Webseite zu sehen
   sind,
@@ -142,40 +142,37 @@ den Pfad für den zu übersetzenden Java Code angibt, wie folgt: \texttt{<source
 path='client'/>} definiert werden kann. Folgend die Gliederung der Klassen und
 Dateien innerhalb ihrer Packages:\\\\
 \begin{tabular}{ll} 
-\textbf{Package} &  \quad \quad \textbf{Klassen und Dateien}\\
+\textbf{Package} &  \quad \textbf{Klassen und Dateien}\\
 \addlinespace
 \hline
 \hline
 \addlinespace
-  \texttt{'projektname'} & \quad \quad \texttt{'Name'.gwt.xml}\\
+  \texttt{'projektname'} & \quad \texttt{'Name'.gwt.xml}\\
   \addlinespace
   \hline
   \addlinespace
-  \texttt{'projektname'.client} & \quad \quad \texttt{AppEntryPoint.java}\\
+  \texttt{'projektname'.client} & \quad \texttt{AppEntryPoint.java}\\
   \addlinespace
   \hline
   \addlinespace
-  \texttt{'projektname'.client.common} & \quad \quad
-  \texttt{AbstractView.java}\\
-    	& \quad \quad \texttt{AbstractActivityDefaultImpl.java}\\
-    	& \quad \quad \texttt{'Name'ViewActivityMapperImpl.java}\\
-    	& \quad \quad \texttt{AppPlaceHistoryMapper.java}\\
+  \texttt{'projektname'.client.common} & \quad \texttt{AbstractView.java}\\
+    	& \quad \texttt{AbstractActivityDefaultImpl.java}\\
+    	& \quad \texttt{'Name'ViewActivityMapperImpl.java}\\
+    	& \quad \texttt{AppPlaceHistoryMapper.java}\\
    \addlinespace
    \hline
    \addlinespace
-  \texttt{'projektname'.client.gin} & \quad \quad
-  \texttt{AppGinjector.java}\\
-      	& \quad \quad \texttt{PlaceControllerProvider.java}\\
-    	& \quad \quad \texttt{ProductionGinModule.java}\\
+  \texttt{'projektname'.client.gin} & \quad \texttt{AppGinjector.java}\\
+      	& \quad \texttt{PlaceControllerProvider.java}\\
+    	& \quad \texttt{ProductionGinModule.java}\\
   \addlinespace
   \hline
   \addlinespace
-  \texttt{'projektname'.client.view} & \quad \quad
-  \texttt{'Name'Activity.java}\\
-  		& \quad \quad \texttt{'Name'Place.java}\\
-    	& \quad \quad \texttt{'Name'View.java}\\
-    	& \quad \quad \texttt{'Name'ViewImpl.java}\\
-    	& \quad \quad \texttt{'Name'ViewImpl.ui.xml}\\
+  \texttt{'projektname'.client.view} & \quad \texttt{'Name'Activity.java}\\
+  		& \quad \texttt{'Name'Place.java}\\
+    	& \quad \texttt{'Name'View.java}\\
+    	& \quad \texttt{'Name'ViewImpl.java}\\
+    	& \quad \texttt{'Name'ViewImpl.ui.xml}\\
 \end{tabular}\\\\
 Jedoch soll für einen Entwickler die Möglichkeit bleiben innerhalb des
 \texttt{view}-Packages, die View Interfaces und ihre dazugehörigen Klassen in
@@ -261,7 +258,7 @@ verschiedenen M1 Modelle und der Mehrwert der Navigationsgenerierung wird
 gemindert aufgrund des Mehraufwandes. Die Verwendung von Enumerations für View
 Komponenten ermöglichte die Idee, dass für navigierbare bzw. verhaltensbasierte
 Elemente eine ähnliche Handhabung dienlich sein kann. Diese ermöglichen die Erfüllung der
-Zielsetzung und bieten über die Angabe eines Attributes \texttt{goTo} die
+Zielsetzung und bieten über die Angabe eines Attributes \texttt{goToView} die
 Navigation sowie über weiterer Attribute z.B. \texttt{openPopup} eine
 Generierung verhaltensbezogener Inhalte über das M1 Modell. Dies führt zu der
 Stereotypenbildung der \textit{Navigations View Komponenten} mit
@@ -280,7 +277,7 @@ enthalten sein und somit eine \textit{eigene View Komponente}, z.B. eine große
 Datentabelle, bilden, die innerhalb mehrerer \textit{View Implementierungen}
 enthalten sein kann.
 
-Im Bereich von Views, z.B. ein Header, die auf allen Websites innerhalb des
+Im Bereich von Views, z.B. ein Header, die auf allen Webseiten innerhalb des
 Browsers sichtbar sind, soll eine weitere Stereotypenbildung stattfinden. Diese Views
 sind \textit{permanente Views} und sollen sich zusätzlich in \textit{Header} und
 \textit{Footer} gliedern, da diese, durch
@@ -295,12 +292,13 @@ ermöglicht.
 % ---------------------------------------------
 \section{M1 Modell}\label{AufBM1}
 Basierend auf dem UML Profil soll das Modell View Implementierungen enthalten,
-welche wiederum View Komponenten als Properties beinhalten und eigene
-View Objekte zu diesen View Komponenten zugeordnet sein können. Darüber hinaus
-sollen über Attribute innerhalb von dem Stereotyp Navigations View Komponenten,
+welche wiederum View Komponenten als Properties und eigene
+View Objekte beinhalten können. Zu den eigenen View Objekten können auch View
+Komponenten zugeordnet sein.
+Darüber hinaus sollen über Attribute innerhalb von dem Stereotyp Navigations View Komponenten,
 im M1 Modell enthaltene View Implementierungen angegeben werden. Somit kann z.B.
-über das Attribut \texttt{goTo} die Navigation zu dieser View Implementierung
-durch die Generierung dessen erfolgen.
+über das Attribut \texttt{goToView} die Navigation zu dieser View
+Implementierung durch die Generierung dessen erfolgen.
 Weiterhin sollen permanente View Implementierungen in Form z.B. eines
 Headers erstellt werden, welche dann auf jeder View innerhalb des Browsers
 sichtbar sind. Eine Implementierung eines Headers soll ein Menu enthalten,
@@ -325,7 +323,7 @@ sollen die Klassen \texttt{'Interfacename'View.java},
 \texttt{'Interfacename'Activity.java} und \texttt{'Interfacename'Place.java} den Interfacenamen tragen. Die
 Implementierungsklassen bzw. Dateien, der View Intefaces,
 \texttt{'Klassenname'ViewImpl.java} und \texttt{'Klassenname'ViewImpl.ui.xml}, haben die
-Implementierungsklassennamen. Darüber hinaus sollen die viewabhängigen Inhalte,
+Implementierungsklassennamen. Darüber hinaus sollen die View abhängigen Inhalte,
 wenn mehr als eine View Implementierung vorhanden ist, mittels eines
 \texttt{boolean} \texttt{binding} dementsprechend unterschieden werden. Dadurch
 sollen alle Inhalte basierend auf View Implementierungen mit dem
@@ -352,7 +350,7 @@ da dies layoutspezifisch ist.
 Der Entwickler soll weiterhin zusätzliche Änderungen vornehmen müssen. Diese
 betreffen die Startwebseite der GWT Webanwendung, welche in dem generiertem
 Code anstatt einer konkreten Angabe des Klassennamens, innerhalb des Befehls,
-über \glqq{}Start\grqq{} gekennzeichnet wird. Dieses Vorgehen kann das
+durch \glqq{}Start\grqq{} gekennzeichnet wird. Dieses Vorgehen kann das
 Verständnis für die Architektur stärken und es werden überflüssige und überfüllende
 Attribute innerhalb des UML Profils und M1 Modells vermieden.
 

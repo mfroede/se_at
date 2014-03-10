@@ -39,7 +39,7 @@ Implementierung}, label={lst:BSPCodeView}]
 	}
 \end{lstlisting}
 \lstset{language=uixml}
-\begin{lstlisting}[caption={Beispielcode UiBinder in ui.xml},
+\begin{lstlisting}[caption={Beispielcode UiBinder in \texttt{.ui.xml}},
 label={lst:BSPCodeUIXML}]
 <!DOCTYPE ui:UiBinder SYSTEM 
 	"http://dl.google.com/gwt/DTD/xhtml.ent">
@@ -67,8 +67,9 @@ Implementierung (vgl.
 Listing \ref{lst:BSPCodeView}) ermöglichen den Zugriff auf die View Komponenten
 mit dem jeweiligem Attribut \texttt{ui:field} in der \texttt{.ui.xml}-Datei
 (vgl.
-Listing \ref{lst:BSPCodeUIXML}). \texttt{@UiField} ist dabei dafür zuständig die
-Instanz, der im UiBinder-Template definierten View Komponente, zu erhalten.
+Listing \ref{lst:BSPCodeUIXML}). Mit \texttt{@UiField} ist es möglich die
+dafür zuständige Instanz, der im UiBinder-Template definierten View
+Komponente, zu erhalten.
 Diese kann dann über den Java Code instanziiert oder Style Eigenschaften gesetzt werden.
 Die Annotation \texttt{@UiHandler} dagegen ermöglicht die Anmeldung einer
 Methode auf der Instanz. Darüber kann dann im Falle des Beispiels ein Klick Event auf dem Button

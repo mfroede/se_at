@@ -1,33 +1,38 @@
 \chapter{Einleitung}
 \label{Einleitung}
-Diese Ausarbeitung beschäftigt sich mit der Generierung eines Google Web
+Dieses Projekt entstand im Rahmen des Software Engineering - Advanced Topic
+Kurses im Master Studiengang Medieninformatik, der Beuth Hochschule Berlin, im
+Wintersemester 2013/14.
+
+Die Ausarbeitung beschäftigt sich mit der Generierung eines Google Web
 Toolkit (GWT) Projektes.
 Dies erfolgt durch eine Model-To-Text Transformation mittels eines Model
 Transformation Language (MTL) Generators, welchem mit der Object Constraint Language (OCL), weitere
 Funktionalitäten zur Verfügung stehen. 
 
-Dabei wird ein besonderes Augenmerk auf die Architektur gelegt, ohne den
-Einsatz von Layouting. Deshalb findet eine Generierung anhand einer vorgegebenen
-Grundstruktur bzw. -architektur statt. Mit dem erstelltem Generator Projekt in
-dieser Ausarbeitung, ist es einem Entwickler möglich basierend auf einem M1 Modell in Form eines UML
-Klassendiagramms eine vollständige Struktur einer GWT Frontend Webanwendung zu
-erzeugen, welche mit kleineren Änderungen vollständig lauffähig ist. Die
-Grundlage des M1 Modells bildet ein UML Profil, welches so gestaltet wird,
-sodass eine GWT Frontend Webanwendung gemäß der vorgegebenen Architektur einfach
-umgesetzt werden kann. Dies hat den Grund, dass die vorgegebene Architektur eine
-durch den Einsatz des Model-View-Presenter (MVP) Patterns sowie verschiedener
-Frameworks, eine durch verschiedene Entwickler angefertigte \glqq{}Best
-Practice\grqq{} Lösung ist. Diese Herangehensweise ist jedoch aufwändig und
-fehleranfällig in der Umsetzung. 
+Dabei wird ein besonderes Augenmerk auf die Architektur gelegt, allerdeings ohne
+des Einsatzes von Layouting. Deshalb findet eine Generierung anhand einer
+vorgegebenen Grundstruktur bzw. -architektur statt. Mit dem in der vorliegenden
+Projektarbeit entwickelten Generator, ist es einem Entwickler möglich eine
+komplette GWT Struktur generieren zu lassen. Auf Grundlage eines, auf einem UML
+Profil basierenden, Klassendiagramms kann eine komplette GWT Frontend
+Webanwendung abgebildet und mit kleinen Änderungen schnell lauffähig gemacht werden.
+Das UML Profil wird so gestaltet, dass eine GWT Anwendung gemäß der vorgegebenen
+Architektur einfach umgesetzt werden kann. Dabei finden das
+Model-View-Presenter (MVP) Pattern sowie verschiedene Frameworks, welche
+weiterhin Architekturkonzepte, beispielsweise für Dependency Injection, liefern,
+als grundlegende Konstrukte Verwendung. Anstoß zu diesem Projekt war eine
+gegebene \glqq{}Best Practice\grqq{} Lösung mehrerer Entwickler, die jedoch
+ziemlich aufwändig und fehleranfällig in der Umsetzung ist.
 \\\\
 In dem weiterem Verlauf dieser Ausarbeitung werden die zugrundeliegenden
 Konzepte und Frameworks (vgl. Abschnitt \ref{Grundlagen}) vorgestellt. Weiterhin
-wird die Idee und knozeptionellen Aspekte (vgl. Abschnitt \ref{Konzeption}),
-auch hinsichtlich der Ziel-Architektur, erläutert, welche im Weiterem mit sich
-ergebenden Änderungen umgesetzt (vgl. Abschnitte \ref{UMLProfil},
-\ref{M1Modell}, \ref{Generator}) werden.
+wird die Idee und konzeptionellen Aspekte (vgl. Abschnitt \ref{Konzeption}),
+auch hinsichtlich der Ziel-Architektur, erläutert. Diese werden im
+Weiterem mit sich ergebenden Änderungen umgesetzt (vgl. Abschnitte \ref{UMLProfil},
+\ref{M1Modell}, \ref{Generator}).
 Anhand des Ergebnisses (vgl. Abschnitt \ref{Ergebnis}) wird gezeigt, dass eine
-GWT Anwendung anhand zweier Anwendungsfälle generiert und mit kleinen
-Änderungen lauffähig gemacht werden kann. Zusammenfassend folgt eine Bewertung
-des Generator Projektes mit Erweiterungsmöglichkeiten (vgl. Abschnitt
+GWT Anwendung anhand zweier Anwendungsfälle generiert und wie diese lauffähig
+gemacht werden kann. Zusammenfassend folgt eine Bewertung des Generator
+Projektes mit einem Ausblick auf Erweiterungsmöglichkeiten (vgl. Abschnitt
 \ref{FazitAusblick}).
