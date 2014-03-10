@@ -2,12 +2,8 @@
 \contentsline {chapter}{\numberline {1.}Einleitung}{2}{chapter.1}
 \contentsline {chapter}{\numberline {2.}Grundlagen}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Model Driven Architecture}{3}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Platform Independent Model und Plattform Specific Model}{3}{subsection.2.1.1}
 \contentsline {section}{\numberline {2.2}GWT}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}MVP}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}UiBinder}{5}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Dependency Injection mittels GIN}{7}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}GIN}{7}{subsection.2.3.1}
 \contentsline {chapter}{\numberline {3.}Konzeption}{8}{chapter.3}
 \contentsline {section}{\numberline {3.1}Ziel-Architektur}{8}{section.3.1}
 \contentsline {section}{\numberline {3.2}UML Profil}{12}{section.3.2}

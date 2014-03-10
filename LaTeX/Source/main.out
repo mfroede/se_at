@@ -1,30 +1,26 @@
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Grundlagen}{}% 2
 \BOOKMARK [1][-]{section.2.1}{Model Driven Architecture}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Platform Independent Model und Plattform Specific Model}{section.2.1}% 4
-\BOOKMARK [1][-]{section.2.2}{GWT}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.1}{MVP}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.2}{UiBinder}{section.2.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Dependency Injection mittels GIN}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.3.1}{GIN}{section.2.3}% 9
-\BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Ziel-Architektur}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{UML Profil}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.3}{M1 Modell}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.4}{Generator}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.5}{Anwendungsfall}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{UML Profil auf M2 Ebene}{}% 16
-\BOOKMARK [0][-]{chapter.5}{Aufbau und Struktur M1 Modell}{}% 17
-\BOOKMARK [1][-]{section.5.1}{M1 Modellaufbau}{chapter.5}% 18
-\BOOKMARK [1][-]{section.5.2}{Klassenaufbau}{chapter.5}% 19
-\BOOKMARK [1][-]{section.5.3}{Seitenaufbau}{chapter.5}% 20
-\BOOKMARK [0][-]{chapter.6}{Generator}{}% 21
-\BOOKMARK [1][-]{section.6.1}{Struktur}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.2}{Funktion}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.3}{Queries}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.4}{Probleme}{chapter.6}% 25
-\BOOKMARK [0][-]{chapter.7}{Ergebnis}{}% 26
-\BOOKMARK [1][-]{section.7.1}{Beispiel Anwendung}{chapter.7}% 27
-\BOOKMARK [0][-]{chapter.8}{Fazit und Ausblick}{}% 28
-\BOOKMARK [0][-]{chapter.9}{Arbeitsaufteilung}{}% 29
-\BOOKMARK [0][-]{chapter.10}{Anhang}{}% 30
+\BOOKMARK [1][-]{section.2.2}{GWT}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Dependency Injection mittels GIN}{chapter.2}% 5
+\BOOKMARK [0][-]{chapter.3}{Konzeption}{}% 6
+\BOOKMARK [1][-]{section.3.1}{Ziel-Architektur}{chapter.3}% 7
+\BOOKMARK [1][-]{section.3.2}{UML Profil}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.3}{M1 Modell}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.4}{Generator}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.5}{Anwendungsfall}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{UML Profil auf M2 Ebene}{}% 12
+\BOOKMARK [0][-]{chapter.5}{Aufbau und Struktur M1 Modell}{}% 13
+\BOOKMARK [1][-]{section.5.1}{M1 Modellaufbau}{chapter.5}% 14
+\BOOKMARK [1][-]{section.5.2}{Klassenaufbau}{chapter.5}% 15
+\BOOKMARK [1][-]{section.5.3}{Seitenaufbau}{chapter.5}% 16
+\BOOKMARK [0][-]{chapter.6}{Generator}{}% 17
+\BOOKMARK [1][-]{section.6.1}{Struktur}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.2}{Funktion}{chapter.6}% 19
+\BOOKMARK [1][-]{section.6.3}{Queries}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.4}{Probleme}{chapter.6}% 21
+\BOOKMARK [0][-]{chapter.7}{Ergebnis}{}% 22
+\BOOKMARK [1][-]{section.7.1}{Beispiel Anwendung}{chapter.7}% 23
+\BOOKMARK [0][-]{chapter.8}{Fazit und Ausblick}{}% 24
+\BOOKMARK [0][-]{chapter.9}{Arbeitsaufteilung}{}% 25
+\BOOKMARK [0][-]{chapter.10}{Anhang}{}% 26
