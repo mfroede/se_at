@@ -1,0 +1,82 @@
+\begin{thebibliography}{}
+
+\bibitem[Andresen, 2004]{bib:MDA1}
+Andresen, A. (2004).
+\newblock {\em Komponentenbasierte Softwarentwicklung: mit MDA,UML2 und XML}.
+\newblock {Carl Hanser Verlag München Wien}, München, Germany.
+\newblock Auflage 2.
+
+\bibitem[Chandel, 2009]{bib:MVP1}
+Chandel, S. (2009).
+\newblock {Testing}.
+\newblock
+  {\url{http://www.gwtproject.org/articles/testing_methodologies_using_gwt.html}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Efftinge et~al., 2007]{bib:MDA2}
+Efftinge, S., Haase, A., Stahl, T., and Völter, M. (2007).
+\newblock {\em Modellgetriebene Softwarentwicklung: Techniken, Engineering,
+  Management}.
+\newblock {dpunkt.Verlag GmbH}, Heidelberg, Germany.
+\newblock Auflage 2.
+
+\bibitem[{Google}, 2008]{bib:guice}
+{Google} (2008).
+\newblock {Guice}.
+\newblock {\url{https://code.google.com/p/google-guice/}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
+\bibitem[{Google}, 2010]{bib:GWTStarted}
+{Google} (2010).
+\newblock {Overview}.
+\newblock {\url{http://www.gwtproject.org/overview.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[Google, 2010]{bib:uiBind}
+Google (2010).
+\newblock {Ui Binder}.
+\newblock {\url{http://www.gwtproject.org/doc/latest/DevGuideUiBinder.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[{Google}, 2011]{bib:gin}
+{Google} (2011).
+\newblock {Gin}.
+\newblock {\url{https://code.google.com/p/google-gin/}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
+\bibitem[Google, 2013]{bib:MDA3}
+Google (2013).
+\newblock {MDA}.
+\newblock
+  {\url{http://www.itwissen.info/definition/lexikon/modell-driven-architecture-MDA.html}}.
+\newblock Letzter Aufruf: 07.03.2014.
+
+\bibitem[{gwt-mvc}, 2010]{bib:MVCvsMVP}
+{gwt-mvc} (2010).
+\newblock {gwt-mvc: MVC layer built on top of GWT}.
+\newblock {\url{http://code.google.com/p/gwt-mvc/wiki/MVCvsMVP}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Hanson and Tacy, 2007]{bib:GWTinAction}
+Hanson, R. and Tacy, A. (2007).
+\newblock {\em GWT in Action: Easy Ajax with the Google Web Toolkit}.
+\newblock Manning Publications Co., Greenwich, CT, USA.
+
+\bibitem[{Martin Fowler}, 2004]{bib:DI}
+{Martin Fowler} (2004).
+\newblock {\url{http://martinfowler.com/articles/injection.html}}.
+\newblock Letzter Aufruf: 08.03.2014.
+
+\bibitem[Ramsdale, 2010]{bib:MVP2}
+Ramsdale, C. (2010).
+\newblock {MVP Part1}.
+\newblock {\url{http://www.gwtproject.org/articles/mvp-architecture.html}}.
+\newblock Letzter Aufruf: 06.03.2014.
+
+\bibitem[Seemann, 2008]{bib:GWToReilly}
+Seemann, M. (2008).
+\newblock {\em Das Google Web Toolkit: GWT}.
+\newblock {O'Reilly Verlag GmbH \& Co. KG}, Köln, Germany.
+\newblock Auflage 1.
+
+\end{thebibliography}

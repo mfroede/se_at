@@ -23,12 +23,12 @@ Die oben erwähnten Generatoren bedienen sich mehrerer Hilfsgeneratoren, darunte
 \section{Funktion}\label{Funktion}
 Um die Struktur des Generators zu verdeutlichen, wird folgend auf die wichtigsten Funktionen ausführlicher eingegangen.
 
-Ein wichtiges Element ist die Klasse des \texttt{AppEntryPoints}. Denn diese beschreibt die Zugriffsklasse für GWT und es werden von dieser gleichzeitig die ersten UI-Panel gesetzt. Hierbei ist im Generator zwischen einer \textit{PermanentViewImpl} und einer Content View zu unterscheiden. Es können durchaus mehrere \textit{PermanentViewImpls} vorhanden sein. Der Contentbereich ist dagegen immer nur einmal vorhanden und dient so als Container für alle\textit{ViewImpls}. So müssen alle \textit{PermanentViewImpls} mittels \texttt{for}-Schleife durchlaufen werden. Zudem sind die Spezialfälle der \textit{PermanentViewImpl}, \textit{Footer} und \textit{Header}, auch unterschiedlich zu behandeln, da diese eine feste Positionierung besitzen. Alle anderen Layoutspezifischen Entscheidungen müssen vom späteren Entwickler gesetzt werden. Sämtliche \textit{PermanentViewImpls} und der Content werden dann als \texttt{SimplePanel} zu dem GWT \texttt{RootPanel} hinzugefügt (Listing \ref{BSPCodeRoot}). 
+Ein wichtiges Element ist die Klasse des \texttt{AppEntryPoints}. Denn diese beschreibt die Zugriffsklasse für GWT und es werden von dieser gleichzeitig die ersten UI-Panel gesetzt. Hierbei ist im Generator zwischen einer \textit{PermanentViewImpl} und einer Content View zu unterscheiden. Es können durchaus mehrere \textit{PermanentViewImpls} vorhanden sein. Der Contentbereich ist dagegen immer nur einmal vorhanden und dient so als Container für alle\textit{ViewImpls}. So müssen alle \textit{PermanentViewImpls} mittels \texttt{for}-Schleife durchlaufen werden. Zudem sind die Spezialfälle der \textit{PermanentViewImpl}, \textit{Footer} und \textit{Header}, auch unterschiedlich zu behandeln, da diese eine feste Positionierung besitzen. Alle anderen Layoutspezifischen Entscheidungen müssen vom späteren Entwickler gesetzt werden. Sämtliche \textit{PermanentViewImpls} und der Content werden dann als \texttt{SimplePanel} zu dem GWT \texttt{RootPanel} hinzugefügt (vgl. Listing \ref{BSPCodeRoot}). 
 \lstset{language=mtl}
 \begin{lstlisting}[caption={Hinzufügen eines Panels zum \texttt{RootPane}l, am Beipsiel eines \textit{Header}s}, label={BSPCodeRoot}]
 [for ($class$ : Class | pack.ownedElement)]
-	[if ( $class$.getAppliedStereotypes()->asOrderedSet()->
-			first().name.endsWith('Header') )]
+	[if ( $class$.getAppliedStereotypes()->asOrderedSet()
+			->first().name.endsWith('Header'))]
 
 		RootPanel.get().add([getClassName($class$).toLowerFirst()/]);
 	[/if]
@@ -43,8 +43,8 @@ bind(YourStartHereActivity.class);
 [for ($class$ : Class | pack.ownedElement)]
 	[if (not isNotViewExisting(class))]
 		...
-		[if(not $class$.getValue($class$.getAppliedStereotypes()->
-			asOrderedSet()->first(),p.name).oclAsType(Boolean))]
+		[if(not $class$.getValue($class$.getAppliedStereotypes()
+			->asOrderedSet()->first(),p.name).oclAsType(Boolean))]
 
 		// bind([getClassName($class$)/]View.class)
 		//	.to([$class$.name/]ViewImpl.class).in(Singleton.class);
@@ -59,47 +59,29 @@ bind(YourStartHereActivity.class);
 \end{lstlisting}
 
 Als weitere Funktion wird im Folgenden die Generatorseitige Umsetzung des MVP Patterns beschreiben. Dieser wurde nach zwei Templates getrennt. Zum einen werden die View Interfaces mit entsprechenden \texttt{Place} und \texttt{Activity} Klassen und zum anderen die View Implementierungen mit dazugehörigen \texttt{.ui.xml} Dateien generiert.
-Jedes View Interface besitzt ein Interface \texttt{Presenter} und die entsprechende \texttt{setPresenter}-Methode sowie andere Operationen, soweit im M1 Modell festgehalten. Zusätzlich enthält das Interface für jedes Navigations Objekt eine \texttt{on'Name'Clicked}-Methode, zu sehen im Listing \ref{BSPCodeClick}. Auch hier wird zusätzlich wie bei dem \texttt{bind}-Befehl die gleiche Methode als Kommentar geschrieben, sofern deren \texttt{concreteBinding}-Attribute auf \texttt{false} gesetzt ist (siehe Listing \ref{BSPCodeClick}). Ein Sonderfall bietet der Button, deren \texttt{onButtonClicked()}-Methode nur einmal generiert wird, unabhängig davon wie viele Buttons existieren. Denn die Buttons werden während der Implementierung mit Hilfe von\texttt{ if}-Bedingungen innerhalb dieser Methode voneinander unterschieden und entsprechend behandelt. Es wurde sich bewusst für die etwas unschöne Art der Programmierung mittels \texttt{label}-Abfrage des Buttons in der \texttt{if}-Bedingung entschieden, da nicht davon ausgegangen wird, dass mehr als fünf Buttons sinnvoller Weise auf einer Webseite angebracht werden sollten. Wenn dies doch einmal vorkommt beispielsweise durch eine Datentabelle, würde diese eh vom Entwickler implementiert und nicht im M1 Modell festgelegt werden.
+Jedes View Interface besitzt ein Interface \texttt{Presenter} und die entsprechende \texttt{setPresenter}-Methode sowie andere Operationen, soweit im M1 Modell festgehalten. Zusätzlich enthält das Interface für jedes Navigations Objekt eine \texttt{on'Name'Clicked}-Methode, zu sehen im Listing \ref{BSPCodeClick}. Auch hier wird zusätzlich wie bei dem \texttt{bind}-Befehl die gleiche Methode als Kommentar geschrieben, sofern deren \texttt{concreteBinding}-Attribute auf \texttt{false} gesetzt ist (siehe Listing \ref{BSPCodeClick}). Ein Sonderfall bietet der Button, deren \texttt{onButtonClicked}-Methode nur einmal generiert wird, unabhängig davon wie viele Buttons existieren. Denn die Buttons werden während der Implementierung mit Hilfe von\texttt{ if}-Bedingungen innerhalb dieser Methode voneinander unterschieden und entsprechend behandelt. Es wurde sich bewusst für die etwas unschöne Art der Programmierung mittels \texttt{label}-Abfrage des Buttons in der \texttt{if}-Bedingung entschieden, da nicht davon ausgegangen wird, dass mehr als fünf Buttons sinnvoller Weise auf einer Webseite angebracht werden sollten. Wenn dies doch einmal vorkommt beispielsweise durch eine Datentabelle, würde diese eh vom Entwickler implementiert und nicht im M1 Modell festgelegt werden.
 In der Activity Klasse wird der \texttt{Presenter} implementiert und über die \texttt{goTo}-Methode des \texttt{PlaceControllers} die Navigation zwischen den Webseiten geschaffen. Durch die Implementierung der View Methoden, muss vor jeder \texttt{on'Name'Clicked}-Methode die \texttt{@Override}-Annotation hinzugefügt werden. Diese dient dann als Wrapper Methode für die eigentliche \texttt{goTo}-Methode.
 \lstset{language=mtl}
 \begin{lstlisting}[caption={Auszug der Generieung der \texttt{on'Name'Clicked}-Methode}, label={BSPCodeClick}]
-[for ($class$:Class | interface.getTargetDirectedRelationships()
-			.source.oclAsType(Class))]
-		[for ($property$: Property | $class$.attribute)]
-			[if ($property$.getAppliedStereotypes()->asOrderedSet()->
-				first().name.endsWith('NavigationObject'))]
-				[if (not getValue($property$.getAppliedStereotypes()->
-					asOrderedSet()->first(), 'type').oclAsType
-					(uml::EnumerationLiteral).name.endsWith('BUTTON'))]
-					[if ($class$.getValue($class$.getAppliedStereotypes()->
-						asOrderedSet()->first(), 'concreteBinding').
-						oclAsType(Boolean))]
+...
+[if ($class$.getValue($class$.getAppliedStereotypes()
+	->asOrderedSet()->first(), 'concreteBinding')
+	.oclAsType(Boolean))]
 						
 		@Override
 		void on[$property$.name.toUpperFirst()/]Clicked(){
 			placeController.gotTo(new [getClassName
-				($property$.getTaggedValue(property.
-				getApplicableStereotypes()->asOrderedSet()->
-				first().name, 'goToView', true)->asOrderedSet()->
-				first().oclAsType(uml::Class))/]Place());
+				($property$.getTaggedValue(...)/]Place());
 		}
-
-					[else]
+[else]
 
 		// @Override
 		// void on[$property$.name.toUpperFirst()/]Clicked(){
 		//	placeController.gotTo(new [getClassName
-				($property$.getTaggedValue($property$.
-				getApplicableStereotypes()->asOrderedSet()->
-				first().name, 'goToView', true)->asOrderedSet()->
-				first().oclAsType(uml::Class))/]Place());
+		//		($property$.getTaggedValue(...)/]Place());
 		// }
-
-					[/if]
-				[/if]
-			[/if]
-		[/for]
-	[/for]
+[/if]
+...
 \end{lstlisting}
 
 Sollte zu einer View Implementierung kein View Interface vorhanden sein, wird \texttt{View}, \texttt{Activity} und \texttt{Place} anhand der Implementierung ähnlich zu dem Interface generiert.
@@ -113,7 +95,8 @@ Darüber hinaus werden für alle UI Elemente die \texttt{.ui.xml} zur entspreche
 <g:MenuBar ui:field="[$property$.name/]">
 
 [if($property$.getValue(property.getAppliedStereotypes()->
-	asOrderedSet()->first(), 'viewNavigationObject')->notEmpty())]
+	asOrderedSet()->first(), 'viewNavigationObject')
+		->notEmpty())]
 	[for ($prop$ : Property | $property$.getTaggedValue
 		('ViewObject','viewNavigationObject', false).oclAsSet().
 		oclAsType(Property))]
@@ -123,6 +106,7 @@ Darüber hinaus werden für alle UI Elemente die \texttt{.ui.xml} zur entspreche
 		first(), 'value')/]"/>
 	[/for]
 [/if]
+
 </g:MenuBar>
 [/if]
 [/template]
